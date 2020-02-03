@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="PRG_GEM1" Id="{b5aed3c6-13be-428f-86ce-8bd830676022}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_GEM1
+VAR
+	
+	
+		
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Kp1 '}
+	fKp1 : REAL:= 0.001; 
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Tn1 '}
+	fTn1 : REAL:= 0.5; 
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Kp2 '}
+	fKp2 : REAL:= 0.01; 
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Tn2 '}
+	fTn2 : REAL:= 0.5; 
+	arrTable_GEM1	: ARRAY[1..14,1..2] OF FLOAT;
+	
+	
+	eMode							: E_CTRL_MODE;
+	stCTRL_PID_PARAMS		: ST_CTRL_PID_PARAMS;
+	bSync							: BOOL;
+	bHold							: BOOL;
+	eErrorId						: E_CTRL_ERRORCODES;
+	bError							: BOOL;
+	bARWactive					: BOOL;
+
+	(* controller *)
+	fbCTRL_PID					: FB_CTRL_PID;
+	bInit							: BOOL	:= TRUE;
+	fbCTRL_LIN_INTERPOLATION					: FB_CTRL_LIN_INTERPOLATION;
+	//stCTRL_LIN_INTERPOLATION_PARAMS		: ST_CTRL_LIN_INTERPOLATION_PARAMS;
+	stCTRL_LIN_INTERPOLATION_PARAMS_GEM	: ST_CTRL_LIN_INTERPOLATION_PARAMS;
+	fbCTRL_DEADBAND						: FB_CTRL_DEADBAND;
+	stCTRL_DEADBAND_PARAMS			: ST_CTRL_DEADBAND_PARAMS;
+		//timer to switch the pid from manual to active 5seconds??? 10 seconds???
+	pid_on :TON;
+	wait : time := T#10S;
+	
+	
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+(*Devices*)
+(* GEM 1*)
+
+(*Gauges*)
+GEM1_GCM_41(i_rFULL_SCALE := 10.0 (*Torr*));
+GEM1_GCM_42(i_rFULL_SCALE := 0.05 (*Torr*));
+
+(* N2 Cut Off Valves *)
+GEM1_VVC_40(i_xExtILK_OK:= GEM1_Aperture_Closed AND GEM1_Turbo_Valves_Open AND GEM1_Turbo_Running); 
+
+(*Flow Control Valves*)
+GEM1_VCN_40 (i_xExtIlkOK := TRUE, i_ReqPos:= );
+//GEM1_VPC_42 (i_xExtIlkOK := TRUE, i_rReqPos:= );
+
+
+(*Pressure control loop implementation*)
+If(GEM1_VCN_40.iq_stVCN.eValveControl = PressureControl) THEN
+	//GATT_VVC_10.iq_stValve.pv_xOPN_SW := true;
+//	GEM1_VCN_40.M_Set_OPN_SW(true);
+	// check valve is open, otherwise raise error
+END_IF
+
+	
+(*Iniitialization*)
+
+IF bInit
+THEN
+	
+	
+	(* init array with the interpolation points  *)
+	(* 	fIn					 |		fOut		*)
+	
+	arrTable_GEM1[1,1] := 0.0;		arrTable_GEM1[1,2] := 0;
+	arrTable_GEM1[2,1] := 0;		arrTable_GEM1[2,2] := 0;
+	arrTable_GEM1[3,1] := 0;		arrTable_GEM1[3,2] := 0;
+	arrTable_GEM1[4,1] :=  0;	    arrTable_GEM1[4,2] := 0;
+	arrTable_GEM1[5,1] :=  0;	    arrTable_GEM1[5,2] := 0;
+	arrTable_GEM1[6,1] := 0;		arrTable_GEM1[6,2] := 0;
+	arrTable_GEM1[7,1] := 0;		arrTable_GEM1[7,2] := 0;
+	arrTable_GEM1[8,1] := 0;	    arrTable_GEM1[8,2] := 0;
+	arrTable_GEM1[9,1] := 0;	    arrTable_GEM1[9,2] := 0;
+	arrTable_GEM1[10,1] := 0;		arrTable_GEM1[10,2] := 0;
+	arrTable_GEM1[11,1] := 0;		arrTable_GEM1[11,2] := 0;
+	arrTable_GEM1[12,1] := 0;		arrTable_GEM1[12,2] := 0;
+	arrTable_GEM1[13,1] := 0;		arrTable_GEM1[13,2] := 0;
+	arrTable_GEM1[14,1] := 0;		arrTable_GEM1[14,2] := 0;
+	
+	
+	(* init parameter struct *)
+	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.tCtrlCycleTime					:= T#10ms;
+	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.tTaskCycleTime					:= T#10ms;
+	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.nDataTable_NumberOfRows		:= INT_TO_UINT(14);	
+
+	(* set the addresses *)
+	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.pDataTable_ADR			:= ADR(arrTable_GEM1);
+	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.nDataTable_SIZEOF		:= SIZEOF(arrTable_GEM1);
+
+
+	(* init parameter struct *)
+	stCTRL_PID_PARAMS.tCtrlCycleTime		:= T#10ms;
+	stCTRL_PID_PARAMS.tTaskCycleTime		:= T#10ms;
+	stCTRL_PID_PARAMS.fKp					:= 2.0;			(* proportional gain Kp				*)
+	stCTRL_PID_PARAMS.tTn					:= T#1s;		(*  Tn									*)
+	stCTRL_PID_PARAMS.tTv					:= T#200ms;	(*  Tv									*)
+	stCTRL_PID_PARAMS.tTd					:= T#100ms;	(*  Td									*)
+	stCTRL_PID_PARAMS.fOutMaxLimit			:=  100;			(* maximum output limit				*)
+	stCTRL_PID_PARAMS.fOutMinLimit			:=  0;			(* minimum output limit				*)
+
+	(* set the mode to ACTIVE --> normal operation *)
+	eMode							:= eCTRL_MODE_PASSIVE    ;					
+	(* reset the init flag *)
+	bInit							:= FALSE;
+END_IF
+
+
+if (GEM1_GO) THEN
+
+fbCTRL_LIN_INTERPOLATION(
+	fIn:= fGEM1SetpointValue , 
+	fManValue:= 0, 
+	bExtrapolate:= , 
+	eMode:= eMode, 
+	fOut=> fbCTRL_PID.fManSyncValue,//LREAL_TO_REAL(GEM1_VPC_41_Req_Pos), 
+	bInIsGreaterThanMaxElement=> , 
+	bInIsLessThanMinElement=> , 
+	eState=> , 
+	eErrorId=> , 
+	bError=> , 
+	stParams:= stCTRL_LIN_INTERPOLATION_PARAMS_GEM );
+
+	//GEM1_VPC_41_Req_PosfbCTRL_PID.fOut := LREAL_TO_REAL(GEM1_VPC_41_Req_Pos);
+	eMode							:= eCTRL_MODE_MANUAL;
+	GEM1_GO :=false;
+ELSE
+		eMode							:= eCTRL_MODE_PASSIVE;
+END_IF
+
+	
+(* call controller *)
+fbCTRL_PID(		fSetpointValue		:= fGEM1SetpointValue,
+					fActualValue		:= GEM1_GCM_41.VG.rPRESS,
+					fManSyncValue	:= ,
+					bSync				:= bSync,
+					eMode				:= eMode,
+					bHold				:= bHold,
+					stParams			:= stCTRL_PID_PARAMS,
+					fOut				=> GEM1_VCN_40.i_ReqPos ,
+					bARWactive		=> bARWactive,
+					eErrorId			=> eErrorId,
+					bError				=> bError
+				);
+
+
+	
+(*deadband/clipper *)
+
+(* call function block *)
+stCTRL_DEADBAND_PARAMS.fThreshold	:=  fGEM1SetpointValue*0.01 ;
+fbCTRL_DEADBAND	(	fIn					:= ,
+					stParams			:= stCTRL_DEADBAND_PARAMS,
+					bInIsUnderThreshold => ,
+					eErrorId			=> ,
+					bError				=> 
+				);
+
+	
+(* call controller *)
+fbCTRL_PID(		fSetpointValue		:= fGEM1SetpointValue,
+					fActualValue		:= ,
+					fManSyncValue	:= ,
+					bSync				:= bSync,
+					eMode				:= eMode,
+					bHold				:= bHold,
+					stParams			:= stCTRL_PID_PARAMS,
+					fOut				=> ,
+					bARWactive		=> bARWactive,
+					eErrorId			=> eErrorId,
+					bError				=> bError
+				);
+
+// or NOT???
+
+stCTRL_PID_PARAMS.bDInTheFeedbackPath := fbCTRL_DEADBAND.bInIsUnderThreshold;
+
+
+//timer
+pid_on(IN:=, PT:= wait, Q=>, ET =>);
+IF (pid_on.Q) THEN eMode:= eCTRL_MODE_ACTIVE; pid_on.IN := FALSE; END_IF; //eCTRL_MODE_TUNE????
+
+
+
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_GEM1">
+      <LineId Id="93" Count="14" />
+      <LineId Id="120" Count="0" />
+      <LineId Id="292" Count="4" />
+      <LineId Id="170" Count="2" />
+      <LineId Id="327" Count="49" />
+      <LineId Id="192" Count="0" />
+      <LineId Id="377" Count="76" />
+      <LineId Id="193" Count="0" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

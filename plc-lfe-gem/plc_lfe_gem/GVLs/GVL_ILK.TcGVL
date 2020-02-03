@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL_ILK" Id="{71142060-83c7-40ff-a8c7-88a94b51c650}">
+    <Declaration><![CDATA[VAR_GLOBAL
+	
+	{attribute 'pytmc' := '
+    pv: plc:lfe:gatt:FF1
+    '}
+    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
+    g_FastFaultOutput1  :   FB_HardwareFFOutput;
+	
+	{attribute 'pytmc' := '
+    pv: plc:lfe:gatt:FF2
+    '}
+    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
+    g_FastFaultOutput2  :   FB_HardwareFFOutput;
+	
+	{attribute 'pytmc' := '
+    pv: plc:kfe:FF_RESET
+    '}
+    xFastFaultReset :   BOOL;
+
+	{attribute 'pytmc' := 'pv: EM1L0:GEM:VAC:OVRDON'}
+	xGEM1OverrideMode	:	BOOL; (* Global system override for the EM1L0*)
+	{attribute 'pytmc' := 'pv: AT1L0:GAS:VAC:OVRDON'}
+	xGATTOverrideMode	:	BOOL; (* Global system override for the GATT*)
+	{attribute 'pytmc' := 'pv: EM2L0:GEM:VAC:OVRDON'}
+	xGEM2OverrideMode	:	BOOL; (* Global system override for the EM2L0*)
+
+
+(* Interlock related bits, local to the PLC*)
+	GEM1_Turbo_Valves_Closed:  BOOL;
+	GEM1_Turbo_Valves_Open:  BOOL;
+	GEM2_Turbo_Valves_Closed: BOOL;
+	GEM2_Turbo_Valves_Open:  BOOL;
+	GEM1_Turbo_Running:  BOOL;
+	GEM2_Turbo_Running:  BOOL;
+	TwinscrewPumps_Valves_Closed: BOOL;
+	GEM1_TwinscrewPumps_Valves_Open : BOOL;
+	GEM2_TwinscrewPumps_Valves_Open : BOOL;
+	GEM1_Aperture_Closed: BOOL;
+	GEM2_Aperture_Closed: BOOL;
+	
+	xGEM1_AperturesOpnOK : BOOL;
+	xGEM2_AperturesOpnOK : BOOL;
+	
+	
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

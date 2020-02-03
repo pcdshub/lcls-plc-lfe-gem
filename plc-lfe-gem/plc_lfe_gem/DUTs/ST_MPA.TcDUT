@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+  <DUT Name="ST_MPA" Id="{ee78164b-027c-4a52-afc0-269c58a42ceb}">
+    <Declaration><![CDATA[TYPE ST_MPA :
+STRUCT
+	//Readbacks
+	{attribute 'pytmc' := '
+    pv: IN;
+	io: i;
+    '}
+	i_bInLS	:	BOOL;
+	{attribute 'pytmc' := '
+    pv: OUT;
+	io: i;
+    '}
+	i_bOutLS	:	BOOL;
+	//Controls
+	{attribute 'pytmc' := '
+    pv: INSERT_DO;
+	io: i;
+    '}
+	q_bRetract	:	BOOL;
+	{attribute 'pytmc' := '
+    pv: RETRACT_DO;
+	io: i;
+    '}
+	q_bInsert	:	BOOL;
+//    q_xRetract_Do : Bool;
+	
+	
+	//Logic and supervisory
+	{attribute 'pytmc' := '
+    pv: ILKOK;
+	io: i;
+    '}
+	bILK_OK: BOOL;
+	{attribute 'pytmc' := '
+    pv: INSERT_OK;
+	io: i;
+    '}
+	bInsertOK	:	BOOL;
+	{attribute 'pytmc' := '
+    pv: RETRACT_OK;
+	io: i;
+    '}
+	bRetractOK	:	BOOL;
+	{attribute 'pytmc' := '
+    pv: IN_CMD;
+	io: io;
+    '}
+	bInsert_SW		:	BOOL;
+	{attribute 'pytmc' := '
+    pv: OUT_CMD;
+	io: io;
+    '}
+	bRetract_SW	:	BOOL;
+	{attribute 'pytmc' := '
+    pv: ERROR;
+	io: io;
+    '}
+	bErrorPresent : BOOL;
+	{attribute 'pytmc' := '
+	pv: POS_STATE ;
+	type: mbbi ;
+	field: ZRST RETRACTED ;
+	field: ONST INSERTED ;
+	field: TWST MOVING ;
+	field: THST INVALID ;
+	io: i
+	'}
+		
+	eState	:	E_PositionState := INVALID;
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

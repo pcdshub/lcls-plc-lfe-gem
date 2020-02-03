@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="PRG_GEM2_DIFF_PUMP" Id="{851181dd-ec63-4e65-94b1-0ffbf8be6c3d}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_GEM2_DIFF_PUMP
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(*Gauges*)
+(*EM2L0*)
+GEM2_GPI_30(PG=>);
+GEM2_GCC_30(PG:=GEM2_GPI_30.PG,IG=>);
+GEM2_GPI_31(PG=>);
+GEM2_GPI_50(PG=>);
+GEM2_GCC_50(PG:=GEM2_GPI_50.PG,IG=>);
+GEM2_GPI_51(PG=>);
+GEM2_GPI_60(PG=>);
+GEM2_GCC_60(PG:=GEM2_GPI_60.PG,IG=>);
+GEM2_GPI_61(PG=>);
+GEM2_GPI_70(PG=>);
+GEM2_GCC_70(PG:=GEM2_GPI_70.PG,IG=>);
+
+(*VALVES*)
+(*Aperture valve may open when Detector and Attenuator N2 valves are closed. Override provided *)
+ (* to Include PMPS ILK with the EXTILK bit*)
+(*apperture valves*)
+GEM2_VGC_10(i_stUSG := GEM2_GPI_10.PG, i_stDSG:= GEM2_GPI_10.PG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+GEM2_VGC_20(i_stUSG := GEM2_GPI_10.PG, i_stDSG:= GEM2_GCC_30.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+GEM2_VGC_30(i_stUSG := GEM2_GCC_30.IG, i_stDSG:= GEM2_GCC_30.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+GEM2_VGC_40(i_stUSG := GEM2_GCC_50.IG, i_stDSG:= GEM2_GCC_50.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);	
+GEM2_VGC_50(i_stUSG := GEM2_GCC_30.IG, i_stDSG:= GEM2_GCC_60.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+GEM2_VGC_60(i_stUSG := GEM2_GCC_60.IG, i_stDSG:= GEM2_GCC_70.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+(*downstream isolation valve*)
+GEM2_VGC_70(i_stUSG := GEM2_GCC_70.IG, i_stDSG:= DSG_GCC.VG,i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE,
+		i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+DSV_VGC(VGC=>);
+
+(*Turbo vent valves NO*)//Deprecated
+GEM2_VVC_30(i_stPTM :=GEM2_PTM_30.iq_stPtm);
+GEM2_VVC_50(i_stPTM :=GEM2_PTM_50.iq_stPtm);
+GEM2_VVC_70(i_stPTM :=GEM2_PTM_70.iq_stPtm);
+(*This part was added to Close all the Turbo's NO vent valves, These valves are capped off, and wont be in use*)
+//GEM2_VVC_30.M_Close(TRUE);
+//GEM2_VVC_50.M_Close(TRUE);
+//GEM2_VVC_70.M_Close(TRUE);
+
+
+(*Turbo Isolation valves*)
+ GEM1_VRC_10(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_10.iq_stPtm,GEM1_GPI_10.PG),i_xOverrideMode := xGEM1OverrideMode);
+ GEM1_VRC_20(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_20.iq_stPtm,GEM1_GPI_20.PG),i_xOverrideMode := xGEM1OverrideMode);
+ GEM1_VRC_30(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_30.iq_stPtm,GEM1_GPI_30.PG),i_xOverrideMode := xGEM1OverrideMode);
+ GEM1_VRC_50(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_50.iq_stPtm,GEM1_GPI_50.PG),i_xOverrideMode := xGEM1OverrideMode);
+ GEM2_VRC_30(i_xExtILK_OK := F_TurboGateValve_ILK(GEM2_PTM_30.iq_stPtm,GEM2_GPI_30.PG),i_xOverrideMode := xGEM2OverrideMode);
+ GEM2_VRC_50(i_xExtILK_OK := F_TurboGateValve_ILK(GEM2_PTM_50.iq_stPtm,GEM2_GPI_50.PG),i_xOverrideMode := xGEM2OverrideMode);
+ GEM2_VRC_60(i_xExtILK_OK := F_TurboGateValve_ILK(GEM2_PTM_60.iq_stPtm,GEM2_GPI_60.PG),i_xOverrideMode := xGEM2OverrideMode);
+ GEM2_VRC_70(i_xExtILK_OK := F_TurboGateValve_ILK(GEM2_PTM_70.iq_stPtm,GEM2_GPI_70.PG),i_xOverrideMode := xGEM2OverrideMode);
+
+(*Turbo Pumps*)
+GEM2_PTM_30(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_30.iq_stPtm, GEM2_GPI_31.PG,
+						GEM2_GPI_30.PG,GEM2_VVC_30.q_stValve,GEM2_PMF_30.iq_stPFO),
+		i_stGauge:=GEM2_GPI_31.PG,i_rMaxBackingPressure :=0.01);
+GEM2_PTM_50(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_50.iq_stPtm, GEM2_GPI_51.PG,
+						GEM2_GPI_50.PG,GEM2_VVC_50.q_stValve,GEM2_PMF_50.iq_stPFO),
+		i_stGauge:=GEM2_GPI_51.PG,i_rMaxBackingPressure :=0.01);
+GEM2_PTM_60(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_60.iq_stPtm, GEM2_GPI_61.PG,
+						GEM2_GPI_60.PG,GEM2_VVC_70.q_stValve,GEM2_PMF_60.iq_stPFO),
+		i_stGauge:=GEM2_GPI_61.PG,i_rMaxBackingPressure :=0.01);
+GEM2_PTM_70(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_70.iq_stPtm, GEM2_GPI_61.PG,
+						GEM2_GPI_70.PG,GEM2_VVC_70.q_stValve,GEM2_PMF_60.iq_stPFO),
+		i_stGauge:=GEM2_GPI_61.PG,i_rMaxBackingPressure :=0.01);
+
+(*Roughing pumps*)
+GEM2_PMF_30(xExtIlk:= TRUE, TurboIsOn:= GEM2_PTM_30.iq_stPtm.q_RunDO); 
+GEM2_PMF_50(xExtIlk:= TRUE, TurboIsOn:= GEM2_PTM_50.iq_stPtm.q_RunDO); 
+GEM2_PMF_60(xExtIlk:= TRUE, TurboIsOn:= (GEM2_PTM_60.iq_stPtm.q_RunDO OR GEM2_PTM_70.iq_stPtm.q_RunDO)); 
+			
+
+
+
+		
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_GEM2_DIFF_PUMP">
+      <LineId Id="144" Count="0" />
+      <LineId Id="253" Count="0" />
+      <LineId Id="157" Count="15" />
+      <LineId Id="180" Count="0" />
+      <LineId Id="287" Count="0" />
+      <LineId Id="181" Count="0" />
+      <LineId Id="288" Count="0" />
+      <LineId Id="182" Count="0" />
+      <LineId Id="289" Count="0" />
+      <LineId Id="183" Count="0" />
+      <LineId Id="290" Count="0" />
+      <LineId Id="184" Count="0" />
+      <LineId Id="291" Count="0" />
+      <LineId Id="185" Count="0" />
+      <LineId Id="292" Count="0" />
+      <LineId Id="186" Count="5" />
+      <LineId Id="195" Count="2" />
+      <LineId Id="306" Count="2" />
+      <LineId Id="305" Count="0" />
+      <LineId Id="198" Count="12" />
+      <LineId Id="223" Count="13" />
+      <LineId Id="300" Count="1" />
+      <LineId Id="242" Count="1" />
+      <LineId Id="271" Count="1" />
+      <LineId Id="274" Count="0" />
+      <LineId Id="273" Count="0" />
+      <LineId Id="244" Count="0" />
+      <LineId Id="31" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

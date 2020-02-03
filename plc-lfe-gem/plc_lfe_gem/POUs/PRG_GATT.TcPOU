@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="PRG_GATT" Id="{f1d0afc8-7bf0-4af8-a68e-a088a19c6a4e}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_GATT
+VAR CONSTANT
+		nDataTable_NumberOfRows : INT:=9;
+END_VAR
+VAR
+	(*needle valve control position*)
+	VCN_Req_Pos: REAL;
+	
+	fb_PID: FB_BasicPID;
+	
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:CNTRL:SP '}
+	fSetpointValue : REAL:=0.001;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:CNTRL:Kp '}
+	fKp : REAL:= 1.1; 
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:CNTRL:Tn '}
+	fTn : REAL:= 0.5; 
+	
+	
+	
+	
+	eMode							: E_CTRL_MODE;
+	stCTRL_PID_PARAMS		: ST_CTRL_PID_PARAMS;
+
+	eErrorId						: E_CTRL_ERRORCODES;
+	bError							: BOOL;
+	bARWactive					: BOOL;
+
+	(* controller *)
+	fbCTRL_PID					: FB_CTRL_PID;
+	bInit							: BOOL	:= TRUE;
+	
+	stCTRL_LIN_INTERPOLATION_PARAMS		: ST_CTRL_LIN_INTERPOLATION_PARAMS;
+	arrTable											: ARRAY[1..nDataTable_NumberOfRows,1..2] OF FLOAT;
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(*Gauges*)
+GATT_GPI_10();
+GATT_GMP_10(i_rFULL_SCALE := 2.0 (*Torr*));
+GATT_GMP_11();
+
+(*Valves*)
+(*Gas Cell vent valve*)
+GATT_VRC_10(i_xExtILK_OK:= GEM2_VGC_70.iq_stValve.i_xClsLS AND DSV_VGC.VGC.i_xClsLS AND GEM1_Turbo_Valves_Closed AND GEM2_Turbo_Valves_Closed AND TwinscrewPumps_Valves_Closed, i_xOverrideMode := xGATTOverrideMode);
+
+(* N2 Cutt off valve*)
+GATT_VVC_10(i_xExtILK_OK := GEM1_Aperture_Closed AND GEM1_Turbo_Valves_Open AND GEM1_Turbo_Running AND GEM2_Aperture_Closed AND GEM2_Turbo_Valves_Open AND GEM2_Turbo_Running AND GEM1_TwinscrewPumps_Valves_Open AND GEM2_TwinscrewPumps_Valves_Open);
+
+(*Pressure control loop implementation*)
+If(GATT_VCN_10.iq_stVCN.eValveControl = PressureControl) THEN
+	//GATT_VVC_10.iq_stValve.pv_xOPN_SW := true;
+	GATT_VVC_10.M_Set_OPN_SW(true);
+	// check valve is open, otherwise raise error
+END_IF
+
+IF bInit
+THEN
+		
+	(* init array with the interpolation points  *)
+	(* 	fIn					 |		fOut		*)
+	arrTable[1,1] := 0;			arrTable[1,2] := 0;
+	arrTable[2,1] := 0.001;		arrTable[1,2] := 20;
+	arrTable[3,1] := 0.005;		arrTable[3,2] := 30;
+	arrTable[4,1] :=  0.089;	arrTable[4,2] := 40;
+	arrTable[5,1] :=  0.276;	arrTable[5,2] := 50;
+	arrTable[6,1] := 2.299;		arrTable[6,2] := 60;
+	arrTable[7,1] := 9.522;		arrTable[7,2] := 70;
+	arrTable[8,1] := 13.815;	arrTable[8,2] := 75;
+	arrTable[9,1] := 24.019;	arrTable[8,2] := 80;
+	
+	
+	(* init parameter struct *)
+	stCTRL_LIN_INTERPOLATION_PARAMS.tCtrlCycleTime					:= T#10ms;
+	stCTRL_LIN_INTERPOLATION_PARAMS.tTaskCycleTime					:= T#10ms;
+	stCTRL_LIN_INTERPOLATION_PARAMS.nDataTable_NumberOfRows		:= INT_TO_UINT(nDataTable_NumberOfRows);
+
+	(* set the addresses *)
+	stCTRL_LIN_INTERPOLATION_PARAMS.pDataTable_ADR			:= ADR(arrTable);
+	stCTRL_LIN_INTERPOLATION_PARAMS.nDataTable_SIZEOF		:= SIZEOF(arrTable);
+
+	
+	(* set the mode to ACTIVE --> normal operation *)
+	eMode							:= eCTRL_MODE_ACTIVE;
+	
+
+
+	(* reset the init flag *)
+	bInit							:= FALSE;
+END_IF
+(*
+stCTRL_PID_PARAMS.fKp					:= fKp;			
+stCTRL_PID_PARAMS.tTn					:= T#1s;	
+
+(* call controller *)
+fbCTRL_PID(		fSetpointValue		:= fSetpointValue,
+					fActualValue		:= GATT_GMP_10.VG.rPRESS, // Pressure gauge selection
+					fManSyncValue	:= ,
+					bSync				:= ,
+					eMode				:= eMode,
+					bHold				:= ,
+					stParams			:= stCTRL_PID_PARAMS,
+					fOut				=> (VCN_Req_Pos),
+					bARWactive		=> bARWactive,
+					eErrorId			=> eErrorId,
+					bError				=> bError
+				);
+*)
+
+(*flow control valve*)
+GATT_VCN_10(i_xExtIlkOK:= TRUE,i_ReqPos:= VCN_Req_Pos);
+]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_GATT">
+      <LineId Id="59" Count="10" />
+      <LineId Id="73" Count="1" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="233" Count="0" />
+      <LineId Id="101" Count="0" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="191" Count="0" />
+      <LineId Id="263" Count="0" />
+      <LineId Id="192" Count="0" />
+      <LineId Id="264" Count="26" />
+      <LineId Id="139" Count="4" />
+      <LineId Id="199" Count="1" />
+      <LineId Id="198" Count="0" />
+      <LineId Id="144" Count="0" />
+      <LineId Id="161" Count="13" />
+      <LineId Id="201" Count="2" />
+      <LineId Id="120" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

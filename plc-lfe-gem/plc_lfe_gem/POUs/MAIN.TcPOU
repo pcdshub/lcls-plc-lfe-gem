@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="MAIN" Id="{08fcf07b-a57e-4f6f-85ed-e3315e0ea5b4}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(*Ethercat Diagnostics*)
+//DIAGNOSTICS();
+
+
+
+(* Call all Programs*)
+PRG_ILK();
+PRG_GEM1_DIFF_PUMP();
+PRG_GEM2_DIFF_PUMP();
+PRG_ROOTS();
+PRG_GATT();
+PRG_GEM1();
+//PRG_GEM2();
+PRG_SATT();
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="6" Count="7" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="14" Count="4" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

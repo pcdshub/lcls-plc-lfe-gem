@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="PRG_GEM2" Id="{7151a316-9a63-4501-9ce1-47c00a15e083}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_GEM2
+VAR
+	
+	
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+(*Devices*)
+(* GEM 1*)
+
+(*Gauges*)
+GEM2_GCM_41(i_rFULL_SCALE := 10.0 (*Torr*));
+GEM2_GCM_42(i_rFULL_SCALE := 0.05 (*Torr*));
+
+(* N2 Cut Off Valves *)
+GEM2_VVC_40(i_xExtILK_OK:= GEM2_Aperture_Closed AND GEM2_Turbo_Valves_Open AND GEM2_Turbo_Running); 
+
+(*Flow Control Valves*)
+GEM2_VCN_40 (i_xExtIlkOK := TRUE, i_ReqPos:= );
+//GEM2_VPC_42 (i_xExtIlkOK := TRUE, i_rReqPos:= );
+
+
+
+(*Control Loop to be implemented*)
+(*how about the control MODE for the VFC ?????*)
+
+
+	
+
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_GEM2">
+      <LineId Id="452" Count="18" />
+      <LineId Id="488" Count="4" />
+      <LineId Id="136" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

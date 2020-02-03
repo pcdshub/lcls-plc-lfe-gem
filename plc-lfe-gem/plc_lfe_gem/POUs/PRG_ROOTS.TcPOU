@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+  <POU Name="PRG_ROOTS" Id="{573f7847-bda8-45d7-9541-d46f5c27ae92}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_ROOTS
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(*EM1L0*)
+(*Roots Pump Chamber 1*)
+(*gauges*)
+GEM1_GPI_60(PG=>);
+GEM1_GPI_61(PG=>);
+GEM1_GPI_71(PG=>);
+
+(*Isolation Valve*)
+GEM1_VRC_60(Pump:=GEM1_PRO_60.q_stPump,Gauge:=GEM1_GPI_60.PG,i_xExtILK_OK:=TRUE);
+GEM1_VRC_70(Pump:=GEM1_PRO_70.q_stPump,Gauge:=GEM1_GPI_60.PG,i_xExtILK_OK:=TRUE);		
+
+
+(* dry pump*)
+GEM1_PRO_60();
+GEM1_PRO_70();
+
+
+
+
+(*EM2L0*)
+(*Roots Pump Chamber 1*)
+(*gauges*)
+GEM2_GPI_10(PG=>);
+GEM2_GPI_11(PG=>);
+GEM2_GPI_21(PG=>);
+
+(*Isolation Valve*)
+GEM2_VRC_10(Pump:=GEM2_PRO_10.q_stPump,Gauge:=GEM2_GPI_10.PG,i_xExtILK_OK:=TRUE);
+GEM2_VRC_20(Pump:=GEM2_PRO_20.q_stPump,Gauge:=GEM2_GPI_10.PG,i_xExtILK_OK:=TRUE);
+
+(* dry pump*)
+GEM2_PRO_10();
+GEM2_PRO_20();]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_ROOTS">
+      <LineId Id="42" Count="0" />
+      <LineId Id="8" Count="1" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="7" Count="0" />
+      <LineId Id="6" Count="0" />
+      <LineId Id="11" Count="1" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="13" Count="2" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="16" Count="2" />
+      <LineId Id="10" Count="0" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="35" Count="1" />
+      <LineId Id="33" Count="1" />
+      <LineId Id="32" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="37" Count="1" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="27" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

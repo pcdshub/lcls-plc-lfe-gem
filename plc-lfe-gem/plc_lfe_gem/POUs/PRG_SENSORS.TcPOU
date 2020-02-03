@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+  <POU Name="PRG_SENSORS" Id="{06b92b62-a281-4dd8-802c-ea3d5a53b2c1}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_SENSORS
+VAR
+		// Sensor Range in Psi
+	CDA_SENS_PRESS_RANGE : REAL := 200; 
+	NITR_SENS_PRESS_RANGE: REAL := 200;	
+	H2O_SENS_PRESS_RANGE: REAL := 200;
+	
+	// Mim pressure setpoint in Psi
+	CDA_SENS_MIN_PRESS_SP: REAL := 30;
+	NITR_SENS_MIN_PRESS_SP: REAL := 15;
+	H2O_SENS_MIN_PRESS_SP: REAL := 15;
+	
+	// Maximum pressure setpoint in Psi
+	CDA_SENS_MAX_PRESS_SP: REAL := 160;
+	NITR_SENS_MAX_PRESS_SP: REAL := 55;
+	H2O_SENS_MAX_PRESS_SP: REAL := 80;
+	
+	// Press default setpoint in Psi
+	CDA_SENS_DEFAULT_SP: REAL := 60;
+	NITR_SENS_DEFAULT_SP: REAL := 25;
+	H2O_SENS_DEFAULT_SP: REAL := 30;
+	
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+GEM1_AIR_1(rDefaultSP:= CDA_SENS_DEFAULT_SP);
+GEM1_AIR_2(rDefaultSP:= CDA_SENS_DEFAULT_SP);
+	
+GEM2_N2_1 (rDefaultSP:= NITR_SENS_DEFAULT_SP);	
+GEM2_N2_2 (rDefaultSP:= NITR_SENS_DEFAULT_SP);	
+	
+]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_SENSORS">
+      <LineId Id="46" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="57" Count="0" />
+      <LineId Id="53" Count="1" />
+      <LineId Id="58" Count="0" />
+      <LineId Id="55" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

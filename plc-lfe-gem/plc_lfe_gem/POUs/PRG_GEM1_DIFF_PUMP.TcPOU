@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="PRG_GEM1_DIFF_PUMP" Id="{7641916e-925e-4304-add8-c14da3930767}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_GEM1_DIFF_PUMP
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(*Gauges*)
+DSG_GCC(VG=>); // Downstream Gauge from Down Stream PLC System
+GEM1_GPI_10(PG=>);
+GEM1_GCC_10(PG:=GEM1_GPI_10.PG,IG=>);
+GEM1_GPI_20(PG=>);
+GEM1_GCC_20(PG:=GEM1_GPI_20.PG,IG=>);
+GEM1_GPI_30(PG=>);
+GEM1_GCC_30(PG:=GEM1_GPI_30.PG,IG=>);
+GEM1_GPI_50(PG=>);
+GEM1_GCC_50(PG:=GEM1_GPI_50.PG,IG=>);
+GEM1_GPI_11(PG=>);
+GEM1_GPI_31(PG=>);
+GEM1_GPI_51(PG=>);
+
+(*VALVES*)
+(*Aperture valve may open when Detector and Attenuator N2 valves are closed. Override provided *)
+ (* to Include PMPS ILK with the EXTILK bit*)
+(*apperture valves*)
+
+GEM1_VGC_10(i_stUSG := USG_GCC.VG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+GEM1_VGC_20(i_stUSG := GEM1_GCC_10.IG, i_stDSG:= GEM1_GCC_20.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+GEM1_VGC_30(i_stUSG := GEM1_GCC_20.IG, i_stDSG:= GEM1_GCC_30.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+GEM1_VGC_40(i_stUSG := GEM1_GCC_30.IG, i_stDSG:= GEM1_GCC_30.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+GEM1_VGC_50(i_stUSG := GEM1_GCC_50.IG, i_stDSG:= GEM1_GCC_50.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+GEM1_VGC_60(i_stUSG := GEM1_GCC_50.IG, i_stDSG:= GEM1_GCC_50.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);		
+GEM1_VGC_70(i_stUSG := GEM1_GCC_50.IG, i_stDSG:= GEM1_GCC_50.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO:=g_FastFaultOutput1);
+
+		
+(*Turbo vent valves NO*) //Deprecated
+GEM1_VVC_20(i_stPTM :=GEM1_PTM_20.iq_stPtm); 
+GEM1_VVC_30(i_stPTM :=GEM1_PTM_30.iq_stPtm);
+GEM1_VVC_50(i_stPTM :=GEM1_PTM_50.iq_stPtm);
+(*This part was added to Close all the Turbo's NO vent valves, These valves are capped off, and wont be in use*)
+//GEM1_VVC_20.M_Close(TRUE);
+//GEM1_VVC_30.M_Close(TRUE);
+//GEM1_VVC_50.M_Close(TRUE);
+
+
+(*Turbo Isolation valves*)
+GEM1_PTM_10.i_xExtILKOk := F_TurboExtILK_NO(GEM1_PTM_10.iq_stPtm, GEM1_GPI_11.PG,
+						GEM1_GPI_10.PG,GEM1_VVC_20.q_stValve,GEM1_PMF_20.iq_stPFO);
+GEM1_PTM_10(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=0.01);
+GEM1_PTM_20.i_xExtILKOk := F_TurboExtILK_NO(GEM1_PTM_20.iq_stPtm,BackingGauge:= GEM1_GPI_11.PG,
+						InletGauge:=GEM1_GPI_20.PG,GEM1_VVC_20.q_stValve,GEM1_PMF_20.iq_stPFO);
+GEM1_PTM_20(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=0.01);
+GEM1_PTM_30(i_xExtILKOK:=F_TurboExtILK_NO(GEM1_PTM_30.iq_stPtm, GEM1_GPI_31.PG,
+						GEM1_GPI_30.PG,GEM1_VVC_30.q_stValve,GEM1_PMF_30.iq_stPFO),
+		i_stGauge:=GEM1_GPI_31.PG,i_rMaxBackingPressure :=0.01);
+GEM1_PTM_50(i_xExtILKOK:=F_TurboExtILK_NO(GEM1_PTM_50.iq_stPtm, GEM1_GPI_51.PG,
+						GEM1_GPI_50.PG,GEM1_VVC_50.q_stValve,GEM1_PMF_50.iq_stPFO),
+		i_stGauge:=GEM1_GPI_51.PG,i_rMaxBackingPressure :=0.01);
+
+(*Roughing pumps*)
+GEM1_PMF_20(xExtIlk:= TRUE, TurboIsOn:= (GEM1_PTM_10.iq_stPtm.q_RunDO OR GEM1_PTM_20.iq_stPtm.q_RunDO));
+GEM1_PMF_30(xExtIlk:= TRUE, TurboIsOn:= GEM1_PTM_30.iq_stPtm.q_RunDO);
+GEM1_PMF_50(xExtIlk:= TRUE, TurboIsOn:= GEM1_PTM_50.iq_stPtm.q_RunDO); 
+		
+]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_GEM1_DIFF_PUMP">
+      <LineId Id="6" Count="11" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="19" Count="3" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="24" Count="15" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="42" Count="2" />
+      <LineId Id="47" Count="3" />
+      <LineId Id="45" Count="1" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="54" Count="12" />
+      <LineId Id="68" Count="3" />
+      <LineId Id="53" Count="0" />
+      <LineId Id="67" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

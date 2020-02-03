@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+  <GVL Name="GVL_Sensors" Id="{4f089478-a986-425c-abb5-9c83df524d85}">
+    <Declaration><![CDATA[VAR_GLOBAL
+	
+(*Pressure Meter*)
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:AIR:1 '}
+	GEM1_AIR_1 :FB_PressureSensor_PX219;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:AIR:2 '}
+	GEM1_AIR_2 :FB_PressureSensor_PX219;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:N2:1 '}
+	GEM2_N2_1 :FB_PressureSensor_PX219;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:N2:2 '}
+	GEM2_N2_2 :FB_PressureSensor_PX219;
+	(*Flow Meters*)
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GFM:41 '}
+	GEM1_GFM_41 :FB_PressureSensor_PX219;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GFM:42 '}
+	GEM1_GFM_42 :FB_PressureSensor_PX219;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GFM:41 '}
+	GEM2_GFM_41 :FB_PressureSensor_PX219;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GFM:42 '}
+	GEM2_GFM_42 :FB_PressureSensor_PX219;
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
