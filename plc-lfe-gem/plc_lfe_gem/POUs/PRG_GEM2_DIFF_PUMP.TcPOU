@@ -46,16 +46,12 @@ GEM2_VVC_30(i_stPTM :=GEM2_PTM_30.iq_stPtm);
 GEM2_VVC_50(i_stPTM :=GEM2_PTM_50.iq_stPtm);
 GEM2_VVC_70(i_stPTM :=GEM2_PTM_70.iq_stPtm);
 (*This part was added to Close all the Turbo's NO vent valves, These valves are capped off, and wont be in use*)
-//GEM2_VVC_30.M_Close(TRUE);
-//GEM2_VVC_50.M_Close(TRUE);
-//GEM2_VVC_70.M_Close(TRUE);
+GEM2_VVC_30.M_Close(TRUE);
+GEM2_VVC_50.M_Close(TRUE);
+GEM2_VVC_70.M_Close(TRUE);
 
 
 (*Turbo Isolation valves*)
- GEM1_VRC_10(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_10.iq_stPtm,GEM1_GPI_10.PG),i_xOverrideMode := xGEM1OverrideMode);
- GEM1_VRC_20(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_20.iq_stPtm,GEM1_GPI_20.PG),i_xOverrideMode := xGEM1OverrideMode);
- GEM1_VRC_30(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_30.iq_stPtm,GEM1_GPI_30.PG),i_xOverrideMode := xGEM1OverrideMode);
- GEM1_VRC_50(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_50.iq_stPtm,GEM1_GPI_50.PG),i_xOverrideMode := xGEM1OverrideMode);
  GEM2_VRC_30(i_xExtILK_OK := F_TurboGateValve_ILK(GEM2_PTM_30.iq_stPtm,GEM2_GPI_30.PG),i_xOverrideMode := xGEM2OverrideMode);
  GEM2_VRC_50(i_xExtILK_OK := F_TurboGateValve_ILK(GEM2_PTM_50.iq_stPtm,GEM2_GPI_50.PG),i_xOverrideMode := xGEM2OverrideMode);
  GEM2_VRC_60(i_xExtILK_OK := F_TurboGateValve_ILK(GEM2_PTM_60.iq_stPtm,GEM2_GPI_60.PG),i_xOverrideMode := xGEM2OverrideMode);
@@ -107,7 +103,8 @@ GEM2_PMF_60(xExtIlk:= TRUE, TurboIsOn:= (GEM2_PTM_60.iq_stPtm.q_RunDO OR GEM2_PT
       <LineId Id="195" Count="2" />
       <LineId Id="306" Count="2" />
       <LineId Id="305" Count="0" />
-      <LineId Id="198" Count="12" />
+      <LineId Id="198" Count="2" />
+      <LineId Id="205" Count="5" />
       <LineId Id="223" Count="13" />
       <LineId Id="300" Count="1" />
       <LineId Id="242" Count="1" />

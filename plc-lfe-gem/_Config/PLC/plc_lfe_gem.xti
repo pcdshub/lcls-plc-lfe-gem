@@ -1998,6 +1998,9 @@ IO]]>
 				<Link VarA="PlcTask Outputs^GVL_Devices.GATT_VRC_10.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.GATT_VVC_10.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
 			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_2 (EP3174-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GATT_GMP_10.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
 			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002)">
 				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_01.i_xInsertedLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_01.i_xRetractedLS" VarB="Channel 1^Input" AutoLink="true"/>

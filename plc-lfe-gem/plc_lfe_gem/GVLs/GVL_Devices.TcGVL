@@ -255,9 +255,11 @@
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[MKS_E7 (EL3064)]^AI Standard Channel 2^Value'}
 	GATT_GPI_10 : FB_MKS317A;
 	
-		{attribute 'pytmc' :=' pv: AT1L0:GAS:GCM:11 '}
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:GCM:11 '}
+	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[L0S6_PNL_04_EB_3 (EP3174-0002)]^AI Standard Channel 1^Value'}
 	GATT_GMP_11 : FB_CMR362;
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:GCM:10 '}
+	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[L0S6_PNL_04_EB_2 (EP3174-0002)]^AI Standard Channel 2^Value'}
 	GATT_GMP_10 : FB_GCM;
 (*Valves*)
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:VCN:10 '}
@@ -451,7 +453,7 @@
 	
 	
 (*Pumps*)
-(*turbos*)
+(*Turbos*)
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:30 '}
 	{attribute 'TcLinkTo' := 	'.i_xR1	:=	TIIB[PLC_EL_5 (EL1088)]^Channel 1^Input;
 								 .i_xLSpd :=	TIIB[PLC_EL_5 (EL1088)]^Channel 2^Input;
