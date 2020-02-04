@@ -14,7 +14,7 @@ END_VAR
 (* GEM 1*)
 
 (*Gauges*)
-GEM2_GCM_41(i_rFULL_SCALE := 10.0 (*Torr*));
+GEM2_GCM_41(i_rFULL_SCALE := 2.0 (*Torr*));
 GEM2_GCM_42(i_rFULL_SCALE := 0.05 (*Torr*));
 
 (* N2 Cut Off Valves *)
