@@ -127,7 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <PlaceholderResolution Include="L2SI Vacuum Library">
-      <Resolution>L2SI Vacuum Library, 1.0.1 (SLAC)</Resolution>
+      <Resolution>L2SI Vacuum Library, * (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
       <Resolution>PMPS, * (SLAC - LCLS)</Resolution>

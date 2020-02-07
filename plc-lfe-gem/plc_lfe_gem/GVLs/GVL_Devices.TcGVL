@@ -244,7 +244,7 @@
 	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S3_PNL_03_EB_7 (EP2338-0002)]^Channel 12^Output'}
 	GEM1_PMF_30 : FB_ScrollPump;
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:PMF:50 '}
-	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S3_PNL_03_EB_7 (EP2338-0002)]^Channel 13^Output'}
+	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S3_PNL_03_EB_7 (EP2338-0002)]^Channel 15^Output'}
 	GEM1_PMF_50 : FB_ScrollPump;
 	
 (******************)	
@@ -256,7 +256,7 @@
 	GATT_GPI_10 : FB_MKS317A;
 	
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:GCM:11 '}
-	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[L0S6_PNL_04_EB_3 (EP3174-0002)]^AI Standard Channel 1^Value'}
+	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[L0S6_PNL_04_EB_3 (EP4374-0002)]^AI Inputs Channel 1^Value'}
 	GATT_GMP_11 : FB_CMR362;
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:GCM:10 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[L0S6_PNL_04_EB_2 (EP3174-0002)]^AI Standard Channel 2^Value'}
@@ -376,9 +376,9 @@
 	GEM2_VGC_40: FB_VGC_AP;
 	
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:50 '}
-	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 5^Input;
-								 .i_xClsLS	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 6^Input;
-								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 15^Output'}
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 2^Input;
+								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 11^Output'}
 	GEM2_VGC_50: FB_VGC_AP;
 	
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:60 '}
@@ -401,9 +401,9 @@
 								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_01_EB_3 (EP2338-0002)]^Channel 11^Output'}
 	GEM2_VRC_30: FB_VRC;
 	{attribute 'pytmc' :=' pv: EM2L0:GAS:VRC:50 '}
-	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 1^Input;
-								 .i_xClsLS	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 2^Input;
-								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 11^Output'}
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 5^Input;
+								 .i_xClsLS	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 6^Input;
+								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 15^Output'}
 	GEM2_VRC_50: FB_VRC;
 	
 	{attribute 'pytmc' :=' pv: EM2L0:GAS:VRC:60 '}
@@ -491,7 +491,7 @@
 	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S6_PNL_01_EB_7 (EP2338-0002)]^Channel 12^Output'}
 	GEM2_PMF_50 : FB_ScrollPump;
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:PMF:60 '}
-	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S6_PNL_01_EB_7 (EP2338-0002)]^Channel 13^Output'}
+	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S6_PNL_01_EB_7 (EP2338-0002)]^Channel 15^Output'}
 	GEM2_PMF_60 : FB_ScrollPump;
 (*Kashyiama Dry Pumps*)
 	
