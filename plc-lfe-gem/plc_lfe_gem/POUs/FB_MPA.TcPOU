@@ -8,6 +8,11 @@ VAR_INPUT
 	ibRetractOK: BOOL;
 	ibPMPS_OK:BOOL;
 	ibOverrideInterlock:BOOL; (*if true interlocks are ignored*)
+	// Reset fault
+	{attribute 'pytmc' := '
+    pv: FF_Reset
+	'}
+    i_xReset: BOOL;
 END_VAR
 VAR_OUTPUT
 	{attribute 'pytmc' := '
@@ -23,9 +28,15 @@ VAR_OUTPUT
 	'}
 	xDone:Bool; // Motion is Done 
 END_VAR
-
+VAR_IN_OUT
+	io_fbFFHWO    :    FB_HardwareFFOutput;
+END_VAR
 VAR
-	
+	// PMPS
+	fbFF    :    FB_FastFault :=(
+        i_DevName := 'VGC',
+        i_Desc := 'Fault occurs when the device is moving',
+        i_TypeCode := 16#1010);
 	(*Init*)
 	xFirstPass	:	BOOL;
 	fbFSInit		:	R_TRIG;
@@ -77,7 +88,9 @@ xDone := (q_stAct.bRetract_SW AND q_stAct.eState=RETRACTED) OR (q_stAct.eState=I
 	
 
 (*MPS FAULT*)
-//xMPS_OK := (q_stAct.eState=INSERTED);
+(* When the valve  is open MPS is OK*)
+xMPS_OK := (q_stAct.eState=RETRACTED) OR (q_stAct.eState=INSERTED);//iq_stValve.i_xOpnLS; 
+
 
 (*PMPS PERMISSION*)
 
@@ -116,6 +129,12 @@ ELSIF NOT q_stAct.i_bOutLS AND tRetracttimeout.Q THEN
 END_IF
 
 
+(*FAST FAULT*)
+fbFF(i_xOK := xMPS_OK,
+    i_xReset := i_xReset,
+    io_fbFFHWO := io_fbFFHWO);
+
+
 (*Soft IO Mapping*)
 ACT_IO();]]></ST>
     </Implementation>
@@ -145,6 +164,7 @@ q_xRetract_DO:=q_stAct.q_bRetract;]]></ST>
       <LineId Id="158" Count="1" />
       <LineId Id="80" Count="0" />
       <LineId Id="82" Count="0" />
+      <LineId Id="337" Count="1" />
       <LineId Id="113" Count="1" />
       <LineId Id="112" Count="0" />
       <LineId Id="272" Count="6" />
@@ -162,6 +182,7 @@ q_xRetract_DO:=q_stAct.q_bRetract;]]></ST>
       <LineId Id="76" Count="1" />
       <LineId Id="75" Count="0" />
       <LineId Id="66" Count="5" />
+      <LineId Id="327" Count="5" />
       <LineId Id="65" Count="0" />
       <LineId Id="61" Count="0" />
       <LineId Id="59" Count="0" />
