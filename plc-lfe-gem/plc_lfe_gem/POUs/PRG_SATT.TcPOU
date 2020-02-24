@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_SATT" Id="{2eccc79f-a12c-40ff-a593-4981b0ae670c}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_SATT
 VAR
@@ -13,7 +13,8 @@ END_VAR
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
-	xDone=> );
+	xDone=> ,
+	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
 	
 SATT_MPA_02(
 	ibInsertOK:= TRUE, 
@@ -22,7 +23,8 @@ SATT_MPA_02(
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
-	xDone=> );
+	xDone=> ,
+	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
 	
 SATT_MPA_03(
 	ibInsertOK:= TRUE, 
@@ -31,7 +33,8 @@ SATT_MPA_03(
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
-	xDone=> );
+	xDone=> ,
+	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
 	
 SATT_MPA_04(
 	ibInsertOK:= TRUE, 
@@ -40,7 +43,8 @@ SATT_MPA_04(
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
-	xDone=> );
+	xDone=> ,
+	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
 
 SATT_MPA_05(
 	ibInsertOK:= TRUE, 
@@ -49,7 +53,8 @@ SATT_MPA_05(
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
-	xDone=> );
+	xDone=> ,
+	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
 	
 SATT_MPA_06(
 	ibInsertOK:= TRUE, 
@@ -58,7 +63,8 @@ SATT_MPA_06(
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
-	xDone=> );
+	xDone=> ,
+	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
 	
 SATT_MPA_07(
 	ibInsertOK:= TRUE, 
@@ -67,7 +73,8 @@ SATT_MPA_07(
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
-	xDone=> );
+	xDone=> ,
+	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
 	
 SATT_MPA_08(
 	ibInsertOK:= TRUE, 
@@ -76,7 +83,8 @@ SATT_MPA_08(
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
-	xDone=> );	
+	xDone=> ,
+	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);	
 
 SATT_MPA_09(
 	ibInsertOK:= TRUE, 
@@ -85,7 +93,8 @@ SATT_MPA_09(
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
-	xDone=> );	
+	xDone=> ,
+	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);	
 
 (*
 MPA_321();
@@ -101,17 +110,30 @@ MPA_329(); *)]]></ST>
     <LineIds Name="PRG_SATT">
       <LineId Id="19" Count="6" />
       <LineId Id="18" Count="0" />
+      <LineId Id="138" Count="0" />
       <LineId Id="28" Count="0" />
       <LineId Id="30" Count="6" />
       <LineId Id="29" Count="0" />
+      <LineId Id="139" Count="0" />
       <LineId Id="37" Count="0" />
-      <LineId Id="39" Count="15" />
+      <LineId Id="39" Count="7" />
+      <LineId Id="140" Count="0" />
+      <LineId Id="47" Count="7" />
       <LineId Id="38" Count="0" />
+      <LineId Id="141" Count="0" />
       <LineId Id="91" Count="0" />
-      <LineId Id="93" Count="33" />
+      <LineId Id="93" Count="7" />
+      <LineId Id="142" Count="0" />
+      <LineId Id="101" Count="8" />
+      <LineId Id="143" Count="0" />
+      <LineId Id="110" Count="8" />
+      <LineId Id="144" Count="0" />
+      <LineId Id="119" Count="7" />
       <LineId Id="56" Count="0" />
+      <LineId Id="145" Count="0" />
       <LineId Id="127" Count="7" />
       <LineId Id="92" Count="0" />
+      <LineId Id="146" Count="0" />
       <LineId Id="26" Count="1" />
       <LineId Id="5" Count="0" />
       <LineId Id="7" Count="1" />
