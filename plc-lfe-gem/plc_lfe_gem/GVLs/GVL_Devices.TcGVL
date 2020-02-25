@@ -5,8 +5,8 @@
 	
 	(*Upstream Interface*)
 	(*Gauges*)
-	USG_GCC: FB_Gauge_Interface;
-	DSG_GCC: FB_Gauge_Interface;
+	USG_GCC: FB_TGCC_ADS;
+	DSG_GCC: FB_TGCC_ADS;
 	(*Valves*)
 	DSV_VGC: FB_Valve_Interface;
 	
@@ -96,7 +96,7 @@
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_01_EB_1 (EP2338-0002)]^Channel 1^Input;
 								 .i_xClsLS	:=	TIIB[L0S3_PNL_01_EB_1 (EP2338-0002)]^Channel 2^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_01_EB_1 (EP2338-0002)]^Channel 11^Output'}
-	GEM1_VGC_10: FB_VGC_AP;
+	GEM1_VGC_10: FB_VGC;
 	
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:VGC:20 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_01_EB_2 (EP2338-0002)]^Channel 1^Input;

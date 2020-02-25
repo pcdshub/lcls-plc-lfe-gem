@@ -34,7 +34,7 @@ END_VAR
 VAR
 	// PMPS
 	fbFF    :    FB_FastFault :=(
-        i_DevName := 'VGC',
+        i_DevName := 'MPA',
         i_Desc := 'Fault occurs when the device is moving',
         i_TypeCode := 16#1010);
 	(*Init*)
@@ -88,8 +88,8 @@ xDone := (q_stAct.bRetract_SW AND q_stAct.eState=RETRACTED) OR (q_stAct.eState=I
 	
 
 (*MPS FAULT*)
-(* When the valve  is open MPS is OK*)
-xMPS_OK := (q_stAct.eState=RETRACTED) OR (q_stAct.eState=INSERTED);//iq_stValve.i_xOpnLS; 
+(**)
+xMPS_OK := (q_stAct.eState=RETRACTED) OR (q_stAct.eState=INSERTED);
 
 
 (*PMPS PERMISSION*)

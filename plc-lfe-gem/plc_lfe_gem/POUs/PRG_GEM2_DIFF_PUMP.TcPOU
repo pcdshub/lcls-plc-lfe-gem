@@ -7,6 +7,7 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(*Gauges*)
+DSG_GCC(sNetId:='172.21.88.138.1.1' , nPort:=851 , sVarName:='GVL_Devices.AT2L0_SOLID_GCC_01',iWatchdog:=Main.iWatchdog,IG=> ); // Downstream Gauge from Down Stream PLC System
 (*EM2L0*)
 GEM2_GPI_30(PG=>);
 GEM2_GCC_30(PG:=GEM2_GPI_30.PG,IG=>);
@@ -37,7 +38,7 @@ GEM2_VGC_50(i_stUSG := GEM2_GCC_30.IG, i_stDSG:= GEM2_GCC_60.IG,i_xDis_DPIlk := 
 GEM2_VGC_60(i_stUSG := GEM2_GCC_60.IG, i_stDSG:= GEM2_GCC_70.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
 		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
 (*downstream isolation valve*)
-GEM2_VGC_70(i_stUSG := GEM2_GCC_70.IG, i_stDSG:= DSG_GCC.VG,i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE,
+GEM2_VGC_70(i_stUSG := GEM2_GCC_70.IG, i_stDSG:= DSG_GCC.IG,i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE,
 		i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
 DSV_VGC(VGC=>);
 
@@ -85,6 +86,7 @@ GEM2_PMF_60(xExtIlk:= TRUE, TurboIsOn:= (GEM2_PTM_60.iq_stPtm.q_RunDO OR GEM2_PT
     </Implementation>
     <LineIds Name="PRG_GEM2_DIFF_PUMP">
       <LineId Id="144" Count="0" />
+      <LineId Id="312" Count="0" />
       <LineId Id="253" Count="0" />
       <LineId Id="157" Count="15" />
       <LineId Id="180" Count="0" />

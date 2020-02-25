@@ -3,6 +3,7 @@
   <POU Name="MAIN" Id="{08fcf07b-a57e-4f6f-85ed-e3315e0ea5b4}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+		iWatchdog:UDINT;//The watchdog variable name written to by the remote plc
 END_VAR
 ]]></Declaration>
     <Implementation>

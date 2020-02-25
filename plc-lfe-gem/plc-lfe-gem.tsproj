@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.30">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
+			<BitSize>48</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>6</Elements>
+			</ArrayInfo>
+			<Format>
+				<Printf>%d.%d.%d.%d.%d.%d</Printf>
+				<Parameter>[0]</Parameter>
+				<Parameter>[1]</Parameter>
+				<Parameter>[2]</Parameter>
+				<Parameter>[3]</Parameter>
+				<Parameter>[4]</Parameter>
+				<Parameter>[5]</Parameter>
+			</Format>
+		</DataType>
+	</DataTypes>
 	<Project ProjectGUID="{5ED1C1A3-9ECF-4FA1-8D02-1402D5F5214D}" TargetNetId="172.21.88.32.1.1" ShowHideConfigurations="#x306">
 		<System>
 			<Tasks>
@@ -9,13 +29,2058 @@
 			</Tasks>
 		</System>
 		<Plc>
-			<Project File="plc_lfe_gem.xti"/>
+			<Project GUID="{EAAAC3F4-7664-4B99-B2B7-C742945A97BE}" Name="plc_lfe_gem" PrjFilePath="plc_lfe_gem\plc_lfe_gem.plcproj" TmcFilePath="plc_lfe_gem\plc_lfe_gem.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="plc_lfe_gem\plc_lfe_gem.tmc">
+					<Name>plc_lfe_gem Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>L2SI_Vacuum_Library.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+							<Comment>
+								<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
+							</Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>L2SI_Vacuum_Library.LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+							<Comment>
+								<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
+							</Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.DSV_VGC.i_xOpnLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.DSV_VGC.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GCC_10.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GPI_10.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GCC_20.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GPI_20.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GCC_30.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GPI_30.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GCC_50.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GPI_50.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GPI_11.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GPI_31.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GPI_51.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GPI_60.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GPI_61.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GPI_71.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GCM_41.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GCM_42.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_10.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_10.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_20.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_20.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_30.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_30.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_40.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_40.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_50.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_50.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_60.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_60.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_70.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_70.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_10.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_10.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_20.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_20.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_30.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_30.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_50.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_50.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_60.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_60.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_70.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_70.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PRO_60.i_xLocal</Name>
+							<Comment>
+								<![CDATA[ Input ]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PRO_60.i_xAlarm</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PRO_60.i_xWarning</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PRO_60.i_xIsRun</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PRO_70.i_xLocal</Name>
+							<Comment>
+								<![CDATA[ Input ]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PRO_70.i_xAlarm</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PRO_70.i_xWarning</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PRO_70.i_xIsRun</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_10.i_xSTART</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_10.i_xR1</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_10.i_xR2</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_10.i_xLSpd</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_10.i_iCurrentMon</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_10.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_10.i_xFault</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_20.i_xSTART</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_20.i_xR1</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_20.i_xR2</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_20.i_xLSpd</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_20.i_iCurrentMon</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_20.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_20.i_xFault</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_30.i_xSTART</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_30.i_xR1</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_30.i_xR2</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_30.i_xLSpd</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_30.i_iCurrentMon</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_30.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_30.i_xFault</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_50.i_xSTART</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_50.i_xR1</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_50.i_xR2</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_50.i_xLSpd</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_50.i_iCurrentMon</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_50.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_50.i_xFault</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GATT_GPI_10.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GATT_GMP_11.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GATT_GMP_10.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GATT_VRC_10.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GATT_VRC_10.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GPI_10.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GPI_11.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GPI_21.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GCC_30.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GPI_30.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GPI_31.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GCC_50.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GPI_50.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GPI_51.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GCC_60.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GPI_60.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GPI_61.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GCC_70.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GPI_70.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GCM_41.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GCM_42.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_10.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_10.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_20.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_20.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_30.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_30.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_40.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_40.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_50.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_50.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_60.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_60.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_70.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_70.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_30.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_30.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_50.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_50.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_60.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_60.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_70.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_70.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_10.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_10.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_20.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_20.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_30.i_xSTART</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_30.i_xR1</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_30.i_xR2</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_30.i_xLSpd</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_30.i_iCurrentMon</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_30.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_30.i_xFault</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_50.i_xSTART</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_50.i_xR1</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_50.i_xR2</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_50.i_xLSpd</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_50.i_iCurrentMon</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_50.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_50.i_xFault</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_60.i_xSTART</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_60.i_xR1</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_60.i_xR2</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_60.i_xLSpd</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_60.i_iCurrentMon</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_60.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_60.i_xFault</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_70.i_xSTART</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_70.i_xR1</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_70.i_xR2</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_70.i_xLSpd</Name>
+							<Comment>
+								<![CDATA[ 'TcLinkTo' (EL1088) ^Input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_70.i_iCurrentMon</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_70.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_70.i_xFault</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PRO_10.i_xLocal</Name>
+							<Comment>
+								<![CDATA[ Input ]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PRO_10.i_xAlarm</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PRO_10.i_xWarning</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PRO_10.i_xIsRun</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PRO_20.i_xLocal</Name>
+							<Comment>
+								<![CDATA[ Input ]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PRO_20.i_xAlarm</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PRO_20.i_xWarning</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PRO_20.i_xIsRun</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_01.i_xInsertedLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_01.i_xRetractedLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_02.i_xInsertedLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_02.i_xRetractedLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_03.i_xInsertedLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_03.i_xRetractedLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_04.i_xInsertedLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_04.i_xRetractedLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_05.i_xInsertedLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_05.i_xRetractedLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_06.i_xInsertedLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_06.i_xRetractedLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_07.i_xInsertedLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_07.i_xRetractedLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_08.i_xInsertedLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_08.i_xRetractedLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_09.i_xInsertedLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_09.i_xRetractedLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM1_AIR_1.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM1_AIR_2.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_N2_1.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_N2_2.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM1_GFM_41.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM1_GFM_42.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_GFM_41.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_GFM_42.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="2">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>GVL_Devices.GEM1_GCC_10.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GCC_20.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GCC_30.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_GCC_50.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VVC_40.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VCN_40.q_iRawPosition</Name>
+							<Comment>
+								<![CDATA[iResolution: INT :=16;
+ 
+IO]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_10.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_20.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_30.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_40.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_50.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_60.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_70.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_10.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_20.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_30.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_50.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_60.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VRC_70.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PRO_60.q_xRunDO</Name>
+							<Comment>
+								<![CDATA[ Output ]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PRO_60.q_xResetDo</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PRO_60.q_xLspdDo</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PRO_70.q_xRunDO</Name>
+							<Comment>
+								<![CDATA[ Output ]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PRO_70.q_xResetDo</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PRO_70.q_xLspdDo</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_10.q_RunDO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_10.q_xLSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_20.q_RunDO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_20.q_xLSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_30.q_RunDO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_30.q_xLSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_50.q_RunDO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PTM_50.q_xLSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VVC_20.q_xCLS_DO</Name>
+							<Comment>
+								<![CDATA[Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VVC_30.q_xCLS_DO</Name>
+							<Comment>
+								<![CDATA[Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VVC_50.q_xCLS_DO</Name>
+							<Comment>
+								<![CDATA[Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PMF_20.q_xRunDo</Name>
+							<Comment>
+								<![CDATA[Previous_RunSW : BOOL;
+ Digital Output to be linked]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PMF_30.q_xRunDo</Name>
+							<Comment>
+								<![CDATA[Previous_RunSW : BOOL;
+ Digital Output to be linked]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_PMF_50.q_xRunDo</Name>
+							<Comment>
+								<![CDATA[Previous_RunSW : BOOL;
+ Digital Output to be linked]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GATT_VCN_10.q_iRawPosition</Name>
+							<Comment>
+								<![CDATA[iResolution: INT :=16;
+ 
+IO]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GATT_VRC_10.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GATT_VVC_10.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GCC_30.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GCC_50.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GCC_60.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_GCC_70.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_10.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_20.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_30.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_40.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_50.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_60.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_70.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_30.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_50.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_60.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_70.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_10.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VRC_20.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VVC_30.q_xCLS_DO</Name>
+							<Comment>
+								<![CDATA[Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VVC_50.q_xCLS_DO</Name>
+							<Comment>
+								<![CDATA[Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VVC_70.q_xCLS_DO</Name>
+							<Comment>
+								<![CDATA[Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VVC_40.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VCN_40.q_iRawPosition</Name>
+							<Comment>
+								<![CDATA[iResolution: INT :=16;
+ 
+IO]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_30.q_RunDO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_30.q_xLSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_50.q_RunDO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_50.q_xLSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_60.q_RunDO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_60.q_xLSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_70.q_RunDO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PTM_70.q_xLSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PMF_30.q_xRunDo</Name>
+							<Comment>
+								<![CDATA[Previous_RunSW : BOOL;
+ Digital Output to be linked]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PMF_50.q_xRunDo</Name>
+							<Comment>
+								<![CDATA[Previous_RunSW : BOOL;
+ Digital Output to be linked]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PMF_60.q_xRunDo</Name>
+							<Comment>
+								<![CDATA[Previous_RunSW : BOOL;
+ Digital Output to be linked]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PRO_10.q_xRunDO</Name>
+							<Comment>
+								<![CDATA[ Output ]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PRO_10.q_xResetDo</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PRO_10.q_xLspdDo</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PRO_20.q_xRunDO</Name>
+							<Comment>
+								<![CDATA[ Output ]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PRO_20.q_xResetDo</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_PRO_20.q_xLspdDo</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_01.q_xInsert_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_01.q_xRetract_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_02.q_xInsert_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_02.q_xRetract_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_03.q_xInsert_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_03.q_xRetract_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_04.q_xInsert_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_04.q_xRetract_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_05.q_xInsert_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_05.q_xRetract_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_06.q_xInsert_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_06.q_xRetract_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_07.q_xInsert_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_07.q_xRetract_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_08.q_xInsert_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_08.q_xRetract_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_09.q_xInsert_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.SATT_MPA_09.q_xRetract_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_ILK.g_FastFaultOutput1.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_ILK.g_FastFaultOutput2.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="8">
+						<Name>PlcTask Retains</Name>
+						<Var>
+							<Name>PMPS_GVL.SuccessfulPreemption</Name>
+							<Comment>
+								<![CDATA[ Any time BPTM applies a new BP request which is confirmed]]>
+							</Comment>
+							<Type>ULINT</Type>
+							<InOut>7</InOut>
+						</Var>
+						<Var>
+							<Name>PMPS_GVL.AccumulatedFF</Name>
+							<Comment>
+								<![CDATA[ Any time a FF occurs]]>
+							</Comment>
+							<Type>ULINT</Type>
+							<InOut>7</InOut>
+						</Var>
+					</Vars>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
 		</Plc>
 		<Io>
 			<Device File="EMxL0 (EtherCAT).xti" Id="3"/>
 		</Io>
 	</Project>
 	<Mappings>
-		<MappingInfo Identifier="{00000000-2001-0850-0020-500850000403}" Id="#x02030010"/>
+		<OwnerA Name="TIPC^plc_lfe_gem^plc_lfe_gem Instance">
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_MKS (EK1100)^MKS_E1 (EL3064)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GCC_10.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GCC_20.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GPI_10.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_MKS (EK1100)^MKS_E10 (EL3064)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GCC_50.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GCC_60.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GPI_50.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_MKS (EK1100)^MKS_E11 (EL3064)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GPI_60.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_MKS (EK1100)^MKS_E12 (EL2794)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_GCC_50.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_GCC_60.q_xHV_DIS" VarB="Channel 2^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_MKS (EK1100)^MKS_E13 (EL3064)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GCC_70.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GPI_70.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_MKS (EK1100)^MKS_E14 (EL3064)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GPI_60.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_MKS (EK1100)^MKS_E15 (EL2794)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_GCC_70.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_MKS (EK1100)^MKS_E2 (EL3064)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GPI_20.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_MKS (EK1100)^MKS_E3 (EL2794)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_GCC_10.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_GCC_20.q_xHV_DIS" VarB="Channel 2^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_MKS (EK1100)^MKS_E4 (EL3064)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GCC_30.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GCC_50.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GPI_30.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_MKS (EK1100)^MKS_E5 (EL3064)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GPI_50.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_MKS (EK1100)^MKS_E6 (EL2794)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_GCC_30.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_GCC_50.q_xHV_DIS" VarB="Channel 2^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_MKS (EK1100)^MKS_E7 (EL3064)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GATT_GPI_10.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GCC_30.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GPI_10.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GPI_30.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_MKS (EK1100)^MKS_E9 (EL2794)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_GCC_30.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_01_EB_1 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VGC_10.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VGC_10.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VRC_10.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VRC_10.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VGC_10.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VRC_10.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_01_EB_2 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VGC_20.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VGC_20.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VGC_30.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VGC_30.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VGC_20.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VGC_30.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_01_EB_3 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VRC_20.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VRC_20.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VRC_20.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VVC_20.q_xCLS_DO" VarB="Channel 11^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_01_EB_4 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VRC_30.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VRC_30.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VRC_30.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VVC_30.q_xCLS_DO" VarB="Channel 11^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_01_EB_5 (EP3174-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GPI_11.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GPI_31.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_02_EB_1 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VGC_40.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VGC_40.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VGC_50.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VGC_50.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VGC_40.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VGC_50.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_02_EB_2 (EP2338-0002)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VVC_40.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_02_EB_3 (EP4374-0002)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VCN_40.q_iRawPosition" VarB="AO Outputs Channel 4^Analog output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_02_EB_4 (EP3174-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GCM_41.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GCM_42.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_03_EB_1 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VGC_60.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VGC_60.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VRC_50.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VRC_50.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VGC_60.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VRC_50.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_03_EB_2 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VRC_60.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VRC_60.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VRC_60.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VVC_50.q_xCLS_DO" VarB="Channel 11^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_03_EB_3 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VGC_70.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VGC_70.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VRC_70.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_VRC_70.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VGC_70.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_VRC_70.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_03_EB_4 (EP3174-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GPI_51.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_03_EB_5 (EP3174-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GPI_61.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_GPI_71.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_03_EB_6 (EP2624-0002)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PRO_60.q_xLspdDo" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PRO_60.q_xResetDo" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PRO_60.q_xRunDO" VarB="Channel 1^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_03_EB_7 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PRO_60.i_xAlarm" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PRO_60.i_xIsRun" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PRO_60.i_xLocal" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PRO_60.i_xWarning" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PMF_20.q_xRunDo" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PMF_30.q_xRunDo" VarB="Channel 12^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PMF_50.q_xRunDo" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_03_EB_8 (EP2624-0002)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PRO_70.q_xLspdDo" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PRO_70.q_xResetDo" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PRO_70.q_xRunDO" VarB="Channel 1^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S3_PNL_03_EB_9 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PRO_70.i_xAlarm" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PRO_70.i_xIsRun" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PRO_70.i_xLocal" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PRO_70.i_xWarning" VarB="Channel 5^Input" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_01_EB_1 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VGC_10.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VGC_10.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VGC_20.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VGC_20.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VGC_10.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VGC_20.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_01_EB_2 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VRC_10.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VRC_10.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VRC_20.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VRC_20.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VRC_10.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VRC_20.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_01_EB_3 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VRC_30.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VRC_30.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VRC_30.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VVC_30.q_xCLS_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_01_EB_4 (EP3174-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GPI_11.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GPI_21.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GPI_31.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_01_EB_6 (EP2624-0002)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PRO_10.q_xLspdDo" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PRO_10.q_xResetDo" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PRO_10.q_xRunDO" VarB="Channel 1^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_01_EB_7 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PRO_10.i_xAlarm" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PRO_10.i_xIsRun" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PRO_10.i_xLocal" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PRO_10.i_xWarning" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PMF_30.q_xRunDo" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PMF_50.q_xRunDo" VarB="Channel 12^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PMF_60.q_xRunDo" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_01_EB_8 (EP2624-0002)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PRO_20.q_xLspdDo" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PRO_20.q_xResetDo" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PRO_20.q_xRunDO" VarB="Channel 1^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_01_EB_9 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PRO_20.i_xAlarm" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PRO_20.i_xIsRun" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PRO_20.i_xLocal" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PRO_20.i_xWarning" VarB="Channel 5^Input" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_02_EB_1 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VGC_30.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VGC_30.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VGC_40.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VGC_40.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VGC_30.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VGC_40.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_02_EB_2 (EP2338-0002)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VVC_40.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_02_EB_3 (EP4374-0002)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VCN_40.q_iRawPosition" VarB="AO Outputs Channel 4^Analog output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_02_EB_4 (EP3174-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GCM_41.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GCM_42.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_03_EB_1 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VGC_50.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VGC_50.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VRC_50.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VRC_50.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VGC_50.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VRC_50.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_03_EB_2 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VRC_60.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VRC_60.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VRC_70.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VRC_70.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VRC_60.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VRC_70.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_03_EB_3 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VGC_60.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VGC_60.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VGC_70.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_VGC_70.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VGC_60.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VGC_70.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_03_EB_4 (EP2338-0002)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VVC_50.q_xCLS_DO" VarB="Channel 15^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_VVC_70.q_xCLS_DO" VarB="Channel 16^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_03_EB_6 (EP3174-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GPI_51.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_GPI_61.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_1 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GATT_VRC_10.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GATT_VRC_10.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GATT_VRC_10.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GATT_VVC_10.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_2 (EP3174-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GATT_GMP_10.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_3 (EP4374-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GATT_GMP_11.i_iPRESS_R" VarB="AI Inputs Channel 1^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_01.i_xInsertedLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_01.i_xRetractedLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_02.i_xInsertedLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_02.i_xRetractedLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_01.q_xInsert_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_02.q_xInsert_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_03.i_xInsertedLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_03.i_xRetractedLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_04.i_xInsertedLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_04.i_xRetractedLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_03.q_xInsert_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_04.q_xInsert_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_05.i_xInsertedLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_05.i_xRetractedLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_06.i_xInsertedLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_06.i_xRetractedLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_05.q_xInsert_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_06.q_xInsert_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_07.i_xInsertedLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_07.i_xRetractedLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_08.i_xInsertedLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_08.i_xRetractedLS" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_07.q_xRetract_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_08.q_xRetract_DO" VarB="Channel 15^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_8 (EP2338-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_09.i_xInsertedLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_09.i_xRetractedLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_09.q_xRetract_DO" VarB="Channel 11^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_1 (EL2088)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PTM_10.q_RunDO" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PTM_20.q_RunDO" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PTM_30.q_RunDO" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PTM_50.q_RunDO" VarB="Channel 4^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_2 (EL1088)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_10.i_xFault" VarB="Channel 4^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_10.i_xLSpd" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_10.i_xR1" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_10.i_xSTART" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_20.i_xFault" VarB="Channel 8^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_20.i_xLSpd" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_20.i_xR1" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_20.i_xSTART" VarB="Channel 7^Input" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_3 (EL1088)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_30.i_xFault" VarB="Channel 4^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_30.i_xLSpd" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_30.i_xR1" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_30.i_xSTART" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_50.i_xFault" VarB="Channel 8^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_50.i_xLSpd" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_50.i_xR1" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_50.i_xSTART" VarB="Channel 7^Input" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_4 (EL2088)">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PTM_30.q_RunDO" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PTM_50.q_RunDO" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PTM_60.q_RunDO" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PTM_70.q_RunDO" VarB="Channel 4^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_5 (EL1088)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_30.i_xFault" VarB="Channel 4^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_30.i_xLSpd" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_30.i_xR1" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_30.i_xSTART" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_50.i_xFault" VarB="Channel 8^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_50.i_xLSpd" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_50.i_xR1" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_50.i_xSTART" VarB="Channel 7^Input" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_6 (EL1088)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_60.i_xFault" VarB="Channel 4^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_60.i_xLSpd" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_60.i_xR1" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_60.i_xSTART" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_70.i_xFault" VarB="Channel 8^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_70.i_xLSpd" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_70.i_xR1" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_70.i_xSTART" VarB="Channel 7^Input" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_FFO">
+				<Link VarA="PlcTask Outputs^GVL_ILK.g_FastFaultOutput1.q_xFastFaultOut" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_ILK.g_FastFaultOutput2.q_xFastFaultOut" VarB="Channel 2^Output" AutoLink="true"/>
+			</OwnerB>
+		</OwnerA>
 	</Mappings>
 </TcSmProject>

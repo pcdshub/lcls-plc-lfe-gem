@@ -4,13 +4,13 @@
     <Declaration><![CDATA[VAR_GLOBAL
 	
 	{attribute 'pytmc' := '
-    pv: plc:lfe:gatt:FF1
+    pv: plc:lfe:gem:FF1
     '}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
     g_FastFaultOutput1  :   FB_HardwareFFOutput;
 	
 	{attribute 'pytmc' := '
-    pv: plc:lfe:gatt:FF2
+    pv: plc:lfe:gem:FF2
     '}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
     g_FastFaultOutput2  :   FB_HardwareFFOutput;

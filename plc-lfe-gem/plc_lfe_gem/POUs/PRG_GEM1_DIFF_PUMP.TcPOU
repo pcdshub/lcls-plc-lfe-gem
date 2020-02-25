@@ -7,7 +7,8 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(*Gauges*)
-DSG_GCC(VG=>); // Downstream Gauge from Down Stream PLC System
+USG_GCC(sNetId:='172.21.88.138.1.1' , nPort:=851 , sVarName:='GVL_Devices.SL1L0_POWER_GCC_01',iWatchdog:=Main.iWatchdog,IG=> );
+
 GEM1_GPI_10(PG=>);
 GEM1_GCC_10(PG:=GEM1_GPI_10.PG,IG=>);
 GEM1_GPI_20(PG=>);
@@ -25,7 +26,7 @@ GEM1_GPI_51(PG=>);
  (* to Include PMPS ILK with the EXTILK bit*)
 (*apperture valves*)
 
-GEM1_VGC_10(i_stUSG := USG_GCC.VG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+GEM1_VGC_10(i_stUSG := USG_GCC.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
 		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
 GEM1_VGC_20(i_stUSG := GEM1_GCC_10.IG, i_stDSG:= GEM1_GCC_20.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
 		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
@@ -52,9 +53,9 @@ GEM1_VVC_20(i_stPTM :=GEM1_PTM_20.iq_stPtm);
 GEM1_VVC_30(i_stPTM :=GEM1_PTM_30.iq_stPtm);
 GEM1_VVC_50(i_stPTM :=GEM1_PTM_50.iq_stPtm);
 (*This part was added to Close all the Turbo's NO vent valves, These valves are capped off, and wont be in use*)
-//GEM1_VVC_20.M_Close(TRUE);
-//GEM1_VVC_30.M_Close(TRUE);
-//GEM1_VVC_50.M_Close(TRUE);
+GEM1_VVC_20.M_Close(TRUE);
+GEM1_VVC_30.M_Close(TRUE);
+GEM1_VVC_50.M_Close(TRUE);
 
 
 (*Turbo Isolation valves*)
@@ -79,7 +80,9 @@ GEM1_PMF_50(xExtIlk:= TRUE, TurboIsOn:= GEM1_PTM_50.iq_stPtm.q_RunDO);
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_GEM1_DIFF_PUMP">
-      <LineId Id="6" Count="11" />
+      <LineId Id="6" Count="0" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="7" Count="10" />
       <LineId Id="5" Count="0" />
       <LineId Id="19" Count="3" />
       <LineId Id="18" Count="0" />

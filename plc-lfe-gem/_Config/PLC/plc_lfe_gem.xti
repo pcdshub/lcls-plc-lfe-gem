@@ -41,36 +41,6 @@
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Devices.USG_GCC.i_rPRESS</Name>
-					<Comment>
-						<![CDATA[This is the human-readable pressure]]>
-					</Comment>
-					<Type>REAL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Devices.USG_GCC.i_xAT_VAC</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Devices.USG_GCC.i_xPRESS_OK</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Devices.DSG_GCC.i_rPRESS</Name>
-					<Comment>
-						<![CDATA[This is the human-readable pressure]]>
-					</Comment>
-					<Type>REAL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Devices.DSG_GCC.i_xAT_VAC</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Devices.DSG_GCC.i_xPRESS_OK</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_Devices.DSV_VGC.i_xOpnLS</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -2089,6 +2059,18 @@ IO]]>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_60.i_xR1" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_60.i_xSTART" VarB="Channel 3^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_70.i_xFault" VarB="Channel 8^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_70.i_xLSpd" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_70.i_xR1" VarB="Channel 5^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_70.i_xSTART" VarB="Channel 7^Input" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_FFO">
+				<Link VarA="PlcTask Outputs^GVL_ILK.g_FastFaultOutput1.q_xFastFaultOut" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_ILK.g_FastFaultOutput2.q_xFastFaultOut" VarB="Channel 2^Output" AutoLink="true"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmItem>
+2_PTM_70.i_xFault" VarB="Channel 8^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_70.i_xLSpd" VarB="Channel 6^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_70.i_xR1" VarB="Channel 5^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_70.i_xSTART" VarB="Channel 7^Input" AutoLink="true"/>
