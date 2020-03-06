@@ -61,16 +61,16 @@ GEM2_VVC_70.M_Close(TRUE);
 (*Turbo Pumps*)
 GEM2_PTM_30(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_30.iq_stPtm, GEM2_GPI_31.PG,
 						GEM2_GPI_30.PG,GEM2_VVC_30.q_stValve,GEM2_PMF_30.iq_stPFO),
-		i_stGauge:=GEM2_GPI_31.PG,i_rMaxBackingPressure :=0.01);
+		i_stGauge:=GEM2_GPI_31.PG,i_rMaxBackingPressure :=0.6);
 GEM2_PTM_50(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_50.iq_stPtm, GEM2_GPI_51.PG,
 						GEM2_GPI_50.PG,GEM2_VVC_50.q_stValve,GEM2_PMF_50.iq_stPFO),
-		i_stGauge:=GEM2_GPI_51.PG,i_rMaxBackingPressure :=0.01);
+		i_stGauge:=GEM2_GPI_51.PG,i_rMaxBackingPressure :=0.6);
 GEM2_PTM_60(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_60.iq_stPtm, GEM2_GPI_61.PG,
 						GEM2_GPI_60.PG,GEM2_VVC_70.q_stValve,GEM2_PMF_60.iq_stPFO),
-		i_stGauge:=GEM2_GPI_61.PG,i_rMaxBackingPressure :=0.01);
+		i_stGauge:=GEM2_GPI_61.PG,i_rMaxBackingPressure :=0.4);
 GEM2_PTM_70(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_70.iq_stPtm, GEM2_GPI_61.PG,
 						GEM2_GPI_70.PG,GEM2_VVC_70.q_stValve,GEM2_PMF_60.iq_stPFO),
-		i_stGauge:=GEM2_GPI_61.PG,i_rMaxBackingPressure :=0.01);
+		i_stGauge:=GEM2_GPI_61.PG,i_rMaxBackingPressure :=0.4);
 
 (*Roughing pumps*)
 GEM2_PMF_30(xExtIlk:= TRUE, TurboIsOn:= GEM2_PTM_30.iq_stPtm.q_RunDO); 

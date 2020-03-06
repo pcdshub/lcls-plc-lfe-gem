@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_Control" Id="{6d2a29ed-0dfc-4be1-ad02-3e5984113bf6}">
     <Declaration><![CDATA[VAR_GLOBAL
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:SP '}
-	fGEM1SetpointValue : REAL:=0.001;
+	fGEM1SetpointValue : REAL:=0;
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:SP '}
-	fGEM2SetpointValue : REAL:=0.001;
+	fGEM2SetpointValue : REAL:=0;
 	
 	
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:GO '}
