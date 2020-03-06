@@ -26,7 +26,7 @@ GEM1_GPI_51(PG=>);
  (* to Include PMPS ILK with the EXTILK bit*)
 (*apperture valves*)
 
-GEM1_VGC_10(i_stUSG := USG_GCC.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+GEM1_VGC_10(i_stUSG := USG_GCC.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE,
 		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
 GEM1_VGC_20(i_stUSG := GEM1_GCC_10.IG, i_stDSG:= GEM1_GCC_20.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
 		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
