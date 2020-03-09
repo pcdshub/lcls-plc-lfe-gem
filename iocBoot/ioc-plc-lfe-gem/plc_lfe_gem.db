@@ -167,6 +167,122 @@ record(ao, "EM1L0:GEM:CNTRL:Tn2") {
   info(autosaveFields_pass0, "PREC VAL")
 }
 
+record(bi, "EM2L0:GEM:CNTRL:RESET_RBV") {
+  field(DESC, "ads:PRG_GEM2.bReset")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_GEM2.bReset?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM2L0:GEM:CNTRL:RESET") {
+  field(DESC, "ads:PRG_GEM2.bReset")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_GEM2.bReset=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2L0:GEM:CNTRL:ERROR_RBV") {
+  field(DESC, "ads:PRG_GEM2.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_GEM2.bError?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM2L0:GEM:CNTRL:ERROR") {
+  field(DESC, "ads:PRG_GEM2.bError")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_GEM2.bError=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(ai, "EM2L0:GEM:CNTRL:Kp1_RBV") {
+  field(DESC, "ads:PRG_GEM2.fKp1")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_GEM2.fKp1?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "EM2L0:GEM:CNTRL:Kp1") {
+  field(DESC, "ads:PRG_GEM2.fKp1")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_GEM2.fKp1=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "EM2L0:GEM:CNTRL:Tn1_RBV") {
+  field(DESC, "ads:PRG_GEM2.fTn1")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_GEM2.fTn1?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "EM2L0:GEM:CNTRL:Tn1") {
+  field(DESC, "ads:PRG_GEM2.fTn1")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_GEM2.fTn1=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "EM2L0:GEM:CNTRL:Kp2_RBV") {
+  field(DESC, "ads:PRG_GEM2.fKp2")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_GEM2.fKp2?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "EM2L0:GEM:CNTRL:Kp2") {
+  field(DESC, "ads:PRG_GEM2.fKp2")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_GEM2.fKp2=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
+record(ai, "EM2L0:GEM:CNTRL:Tn2_RBV") {
+  field(DESC, "ads:PRG_GEM2.fTn2")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_GEM2.fTn2?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
+record(ao, "EM2L0:GEM:CNTRL:Tn2") {
+  field(DESC, "ads:PRG_GEM2.fTn2")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_GEM2.fTn2=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC VAL")
+}
+
 record(bi, "EM1L0:GEM:CNTRL:GO_RBV") {
   field(DESC, "ads:GVL_Control.GEM1_GO")
   field(SCAN, "I/O Intr")
@@ -182,6 +298,26 @@ record(bo, "EM1L0:GEM:CNTRL:GO") {
   field(DESC, "ads:GVL_Control.GEM1_GO")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Control.GEM1_GO=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM2L0:GEM:CNTRL:GO_RBV") {
+  field(DESC, "ads:GVL_Control.GEM2_GO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Control.GEM2_GO?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM2L0:GEM:CNTRL:GO") {
+  field(DESC, "ads:GVL_Control.GEM2_GO")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Control.GEM2_GO=")
   field(ZNAM, "Zero")
   field(ONAM, "One")
   info(autosaveFields_pass0, "VAL")
@@ -223,86 +359,6 @@ record(ao, "EM2L0:GEM:CNTRL:SP") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Control.fGEM2SetpointValue=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
-}
-
-record(bi, "EM2L0:GEM:CNTRL:GO_RBV") {
-  field(DESC, "ads:GVL_Control.GEM2_GO")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Control.GEM2_GO?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "EM2L0:GEM:CNTRL:GO") {
-  field(DESC, "ads:GVL_Control.GEM2_GO")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Control.GEM2_GO=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "PLC:LFE:GEM:FF_RESET_RBV") {
-  field(DESC, "ads:GVL_ILK.xFastFaultReset")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ILK.xFastFaultReset?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "PLC:LFE:GEM:FF_RESET") {
-  field(DESC, "ads:GVL_ILK.xFastFaultReset")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ILK.xFastFaultReset=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "EM1L0:GEM:VAC:OVRDON_RBV") {
-  field(DESC, "ads:GVL_ILK.xGEM1OverrideMode")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ILK.xGEM1OverrideMode?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "EM1L0:GEM:VAC:OVRDON") {
-  field(DESC, "ads:GVL_ILK.xGEM1OverrideMode")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ILK.xGEM1OverrideMode=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
-}
-
-record(bi, "AT1L0:GAS:VAC:OVRDON_RBV") {
-  field(DESC, "ads:GVL_ILK.xGATTOverrideMode")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ILK.xGATTOverrideMode?")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-}
-
-record(bo, "AT1L0:GAS:VAC:OVRDON") {
-  field(DESC, "ads:GVL_ILK.xGATTOverrideMode")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ILK.xGATTOverrideMode=")
-  field(ZNAM, "Zero")
-  field(ONAM, "One")
-  info(autosaveFields_pass0, "VAL")
 }
 
 record(ai, "EM1L0:GEM:GCC:10:PRESS_RBV") {
@@ -3762,7 +3818,7 @@ record(ai, "EM1L0:GEM:VCN:40:POS_RDBK_RBV") {
   info(autosaveFields_pass0, "PREC")
 }
 
-record(longin, "EM1L0:GEM:VCN:40:POS_AO_RBV") {
+record(longin, "EM1L0:GEM:VCN:40:POS_AO_R_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...CN.q_iRawPosition")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -3831,6 +3887,17 @@ record(mbbo, "EM1L0:GEM:VCN:40:STATE") {
   field(THST, "ManualControl")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VCN_40.iq_stVCN.eValveControl=")
   info(autosaveFields_pass0, "VAL")
+}
+
+record(ai, "EM1L0:GEM:VCN:40:POS_AO_RBV") {
+  field(DESC, "ads:GVL_Devices.GEM1_VCN_40.rReqVoltage")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Devices.GEM1_VCN_40.rReqVoltage?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
 }
 
 record(bi, "EM1L0:GEM:VGC:10:Dis_DPIlk_RBV") {
@@ -7067,7 +7134,7 @@ record(bo, "EM1L0:GEM:VGC:70:MPS_FAULT_OK") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:10:EXT_ILK_OK_RBV") {
+record(bi, "EM1L0:GEM:VRC:10:EXT_ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1_VRC_10.i_xExtILK_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7078,7 +7145,7 @@ record(bi, "EM1L0:GAS:VRC:10:EXT_ILK_OK_RBV") {
   field(ONAM, "OK")
 }
 
-record(bi, "EM1L0:GAS:VRC:10:OPN_DI_RBV") {
+record(bi, "EM1L0:GEM:VRC:10:OPN_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1..._stValve.i_xOpnLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7089,7 +7156,7 @@ record(bi, "EM1L0:GAS:VRC:10:OPN_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:10:CLS_DI_RBV") {
+record(bi, "EM1L0:GEM:VRC:10:CLS_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1..._stValve.i_xClsLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7100,7 +7167,7 @@ record(bi, "EM1L0:GAS:VRC:10:CLS_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(mbbi, "EM1L0:GAS:VRC:10:POS_STATE_RBV") {
+record(mbbi, "EM1L0:GEM:VRC:10:POS_STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...iq_stValve.eState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7117,7 +7184,7 @@ record(mbbi, "EM1L0:GAS:VRC:10:POS_STATE_RBV") {
   field(THST, "INVALID")
 }
 
-record(mbbi, "EM1L0:GAS:VRC:10:STATE_RBV") {
+record(mbbi, "EM1L0:GEM:VRC:10:STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...tValve.eVGC_State")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7136,7 +7203,7 @@ record(mbbi, "EM1L0:GAS:VRC:10:STATE_RBV") {
   field(FRST, "Ext Fault")
 }
 
-record(bi, "EM1L0:GAS:VRC:10:OPN_SW_RBV") {
+record(bi, "EM1L0:GEM:VRC:10:OPN_SW_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...tValve.pv_xOPN_SW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7147,7 +7214,7 @@ record(bi, "EM1L0:GAS:VRC:10:OPN_SW_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bo, "EM1L0:GAS:VRC:10:OPN_SW") {
+record(bo, "EM1L0:GEM:VRC:10:OPN_SW") {
   field(DESC, "ads:GVL_Devices.GEM1...tValve.pv_xOPN_SW")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_10.iq_stValve.pv_xOPN_SW=")
@@ -7156,7 +7223,7 @@ record(bo, "EM1L0:GAS:VRC:10:OPN_SW") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:10:FORCE_OPN_RBV") {
+record(bi, "EM1L0:GEM:VRC:10:FORCE_OPN_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...Valve.pv_xOvrdOpn")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7167,7 +7234,7 @@ record(bi, "EM1L0:GAS:VRC:10:FORCE_OPN_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM1L0:GAS:VRC:10:FORCE_OPN") {
+record(bo, "EM1L0:GEM:VRC:10:FORCE_OPN") {
   field(DESC, "ads:GVL_Devices.GEM1...Valve.pv_xOvrdOpn")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_10.iq_stValve.pv_xOvrdOpn=")
@@ -7176,7 +7243,7 @@ record(bo, "EM1L0:GAS:VRC:10:FORCE_OPN") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:10:OVRD_ON_RBV") {
+record(bi, "EM1L0:GEM:VRC:10:OVRD_ON_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.xOverrideMode")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7187,7 +7254,7 @@ record(bi, "EM1L0:GAS:VRC:10:OVRD_ON_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM1L0:GAS:VRC:10:OVRD_ON") {
+record(bo, "EM1L0:GEM:VRC:10:OVRD_ON") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.xOverrideMode")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_10.iq_stValve.xOverrideMode=")
@@ -7196,7 +7263,7 @@ record(bo, "EM1L0:GAS:VRC:10:OVRD_ON") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:10:OPN_OK_RBV") {
+record(bi, "EM1L0:GEM:VRC:10:OPN_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...q_stValve.xOPN_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7207,7 +7274,7 @@ record(bi, "EM1L0:GAS:VRC:10:OPN_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:10:CLS_OK_RBV") {
+record(bi, "EM1L0:GEM:VRC:10:CLS_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...q_stValve.xCLS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7218,7 +7285,7 @@ record(bi, "EM1L0:GAS:VRC:10:CLS_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:10:OPN_DO_RBV") {
+record(bi, "EM1L0:GEM:VRC:10:OPN_DO_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...stValve.q_xOPN_DO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7229,7 +7296,7 @@ record(bi, "EM1L0:GAS:VRC:10:OPN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:10:ERROR_RBV") {
+record(bi, "EM1L0:GEM:VRC:10:ERROR_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.bErrorPresent")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7240,7 +7307,7 @@ record(bi, "EM1L0:GAS:VRC:10:ERROR_RBV") {
   field(ONAM, "ERROR PRESENT")
 }
 
-record(bo, "EM1L0:GAS:VRC:10:ERROR") {
+record(bo, "EM1L0:GEM:VRC:10:ERROR") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.bErrorPresent")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_10.iq_stValve.bErrorPresent=")
@@ -7249,7 +7316,7 @@ record(bo, "EM1L0:GAS:VRC:10:ERROR") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:20:EXT_ILK_OK_RBV") {
+record(bi, "EM1L0:GEM:VRC:20:EXT_ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1_VRC_20.i_xExtILK_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7260,7 +7327,7 @@ record(bi, "EM1L0:GAS:VRC:20:EXT_ILK_OK_RBV") {
   field(ONAM, "OK")
 }
 
-record(bi, "EM1L0:GAS:VRC:20:OPN_DI_RBV") {
+record(bi, "EM1L0:GEM:VRC:20:OPN_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1..._stValve.i_xOpnLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7271,7 +7338,7 @@ record(bi, "EM1L0:GAS:VRC:20:OPN_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:20:CLS_DI_RBV") {
+record(bi, "EM1L0:GEM:VRC:20:CLS_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1..._stValve.i_xClsLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7282,7 +7349,7 @@ record(bi, "EM1L0:GAS:VRC:20:CLS_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(mbbi, "EM1L0:GAS:VRC:20:POS_STATE_RBV") {
+record(mbbi, "EM1L0:GEM:VRC:20:POS_STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...iq_stValve.eState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7299,7 +7366,7 @@ record(mbbi, "EM1L0:GAS:VRC:20:POS_STATE_RBV") {
   field(THST, "INVALID")
 }
 
-record(mbbi, "EM1L0:GAS:VRC:20:STATE_RBV") {
+record(mbbi, "EM1L0:GEM:VRC:20:STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...tValve.eVGC_State")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7318,7 +7385,7 @@ record(mbbi, "EM1L0:GAS:VRC:20:STATE_RBV") {
   field(FRST, "Ext Fault")
 }
 
-record(bi, "EM1L0:GAS:VRC:20:OPN_SW_RBV") {
+record(bi, "EM1L0:GEM:VRC:20:OPN_SW_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...tValve.pv_xOPN_SW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7329,7 +7396,7 @@ record(bi, "EM1L0:GAS:VRC:20:OPN_SW_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bo, "EM1L0:GAS:VRC:20:OPN_SW") {
+record(bo, "EM1L0:GEM:VRC:20:OPN_SW") {
   field(DESC, "ads:GVL_Devices.GEM1...tValve.pv_xOPN_SW")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_20.iq_stValve.pv_xOPN_SW=")
@@ -7338,7 +7405,7 @@ record(bo, "EM1L0:GAS:VRC:20:OPN_SW") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:20:FORCE_OPN_RBV") {
+record(bi, "EM1L0:GEM:VRC:20:FORCE_OPN_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...Valve.pv_xOvrdOpn")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7349,7 +7416,7 @@ record(bi, "EM1L0:GAS:VRC:20:FORCE_OPN_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM1L0:GAS:VRC:20:FORCE_OPN") {
+record(bo, "EM1L0:GEM:VRC:20:FORCE_OPN") {
   field(DESC, "ads:GVL_Devices.GEM1...Valve.pv_xOvrdOpn")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_20.iq_stValve.pv_xOvrdOpn=")
@@ -7358,7 +7425,7 @@ record(bo, "EM1L0:GAS:VRC:20:FORCE_OPN") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:20:OVRD_ON_RBV") {
+record(bi, "EM1L0:GEM:VRC:20:OVRD_ON_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.xOverrideMode")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7369,7 +7436,7 @@ record(bi, "EM1L0:GAS:VRC:20:OVRD_ON_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM1L0:GAS:VRC:20:OVRD_ON") {
+record(bo, "EM1L0:GEM:VRC:20:OVRD_ON") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.xOverrideMode")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_20.iq_stValve.xOverrideMode=")
@@ -7378,7 +7445,7 @@ record(bo, "EM1L0:GAS:VRC:20:OVRD_ON") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:20:OPN_OK_RBV") {
+record(bi, "EM1L0:GEM:VRC:20:OPN_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...q_stValve.xOPN_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7389,7 +7456,7 @@ record(bi, "EM1L0:GAS:VRC:20:OPN_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:20:CLS_OK_RBV") {
+record(bi, "EM1L0:GEM:VRC:20:CLS_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...q_stValve.xCLS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7400,7 +7467,7 @@ record(bi, "EM1L0:GAS:VRC:20:CLS_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:20:OPN_DO_RBV") {
+record(bi, "EM1L0:GEM:VRC:20:OPN_DO_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...stValve.q_xOPN_DO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7411,7 +7478,7 @@ record(bi, "EM1L0:GAS:VRC:20:OPN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:20:ERROR_RBV") {
+record(bi, "EM1L0:GEM:VRC:20:ERROR_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.bErrorPresent")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7422,7 +7489,7 @@ record(bi, "EM1L0:GAS:VRC:20:ERROR_RBV") {
   field(ONAM, "ERROR PRESENT")
 }
 
-record(bo, "EM1L0:GAS:VRC:20:ERROR") {
+record(bo, "EM1L0:GEM:VRC:20:ERROR") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.bErrorPresent")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_20.iq_stValve.bErrorPresent=")
@@ -7431,7 +7498,7 @@ record(bo, "EM1L0:GAS:VRC:20:ERROR") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:30:EXT_ILK_OK_RBV") {
+record(bi, "EM1L0:GEM:VRC:30:EXT_ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1_VRC_30.i_xExtILK_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7442,7 +7509,7 @@ record(bi, "EM1L0:GAS:VRC:30:EXT_ILK_OK_RBV") {
   field(ONAM, "OK")
 }
 
-record(bi, "EM1L0:GAS:VRC:30:OPN_DI_RBV") {
+record(bi, "EM1L0:GEM:VRC:30:OPN_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1..._stValve.i_xOpnLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7453,7 +7520,7 @@ record(bi, "EM1L0:GAS:VRC:30:OPN_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:30:CLS_DI_RBV") {
+record(bi, "EM1L0:GEM:VRC:30:CLS_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1..._stValve.i_xClsLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7464,7 +7531,7 @@ record(bi, "EM1L0:GAS:VRC:30:CLS_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(mbbi, "EM1L0:GAS:VRC:30:POS_STATE_RBV") {
+record(mbbi, "EM1L0:GEM:VRC:30:POS_STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...iq_stValve.eState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7481,7 +7548,7 @@ record(mbbi, "EM1L0:GAS:VRC:30:POS_STATE_RBV") {
   field(THST, "INVALID")
 }
 
-record(mbbi, "EM1L0:GAS:VRC:30:STATE_RBV") {
+record(mbbi, "EM1L0:GEM:VRC:30:STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...tValve.eVGC_State")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7500,7 +7567,7 @@ record(mbbi, "EM1L0:GAS:VRC:30:STATE_RBV") {
   field(FRST, "Ext Fault")
 }
 
-record(bi, "EM1L0:GAS:VRC:30:OPN_SW_RBV") {
+record(bi, "EM1L0:GEM:VRC:30:OPN_SW_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...tValve.pv_xOPN_SW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7511,7 +7578,7 @@ record(bi, "EM1L0:GAS:VRC:30:OPN_SW_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bo, "EM1L0:GAS:VRC:30:OPN_SW") {
+record(bo, "EM1L0:GEM:VRC:30:OPN_SW") {
   field(DESC, "ads:GVL_Devices.GEM1...tValve.pv_xOPN_SW")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_30.iq_stValve.pv_xOPN_SW=")
@@ -7520,7 +7587,7 @@ record(bo, "EM1L0:GAS:VRC:30:OPN_SW") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:30:FORCE_OPN_RBV") {
+record(bi, "EM1L0:GEM:VRC:30:FORCE_OPN_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...Valve.pv_xOvrdOpn")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7531,7 +7598,7 @@ record(bi, "EM1L0:GAS:VRC:30:FORCE_OPN_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM1L0:GAS:VRC:30:FORCE_OPN") {
+record(bo, "EM1L0:GEM:VRC:30:FORCE_OPN") {
   field(DESC, "ads:GVL_Devices.GEM1...Valve.pv_xOvrdOpn")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_30.iq_stValve.pv_xOvrdOpn=")
@@ -7540,7 +7607,7 @@ record(bo, "EM1L0:GAS:VRC:30:FORCE_OPN") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:30:OVRD_ON_RBV") {
+record(bi, "EM1L0:GEM:VRC:30:OVRD_ON_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.xOverrideMode")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7551,7 +7618,7 @@ record(bi, "EM1L0:GAS:VRC:30:OVRD_ON_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM1L0:GAS:VRC:30:OVRD_ON") {
+record(bo, "EM1L0:GEM:VRC:30:OVRD_ON") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.xOverrideMode")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_30.iq_stValve.xOverrideMode=")
@@ -7560,7 +7627,7 @@ record(bo, "EM1L0:GAS:VRC:30:OVRD_ON") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:30:OPN_OK_RBV") {
+record(bi, "EM1L0:GEM:VRC:30:OPN_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...q_stValve.xOPN_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7571,7 +7638,7 @@ record(bi, "EM1L0:GAS:VRC:30:OPN_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:30:CLS_OK_RBV") {
+record(bi, "EM1L0:GEM:VRC:30:CLS_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...q_stValve.xCLS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7582,7 +7649,7 @@ record(bi, "EM1L0:GAS:VRC:30:CLS_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:30:OPN_DO_RBV") {
+record(bi, "EM1L0:GEM:VRC:30:OPN_DO_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...stValve.q_xOPN_DO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7593,7 +7660,7 @@ record(bi, "EM1L0:GAS:VRC:30:OPN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:30:ERROR_RBV") {
+record(bi, "EM1L0:GEM:VRC:30:ERROR_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.bErrorPresent")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7604,7 +7671,7 @@ record(bi, "EM1L0:GAS:VRC:30:ERROR_RBV") {
   field(ONAM, "ERROR PRESENT")
 }
 
-record(bo, "EM1L0:GAS:VRC:30:ERROR") {
+record(bo, "EM1L0:GEM:VRC:30:ERROR") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.bErrorPresent")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_30.iq_stValve.bErrorPresent=")
@@ -7613,7 +7680,7 @@ record(bo, "EM1L0:GAS:VRC:30:ERROR") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:50:EXT_ILK_OK_RBV") {
+record(bi, "EM1L0:GEM:VRC:50:EXT_ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1_VRC_50.i_xExtILK_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7624,7 +7691,7 @@ record(bi, "EM1L0:GAS:VRC:50:EXT_ILK_OK_RBV") {
   field(ONAM, "OK")
 }
 
-record(bi, "EM1L0:GAS:VRC:50:OPN_DI_RBV") {
+record(bi, "EM1L0:GEM:VRC:50:OPN_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1..._stValve.i_xOpnLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7635,7 +7702,7 @@ record(bi, "EM1L0:GAS:VRC:50:OPN_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:50:CLS_DI_RBV") {
+record(bi, "EM1L0:GEM:VRC:50:CLS_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1..._stValve.i_xClsLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7646,7 +7713,7 @@ record(bi, "EM1L0:GAS:VRC:50:CLS_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(mbbi, "EM1L0:GAS:VRC:50:POS_STATE_RBV") {
+record(mbbi, "EM1L0:GEM:VRC:50:POS_STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...iq_stValve.eState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7663,7 +7730,7 @@ record(mbbi, "EM1L0:GAS:VRC:50:POS_STATE_RBV") {
   field(THST, "INVALID")
 }
 
-record(mbbi, "EM1L0:GAS:VRC:50:STATE_RBV") {
+record(mbbi, "EM1L0:GEM:VRC:50:STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...tValve.eVGC_State")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7682,7 +7749,7 @@ record(mbbi, "EM1L0:GAS:VRC:50:STATE_RBV") {
   field(FRST, "Ext Fault")
 }
 
-record(bi, "EM1L0:GAS:VRC:50:OPN_SW_RBV") {
+record(bi, "EM1L0:GEM:VRC:50:OPN_SW_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...tValve.pv_xOPN_SW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7693,7 +7760,7 @@ record(bi, "EM1L0:GAS:VRC:50:OPN_SW_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bo, "EM1L0:GAS:VRC:50:OPN_SW") {
+record(bo, "EM1L0:GEM:VRC:50:OPN_SW") {
   field(DESC, "ads:GVL_Devices.GEM1...tValve.pv_xOPN_SW")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_50.iq_stValve.pv_xOPN_SW=")
@@ -7702,7 +7769,7 @@ record(bo, "EM1L0:GAS:VRC:50:OPN_SW") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:50:FORCE_OPN_RBV") {
+record(bi, "EM1L0:GEM:VRC:50:FORCE_OPN_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...Valve.pv_xOvrdOpn")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7713,7 +7780,7 @@ record(bi, "EM1L0:GAS:VRC:50:FORCE_OPN_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM1L0:GAS:VRC:50:FORCE_OPN") {
+record(bo, "EM1L0:GEM:VRC:50:FORCE_OPN") {
   field(DESC, "ads:GVL_Devices.GEM1...Valve.pv_xOvrdOpn")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_50.iq_stValve.pv_xOvrdOpn=")
@@ -7722,7 +7789,7 @@ record(bo, "EM1L0:GAS:VRC:50:FORCE_OPN") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:50:OVRD_ON_RBV") {
+record(bi, "EM1L0:GEM:VRC:50:OVRD_ON_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.xOverrideMode")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7733,7 +7800,7 @@ record(bi, "EM1L0:GAS:VRC:50:OVRD_ON_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM1L0:GAS:VRC:50:OVRD_ON") {
+record(bo, "EM1L0:GEM:VRC:50:OVRD_ON") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.xOverrideMode")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_50.iq_stValve.xOverrideMode=")
@@ -7742,7 +7809,7 @@ record(bo, "EM1L0:GAS:VRC:50:OVRD_ON") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM1L0:GAS:VRC:50:OPN_OK_RBV") {
+record(bi, "EM1L0:GEM:VRC:50:OPN_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...q_stValve.xOPN_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7753,7 +7820,7 @@ record(bi, "EM1L0:GAS:VRC:50:OPN_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:50:CLS_OK_RBV") {
+record(bi, "EM1L0:GEM:VRC:50:CLS_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...q_stValve.xCLS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7764,7 +7831,7 @@ record(bi, "EM1L0:GAS:VRC:50:CLS_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:50:OPN_DO_RBV") {
+record(bi, "EM1L0:GEM:VRC:50:OPN_DO_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...stValve.q_xOPN_DO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7775,7 +7842,7 @@ record(bi, "EM1L0:GAS:VRC:50:OPN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GAS:VRC:50:ERROR_RBV") {
+record(bi, "EM1L0:GEM:VRC:50:ERROR_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.bErrorPresent")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -7786,7 +7853,7 @@ record(bi, "EM1L0:GAS:VRC:50:ERROR_RBV") {
   field(ONAM, "ERROR PRESENT")
 }
 
-record(bo, "EM1L0:GAS:VRC:50:ERROR") {
+record(bo, "EM1L0:GEM:VRC:50:ERROR") {
   field(DESC, "ads:GVL_Devices.GEM1...lve.bErrorPresent")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM1_VRC_50.iq_stValve.bErrorPresent=")
@@ -8588,7 +8655,7 @@ record(bi, "EM1L0:GEM:PTM:10:RUN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GEM:PTM:10:ILK_STATUS_RBV") {
+record(bi, "EM1L0:GEM:PTM:10:ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...q_stPtm.xExtRunOk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8880,7 +8947,7 @@ record(bi, "EM1L0:GEM:PTM:20:RUN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GEM:PTM:20:ILK_STATUS_RBV") {
+record(bi, "EM1L0:GEM:PTM:20:ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...q_stPtm.xExtRunOk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -9172,7 +9239,7 @@ record(bi, "EM1L0:GEM:PTM:30:RUN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GEM:PTM:30:ILK_STATUS_RBV") {
+record(bi, "EM1L0:GEM:PTM:30:ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...q_stPtm.xExtRunOk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -9464,7 +9531,7 @@ record(bi, "EM1L0:GEM:PTM:50:RUN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM1L0:GEM:PTM:50:ILK_STATUS_RBV") {
+record(bi, "EM1L0:GEM:PTM:50:ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM1...q_stPtm.xExtRunOk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -10891,7 +10958,7 @@ record(ai, "AT1L0:GAS:VCN:10:POS_RDBK_RBV") {
   info(autosaveFields_pass0, "PREC")
 }
 
-record(longin, "AT1L0:GAS:VCN:10:POS_AO_RBV") {
+record(longin, "AT1L0:GAS:VCN:10:POS_AO_R_RBV") {
   field(DESC, "ads:GVL_Devices.GATT...CN.q_iRawPosition")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -10960,6 +11027,17 @@ record(mbbo, "AT1L0:GAS:VCN:10:STATE") {
   field(THST, "ManualControl")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GATT_VCN_10.iq_stVCN.eValveControl=")
   info(autosaveFields_pass0, "VAL")
+}
+
+record(ai, "AT1L0:GAS:VCN:10:POS_AO_RBV") {
+  field(DESC, "ads:GVL_Devices.GATT_VCN_10.rReqVoltage")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Devices.GATT_VCN_10.rReqVoltage?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
 }
 
 record(bi, "AT1L0:GAS:VRC:10:EXT_ILK_OK_RBV") {
@@ -17804,7 +17882,7 @@ record(bo, "EM2L0:GEM:VGC:70:MPS_FAULT_OK") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:30:EXT_ILK_OK_RBV") {
+record(bi, "EM2L0:GEM:VRC:30:EXT_ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2_VRC_30.i_xExtILK_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -17815,7 +17893,7 @@ record(bi, "EM2L0:GAS:VRC:30:EXT_ILK_OK_RBV") {
   field(ONAM, "OK")
 }
 
-record(bi, "EM2L0:GAS:VRC:30:OPN_DI_RBV") {
+record(bi, "EM2L0:GEM:VRC:30:OPN_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2..._stValve.i_xOpnLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -17826,7 +17904,7 @@ record(bi, "EM2L0:GAS:VRC:30:OPN_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:30:CLS_DI_RBV") {
+record(bi, "EM2L0:GEM:VRC:30:CLS_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2..._stValve.i_xClsLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -17837,7 +17915,7 @@ record(bi, "EM2L0:GAS:VRC:30:CLS_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(mbbi, "EM2L0:GAS:VRC:30:POS_STATE_RBV") {
+record(mbbi, "EM2L0:GEM:VRC:30:POS_STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...iq_stValve.eState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -17854,7 +17932,7 @@ record(mbbi, "EM2L0:GAS:VRC:30:POS_STATE_RBV") {
   field(THST, "INVALID")
 }
 
-record(mbbi, "EM2L0:GAS:VRC:30:STATE_RBV") {
+record(mbbi, "EM2L0:GEM:VRC:30:STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...tValve.eVGC_State")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -17873,7 +17951,7 @@ record(mbbi, "EM2L0:GAS:VRC:30:STATE_RBV") {
   field(FRST, "Ext Fault")
 }
 
-record(bi, "EM2L0:GAS:VRC:30:OPN_SW_RBV") {
+record(bi, "EM2L0:GEM:VRC:30:OPN_SW_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...tValve.pv_xOPN_SW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -17884,7 +17962,7 @@ record(bi, "EM2L0:GAS:VRC:30:OPN_SW_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bo, "EM2L0:GAS:VRC:30:OPN_SW") {
+record(bo, "EM2L0:GEM:VRC:30:OPN_SW") {
   field(DESC, "ads:GVL_Devices.GEM2...tValve.pv_xOPN_SW")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_30.iq_stValve.pv_xOPN_SW=")
@@ -17893,7 +17971,7 @@ record(bo, "EM2L0:GAS:VRC:30:OPN_SW") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:30:FORCE_OPN_RBV") {
+record(bi, "EM2L0:GEM:VRC:30:FORCE_OPN_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...Valve.pv_xOvrdOpn")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -17904,7 +17982,7 @@ record(bi, "EM2L0:GAS:VRC:30:FORCE_OPN_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM2L0:GAS:VRC:30:FORCE_OPN") {
+record(bo, "EM2L0:GEM:VRC:30:FORCE_OPN") {
   field(DESC, "ads:GVL_Devices.GEM2...Valve.pv_xOvrdOpn")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_30.iq_stValve.pv_xOvrdOpn=")
@@ -17913,7 +17991,7 @@ record(bo, "EM2L0:GAS:VRC:30:FORCE_OPN") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:30:OVRD_ON_RBV") {
+record(bi, "EM2L0:GEM:VRC:30:OVRD_ON_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.xOverrideMode")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -17924,7 +18002,7 @@ record(bi, "EM2L0:GAS:VRC:30:OVRD_ON_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM2L0:GAS:VRC:30:OVRD_ON") {
+record(bo, "EM2L0:GEM:VRC:30:OVRD_ON") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.xOverrideMode")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_30.iq_stValve.xOverrideMode=")
@@ -17933,7 +18011,7 @@ record(bo, "EM2L0:GAS:VRC:30:OVRD_ON") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:30:OPN_OK_RBV") {
+record(bi, "EM2L0:GEM:VRC:30:OPN_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stValve.xOPN_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -17944,7 +18022,7 @@ record(bi, "EM2L0:GAS:VRC:30:OPN_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:30:CLS_OK_RBV") {
+record(bi, "EM2L0:GEM:VRC:30:CLS_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stValve.xCLS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -17955,7 +18033,7 @@ record(bi, "EM2L0:GAS:VRC:30:CLS_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:30:OPN_DO_RBV") {
+record(bi, "EM2L0:GEM:VRC:30:OPN_DO_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...stValve.q_xOPN_DO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -17966,7 +18044,7 @@ record(bi, "EM2L0:GAS:VRC:30:OPN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:30:ERROR_RBV") {
+record(bi, "EM2L0:GEM:VRC:30:ERROR_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.bErrorPresent")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -17977,7 +18055,7 @@ record(bi, "EM2L0:GAS:VRC:30:ERROR_RBV") {
   field(ONAM, "ERROR PRESENT")
 }
 
-record(bo, "EM2L0:GAS:VRC:30:ERROR") {
+record(bo, "EM2L0:GEM:VRC:30:ERROR") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.bErrorPresent")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_30.iq_stValve.bErrorPresent=")
@@ -17986,7 +18064,7 @@ record(bo, "EM2L0:GAS:VRC:30:ERROR") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:50:EXT_ILK_OK_RBV") {
+record(bi, "EM2L0:GEM:VRC:50:EXT_ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2_VRC_50.i_xExtILK_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -17997,7 +18075,7 @@ record(bi, "EM2L0:GAS:VRC:50:EXT_ILK_OK_RBV") {
   field(ONAM, "OK")
 }
 
-record(bi, "EM2L0:GAS:VRC:50:OPN_DI_RBV") {
+record(bi, "EM2L0:GEM:VRC:50:OPN_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2..._stValve.i_xOpnLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18008,7 +18086,7 @@ record(bi, "EM2L0:GAS:VRC:50:OPN_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:50:CLS_DI_RBV") {
+record(bi, "EM2L0:GEM:VRC:50:CLS_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2..._stValve.i_xClsLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18019,7 +18097,7 @@ record(bi, "EM2L0:GAS:VRC:50:CLS_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(mbbi, "EM2L0:GAS:VRC:50:POS_STATE_RBV") {
+record(mbbi, "EM2L0:GEM:VRC:50:POS_STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...iq_stValve.eState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18036,7 +18114,7 @@ record(mbbi, "EM2L0:GAS:VRC:50:POS_STATE_RBV") {
   field(THST, "INVALID")
 }
 
-record(mbbi, "EM2L0:GAS:VRC:50:STATE_RBV") {
+record(mbbi, "EM2L0:GEM:VRC:50:STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...tValve.eVGC_State")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18055,7 +18133,7 @@ record(mbbi, "EM2L0:GAS:VRC:50:STATE_RBV") {
   field(FRST, "Ext Fault")
 }
 
-record(bi, "EM2L0:GAS:VRC:50:OPN_SW_RBV") {
+record(bi, "EM2L0:GEM:VRC:50:OPN_SW_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...tValve.pv_xOPN_SW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18066,7 +18144,7 @@ record(bi, "EM2L0:GAS:VRC:50:OPN_SW_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bo, "EM2L0:GAS:VRC:50:OPN_SW") {
+record(bo, "EM2L0:GEM:VRC:50:OPN_SW") {
   field(DESC, "ads:GVL_Devices.GEM2...tValve.pv_xOPN_SW")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_50.iq_stValve.pv_xOPN_SW=")
@@ -18075,7 +18153,7 @@ record(bo, "EM2L0:GAS:VRC:50:OPN_SW") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:50:FORCE_OPN_RBV") {
+record(bi, "EM2L0:GEM:VRC:50:FORCE_OPN_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...Valve.pv_xOvrdOpn")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18086,7 +18164,7 @@ record(bi, "EM2L0:GAS:VRC:50:FORCE_OPN_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM2L0:GAS:VRC:50:FORCE_OPN") {
+record(bo, "EM2L0:GEM:VRC:50:FORCE_OPN") {
   field(DESC, "ads:GVL_Devices.GEM2...Valve.pv_xOvrdOpn")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_50.iq_stValve.pv_xOvrdOpn=")
@@ -18095,7 +18173,7 @@ record(bo, "EM2L0:GAS:VRC:50:FORCE_OPN") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:50:OVRD_ON_RBV") {
+record(bi, "EM2L0:GEM:VRC:50:OVRD_ON_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.xOverrideMode")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18106,7 +18184,7 @@ record(bi, "EM2L0:GAS:VRC:50:OVRD_ON_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM2L0:GAS:VRC:50:OVRD_ON") {
+record(bo, "EM2L0:GEM:VRC:50:OVRD_ON") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.xOverrideMode")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_50.iq_stValve.xOverrideMode=")
@@ -18115,7 +18193,7 @@ record(bo, "EM2L0:GAS:VRC:50:OVRD_ON") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:50:OPN_OK_RBV") {
+record(bi, "EM2L0:GEM:VRC:50:OPN_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stValve.xOPN_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18126,7 +18204,7 @@ record(bi, "EM2L0:GAS:VRC:50:OPN_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:50:CLS_OK_RBV") {
+record(bi, "EM2L0:GEM:VRC:50:CLS_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stValve.xCLS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18137,7 +18215,7 @@ record(bi, "EM2L0:GAS:VRC:50:CLS_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:50:OPN_DO_RBV") {
+record(bi, "EM2L0:GEM:VRC:50:OPN_DO_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...stValve.q_xOPN_DO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18148,7 +18226,7 @@ record(bi, "EM2L0:GAS:VRC:50:OPN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:50:ERROR_RBV") {
+record(bi, "EM2L0:GEM:VRC:50:ERROR_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.bErrorPresent")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18159,7 +18237,7 @@ record(bi, "EM2L0:GAS:VRC:50:ERROR_RBV") {
   field(ONAM, "ERROR PRESENT")
 }
 
-record(bo, "EM2L0:GAS:VRC:50:ERROR") {
+record(bo, "EM2L0:GEM:VRC:50:ERROR") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.bErrorPresent")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_50.iq_stValve.bErrorPresent=")
@@ -18168,7 +18246,7 @@ record(bo, "EM2L0:GAS:VRC:50:ERROR") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:60:EXT_ILK_OK_RBV") {
+record(bi, "EM2L0:GEM:VRC:60:EXT_ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2_VRC_60.i_xExtILK_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18179,7 +18257,7 @@ record(bi, "EM2L0:GAS:VRC:60:EXT_ILK_OK_RBV") {
   field(ONAM, "OK")
 }
 
-record(bi, "EM2L0:GAS:VRC:60:OPN_DI_RBV") {
+record(bi, "EM2L0:GEM:VRC:60:OPN_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2..._stValve.i_xOpnLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18190,7 +18268,7 @@ record(bi, "EM2L0:GAS:VRC:60:OPN_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:60:CLS_DI_RBV") {
+record(bi, "EM2L0:GEM:VRC:60:CLS_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2..._stValve.i_xClsLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18201,7 +18279,7 @@ record(bi, "EM2L0:GAS:VRC:60:CLS_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(mbbi, "EM2L0:GAS:VRC:60:POS_STATE_RBV") {
+record(mbbi, "EM2L0:GEM:VRC:60:POS_STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...iq_stValve.eState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18218,7 +18296,7 @@ record(mbbi, "EM2L0:GAS:VRC:60:POS_STATE_RBV") {
   field(THST, "INVALID")
 }
 
-record(mbbi, "EM2L0:GAS:VRC:60:STATE_RBV") {
+record(mbbi, "EM2L0:GEM:VRC:60:STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...tValve.eVGC_State")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18237,7 +18315,7 @@ record(mbbi, "EM2L0:GAS:VRC:60:STATE_RBV") {
   field(FRST, "Ext Fault")
 }
 
-record(bi, "EM2L0:GAS:VRC:60:OPN_SW_RBV") {
+record(bi, "EM2L0:GEM:VRC:60:OPN_SW_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...tValve.pv_xOPN_SW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18248,7 +18326,7 @@ record(bi, "EM2L0:GAS:VRC:60:OPN_SW_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bo, "EM2L0:GAS:VRC:60:OPN_SW") {
+record(bo, "EM2L0:GEM:VRC:60:OPN_SW") {
   field(DESC, "ads:GVL_Devices.GEM2...tValve.pv_xOPN_SW")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_60.iq_stValve.pv_xOPN_SW=")
@@ -18257,7 +18335,7 @@ record(bo, "EM2L0:GAS:VRC:60:OPN_SW") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:60:FORCE_OPN_RBV") {
+record(bi, "EM2L0:GEM:VRC:60:FORCE_OPN_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...Valve.pv_xOvrdOpn")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18268,7 +18346,7 @@ record(bi, "EM2L0:GAS:VRC:60:FORCE_OPN_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM2L0:GAS:VRC:60:FORCE_OPN") {
+record(bo, "EM2L0:GEM:VRC:60:FORCE_OPN") {
   field(DESC, "ads:GVL_Devices.GEM2...Valve.pv_xOvrdOpn")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_60.iq_stValve.pv_xOvrdOpn=")
@@ -18277,7 +18355,7 @@ record(bo, "EM2L0:GAS:VRC:60:FORCE_OPN") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:60:OVRD_ON_RBV") {
+record(bi, "EM2L0:GEM:VRC:60:OVRD_ON_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.xOverrideMode")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18288,7 +18366,7 @@ record(bi, "EM2L0:GAS:VRC:60:OVRD_ON_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM2L0:GAS:VRC:60:OVRD_ON") {
+record(bo, "EM2L0:GEM:VRC:60:OVRD_ON") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.xOverrideMode")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_60.iq_stValve.xOverrideMode=")
@@ -18297,7 +18375,7 @@ record(bo, "EM2L0:GAS:VRC:60:OVRD_ON") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:60:OPN_OK_RBV") {
+record(bi, "EM2L0:GEM:VRC:60:OPN_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stValve.xOPN_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18308,7 +18386,7 @@ record(bi, "EM2L0:GAS:VRC:60:OPN_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:60:CLS_OK_RBV") {
+record(bi, "EM2L0:GEM:VRC:60:CLS_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stValve.xCLS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18319,7 +18397,7 @@ record(bi, "EM2L0:GAS:VRC:60:CLS_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:60:OPN_DO_RBV") {
+record(bi, "EM2L0:GEM:VRC:60:OPN_DO_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...stValve.q_xOPN_DO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18330,7 +18408,7 @@ record(bi, "EM2L0:GAS:VRC:60:OPN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:60:ERROR_RBV") {
+record(bi, "EM2L0:GEM:VRC:60:ERROR_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.bErrorPresent")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18341,7 +18419,7 @@ record(bi, "EM2L0:GAS:VRC:60:ERROR_RBV") {
   field(ONAM, "ERROR PRESENT")
 }
 
-record(bo, "EM2L0:GAS:VRC:60:ERROR") {
+record(bo, "EM2L0:GEM:VRC:60:ERROR") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.bErrorPresent")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_60.iq_stValve.bErrorPresent=")
@@ -18350,7 +18428,7 @@ record(bo, "EM2L0:GAS:VRC:60:ERROR") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:70:EXT_ILK_OK_RBV") {
+record(bi, "EM2L0:GEM:VRC:70:EXT_ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2_VRC_70.i_xExtILK_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18361,7 +18439,7 @@ record(bi, "EM2L0:GAS:VRC:70:EXT_ILK_OK_RBV") {
   field(ONAM, "OK")
 }
 
-record(bi, "EM2L0:GAS:VRC:70:OPN_DI_RBV") {
+record(bi, "EM2L0:GEM:VRC:70:OPN_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2..._stValve.i_xOpnLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18372,7 +18450,7 @@ record(bi, "EM2L0:GAS:VRC:70:OPN_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:70:CLS_DI_RBV") {
+record(bi, "EM2L0:GEM:VRC:70:CLS_DI_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2..._stValve.i_xClsLS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18383,7 +18461,7 @@ record(bi, "EM2L0:GAS:VRC:70:CLS_DI_RBV") {
   field(ONAM, "One")
 }
 
-record(mbbi, "EM2L0:GAS:VRC:70:POS_STATE_RBV") {
+record(mbbi, "EM2L0:GEM:VRC:70:POS_STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...iq_stValve.eState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18400,7 +18478,7 @@ record(mbbi, "EM2L0:GAS:VRC:70:POS_STATE_RBV") {
   field(THST, "INVALID")
 }
 
-record(mbbi, "EM2L0:GAS:VRC:70:STATE_RBV") {
+record(mbbi, "EM2L0:GEM:VRC:70:STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...tValve.eVGC_State")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18419,7 +18497,7 @@ record(mbbi, "EM2L0:GAS:VRC:70:STATE_RBV") {
   field(FRST, "Ext Fault")
 }
 
-record(bi, "EM2L0:GAS:VRC:70:OPN_SW_RBV") {
+record(bi, "EM2L0:GEM:VRC:70:OPN_SW_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...tValve.pv_xOPN_SW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18430,7 +18508,7 @@ record(bi, "EM2L0:GAS:VRC:70:OPN_SW_RBV") {
   field(ONAM, "OPEN")
 }
 
-record(bo, "EM2L0:GAS:VRC:70:OPN_SW") {
+record(bo, "EM2L0:GEM:VRC:70:OPN_SW") {
   field(DESC, "ads:GVL_Devices.GEM2...tValve.pv_xOPN_SW")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_70.iq_stValve.pv_xOPN_SW=")
@@ -18439,7 +18517,7 @@ record(bo, "EM2L0:GAS:VRC:70:OPN_SW") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:70:FORCE_OPN_RBV") {
+record(bi, "EM2L0:GEM:VRC:70:FORCE_OPN_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...Valve.pv_xOvrdOpn")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18450,7 +18528,7 @@ record(bi, "EM2L0:GAS:VRC:70:FORCE_OPN_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM2L0:GAS:VRC:70:FORCE_OPN") {
+record(bo, "EM2L0:GEM:VRC:70:FORCE_OPN") {
   field(DESC, "ads:GVL_Devices.GEM2...Valve.pv_xOvrdOpn")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_70.iq_stValve.pv_xOvrdOpn=")
@@ -18459,7 +18537,7 @@ record(bo, "EM2L0:GAS:VRC:70:FORCE_OPN") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:70:OVRD_ON_RBV") {
+record(bi, "EM2L0:GEM:VRC:70:OVRD_ON_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.xOverrideMode")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18470,7 +18548,7 @@ record(bi, "EM2L0:GAS:VRC:70:OVRD_ON_RBV") {
   field(ONAM, "One")
 }
 
-record(bo, "EM2L0:GAS:VRC:70:OVRD_ON") {
+record(bo, "EM2L0:GEM:VRC:70:OVRD_ON") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.xOverrideMode")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_70.iq_stValve.xOverrideMode=")
@@ -18479,7 +18557,7 @@ record(bo, "EM2L0:GAS:VRC:70:OVRD_ON") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "EM2L0:GAS:VRC:70:OPN_OK_RBV") {
+record(bi, "EM2L0:GEM:VRC:70:OPN_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stValve.xOPN_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18490,7 +18568,7 @@ record(bi, "EM2L0:GAS:VRC:70:OPN_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:70:CLS_OK_RBV") {
+record(bi, "EM2L0:GEM:VRC:70:CLS_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stValve.xCLS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18501,7 +18579,7 @@ record(bi, "EM2L0:GAS:VRC:70:CLS_OK_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:70:OPN_DO_RBV") {
+record(bi, "EM2L0:GEM:VRC:70:OPN_DO_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...stValve.q_xOPN_DO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18512,7 +18590,7 @@ record(bi, "EM2L0:GAS:VRC:70:OPN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GAS:VRC:70:ERROR_RBV") {
+record(bi, "EM2L0:GEM:VRC:70:ERROR_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.bErrorPresent")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -18523,7 +18601,7 @@ record(bi, "EM2L0:GAS:VRC:70:ERROR_RBV") {
   field(ONAM, "ERROR PRESENT")
 }
 
-record(bo, "EM2L0:GAS:VRC:70:ERROR") {
+record(bo, "EM2L0:GEM:VRC:70:ERROR") {
   field(DESC, "ads:GVL_Devices.GEM2...lve.bErrorPresent")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_VRC_70.iq_stValve.bErrorPresent=")
@@ -19233,7 +19311,7 @@ record(ai, "EM2L0:GEM:VCN:40:POS_RDBK_RBV") {
   info(autosaveFields_pass0, "PREC")
 }
 
-record(longin, "EM2L0:GEM:VCN:40:POS_AO_RBV") {
+record(longin, "EM2L0:GEM:VCN:40:POS_AO_R_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...CN.q_iRawPosition")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -19304,6 +19382,17 @@ record(mbbo, "EM2L0:GEM:VCN:40:STATE") {
   info(autosaveFields_pass0, "VAL")
 }
 
+record(ai, "EM2L0:GEM:VCN:40:POS_AO_RBV") {
+  field(DESC, "ads:GVL_Devices.GEM2_VCN_40.rReqVoltage")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Devices.GEM2_VCN_40.rReqVoltage?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "PREC")
+}
+
 record(bi, "EM2L0:GEM:PTM:30:RUN_SW_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...0.iq_stPtm.xRunSW")
   field(SCAN, "I/O Intr")
@@ -19355,7 +19444,7 @@ record(bi, "EM2L0:GEM:PTM:30:RUN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GEM:PTM:30:ILK_STATUS_RBV") {
+record(bi, "EM2L0:GEM:PTM:30:ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stPtm.xExtRunOk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -19647,7 +19736,7 @@ record(bi, "EM2L0:GEM:PTM:50:RUN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GEM:PTM:50:ILK_STATUS_RBV") {
+record(bi, "EM2L0:GEM:PTM:50:ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stPtm.xExtRunOk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -19939,7 +20028,7 @@ record(bi, "EM2L0:GEM:PTM:60:RUN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GEM:PTM:60:ILK_STATUS_RBV") {
+record(bi, "EM2L0:GEM:PTM:60:ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stPtm.xExtRunOk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -20231,7 +20320,7 @@ record(bi, "EM2L0:GEM:PTM:70:RUN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "EM2L0:GEM:PTM:70:ILK_STATUS_RBV") {
+record(bi, "EM2L0:GEM:PTM:70:ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stPtm.xExtRunOk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -20566,7 +20655,7 @@ record(mbbi, "EM2L0:GEM:PMF:30:STATE_RBV") {
   field(FRST, "pumpSTOPPING")
 }
 
-record(bi, "AT1L0:GAS:PMF:50:RUN_SW_RBV") {
+record(bi, "EM2L0:GEM:PMF:50:RUN_SW_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stPFO.pv_xRunSW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -20577,7 +20666,7 @@ record(bi, "AT1L0:GAS:PMF:50:RUN_SW_RBV") {
   field(ONAM, "Start")
 }
 
-record(bo, "AT1L0:GAS:PMF:50:RUN_SW") {
+record(bo, "EM2L0:GEM:PMF:50:RUN_SW") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stPFO.pv_xRunSW")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_PMF_50.iq_stPFO.pv_xRunSW=")
@@ -20586,7 +20675,7 @@ record(bo, "AT1L0:GAS:PMF:50:RUN_SW") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "AT1L0:GAS:PMF:50:RUN_DO_RBV") {
+record(bi, "EM2L0:GEM:PMF:50:RUN_DO_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...iq_stPFO.q_xRunDo")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -20597,7 +20686,7 @@ record(bi, "AT1L0:GAS:PMF:50:RUN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "AT1L0:GAS:PMF:50:ILK_OK_RBV") {
+record(bi, "EM2L0:GEM:PMF:50:ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...0.iq_stPFO.xIlkOK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -20608,7 +20697,7 @@ record(bi, "AT1L0:GAS:PMF:50:ILK_OK_RBV") {
   field(ONAM, "OK")
 }
 
-record(bi, "AT1L0:GAS:PMF:50:AT_SPD_RBV") {
+record(bi, "EM2L0:GEM:PMF:50:AT_SPD_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...0.iq_stPFO.xAtSpd")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -20619,7 +20708,7 @@ record(bi, "AT1L0:GAS:PMF:50:AT_SPD_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "AT1L0:GAS:PMF:50:WARN_RBV") {
+record(bi, "EM2L0:GEM:PMF:50:WARN_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2..._50.iq_stPFO.xWrn")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -20630,7 +20719,7 @@ record(bi, "AT1L0:GAS:PMF:50:WARN_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "AT1L0:GAS:PMF:50:ERROR_RBV") {
+record(bi, "EM2L0:GEM:PMF:50:ERROR_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2..._50.iq_stPFO.xErr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -20641,7 +20730,7 @@ record(bi, "AT1L0:GAS:PMF:50:ERROR_RBV") {
   field(ONAM, "One")
 }
 
-record(mbbi, "AT1L0:GAS:PMF:50:STATE_RBV") {
+record(mbbi, "EM2L0:GEM:PMF:50:STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...0.iq_stPFO.eState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -20660,7 +20749,7 @@ record(mbbi, "AT1L0:GAS:PMF:50:STATE_RBV") {
   field(FRST, "pumpSTOPPING")
 }
 
-record(bi, "AT1L0:GAS:PMF:60:RUN_SW_RBV") {
+record(bi, "EM2L0:GEM:PMF:60:RUN_SW_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stPFO.pv_xRunSW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -20671,7 +20760,7 @@ record(bi, "AT1L0:GAS:PMF:60:RUN_SW_RBV") {
   field(ONAM, "Start")
 }
 
-record(bo, "AT1L0:GAS:PMF:60:RUN_SW") {
+record(bo, "EM2L0:GEM:PMF:60:RUN_SW") {
   field(DESC, "ads:GVL_Devices.GEM2...q_stPFO.pv_xRunSW")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Devices.GEM2_PMF_60.iq_stPFO.pv_xRunSW=")
@@ -20680,7 +20769,7 @@ record(bo, "AT1L0:GAS:PMF:60:RUN_SW") {
   info(autosaveFields_pass0, "VAL")
 }
 
-record(bi, "AT1L0:GAS:PMF:60:RUN_DO_RBV") {
+record(bi, "EM2L0:GEM:PMF:60:RUN_DO_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...iq_stPFO.q_xRunDo")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -20691,7 +20780,7 @@ record(bi, "AT1L0:GAS:PMF:60:RUN_DO_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "AT1L0:GAS:PMF:60:ILK_OK_RBV") {
+record(bi, "EM2L0:GEM:PMF:60:ILK_OK_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...0.iq_stPFO.xIlkOK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -20702,7 +20791,7 @@ record(bi, "AT1L0:GAS:PMF:60:ILK_OK_RBV") {
   field(ONAM, "OK")
 }
 
-record(bi, "AT1L0:GAS:PMF:60:AT_SPD_RBV") {
+record(bi, "EM2L0:GEM:PMF:60:AT_SPD_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...0.iq_stPFO.xAtSpd")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -20713,7 +20802,7 @@ record(bi, "AT1L0:GAS:PMF:60:AT_SPD_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "AT1L0:GAS:PMF:60:WARN_RBV") {
+record(bi, "EM2L0:GEM:PMF:60:WARN_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2..._60.iq_stPFO.xWrn")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -20724,7 +20813,7 @@ record(bi, "AT1L0:GAS:PMF:60:WARN_RBV") {
   field(ONAM, "One")
 }
 
-record(bi, "AT1L0:GAS:PMF:60:ERROR_RBV") {
+record(bi, "EM2L0:GEM:PMF:60:ERROR_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2..._60.iq_stPFO.xErr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -20735,7 +20824,7 @@ record(bi, "AT1L0:GAS:PMF:60:ERROR_RBV") {
   field(ONAM, "One")
 }
 
-record(mbbi, "AT1L0:GAS:PMF:60:STATE_RBV") {
+record(mbbi, "EM2L0:GEM:PMF:60:STATE_RBV") {
   field(DESC, "ads:GVL_Devices.GEM2...0.iq_stPFO.eState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -87704,6 +87793,66 @@ record(bo, "PLC:LFE:GEM:FF2:FF:0250:Reset") {
   info(autosaveFields_pass0, "VAL")
 }
 
+record(bi, "PLC:LFE:GEM:FF_RESET_RBV") {
+  field(DESC, "ads:GVL_ILK.xFastFaultReset")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ILK.xFastFaultReset?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "PLC:LFE:GEM:FF_RESET") {
+  field(DESC, "ads:GVL_ILK.xFastFaultReset")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ILK.xFastFaultReset=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "EM1L0:GEM:VAC:OVRDON_RBV") {
+  field(DESC, "ads:GVL_ILK.xGEM1OverrideMode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ILK.xGEM1OverrideMode?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "EM1L0:GEM:VAC:OVRDON") {
+  field(DESC, "ads:GVL_ILK.xGEM1OverrideMode")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ILK.xGEM1OverrideMode=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
+record(bi, "AT1L0:GAS:VAC:OVRDON_RBV") {
+  field(DESC, "ads:GVL_ILK.xGATTOverrideMode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ILK.xGATTOverrideMode?")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "AT1L0:GAS:VAC:OVRDON") {
+  field(DESC, "ads:GVL_ILK.xGATTOverrideMode")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ILK.xGATTOverrideMode=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
+
 record(bi, "EM2L0:GEM:VAC:OVRDON_RBV") {
   field(DESC, "ads:GVL_ILK.xGEM2OverrideMode")
   field(SCAN, "I/O Intr")
@@ -88578,80 +88727,4 @@ record(bi, "EM2L0:GEM:GFM:42:ALARM_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Sensors.GEM2_GFM_42.Sensor.xPstateAlarm?")
   field(ZNAM, "Normal")
   field(ONAM, "Alarm")
-}
-
-record(ai, "EM2L0:GEM:CNTRL:Kp1_RBV") {
-  field(DESC, "ads:PRG_GEM2.fKp1")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_GEM2.fKp1?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(ao, "EM2L0:GEM:CNTRL:Kp1") {
-  field(DESC, "ads:PRG_GEM2.fKp1")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_GEM2.fKp1=")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC VAL")
-}
-
-record(ai, "EM2L0:GEM:CNTRL:Tn1_RBV") {
-  field(DESC, "ads:PRG_GEM2.fTn1")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_GEM2.fTn1?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(ao, "EM2L0:GEM:CNTRL:Tn1") {
-  field(DESC, "ads:PRG_GEM2.fTn1")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_GEM2.fTn1=")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC VAL")
-}
-
-record(ai, "EM2L0:GEM:CNTRL:Kp2_RBV") {
-  field(DESC, "ads:PRG_GEM2.fKp2")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_GEM2.fKp2?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(ao, "EM2L0:GEM:CNTRL:Kp2") {
-  field(DESC, "ads:PRG_GEM2.fKp2")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_GEM2.fKp2=")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC VAL")
-}
-
-record(ai, "EM2L0:GEM:CNTRL:Tn2_RBV") {
-  field(DESC, "ads:PRG_GEM2.fTn2")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_GEM2.fTn2?")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC")
-}
-
-record(ao, "EM2L0:GEM:CNTRL:Tn2") {
-  field(DESC, "ads:PRG_GEM2.fTn2")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_GEM2.fTn2=")
-  field(PREC, "3")
-  info(autosaveFields_pass0, "PREC VAL")
 }

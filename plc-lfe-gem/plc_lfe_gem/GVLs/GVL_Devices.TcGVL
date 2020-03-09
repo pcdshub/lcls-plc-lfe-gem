@@ -135,25 +135,25 @@
 	GEM1_VGC_70: FB_VGC_AP;
 
 (*Turbo Isolation valves*)
-	{attribute 'pytmc' :=' pv: EM1L0:GAS:VRC:10 '}
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:VRC:10 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_01_EB_1 (EP2338-0002)]^Channel 5^Input;
 								 .i_xClsLS	:=	TIIB[L0S3_PNL_01_EB_1 (EP2338-0002)]^Channel 6^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_01_EB_1 (EP2338-0002)]^Channel 15^Output'}
 	GEM1_VRC_10: FB_VRC;
 	
-	{attribute 'pytmc' :=' pv: EM1L0:GAS:VRC:20 '}
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:VRC:20 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_01_EB_3 (EP2338-0002)]^Channel 5^Input;
 								 .i_xClsLS	:=	TIIB[L0S3_PNL_01_EB_3 (EP2338-0002)]^Channel 6^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_01_EB_3 (EP2338-0002)]^Channel 15^Output'}
 	GEM1_VRC_20: FB_VRC;
 	
-	{attribute 'pytmc' :=' pv: EM1L0:GAS:VRC:30 '}
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:VRC:30 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_01_EB_4 (EP2338-0002)]^Channel 5^Input;
 								 .i_xClsLS	:=	TIIB[L0S3_PNL_01_EB_4 (EP2338-0002)]^Channel 6^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_01_EB_4 (EP2338-0002)]^Channel 15^Output'}
 	GEM1_VRC_30: FB_VRC;
 	
-	{attribute 'pytmc' :=' pv: EM1L0:GAS:VRC:50 '}
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:VRC:50 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_03_EB_1 (EP2338-0002)]^Channel 1^Input;
 								 .i_xClsLS	:=	TIIB[L0S3_PNL_03_EB_1 (EP2338-0002)]^Channel 2^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_03_EB_1 (EP2338-0002)]^Channel 11^Output'}
@@ -395,24 +395,24 @@
 	
 (*Turbo isolation valves*)
 	
-	{attribute 'pytmc' :=' pv: EM2L0:GAS:VRC:30 '}
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:VRC:30 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_01_EB_3 (EP2338-0002)]^Channel 1^Input;
 								 .i_xClsLS	:=	TIIB[L0S6_PNL_01_EB_3 (EP2338-0002)]^Channel 2^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_01_EB_3 (EP2338-0002)]^Channel 11^Output'}
 	GEM2_VRC_30: FB_VRC;
-	{attribute 'pytmc' :=' pv: EM2L0:GAS:VRC:50 '}
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:VRC:50 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 5^Input;
 								 .i_xClsLS	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 6^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 15^Output'}
 	GEM2_VRC_50: FB_VRC;
 	
-	{attribute 'pytmc' :=' pv: EM2L0:GAS:VRC:60 '}
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:VRC:60 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_03_EB_2 (EP2338-0002)]^Channel 1^Input;
 								 .i_xClsLS	:=	TIIB[L0S6_PNL_03_EB_2 (EP2338-0002)]^Channel 2^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_03_EB_2 (EP2338-0002)]^Channel 11^Output'}
 	GEM2_VRC_60: FB_VRC;
 	
-	{attribute 'pytmc' :=' pv: EM2L0:GAS:VRC:70 '}
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:VRC:70 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_03_EB_2 (EP2338-0002)]^Channel 5^Input;
 								 .i_xClsLS	:=	TIIB[L0S6_PNL_03_EB_2 (EP2338-0002)]^Channel 6^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_03_EB_2 (EP2338-0002)]^Channel 15^Output'}
@@ -487,10 +487,10 @@
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:PMF:30 '}
 	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S6_PNL_01_EB_7 (EP2338-0002)]^Channel 11^Output'}
 	GEM2_PMF_30 : FB_ScrollPump;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:PMF:50 '}
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:PMF:50 '}
 	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S6_PNL_01_EB_7 (EP2338-0002)]^Channel 12^Output'}
 	GEM2_PMF_50 : FB_ScrollPump;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:PMF:60 '}
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:PMF:60 '}
 	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S6_PNL_01_EB_7 (EP2338-0002)]^Channel 15^Output'}
 	GEM2_PMF_60 : FB_ScrollPump;
 (*Kashyiama Dry Pumps*)

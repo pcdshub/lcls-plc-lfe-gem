@@ -4,13 +4,16 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 		iWatchdog:UDINT;//The watchdog variable name written to by the remote plc
+
+	fbLogHandler: FB_LogHandler;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(*Ethercat Diagnostics*)
 //DIAGNOSTICS();
 
-
+//Log Handler
+//fbLogHandler();
 
 (* Call all Programs*)
 PRG_ILK();
@@ -24,7 +27,9 @@ PRG_SATT();
 ]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
-      <LineId Id="6" Count="7" />
+      <LineId Id="6" Count="3" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="10" Count="3" />
       <LineId Id="22" Count="0" />
       <LineId Id="14" Count="4" />
       <LineId Id="2" Count="0" />
