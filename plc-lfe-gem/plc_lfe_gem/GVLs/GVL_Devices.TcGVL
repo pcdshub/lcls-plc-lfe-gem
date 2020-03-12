@@ -63,7 +63,7 @@
 	GEM1_GPI_51 : FB_MKS275;
 	
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:GPI:60 '}
-	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[MKS_E14 (EL3064)]^AI Standard Channel 4^Value'}
+	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[MKS_E14 (EL3064)]^AI Standard Channel 1^Value'}
 	GEM1_GPI_60 : FB_MKS317A;
 	
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:GPI:61 '}
