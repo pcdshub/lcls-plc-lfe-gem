@@ -7,7 +7,7 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(*Gauges*)
-DSG_PIN(sNetId:='172.21.88.138.1.1' , nPort:=851 , sVarName:='GVL_Devices. AT2L0_SOLID_PIN_01',iWatchdog:=Main.iWatchdog,IG=> ); // Downstream Gauge from Down Stream PLC System
+DSG_PIN(sNetId:='172.21.88.138.1.1' , nPort:=851 , sVarName:='GVL_Devices.AT2L0_SOLID_PIN_01',iWatchdog:=Main.iWatchdog,IG=> ); // Downstream Gauge from Down Stream PLC System
 (*EM2L0*)
 GEM2_GPI_30(PG=>);
 GEM2_GCC_30(PG:=GEM2_GPI_30.PG,IG=>);
