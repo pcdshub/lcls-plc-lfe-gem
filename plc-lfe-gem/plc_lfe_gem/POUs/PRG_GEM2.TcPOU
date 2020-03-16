@@ -149,9 +149,9 @@ fbCTRL_LIN_INTERPOLATION(
 
 (* Gauge selection *)
 IF (fGEM2SetpointValue >0.04) THEN
-	fbCTRL_PID.fActualValue := GEM2_GCM_41.VG.rPRESS;
+	fbCTRL_PID.fActualValue := GEM2_GCM_41.PG.rPRESS;
 ELSE
-	fbCTRL_PID.fActualValue := GEM2_GCM_42.VG.rPRESS;
+	fbCTRL_PID.fActualValue := GEM2_GCM_42.PG.rPRESS;
 END_IF
 
 (* call controller *)

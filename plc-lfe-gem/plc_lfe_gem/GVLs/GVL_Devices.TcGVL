@@ -5,12 +5,13 @@
 	
 	(*Upstream Interface*)
 	(*Gauges*)
-	USG_GCC: FB_TGCC_ADS;
-	DSG_GCC: FB_TGCC_ADS;
+	USG_PIN: FB_TPIP_ADS;
+	DSG_PIN: FB_TPIP_ADS;
 	(*Valves*)
 	DSV_VGC: FB_Valve_Interface;
 	
-	
+	iWatchdog:UDINT;//The watchdog variable name written to by the remote plc
+
 
 (*EM1L0*)
 (*Gauges*)

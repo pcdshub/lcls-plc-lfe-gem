@@ -3,11 +3,12 @@
   <POU Name="PRG_GEM1_DIFF_PUMP" Id="{7641916e-925e-4304-add8-c14da3930767}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_GEM1_DIFF_PUMP
 VAR
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(*Gauges*)
-USG_GCC(sNetId:='172.21.88.138.1.1' , nPort:=851 , sVarName:='GVL_Devices.SL1L0_POWER_GCC_01',iWatchdog:=Main.iWatchdog,IG=> );
+USG_PIN(sNetId:='172.21.88.138.1.1' , nPort:=851 , sVarName:='GVL_Devices.SL1L0_POWER_PIN_01',iWatchdog:=Main.iWatchdog,IG=> );
 
 GEM1_GPI_10(PG=>);
 GEM1_GCC_10(PG:=GEM1_GPI_10.PG,IG=>);
@@ -26,7 +27,7 @@ GEM1_GPI_51(PG=>);
  (* to Include PMPS ILK with the EXTILK bit*)
 (*apperture valves*)
 
-GEM1_VGC_10(i_stUSG := USG_GCC.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE,
+GEM1_VGC_10(i_stUSG := USG_PIN.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE,
 		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
 GEM1_VGC_20(i_stUSG := GEM1_GCC_10.IG, i_stDSG:= GEM1_GCC_20.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
 		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);

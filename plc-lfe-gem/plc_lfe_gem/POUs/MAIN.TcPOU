@@ -3,7 +3,7 @@
   <POU Name="MAIN" Id="{08fcf07b-a57e-4f6f-85ed-e3315e0ea5b4}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
-		iWatchdog:UDINT;//The watchdog variable name written to by the remote plc
+	iWatchdog:UDINT;//The watchdog variable name written to by the remote plc
 
 	fbLogHandler: FB_LogHandler;
 END_VAR
@@ -12,8 +12,7 @@ END_VAR
       <ST><![CDATA[(*Ethercat Diagnostics*)
 //DIAGNOSTICS();
 
-//Log Handler
-//fbLogHandler();
+
 
 (* Call all Programs*)
 PRG_ILK();
@@ -24,14 +23,18 @@ PRG_GATT();
 PRG_GEM1();
 PRG_GEM2();
 PRG_SATT();
-]]></ST>
+
+
+//Log Handler
+fbLogHandler();]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
-      <LineId Id="6" Count="3" />
+      <LineId Id="6" Count="2" />
       <LineId Id="28" Count="0" />
       <LineId Id="10" Count="3" />
       <LineId Id="22" Count="0" />
       <LineId Id="14" Count="4" />
+      <LineId Id="35" Count="2" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
