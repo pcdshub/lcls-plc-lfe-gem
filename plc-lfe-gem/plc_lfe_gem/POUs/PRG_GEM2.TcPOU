@@ -51,7 +51,8 @@ GEM2_GCM_42(i_rFULL_SCALE := 0.05 (*Torr*));
 (* N2 Cut Off Valves *)
 GEM2_VVC_40(i_xExtILK_OK:= GEM2_Aperture_Closed AND GEM2_Turbo_Valves_Open AND GEM2_Turbo_Running); 
 (*Flow Control Valves*)
-GEM2_VCN_40 (i_xExtIlkOK := (GEM2_Aperture_Closed AND GEM2_Turbo_Valves_Open AND GEM2_Turbo_Running AND GEM2_VVC_40.M_IsOpen()), i_ReqPos:=  fbCTRL_LIN_INTERPOLATION.fOut + fbCTRL_PID.fOut);
+GEM2_VCN_40 (i_xExtIlkOK := (GEM2_Aperture_Closed AND GEM2_Turbo_Valves_Open AND GEM2_Turbo_Running AND GEM2_VVC_40.M_IsOpen()), 
+			i_ReqPos:=  fbCTRL_LIN_INTERPOLATION.fOut + fbCTRL_PID.fOut);
 
 (*Iniitialization*)
 IF bInit
@@ -208,6 +209,7 @@ FTRIG(CLK := GEM2_GO);
       <LineId Id="456" Count="2" />
       <LineId Id="460" Count="1" />
       <LineId Id="463" Count="1" />
+      <LineId Id="896" Count="0" />
       <LineId Id="468" Count="0" />
       <LineId Id="499" Count="0" />
       <LineId Id="501" Count="1" />

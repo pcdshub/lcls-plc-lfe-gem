@@ -64,12 +64,6 @@
     <Compile Include="POUs\PRG_GEM1.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\PRG_GEM1_41.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\PRG_GEM1_42.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="POUs\PRG_GEM2.TcPOU">
       <SubType>Code</SubType>
     </Compile>

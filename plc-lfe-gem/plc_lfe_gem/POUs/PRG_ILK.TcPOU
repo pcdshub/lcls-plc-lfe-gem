@@ -14,11 +14,11 @@ GEM2_Turbo_Valves_Closed := GEM2_VRC_30.iq_stValve.i_xClsLS AND  GEM2_VRC_50.iq_
 GEM1_TwinscrewPumps_Valves_Open := (GEM1_VRC_60.q_stValve.i_xOpnLS AND GEM1_PRO_60.q_stPump.i_xIsRun) OR   (GEM1_VRC_70.q_stValve.i_xOpnLS AND GEM1_PRO_70.q_stPump.i_xIsRun);
 GEM2_TwinscrewPumps_Valves_Open := (GEM2_VRC_10.q_stValve.i_xOpnLS AND GEM2_PRO_10.q_stPump.i_xIsRun) OR   (GEM2_VRC_20.q_stValve.i_xOpnLS AND GEM2_PRO_20.q_stPump.i_xIsRun);
 GEM1_Turbo_Valves_Open := GEM1_VRC_10.iq_stValve.i_xOpnLS AND  GEM1_VRC_20.iq_stValve.i_xOpnLS AND GEM1_VRC_30.iq_stValve.i_xOpnLS AND GEM1_VRC_50.iq_stValve.i_xOpnLS;
-GEM2_Turbo_Valves_Open := GEM2_VRC_30.iq_stValve.i_xOpnLS AND  GEM2_VRC_50.iq_stValve.i_xOpnLS AND GEM2_VRC_60.iq_stValve.i_xOpnLS;// AND GEM2_VRC_70.iq_stValve.i_xOpnLS; (*MG 03.09.20 Turbo is failing, but injection can run without it*)
+GEM2_Turbo_Valves_Open := GEM2_VRC_30.iq_stValve.i_xOpnLS AND  GEM2_VRC_50.iq_stValve.i_xOpnLS AND GEM2_VRC_60.iq_stValve.i_xOpnLS AND GEM2_VRC_70.iq_stValve.i_xOpnLS; (*MG 03.09.20 Turbo is failing, but injection can run without it*)
 GEM1_Aperture_Closed := GEM1_VGC_10.iq_stValve.i_xClsLS AND GEM1_VGC_20.iq_stValve.i_xClsLS AND GEM1_VGC_30.iq_stValve.i_xClsLS AND GEM1_VGC_40.iq_stValve.i_xClsLS AND GEM1_VGC_50.iq_stValve.i_xClsLS AND GEM1_VGC_60.iq_stValve.i_xClsLS AND GEM1_VGC_70.iq_stValve.i_xClsLS ;
 GEM2_Aperture_Closed := GEM2_VGC_10.iq_stValve.i_xClsLS AND GEM2_VGC_20.iq_stValve.i_xClsLS AND GEM2_VGC_30.iq_stValve.i_xClsLS AND GEM2_VGC_40.iq_stValve.i_xClsLS AND GEM2_VGC_50.iq_stValve.i_xClsLS AND GEM2_VGC_60.iq_stValve.i_xClsLS; ;
 GEM1_Turbo_Running := (GEM1_PTM_10.iq_stPtm.eState = pumpRUNNING) AND (GEM1_PTM_20.iq_stPtm.eState = pumpRUNNING) AND (GEM1_PTM_30.iq_stPtm.eState = pumpRUNNING) AND (GEM1_PTM_50.iq_stPtm.eState = pumpRUNNING);
-GEM2_Turbo_Running := (GEM2_PTM_30.iq_stPtm.eState = pumpRUNNING) AND (GEM2_PTM_50.iq_stPtm.eState = pumpRUNNING) AND (GEM2_PTM_60.iq_stPtm.eState = pumpRUNNING);//  AND (GEM2_PTM_70.iq_stPtm.eState = pumpRUNNING); (*MG 03.09.20 Turbo is failing, but injection can run without it*)
+GEM2_Turbo_Running := (GEM2_PTM_30.iq_stPtm.eState = pumpRUNNING) AND (GEM2_PTM_50.iq_stPtm.eState = pumpRUNNING) AND (GEM2_PTM_60.iq_stPtm.eState = pumpRUNNING) AND (GEM2_PTM_70.iq_stPtm.eState = pumpRUNNING); (*MG 03.09.20 Turbo is failing, but injection can run without it*)
 
 xGEM1_AperturesOpnOK := NOT GEM1_VVC_40.iq_stValve.q_xOPN_DO AND NOT GATT_VVC_10.iq_stValve.q_xOPN_DO; //AND VCN is closed 
 xGEM2_AperturesOpnOK := NOT GEM2_VVC_40.iq_stValve.q_xOPN_DO AND NOT GATT_VVC_10.iq_stValve.q_xOPN_DO; //AND VCN is closed 
