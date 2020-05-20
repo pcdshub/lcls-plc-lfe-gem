@@ -1,11 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
   <POU Name="PRG_GEM1" Id="{b5aed3c6-13be-428f-86ce-8bd830676022}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_GEM1
 VAR
-	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:RESET '}
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:RESET;
+     field: ZNAM FALSE; 
+	 field: ONAM TRUE; 
+	 io: io;
+	'}
 	bReset : BOOL; 
-	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:ERROR '}
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:ERROR;
+     field: ZNAM FALSE; 
+	 field: ONAM TRUE; 
+	 io: io;
+	'}
 	bError : BOOL; 
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Kp1 '}
 	fKp1 : REAL:= 0.001; 
@@ -44,11 +52,14 @@ END_VAR
       <ST><![CDATA[
 (*Devices*)
 (* GEM 1*)
-
 (*Gauges*)
 GEM1_GCM_41(i_rFULL_SCALE := 10.0 (*Torr*));
 GEM1_GCM_42(i_rFULL_SCALE := 0.05 (*Torr*));
-
+(*Assign reading to psuedo gauge*)
+IF (GEM1_GCM_42.PG.rPRESS >=0.04) THEN GEM1_GCM_40 = GEM1_GCM_42.PG;
+	ELSE
+	GEM1_GCM_40 = GEM1_GCM_41.PG;	
+END_IF
 (* N2 Cut Off Valves *)
 GEM1_VVC_40(i_xExtILK_OK:= GEM1_Aperture_Closed AND GEM1_Turbo_Valves_Open AND GEM1_Turbo_Running); 
 
@@ -209,39 +220,5 @@ FTRIG(CLK := GEM2_GO);
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_GEM1">
-      <LineId Id="93" Count="12" />
-      <LineId Id="566" Count="0" />
-      <LineId Id="106" Count="1" />
-      <LineId Id="120" Count="0" />
-      <LineId Id="172" Count="0" />
-      <LineId Id="327" Count="0" />
-      <LineId Id="329" Count="5" />
-      <LineId Id="496" Count="29" />
-      <LineId Id="350" Count="5" />
-      <LineId Id="360" Count="16" />
-      <LineId Id="527" Count="2" />
-      <LineId Id="526" Count="0" />
-      <LineId Id="192" Count="0" />
-      <LineId Id="377" Count="1" />
-      <LineId Id="545" Count="3" />
-      <LineId Id="395" Count="0" />
-      <LineId Id="549" Count="1" />
-      <LineId Id="396" Count="0" />
-      <LineId Id="551" Count="0" />
-      <LineId Id="398" Count="0" />
-      <LineId Id="552" Count="5" />
-      <LineId Id="530" Count="12" />
-      <LineId Id="399" Count="0" />
-      <LineId Id="543" Count="0" />
-      <LineId Id="559" Count="5" />
-      <LineId Id="558" Count="0" />
-      <LineId Id="400" Count="26" />
-      <LineId Id="565" Count="0" />
-      <LineId Id="427" Count="0" />
-      <LineId Id="441" Count="12" />
-      <LineId Id="193" Count="0" />
-      <LineId Id="9" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

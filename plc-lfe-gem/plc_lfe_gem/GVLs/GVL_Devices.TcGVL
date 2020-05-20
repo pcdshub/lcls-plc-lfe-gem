@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
   <GVL Name="GVL_Devices" Id="{5218a143-2eb9-4336-8a4d-04004f4dd216}">
     <Declaration><![CDATA[VAR_GLOBAL
 	
@@ -76,13 +76,15 @@
 	GEM1_GPI_71 : FB_MKS275;
 
 (*detector*)
-		
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:GCM:41 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[L0S3_PNL_02_EB_4 (EP3174-0002)]^AI Standard Channel 1^Value'}
 	GEM1_GCM_41 : FB_GCM;
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:GCM:42 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[L0S3_PNL_02_EB_4 (EP3174-0002)]^AI Standard Channel 2^Value'}
-	GEM1_GCM_42 : FB_GCM;	
+	GEM1_GCM_42 : FB_GCM;
+	(*Pseudo gauge device Structure to combine the readings of two GCM gauges*)
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GCM:40 '}
+	GEM1_GCM_40 : ST_VG;	
 (* N2 cutt off valve *)
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:VVC:40'}
 	{attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[L0S3_PNL_02_EB_2 (EP2338-0002)]^Channel 15^Output'}
@@ -342,13 +344,16 @@
 	GEM2_GPI_70 : FB_MKS317A;
 	
 (* GAS Cell CM*)
-
+	
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:GCM:41 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[L0S6_PNL_02_EB_4 (EP3174-0002)]^AI Standard Channel 1^Value'}
 	GEM2_GCM_41 : FB_GCM;
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:GCM:42 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[L0S6_PNL_02_EB_4 (EP3174-0002)]^AI Standard Channel 2^Value'}
 	GEM2_GCM_42 : FB_GCM;
+	(*Pseudo gauge device Structure to combine the readings of two GCM gauges*)
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GCM:40 '}
+	GEM2_GCM_40 : ST_VG;
 
 (*valves*)
 	

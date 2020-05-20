@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
   <GVL Name="GVL_ILK" Id="{71142060-83c7-40ff-a8c7-88a94b51c650}">
     <Declaration><![CDATA[VAR_GLOBAL
 	
@@ -16,15 +16,30 @@
     g_FastFaultOutput2  :   FB_HardwareFFOutput;
 	
 	{attribute 'pytmc' := '
-    pv: PLC:LFE:GEM:FF_RESET
+    pv: PLC:LFE:GEM:FF_RESET;
+	field: ZNAM FALSE; 
+	field: ONAM TRUE; 
+	 io: io;
     '}
     xFastFaultReset :   BOOL;
 
-	{attribute 'pytmc' := 'pv: EM1L0:GEM:VAC:OVRDON'}
+	{attribute 'pytmc' := 'pv: EM1L0:GEM:VAC:OVRDON;
+	field: ZNAM Override OFF; 
+	field: ONAM Override ON; 
+	 io: io;
+	'}
 	xGEM1OverrideMode	:	BOOL; (* Global system override for the EM1L0*)
-	{attribute 'pytmc' := 'pv: AT1L0:GAS:VAC:OVRDON'}
+	{attribute 'pytmc' := 'pv: AT1L0:GAS:VAC:OVRDON;
+	field: ZNAM Override OFF; 
+	field: ONAM Override ON; 
+	 io: io;
+	'}
 	xGATTOverrideMode	:	BOOL; (* Global system override for the GATT*)
-	{attribute 'pytmc' := 'pv: EM2L0:GEM:VAC:OVRDON'}
+	{attribute 'pytmc' := 'pv: EM2L0:GEM:VAC:OVRDON;
+	field: ZNAM Override OFF; 
+	field: ONAM Override ON; 
+	 io: io;
+	'}
 	xGEM2OverrideMode	:	BOOL; (* Global system override for the EM2L0*)
 
 

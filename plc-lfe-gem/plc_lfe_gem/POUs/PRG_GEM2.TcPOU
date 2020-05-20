@@ -1,11 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
   <POU Name="PRG_GEM2" Id="{7151a316-9a63-4501-9ce1-47c00a15e083}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_GEM2
 VAR
-	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:RESET '}
+	{attribute 'pytmc' :='
+     pv: EM2L0:GEM:CNTRL:RESET; 
+     field: ZNAM FALSE; 
+	 field: ONAM TRUE; 
+	 io: io;
+	'}
 	bReset : BOOL; 
-	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:ERROR '}
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:ERROR;
+ 	field: ZNAM FALSE; 
+	 field: ONAM TRUE; 
+	 io: io;
+	 '}
 	bError : BOOL; 
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:Kp1 '}
 	fKp1 : REAL:= 0.04; 
@@ -48,6 +57,11 @@ END_VAR
 (*Gauges*)
 GEM2_GCM_41(i_rFULL_SCALE := 2.0 (*Torr*));
 GEM2_GCM_42(i_rFULL_SCALE := 0.05 (*Torr*));
+(*Assign reading to psuedo gauge*)
+IF (GEM2_GCM_42.PG.rPRESS >=0.04) THEN GEM2_GCM_40 = GEM2_GCM_42.PG;
+	ELSE
+	GEM2_GCM_40 = GEM2_GCM_41.PG;	
+END_IF
 (* N2 Cut Off Valves *)
 GEM2_VVC_40(i_xExtILK_OK:= GEM2_Aperture_Closed AND GEM2_Turbo_Valves_Open AND GEM2_Turbo_Running); 
 (*Flow Control Valves*)
@@ -204,52 +218,5 @@ FTRIG(CLK := GEM2_GO);
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_GEM2">
-      <LineId Id="452" Count="1" />
-      <LineId Id="456" Count="2" />
-      <LineId Id="460" Count="1" />
-      <LineId Id="463" Count="1" />
-      <LineId Id="896" Count="0" />
-      <LineId Id="468" Count="0" />
-      <LineId Id="499" Count="0" />
-      <LineId Id="501" Count="1" />
-      <LineId Id="505" Count="1" />
-      <LineId Id="508" Count="13" />
-      <LineId Id="722" Count="12" />
-      <LineId Id="721" Count="0" />
-      <LineId Id="522" Count="0" />
-      <LineId Id="735" Count="0" />
-      <LineId Id="523" Count="4" />
-      <LineId Id="532" Count="16" />
-      <LineId Id="792" Count="1" />
-      <LineId Id="549" Count="2" />
-      <LineId Id="803" Count="2" />
-      <LineId Id="852" Count="0" />
-      <LineId Id="806" Count="2" />
-      <LineId Id="810" Count="0" />
-      <LineId Id="851" Count="0" />
-      <LineId Id="809" Count="0" />
-      <LineId Id="569" Count="1" />
-      <LineId Id="855" Count="0" />
-      <LineId Id="853" Count="1" />
-      <LineId Id="571" Count="0" />
-      <LineId Id="736" Count="6" />
-      <LineId Id="794" Count="0" />
-      <LineId Id="743" Count="5" />
-      <LineId Id="750" Count="0" />
-      <LineId Id="572" Count="0" />
-      <LineId Id="674" Count="4" />
-      <LineId Id="573" Count="0" />
-      <LineId Id="693" Count="13" />
-      <LineId Id="586" Count="0" />
-      <LineId Id="589" Count="11" />
-      <LineId Id="802" Count="0" />
-      <LineId Id="661" Count="0" />
-      <LineId Id="797" Count="0" />
-      <LineId Id="601" Count="0" />
-      <LineId Id="615" Count="11" />
-      <LineId Id="488" Count="4" />
-      <LineId Id="136" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
