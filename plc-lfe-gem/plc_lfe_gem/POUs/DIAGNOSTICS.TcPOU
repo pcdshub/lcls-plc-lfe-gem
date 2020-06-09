@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="DIAGNOSTICS" Id="{d5fd7bb7-4774-4449-9ad1-fd88b4889e7b}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM DIAGNOSTICS
 VAR
@@ -36,5 +36,9 @@ fbEcatDiag(
 	
 ]]></ST>
     </Implementation>
+    <LineIds Name="DIAGNOSTICS">
+      <LineId Id="3" Count="12" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

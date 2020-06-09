@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_GEM1" Id="{b5aed3c6-13be-428f-86ce-8bd830676022}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_GEM1
 VAR
@@ -56,15 +56,15 @@ END_VAR
 GEM1_GCM_41(i_rFULL_SCALE := 10.0 (*Torr*));
 GEM1_GCM_42(i_rFULL_SCALE := 0.05 (*Torr*));
 (*Assign reading to psuedo gauge*)
-IF (GEM1_GCM_42.PG.rPRESS >=0.04) THEN GEM1_GCM_40 = GEM1_GCM_42.PG;
+IF (GEM1_GCM_42.PG.rPRESS >=0.04) THEN GEM1_GCM_40 := GEM1_GCM_42.PG;
 	ELSE
-	GEM1_GCM_40 = GEM1_GCM_41.PG;	
+	GEM1_GCM_40 := GEM1_GCM_41.PG;	
 END_IF
 (* N2 Cut Off Valves *)
 GEM1_VVC_40(i_xExtILK_OK:= GEM1_Aperture_Closed AND GEM1_Turbo_Valves_Open AND GEM1_Turbo_Running); 
 
 (*Flow Control Valves*)
-GEM1_VCN_40 (i_xExtIlkOK := (GEM1_Aperture_Closed AND GEM1_Turbo_Valves_Open AND GEM1_Turbo_Running AND  GEM2_VVC_40.M_IsOpen()),
+GEM1_VCN_40 (i_xExtIlkOK := (GEM1_Aperture_Closed AND GEM1_Turbo_Valves_Open AND GEM1_Turbo_Running),// AND  GEM1_VVC_40.M_IsOpen()),
 			 i_ReqPos:= fbCTRL_LIN_INTERPOLATION.fOut + fbCTRL_PID.fOut);
 //GEM1_VPC_42 (i_xExtIlkOK := TRUE, i_rReqPos:= );
 
@@ -220,5 +220,9 @@ FTRIG(CLK := GEM2_GO);
 
 ]]></ST>
     </Implementation>
+    <LineIds Name="PRG_GEM1">
+      <LineId Id="3" Count="168" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

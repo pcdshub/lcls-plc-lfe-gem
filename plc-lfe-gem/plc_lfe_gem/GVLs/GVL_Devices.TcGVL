@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_Devices" Id="{5218a143-2eb9-4336-8a4d-04004f4dd216}">
     <Declaration><![CDATA[VAR_GLOBAL
 	
@@ -240,15 +240,15 @@
 	GEM1_VVC_50: FB_TurbVentvalve_NO;
 
 (*Scroll Pumps*)
-	{attribute 'pytmc' :=' pv: EM1L0:GEM:PMF:20 '}
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:PRO:20 '}
 	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S3_PNL_03_EB_7 (EP2338-0002)]^Channel 11^Output'}
-	GEM1_PMF_20 : FB_ScrollPump;
-	{attribute 'pytmc' :=' pv: EM1L0:GEM:PMF:30 '}
+	GEM1_PRO_20 : FB_ScrollPump;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:PRO:30 '}
 	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S3_PNL_03_EB_7 (EP2338-0002)]^Channel 12^Output'}
-	GEM1_PMF_30 : FB_ScrollPump;
-	{attribute 'pytmc' :=' pv: EM1L0:GEM:PMF:50 '}
+	GEM1_PRO_30 : FB_ScrollPump;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:PRO:50 '}
 	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S3_PNL_03_EB_7 (EP2338-0002)]^Channel 15^Output'}
-	GEM1_PMF_50 : FB_ScrollPump;
+	GEM1_PRO_50 : FB_ScrollPump;
 	
 (******************)	
 (******AT1L0*******)
@@ -490,15 +490,15 @@
 	GEM2_PTM_70 : FB_PTM_Agilent;
 
 (*Scroll Pumps*)
-	{attribute 'pytmc' :=' pv: EM2L0:GEM:PMF:30 '}
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:PRO:30 '}
 	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S6_PNL_01_EB_7 (EP2338-0002)]^Channel 11^Output'}
-	GEM2_PMF_30 : FB_ScrollPump;
-	{attribute 'pytmc' :=' pv: EM2L0:GEM:PMF:50 '}
+	GEM2_PRO_30 : FB_ScrollPump;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:PRO:50 '}
 	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S6_PNL_01_EB_7 (EP2338-0002)]^Channel 12^Output'}
-	GEM2_PMF_50 : FB_ScrollPump;
-	{attribute 'pytmc' :=' pv: EM2L0:GEM:PMF:60 '}
+	GEM2_PRO_50 : FB_ScrollPump;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:PRO:60 '}
 	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S6_PNL_01_EB_7 (EP2338-0002)]^Channel 15^Output'}
-	GEM2_PMF_60 : FB_ScrollPump;
+	GEM2_PRO_60 : FB_ScrollPump;
 (*Kashyiama Dry Pumps*)
 	
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:PRO:10 '}
