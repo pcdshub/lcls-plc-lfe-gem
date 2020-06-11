@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_ILK" Id="{71142060-83c7-40ff-a8c7-88a94b51c650}">
     <Declaration><![CDATA[VAR_GLOBAL
 	
@@ -16,12 +16,20 @@
     g_FastFaultOutput2  :   FB_HardwareFFOutput;
 	
 	{attribute 'pytmc' := '
-    pv: PLC:LFE:GEM:FF_RESET;
+    pv: PLC:LFE:GEM:FF_RESET:01;
 	field: ZNAM FALSE; 
 	field: ONAM TRUE; 
 	 io: io;
     '}
-    xFastFaultReset :   BOOL;
+    xFastFaultReset:   BOOL;
+	
+	{attribute 'pytmc' := '
+    pv: PLC:LFE:GEM:FF_RESET:02;
+	field: ZNAM FALSE; 
+	field: ONAM TRUE; 
+	 io: io;
+    '}
+    xFastFaultReset_2 :   BOOL;
 
 	{attribute 'pytmc' := 'pv: EM1L0:GEM:VAC:OVRDON;
 	field: ZNAM Override OFF; 

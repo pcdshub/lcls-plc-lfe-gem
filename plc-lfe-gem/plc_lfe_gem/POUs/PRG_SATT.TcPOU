@@ -3,98 +3,99 @@
   <POU Name="PRG_SATT" Id="{2eccc79f-a12c-40ff-a593-4981b0ae670c}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_SATT
 VAR
+	PMPS_OK: BOOL := TRUE; // to be linked to pmps
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[SATT_MPA_01(
-	ibInsertOK:= TRUE, 
-	ibRetractOK:= TRUE , 
-	ibPMPS_OK:= TRUE , 
+	ibInsertOK:= PMPS_OK, 
+	ibRetractOK:= PMPS_OK , 
+	ibPMPS_OK:= PMPS_OK , 
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+	i_xReset := xFastFaultReset_2,io_fbFFHWO :=g_FastFaultOutput2);
 	
 SATT_MPA_02(
-	ibInsertOK:= TRUE, 
-	ibRetractOK:= TRUE , 
-	ibPMPS_OK:= TRUE , 
+	ibInsertOK:= PMPS_OK, 
+	ibRetractOK:= PMPS_OK , 
+	ibPMPS_OK:= PMPS_OK , 
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+	i_xReset := xFastFaultReset_2,io_fbFFHWO :=g_FastFaultOutput2);
 	
 SATT_MPA_03(
-	ibInsertOK:= TRUE, 
-	ibRetractOK:= TRUE , 
-	ibPMPS_OK:= TRUE , 
+	ibInsertOK:= PMPS_OK, 
+	ibRetractOK:= PMPS_OK , 
+	ibPMPS_OK:= PMPS_OK , 
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+	i_xReset := xFastFaultReset_2,io_fbFFHWO :=g_FastFaultOutput2);
 	
 SATT_MPA_04(
-	ibInsertOK:= TRUE, 
-	ibRetractOK:= TRUE , 
-	ibPMPS_OK:= TRUE , 
+	ibInsertOK:= PMPS_OK, 
+	ibRetractOK:= PMPS_OK , 
+	ibPMPS_OK:= PMPS_OK , 
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+	i_xReset := xFastFaultReset_2,io_fbFFHWO :=g_FastFaultOutput2);
 
 SATT_MPA_05(
-	ibInsertOK:= TRUE, 
-	ibRetractOK:= TRUE , 
-	ibPMPS_OK:= TRUE , 
+	ibInsertOK:= PMPS_OK, 
+	ibRetractOK:= PMPS_OK , 
+	ibPMPS_OK:= PMPS_OK , 
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+	i_xReset := xFastFaultReset_2,io_fbFFHWO :=g_FastFaultOutput2);
 	
 SATT_MPA_06(
-	ibInsertOK:= TRUE, 
-	ibRetractOK:= TRUE , 
-	ibPMPS_OK:= TRUE , 
+	ibInsertOK:= PMPS_OK, 
+	ibRetractOK:= PMPS_OK , 
+	ibPMPS_OK:= PMPS_OK , 
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+	i_xReset := xFastFaultReset_2,io_fbFFHWO :=g_FastFaultOutput2);
 	
 SATT_MPA_07(
-	ibInsertOK:= TRUE, 
-	ibRetractOK:= TRUE , 
-	ibPMPS_OK:= TRUE , 
+	ibInsertOK:= PMPS_OK, 
+	ibRetractOK:= PMPS_OK , 
+	ibPMPS_OK:= PMPS_OK , 
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+	i_xReset := xFastFaultReset_2,io_fbFFHWO :=g_FastFaultOutput2);
 	
 SATT_MPA_08(
-	ibInsertOK:= TRUE, 
-	ibRetractOK:= TRUE , 
-	ibPMPS_OK:= TRUE , 
+	ibInsertOK:= PMPS_OK, 
+	ibRetractOK:= PMPS_OK , 
+	ibPMPS_OK:= PMPS_OK , 
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);	
+	i_xReset := xFastFaultReset_2,io_fbFFHWO :=g_FastFaultOutput2);	
 
 SATT_MPA_09(
-	ibInsertOK:= TRUE, 
-	ibRetractOK:= TRUE , 
-	ibPMPS_OK:= TRUE , 
+	ibInsertOK:= PMPS_OK, 
+	ibRetractOK:= PMPS_OK , 
+	ibPMPS_OK:= PMPS_OK , 
 	ibOverrideInterlock:= , 
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);	
+	i_xReset := xFastFaultReset_2,io_fbFFHWO :=g_FastFaultOutput2);	
 
 (*
 MPA_321();

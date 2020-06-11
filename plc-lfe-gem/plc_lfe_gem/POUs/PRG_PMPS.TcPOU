@@ -1,17 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_PMPS" Id="{3bbd9cd5-72c9-4b35-aa2f-63d3e3610a6e}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_PMPS
 VAR
-	 io_fbFFHWO1    :    FB_HardwareFFOutput;
-	 io_fbFFHWO2   :    FB_HardwareFFOutput;
+	// io_fbFFHWO1    :    FB_HardwareFFOutput;
+	// io_fbFFHWO2   :    FB_HardwareFFOutput;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[g_FastFaultOutput1.EvaluateOutput(i_xVeto:=PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.L_Stopper.ST1]);
+g_FastFaultOutput2.EvaluateOutput(i_xVeto:=PMPS_GVL.stCurrentBeamParameters.aStoppers[PMPS.L_Stopper.ST1]);
+]]></ST>
     </Implementation>
     <LineIds Name="PRG_PMPS">
       <LineId Id="5" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="11" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
