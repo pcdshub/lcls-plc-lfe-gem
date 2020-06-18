@@ -56,10 +56,20 @@ END_VAR
 GEM1_GCM_41(i_rFULL_SCALE := 10.0 (*Torr*));
 GEM1_GCM_42(i_rFULL_SCALE := 0.05 (*Torr*));
 (*Assign reading to psuedo gauge*)
-IF (GEM1_GCM_42.PG.rPRESS >0.04) THEN GEM1_GCM_40 := GEM1_GCM_42.PG;
+IF (GEM1_GCM_42.PG.rPRESS >=0.049) THEN GEM1_GCM_40 := GEM1_GCM_41.PG;
 	ELSE
-	GEM1_GCM_40 := GEM1_GCM_41.PG;	
+	GEM1_GCM_40 := GEM1_GCM_42.PG;	
 END_IF
+(* Gauge selection *)
+fbCTRL_PID.fActualValue := GEM1_GCM_40.rPRESS;
+(*
+IF (fGEM1SetpointValue >=0.049) THEN
+	fbCTRL_PID.fActualValue := GEM1_GCM_41.PG.rPRESS;
+ELSE
+	fbCTRL_PID.fActualValue := GEM1_GCM_42.PG.rPRESS;
+END_IF*)
+
+
 (* N2 Cut Off Valves *)
 GEM1_VVC_40(i_xExtILK_OK:= GEM1_Aperture_Closed AND GEM1_Turbo_Valves_Open AND GEM1_Turbo_Running); 
 
@@ -168,12 +178,6 @@ fbCTRL_LIN_INTERPOLATION(
 	bError=> , 
 	stParams:= stCTRL_LIN_INTERPOLATION_PARAMS_GEM );
 	
-(* Gauge selection *)
-IF (fGEM1SetpointValue >0.04) THEN
-	fbCTRL_PID.fActualValue := GEM1_GCM_41.PG.rPRESS;
-ELSE
-	fbCTRL_PID.fActualValue := GEM1_GCM_42.PG.rPRESS;
-END_IF
 
 	
 (* call controller *)
@@ -221,7 +225,15 @@ FTRIG(CLK := GEM1_GO);
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_GEM1">
-      <LineId Id="3" Count="168" />
+      <LineId Id="3" Count="10" />
+      <LineId Id="221" Count="0" />
+      <LineId Id="229" Count="0" />
+      <LineId Id="227" Count="0" />
+      <LineId Id="222" Count="4" />
+      <LineId Id="228" Count="0" />
+      <LineId Id="220" Count="0" />
+      <LineId Id="14" Count="107" />
+      <LineId Id="128" Count="43" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
