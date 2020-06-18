@@ -16,7 +16,7 @@ VAR
 	'}
 	bError : BOOL; 
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Kp1 '}
-	fKp1 : REAL:= 0.001; 
+	fKp1 : REAL:= 0.5; 
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Tn1 '}
 	fTn1 : REAL:= 0.5; 
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Kp2 '}
@@ -78,36 +78,36 @@ THEN
 	(* init array with the interpolation points  *)
 	(* 	fIn					 |		fOut		*)
 	arrTable_GEM1[1,1] := 0;		arrTable_GEM1[1,2] := 0;
-	arrTable_GEM1[2,1] := 0.0000412;		arrTable_GEM1[2,2] := 34;
-	arrTable_GEM1[3,1] := 0.001282;		arrTable_GEM1[3,2] := 36;
-	arrTable_GEM1[4,1] :=  0.002136;	    arrTable_GEM1[4,2] := 38;
-	arrTable_GEM1[5,1] :=  0.005884;	    arrTable_GEM1[5,2] := 40;
-	arrTable_GEM1[6,1] := 0.00907;		arrTable_GEM1[6,2] := 42;
-	arrTable_GEM1[7,1] := 0.01183;		arrTable_GEM1[7,2] := 44;
-	arrTable_GEM1[8,1] := 0.01799;	    arrTable_GEM1[8,2] := 46;
-	arrTable_GEM1[9,1] := 0.0302;	    arrTable_GEM1[9,2] := 47;
-	arrTable_GEM1[10,1] := 0.0417;		arrTable_GEM1[10,2] := 50;
-	arrTable_GEM1[11,1] := 0.06635;		arrTable_GEM1[11,2] := 51;
-	arrTable_GEM1[12,1] := 0.08118;		arrTable_GEM1[12,2] := 53;
-	arrTable_GEM1[13,1] := 0.0998;		arrTable_GEM1[13,2] := 56;
-	arrTable_GEM1[14,1] := 0.10644;		arrTable_GEM1[14,2] := 56.5;
-	arrTable_GEM1[15,1] := 0.1359;		arrTable_GEM1[15,2] := 58;
-	arrTable_GEM1[16,1] := 0.1929;		arrTable_GEM1[16,2] := 60;
-	arrTable_GEM1[17,1] := 0.2922;		arrTable_GEM1[17,2] := 62;
-	arrTable_GEM1[18,1] := 0.3428;	    arrTable_GEM1[18,2] := 64;
-	arrTable_GEM1[19,1] :=  0.405;;	    arrTable_GEM1[19,2] :=66;
-	arrTable_GEM1[20,1] := 0.481;		arrTable_GEM1[20,2] := 68;
-	arrTable_GEM1[21,1] := 0.5542;		arrTable_GEM1[21,2] := 69;
-	arrTable_GEM1[22,1] := 0.6333;	    arrTable_GEM1[22,2] := 70;
-	arrTable_GEM1[23,1] := 0.7901;	    arrTable_GEM1[23,2] := 72;
-	arrTable_GEM1[24,1] := 0.9307;		arrTable_GEM1[24,2] := 73.04;
-	arrTable_GEM1[25,1] := 1.0448;		arrTable_GEM1[25,2] := 73.64;
-	arrTable_GEM1[26,1] := 1.31919;;		arrTable_GEM1[26,2] := 74.45;
-	arrTable_GEM1[27,1] :=  1.324;		arrTable_GEM1[27,2] :=74.46;
-	arrTable_GEM1[28,1] := 1.71941;	arrTable_GEM1[28,2] := 75;
-	arrTable_GEM1[29,1] :=  1.963194;		arrTable_GEM1[29,2] :=75.5;
-	arrTable_GEM1[30,1] := 1.99999;	arrTable_GEM1[30,2] := 75.505;
-	arrTable_GEM1[31,1] := 2;	arrTable_GEM1[31,2] := 75.55;
+	arrTable_GEM1[2,1] := 0.00178;		arrTable_GEM1[2,2] := 30;
+	arrTable_GEM1[3,1] := 0.0025;		arrTable_GEM1[3,2] := 32;
+	arrTable_GEM1[4,1] :=  0.003;	    arrTable_GEM1[4,2] := 34;
+	arrTable_GEM1[5,1] :=  0.005884;	    arrTable_GEM1[5,2] := 35;
+	arrTable_GEM1[6,1] := 0.0045;		arrTable_GEM1[6,2] := 42;
+	arrTable_GEM1[7,1] := 0.09;		arrTable_GEM1[7,2] := 45;
+	arrTable_GEM1[8,1] := 0.1;	    arrTable_GEM1[8,2] := 46;
+	arrTable_GEM1[9,1] := 0.152;	    arrTable_GEM1[9,2] := 47;
+	arrTable_GEM1[10,1] := 0.199;		arrTable_GEM1[10,2] := 50;
+	arrTable_GEM1[11,1] := 0.24;		arrTable_GEM1[11,2] := 52;
+	arrTable_GEM1[12,1] := 0.29;		arrTable_GEM1[12,2] := 54;
+	arrTable_GEM1[13,1] := 0.3;		arrTable_GEM1[13,2] := 56;
+	arrTable_GEM1[14,1] := 0.39;		arrTable_GEM1[14,2] := 56.5;
+	arrTable_GEM1[15,1] := 0.6;		arrTable_GEM1[15,2] := 58;
+	arrTable_GEM1[16,1] := 0.6929;		arrTable_GEM1[16,2] := 60;
+	arrTable_GEM1[17,1] := 0.7322;		arrTable_GEM1[17,2] := 62;
+	arrTable_GEM1[18,1] := 0.7928;	    arrTable_GEM1[18,2] := 64;
+	arrTable_GEM1[19,1] := 0.85;;	    arrTable_GEM1[19,2] :=66;
+	arrTable_GEM1[20,1] := 0.91;		arrTable_GEM1[20,2] := 68;
+	arrTable_GEM1[21,1] := 1;		arrTable_GEM1[21,2] := 69;
+	arrTable_GEM1[22,1] :=  1.0448;	    arrTable_GEM1[22,2] := 70;
+	arrTable_GEM1[23,1] :=  1.31919;	    arrTable_GEM1[23,2] := 72;
+	arrTable_GEM1[24,1] :=1.324;		arrTable_GEM1[24,2] := 73.04;
+	arrTable_GEM1[25,1] :=1.71941;		arrTable_GEM1[25,2] := 73.64;
+	arrTable_GEM1[26,1] := 1.81941;		arrTable_GEM1[26,2] := 74.45;
+	arrTable_GEM1[27,1] :=  1.963194;		arrTable_GEM1[27,2] :=74.46;
+	arrTable_GEM1[28,1] := 1.99999;	arrTable_GEM1[28,2] := 75;
+	arrTable_GEM1[29,1] :=  2;		arrTable_GEM1[29,2] :=75.5;
+	arrTable_GEM1[30,1] := 2.1;	arrTable_GEM1[30,2] := 75.505;
+	arrTable_GEM1[31,1] := 2.2;	arrTable_GEM1[31,2] := 75.55;
 	
 	(* init parameter struct *)
 	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.tCtrlCycleTime					:= T#10ms;
@@ -187,7 +187,7 @@ fbCTRL_PID(		fSetpointValue		:= fGEM1SetpointValue,
 					fOut				=>  ,
 					bARWactive		=> bARWactive,
 					eErrorId			=> eErrorId,
-					bError				=> bError
+					bError				=> 
 				);
 
 
@@ -203,7 +203,7 @@ stCTRL_DEADBAND_PARAMS.fThreshold	:=  fGEM1SetpointValue*0.01 ;
 					bError				=> 
 				);*)
 				
-
+bError := fbCTRL_PID.bError OR fbCTRL_LIN_INTERPOLATION.bError;
 
 
 // or NOT???
@@ -215,7 +215,7 @@ stCTRL_DEADBAND_PARAMS.fThreshold	:=  fGEM1SetpointValue*0.01 ;
 //pid_on(IN:=, PT:= wait, Q=>, ET =>);
 //IF (pid_on.Q) THEN eMode:= eCTRL_MODE_ACTIVE; pid_on.IN := FALSE; END_IF; //eCTRL_MODE_TUNE????
 
-FTRIG(CLK := GEM2_GO);
+FTRIG(CLK := GEM1_GO);
 
 
 ]]></ST>
