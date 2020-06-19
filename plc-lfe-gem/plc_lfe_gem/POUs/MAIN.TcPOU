@@ -23,7 +23,7 @@ PRG_GATT();
 PRG_GEM1();
 PRG_GEM2();
 PRG_SATT();
-
+PRG_PMPS();
 //Log Handler
 fbLogHandler();]]></ST>
     </Implementation>
