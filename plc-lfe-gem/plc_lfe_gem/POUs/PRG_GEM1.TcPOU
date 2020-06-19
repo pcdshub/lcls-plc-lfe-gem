@@ -23,7 +23,7 @@ VAR
 	fKp2 : REAL:= 0.01; 
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Tn2 '}
 	fTn2 : REAL:= 0.5; 
-	arrTable_GEM1	: ARRAY[1..31,1..2] OF FLOAT;
+	arrTable_GEM1	: ARRAY[1..30,1..2] OF FLOAT;
 	fManValue											: FLOAT;
 	bExtrapolate										: BOOL;
 	eMode							: E_CTRL_MODE;
@@ -90,39 +90,38 @@ THEN
 	arrTable_GEM1[1,1] := 0;		arrTable_GEM1[1,2] := 0;
 	arrTable_GEM1[2,1] := 0.00178;		arrTable_GEM1[2,2] := 30;
 	arrTable_GEM1[3,1] := 0.0025;		arrTable_GEM1[3,2] := 32;
-	arrTable_GEM1[4,1] :=  0.003;	    arrTable_GEM1[4,2] := 34;
-	arrTable_GEM1[5,1] :=  0.005884;	    arrTable_GEM1[5,2] := 35;
-	arrTable_GEM1[6,1] := 0.0045;		arrTable_GEM1[6,2] := 42;
-	arrTable_GEM1[7,1] := 0.09;		arrTable_GEM1[7,2] := 45;
-	arrTable_GEM1[8,1] := 0.1;	    arrTable_GEM1[8,2] := 46;
-	arrTable_GEM1[9,1] := 0.152;	    arrTable_GEM1[9,2] := 47;
-	arrTable_GEM1[10,1] := 0.199;		arrTable_GEM1[10,2] := 50;
-	arrTable_GEM1[11,1] := 0.24;		arrTable_GEM1[11,2] := 52;
-	arrTable_GEM1[12,1] := 0.29;		arrTable_GEM1[12,2] := 54;
-	arrTable_GEM1[13,1] := 0.3;		arrTable_GEM1[13,2] := 56;
-	arrTable_GEM1[14,1] := 0.39;		arrTable_GEM1[14,2] := 56.5;
-	arrTable_GEM1[15,1] := 0.6;		arrTable_GEM1[15,2] := 58;
-	arrTable_GEM1[16,1] := 0.6929;		arrTable_GEM1[16,2] := 60;
-	arrTable_GEM1[17,1] := 0.7322;		arrTable_GEM1[17,2] := 62;
-	arrTable_GEM1[18,1] := 0.7928;	    arrTable_GEM1[18,2] := 64;
-	arrTable_GEM1[19,1] := 0.85;;	    arrTable_GEM1[19,2] :=66;
-	arrTable_GEM1[20,1] := 0.91;		arrTable_GEM1[20,2] := 68;
-	arrTable_GEM1[21,1] := 1;		arrTable_GEM1[21,2] := 69;
-	arrTable_GEM1[22,1] :=  1.0448;	    arrTable_GEM1[22,2] := 70;
-	arrTable_GEM1[23,1] :=  1.31919;	    arrTable_GEM1[23,2] := 72;
-	arrTable_GEM1[24,1] :=1.324;		arrTable_GEM1[24,2] := 73.04;
-	arrTable_GEM1[25,1] :=1.71941;		arrTable_GEM1[25,2] := 73.64;
-	arrTable_GEM1[26,1] := 1.81941;		arrTable_GEM1[26,2] := 74.45;
-	arrTable_GEM1[27,1] :=  1.963194;		arrTable_GEM1[27,2] :=74.46;
-	arrTable_GEM1[28,1] := 1.99999;	arrTable_GEM1[28,2] := 75;
-	arrTable_GEM1[29,1] :=  2;		arrTable_GEM1[29,2] :=75.5;
-	arrTable_GEM1[30,1] := 2.1;	arrTable_GEM1[30,2] := 75.505;
-	arrTable_GEM1[31,1] := 2.2;	arrTable_GEM1[31,2] := 75.55;
+	arrTable_GEM1[4,1] :=  0.005884;	    arrTable_GEM1[4,2] := 35;
+	arrTable_GEM1[5,1] :=  0.085;	    arrTable_GEM1[5,2] := 37;
+	arrTable_GEM1[6,1] := 0.1263;		arrTable_GEM1[6,2] := 40;
+	arrTable_GEM1[7,1] := 0.1626;		arrTable_GEM1[7,2] := 42;
+	arrTable_GEM1[8,1] := 0.19;	    arrTable_GEM1[8,2] := 44;
+	arrTable_GEM1[9,1] := 0.234;	    arrTable_GEM1[9,2] := 46;
+	arrTable_GEM1[10,1] := 0.32;		arrTable_GEM1[10,2] := 50;
+	arrTable_GEM1[11,1] := 0.370;		arrTable_GEM1[11,2] := 52;
+	arrTable_GEM1[12,1] := 0.43427;		arrTable_GEM1[12,2] := 54;
+	arrTable_GEM1[13,1] := 0.5316;		arrTable_GEM1[13,2] := 56;
+	arrTable_GEM1[14,1] := 0.61;		arrTable_GEM1[14,2] := 56.5;
+	arrTable_GEM1[15,1] := 0.894;		arrTable_GEM1[15,2] := 58;
+	arrTable_GEM1[16,1] := 1.215;		arrTable_GEM1[16,2] := 59;
+	arrTable_GEM1[17,1] := 1.58;		arrTable_GEM1[17,2] := 60;
+	arrTable_GEM1[18,1] := 2.025;	    arrTable_GEM1[18,2] := 62;
+	arrTable_GEM1[19,1] := 2.2;	    arrTable_GEM1[19,2] :=63;
+	arrTable_GEM1[20,1] := 2.9;		arrTable_GEM1[20,2] := 68;
+	arrTable_GEM1[21,1] := 3;		arrTable_GEM1[21,2] := 69;
+	arrTable_GEM1[22,1] :=  3.0448;	    arrTable_GEM1[22,2] := 70;
+	arrTable_GEM1[23,1] :=  3.31919;	    arrTable_GEM1[23,2] := 72;
+	arrTable_GEM1[24,1] :=3.324;		arrTable_GEM1[24,2] := 73.04;
+	arrTable_GEM1[25,1] :=3.71941;		arrTable_GEM1[25,2] := 73.64;
+	arrTable_GEM1[26,1] := 3.81941;		arrTable_GEM1[26,2] := 74.45;
+	arrTable_GEM1[27,1] :=  3.963194;		arrTable_GEM1[27,2] :=74.46;
+	arrTable_GEM1[28,1] := 3.99999;	arrTable_GEM1[28,2] := 75;
+	arrTable_GEM1[29,1] :=  4;		arrTable_GEM1[29,2] :=75.5;
+	arrTable_GEM1[30,1] := 4.1;	arrTable_GEM1[30,2] := 75.505;
 	
 	(* init parameter struct *)
 	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.tCtrlCycleTime					:= T#10ms;
 	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.tTaskCycleTime					:= T#10ms;
-	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.nDataTable_NumberOfRows		:= INT_TO_UINT(31);	
+	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.nDataTable_NumberOfRows		:= INT_TO_UINT(30);	
 
 
 	(* init parameter struct *)
@@ -150,6 +149,7 @@ if (GEM1_GO) THEN
 	IF (bReset) THEN
 		(* set the mode to RESET*)
 		eMode							:= eCTRL_MODE_RESET   ;
+		stCTRL_PID_PARAMS.fKp					:= fKp1;			(* proportional gain Kp				*)
 		GEM1_VCN_40.M_ValveControl(CloseValve);
 		//bReset := False;
 	ELSE(* set the mode to ACTIVE --> normal operation *)
@@ -232,7 +232,10 @@ FTRIG(CLK := GEM1_GO);
       <LineId Id="222" Count="4" />
       <LineId Id="228" Count="0" />
       <LineId Id="220" Count="0" />
-      <LineId Id="14" Count="107" />
+      <LineId Id="14" Count="46" />
+      <LineId Id="62" Count="31" />
+      <LineId Id="276" Count="0" />
+      <LineId Id="94" Count="27" />
       <LineId Id="128" Count="43" />
       <LineId Id="2" Count="0" />
     </LineIds>

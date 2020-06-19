@@ -141,6 +141,7 @@ if (GEM2_GO) THEN
 	IF (bReset) THEN
 	(* set the mode to RESET*)
 	eMode							:= eCTRL_MODE_RESET   ;
+	stCTRL_PID_PARAMS.fKp					:= fKp1;			(* proportional gain Kp				*)
 	GEM2_VCN_40.M_ValveControl(CloseValve);
 	//bReset := False;
 	ELSE
@@ -228,7 +229,9 @@ FTRIG(CLK := GEM2_GO);
       <LineId Id="224" Count="0" />
       <LineId Id="220" Count="2" />
       <LineId Id="216" Count="0" />
-      <LineId Id="13" Count="98" />
+      <LineId Id="13" Count="70" />
+      <LineId Id="274" Count="0" />
+      <LineId Id="84" Count="27" />
       <LineId Id="118" Count="48" />
       <LineId Id="2" Count="0" />
     </LineIds>
