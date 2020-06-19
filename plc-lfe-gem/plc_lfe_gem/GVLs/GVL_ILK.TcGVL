@@ -4,32 +4,17 @@
     <Declaration><![CDATA[VAR_GLOBAL
 	
 	{attribute 'pytmc' := '
-    pv: PLC:LFE:GEM:FF1
+    pv: PLC:LFE:GEM:FFO:01
     '}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
     g_FastFaultOutput1  :   FB_HardwareFFOutput;
 	
 	{attribute 'pytmc' := '
-    pv: PLC:LFE:GEM:FF2
+    pv: PLC:LFE:GEM:FFO:02
     '}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
     g_FastFaultOutput2  :   FB_HardwareFFOutput;
 	
-	{attribute 'pytmc' := '
-    pv: PLC:LFE:GEM:FF_RESET:01;
-	field: ZNAM FALSE; 
-	field: ONAM TRUE; 
-	 io: io;
-    '}
-    xFastFaultReset:   BOOL;
-	
-	{attribute 'pytmc' := '
-    pv: PLC:LFE:GEM:FF_RESET:02;
-	field: ZNAM FALSE; 
-	field: ONAM TRUE; 
-	 io: io;
-    '}
-    xFastFaultReset_2 :   BOOL;
 
 	{attribute 'pytmc' := 'pv: EM1L0:GEM:VAC:OVRDON;
 	field: ZNAM Override OFF; 
