@@ -62,10 +62,10 @@ IF (GEM2_GCM_42.PG.rPRESS >0.04) THEN GEM2_GCM_40 := GEM2_GCM_41.PG;
 	ELSE
 	GEM2_GCM_40 := GEM2_GCM_42.PG;	
 END_IF
-
 (* Gauge selection *)
 	fbCTRL_PID.fActualValue := GEM2_GCM_40.rPRESS;
-(*IF (fGEM2SetpointValue >0.04) THEN
+(*
+IF (fGEM2SetpointValue >0.04) THEN
 	fbCTRL_PID.fActualValue := GEM2_GCM_41.PG.rPRESS;
 ELSE
 	fbCTRL_PID.fActualValue := GEM2_GCM_42.PG.rPRESS;
@@ -222,9 +222,11 @@ FTRIG(CLK := GEM2_GO);
     </Implementation>
     <LineIds Name="PRG_GEM2">
       <LineId Id="3" Count="9" />
-      <LineId Id="217" Count="1" />
+      <LineId Id="218" Count="0" />
       <LineId Id="223" Count="0" />
-      <LineId Id="219" Count="3" />
+      <LineId Id="219" Count="0" />
+      <LineId Id="224" Count="0" />
+      <LineId Id="220" Count="2" />
       <LineId Id="216" Count="0" />
       <LineId Id="13" Count="98" />
       <LineId Id="118" Count="48" />

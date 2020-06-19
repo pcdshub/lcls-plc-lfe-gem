@@ -199,7 +199,7 @@ fbCTRL_PID(		fSetpointValue		:= fGEM1SetpointValue,
 (*deadband/clipper *)
 
 (* call function block *)
-stCTRL_DEADBAND_PARAMS.fThreshold	:=  fGEM1SetpointValue*0.01 ;
+stCTRL_DEADBAND_PARAMS.fThreshold	:=  fGEM1SetpointValue*0.0016 ;
 (*fbCTRL_DEADBAND	(	fIn					:= ,
 					stParams			:= stCTRL_DEADBAND_PARAMS,
 					bInIsUnderThreshold => ,
