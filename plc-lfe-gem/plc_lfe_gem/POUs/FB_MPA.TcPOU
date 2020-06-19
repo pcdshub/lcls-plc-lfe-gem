@@ -132,6 +132,7 @@ END_IF
 (*FAST FAULT*)
 fbFF(i_xOK := xMPS_OK,
     i_xReset := i_xReset,
+	i_xAutoReset :=TRUE,
     io_fbFFHWO := io_fbFFHWO);
 
 
@@ -182,7 +183,9 @@ q_xRetract_DO:=q_stAct.q_bRetract;]]></ST>
       <LineId Id="76" Count="1" />
       <LineId Id="75" Count="0" />
       <LineId Id="66" Count="5" />
-      <LineId Id="327" Count="5" />
+      <LineId Id="327" Count="4" />
+      <LineId Id="393" Count="0" />
+      <LineId Id="332" Count="0" />
       <LineId Id="65" Count="0" />
       <LineId Id="61" Count="0" />
       <LineId Id="59" Count="0" />
