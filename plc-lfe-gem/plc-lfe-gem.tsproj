@@ -1696,7 +1696,7 @@ IO]]>
 							<Comment>
 								<![CDATA[ Any time BPTM applies a new BP request which is confirmed]]>
 							</Comment>
-							<Type>ULINT</Type>
+							<Type>UDINT</Type>
 							<InOut>7</InOut>
 						</Var>
 						<Var>
@@ -1704,7 +1704,7 @@ IO]]>
 							<Comment>
 								<![CDATA[ Any time a FF occurs]]>
 							</Comment>
-							<Type>ULINT</Type>
+							<Type>UDINT</Type>
 							<InOut>7</InOut>
 						</Var>
 					</Vars>
