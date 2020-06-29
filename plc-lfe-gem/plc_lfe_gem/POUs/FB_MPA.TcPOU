@@ -13,6 +13,7 @@ VAR_INPUT
     pv: FF_Reset
 	'}
     i_xReset: BOOL;
+	i_sDevName : T_MaxString :=  'MPA'; // Device name for diagnostic
 END_VAR
 VAR_OUTPUT
 	{attribute 'pytmc' := '
@@ -67,6 +68,7 @@ IF xFirstPass THEN
 	q_stAct.eState := INVALID;
 	q_stAct.bRetract_SW := FALSE;
 	q_stAct.bInsert_SW := FALSE;
+	fbFF.i_DevName := i_sDevName;
 END_IF
 
 
@@ -155,6 +157,7 @@ q_xRetract_DO:=q_stAct.q_bRetract;]]></ST>
       <LineId Id="98" Count="2" />
       <LineId Id="102" Count="3" />
       <LineId Id="111" Count="0" />
+      <LineId Id="449" Count="0" />
       <LineId Id="97" Count="0" />
       <LineId Id="263" Count="0" />
       <LineId Id="78" Count="1" />

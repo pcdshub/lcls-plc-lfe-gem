@@ -17,7 +17,7 @@ VAR
 	 '}
 	bError : BOOL; 
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:Kp1 '}
-	fKp1 : REAL:= 0.5; 
+	fKp1 : REAL:= 0.25; 
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:Tn1 '}
 	fTn1 : REAL:= 1;//0.5; 
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:Kp2 '}
