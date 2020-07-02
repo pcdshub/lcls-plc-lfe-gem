@@ -15,6 +15,9 @@
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
     g_FastFaultOutput2  :   FB_HardwareFFOutput;
 	
+	g_fbArbiter   :   FB_Arbiter(1);
+	 
+	
 
 	{attribute 'pytmc' := 'pv: EM1L0:GEM:VAC:OVRDON;
 	field: ZNAM Override OFF; 
