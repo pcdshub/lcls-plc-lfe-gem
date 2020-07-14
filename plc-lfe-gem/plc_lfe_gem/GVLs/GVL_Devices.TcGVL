@@ -105,37 +105,37 @@
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_01_EB_2 (EP2338-0002)]^Channel 1^Input;
 								 .i_xClsLS	:=	TIIB[L0S3_PNL_01_EB_2 (EP2338-0002)]^Channel 2^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_01_EB_2 (EP2338-0002)]^Channel 11^Output'}
-	GEM1_VGC_20: FB_VGC_AP;
+	GEM1_VGC_20: FB_VGC;
 	
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:VGC:30 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_01_EB_2 (EP2338-0002)]^Channel 5^Input;
 								 .i_xClsLS	:=	TIIB[L0S3_PNL_01_EB_2 (EP2338-0002)]^Channel 6^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_01_EB_2 (EP2338-0002)]^Channel 15^Output'}
-	GEM1_VGC_30: FB_VGC_AP;
+	GEM1_VGC_30: FB_VGC;
 	
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:VGC:40 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_02_EB_1 (EP2338-0002)]^Channel 1^Input;
 								 .i_xClsLS	:=	TIIB[L0S3_PNL_02_EB_1 (EP2338-0002)]^Channel 2^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_02_EB_1 (EP2338-0002)]^Channel 11^Output'}
-	GEM1_VGC_40: FB_VGC_AP;
+	GEM1_VGC_40: FB_VGC;
 	
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:VGC:50 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_02_EB_1 (EP2338-0002)]^Channel 5^Input;
 								 .i_xClsLS	:=	TIIB[L0S3_PNL_02_EB_1 (EP2338-0002)]^Channel 6^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_02_EB_1 (EP2338-0002)]^Channel 15^Output'}
-	GEM1_VGC_50: FB_VGC_AP;
+	GEM1_VGC_50: FB_VGC;
 	
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:VGC:60 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_03_EB_1 (EP2338-0002)]^Channel 5^Input;
 								 .i_xClsLS	:=	TIIB[L0S3_PNL_03_EB_1 (EP2338-0002)]^Channel 6^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_03_EB_1 (EP2338-0002)]^Channel 15^Output'}
-	GEM1_VGC_60: FB_VGC_AP;
+	GEM1_VGC_60: FB_VGC;
 	
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:VGC:70 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_03_EB_3 (EP2338-0002)]^Channel 1^Input;
 								 .i_xClsLS	:=	TIIB[L0S3_PNL_03_EB_3 (EP2338-0002)]^Channel 2^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_03_EB_3 (EP2338-0002)]^Channel 11^Output'}
-	GEM1_VGC_70: FB_VGC_AP;
+	GEM1_VGC_70: FB_VGC;
 
 (*Turbo Isolation valves*)
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:VRC:10 '}
@@ -361,37 +361,37 @@
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_01_EB_1 (EP2338-0002)]^Channel 1^Input;
 								 .i_xClsLS	:=	TIIB[L0S6_PNL_01_EB_1 (EP2338-0002)]^Channel 2^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_01_EB_1 (EP2338-0002)]^Channel 11^Output'}
-	GEM2_VGC_10: FB_VGC_AP;
+	GEM2_VGC_10: FB_VGC;
 	
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:20'}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_01_EB_1 (EP2338-0002)]^Channel 5^Input;
 								 .i_xClsLS	:=	TIIB[L0S6_PNL_01_EB_1 (EP2338-0002)]^Channel 6^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_01_EB_1 (EP2338-0002)]^Channel 15^Output'}
-	GEM2_VGC_20: FB_VGC_AP;
+	GEM2_VGC_20: FB_VGC;
 	
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:30 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_02_EB_1 (EP2338-0002)]^Channel 1^Input;
 								 .i_xClsLS	:=	TIIB[L0S6_PNL_02_EB_1 (EP2338-0002)]^Channel 2^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_02_EB_1 (EP2338-0002)]^Channel 11^Output'}
-	GEM2_VGC_30: FB_VGC_AP;
+	GEM2_VGC_30: FB_VGC;
 	
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:40 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_02_EB_1 (EP2338-0002)]^Channel 5^Input;
 								 .i_xClsLS	:=	TIIB[L0S6_PNL_02_EB_1 (EP2338-0002)]^Channel 6^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_02_EB_1 (EP2338-0002)]^Channel 15^Output'}
-	GEM2_VGC_40: FB_VGC_AP;
+	GEM2_VGC_40: FB_VGC;
 	
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:50 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 1^Input;
 								 .i_xClsLS	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 2^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 11^Output'}
-	GEM2_VGC_50: FB_VGC_AP;
+	GEM2_VGC_50: FB_VGC;
 	
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:60 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_03_EB_3 (EP2338-0002)]^Channel 1^Input;
 								 .i_xClsLS	:=	TIIB[L0S6_PNL_03_EB_3 (EP2338-0002)]^Channel 2^Input;
 								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_03_EB_3 (EP2338-0002)]^Channel 11^Output'}
-	GEM2_VGC_60: FB_VGC_AP;
+	GEM2_VGC_60: FB_VGC;
 	
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:70 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_03_EB_3 (EP2338-0002)]^Channel 5^Input;

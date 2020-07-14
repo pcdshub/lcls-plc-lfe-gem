@@ -91,7 +91,7 @@ xDone := (q_stAct.bRetract_SW AND q_stAct.eState=RETRACTED) OR (q_stAct.eState=I
 
 (*MPS FAULT*)
 (**)
-xMPS_OK := (q_stAct.eState=RETRACTED) OR (q_stAct.eState=INSERTED);
+xMPS_OK := i_xInsertedLS XOR i_xRetractedLS;//(q_stAct.eState=RETRACTED) OR (q_stAct.eState=INSERTED);
 
 
 (*PMPS PERMISSION*)

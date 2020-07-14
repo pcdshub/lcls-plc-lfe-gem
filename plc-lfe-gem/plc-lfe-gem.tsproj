@@ -2248,12 +2248,12 @@ IO]]>
 					<UnrestoredVarLinks ImportTime="2020-07-08T09:34:00">
 						<OwnerA Name="OutputSrc" Prefix="TIPC^plc_lfe_gem^plc_lfe_gem Instance" Type="2">
 							<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_PRE">
-								<Link VarA="PRG_PMPS.fbArbiterIO.q_stRequestedBP" InOutA="1" GuidA="{41059C79-1015-4C2C-AFF4-697A824775D7}" VarB="IO Outputs^RequestedBP" AutoLink="true" RestoreInfo="TypeChanged" TypeA="ST_BeamParams_IO" IdA="302"/>
+								<Link VarA="PRG_PMPS.fbArbiterIO.q_stRequestedBP" InOutA="1" GuidA="{41059C79-1015-4C2C-AFF4-697A824775D7}" VarB="IO Outputs^RequestedBP" AutoLink="true" TypeA="ST_BeamParams_IO" IdA="302" RestoreInfo="BNotFound"/>
 							</OwnerB>
 						</OwnerA>
 						<OwnerA Name="InputDst" Prefix="TIPC^plc_lfe_gem^plc_lfe_gem Instance" Type="1">
 							<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_PRE">
-								<Link VarA="PRG_PMPS.fbArbiterIO.i_stCurrentBP" InOutA="0" GuidA="{41059C79-1015-4C2C-AFF4-697A824775D7}" VarB="IO Inputs^CurrentBP" AutoLink="true" RestoreInfo="TypeChanged" TypeA="ST_BeamParams_IO" IdA="4"/>
+								<Link VarA="PRG_PMPS.fbArbiterIO.i_stCurrentBP" InOutA="0" GuidA="{41059C79-1015-4C2C-AFF4-697A824775D7}" VarB="IO Inputs^CurrentBP" AutoLink="true" TypeA="ST_BeamParams_IO" IdA="4" RestoreInfo="BNotFound"/>
 							</OwnerB>
 						</OwnerA>
 					</UnrestoredVarLinks>

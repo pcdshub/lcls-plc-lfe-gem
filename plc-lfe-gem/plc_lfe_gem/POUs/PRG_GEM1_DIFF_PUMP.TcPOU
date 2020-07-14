@@ -31,22 +31,22 @@ GEM1_VGC_10(i_stUSG := USG_PIN.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := FALS
 		i_xPMPS_OK := TRUE, i_xExt_OK := NOT (USG_PIN.bError), i_xOverrideMode := xGEM1OverrideMode,i_xReset := ,
 		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:10');
 GEM1_VGC_20(i_stUSG := GEM1_GCC_10.IG, i_stDSG:= GEM1_GCC_20.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := ,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
 		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:20');
 GEM1_VGC_30(i_stUSG := GEM1_GCC_20.IG, i_stDSG:= GEM1_GCC_30.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := ,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
 		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:30');
 GEM1_VGC_40(i_stUSG := GEM1_GCC_30.IG, i_stDSG:= GEM1_GCC_30.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := ,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE, 
 		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:40');
 GEM1_VGC_50(i_stUSG := GEM1_GCC_50.IG, i_stDSG:= GEM1_GCC_50.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := ,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
 		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:50');
 GEM1_VGC_60(i_stUSG := GEM1_GCC_50.IG, i_stDSG:= GEM1_GCC_50.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := ,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
 		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:60');		
 GEM1_VGC_70(i_stUSG := GEM1_GCC_50.IG, i_stDSG:= GEM1_GCC_50.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := ,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
 		io_fbFFHWO:=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:70');
 
 (*Turbo Isolation Valves*)

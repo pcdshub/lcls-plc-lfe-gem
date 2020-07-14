@@ -38,10 +38,10 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{FE32F9A9-7E7A-413D-8D77-0C99C34D8CD9}">ST_PMPS_Attenuator_IO</Name>
+			<Name GUID="{D01709AA-9B4A-464A-B4D1-4BF476CFE7DE}">ST_PMPS_Attenuator_IO</Name>
 			<BitSize>32</BitSize>
 			<SubItem>
-				<Name>nAtt</Name>
+				<Name>nTran</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
 				<BitSize>16</BitSize>
 				<BitOffs>0</BitOffs>
@@ -55,6 +55,7 @@
 			<Hides>
 				<Hide GUID="{76269EAC-36F0-4513-B811-3725FD02409A}"/>
 				<Hide GUID="{E96BEA56-6301-4A6A-BF6A-F08340C87594}"/>
+				<Hide GUID="{FE32F9A9-7E7A-413D-8D77-0C99C34D8CD9}"/>
 			</Hides>
 		</DataType>
 		<DataType>
@@ -112,15 +113,15 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name GUID="{41059C79-1015-4C2C-AFF4-697A824775D7}">ST_BeamParams_IO</Name>
+			<Name GUID="{80E871EC-0C36-49B0-AD5D-F1F0FB351299}">ST_BeamParams_IO</Name>
 			<BitSize>1216</BitSize>
 			<SubItem>
-				<Name>fAtt</Name>
-				<Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
+				<Name>nTran</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
 				<Comment>
 					<![CDATA[  Requested pre-optic attenuation %  ]]>
 				</Comment>
-				<BitSize>32</BitSize>
+				<BitSize>16</BitSize>
 				<BitOffs>0</BitOffs>
 				<Default>
 					<Value>100</Value>
@@ -196,7 +197,7 @@
 			</SubItem>
 			<SubItem>
 				<Name>astAttenuators</Name>
-				<Type GUID="{FE32F9A9-7E7A-413D-8D77-0C99C34D8CD9}">ST_PMPS_Attenuator_IO</Type>
+				<Type GUID="{D01709AA-9B4A-464A-B4D1-4BF476CFE7DE}">ST_PMPS_Attenuator_IO</Type>
 				<ArrayInfo>
 					<LBound>1</LBound>
 					<Elements>16</Elements>
@@ -288,6 +289,7 @@
 			<Hides>
 				<Hide GUID="{ADE62DDD-CAE3-4FE3-BE11-F358D7D0CDD8}"/>
 				<Hide GUID="{729DFDAA-EB68-494E-B247-D86DA3C0AE5E}"/>
+				<Hide GUID="{41059C79-1015-4C2C-AFF4-697A824775D7}"/>
 			</Hides>
 		</DataType>
 	</DataTypes>
@@ -1309,12 +1311,12 @@ Bit1: Value smaller than Limit2]]>
 					</Pdo>
 					<Pdo Name="IO Inputs" Index="#x1a00" Flags="#x0021" SyncMan="3">
 						<Entry Name="CurrentBP" Index="#x6000" Sub="#x01">
-							<Type GUID="{41059C79-1015-4C2C-AFF4-697A824775D7}">ST_BeamParams_IO</Type>
+							<Type GUID="{80E871EC-0C36-49B0-AD5D-F1F0FB351299}">ST_BeamParams_IO</Type>
 						</Entry>
 					</Pdo>
 					<Pdo Name="IO Outputs" Index="#x1600" InOut="1" Flags="#x0021" SyncMan="2">
 						<Entry Name="RequestedBP" Index="#x7000" Sub="#x01">
-							<Type GUID="{41059C79-1015-4C2C-AFF4-697A824775D7}">ST_BeamParams_IO</Type>
+							<Type GUID="{80E871EC-0C36-49B0-AD5D-F1F0FB351299}">ST_BeamParams_IO</Type>
 						</Entry>
 					</Pdo>
 					<CoeProfile ProfileNo="5001"/>
