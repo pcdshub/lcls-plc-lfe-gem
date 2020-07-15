@@ -95,7 +95,7 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name GUID="{80E871EC-0C36-49B0-AD5D-F1F0FB351299}">ST_BeamParams_IO</Name>
+			<Name GUID="{5FC92061-002A-45B0-B954-CD8F28B5CE49}">ST_BeamParams_IO</Name>
 			<BitSize>1216</BitSize>
 			<SubItem>
 				<Name>nTran</Name>
@@ -201,7 +201,7 @@
 				<Name>astApertures</Name>
 				<Type GUID="{67AC048F-B785-4A4D-B941-B11E2213F502}">ST_PMPS_Aperture_IO</Type>
 				<ArrayInfo>
-					<LBound>0</LBound>
+					<LBound>1</LBound>
 					<Elements>4</Elements>
 				</ArrayInfo>
 				<BitSize>384</BitSize>
@@ -272,6 +272,7 @@
 				<Hide GUID="{ADE62DDD-CAE3-4FE3-BE11-F358D7D0CDD8}"/>
 				<Hide GUID="{729DFDAA-EB68-494E-B247-D86DA3C0AE5E}"/>
 				<Hide GUID="{41059C79-1015-4C2C-AFF4-697A824775D7}"/>
+				<Hide GUID="{80E871EC-0C36-49B0-AD5D-F1F0FB351299}"/>
 			</Hides>
 		</DataType>
 	</DataTypes>
@@ -319,7 +320,7 @@
 						</Var>
 						<Var>
 							<Name>PRG_PMPS.fbArbiterIO.i_stCurrentBP</Name>
-							<Type GUID="{80E871EC-0C36-49B0-AD5D-F1F0FB351299}">ST_BeamParams_IO</Type>
+							<Type GUID="{5FC92061-002A-45B0-B954-CD8F28B5CE49}">ST_BeamParams_IO</Type>
 							<SubVar>
 								<Name>nTran</Name>
 								<Comment>
@@ -348,24 +349,6 @@
 								<Name>astAttenuators</Name>
 								<Comment>
 									<![CDATA[ Beamline attenuators ]]>
-								</Comment>
-							</SubVar>
-							<SubVar>
-								<Name>astApertures^astApertures[0]^Width</Name>
-								<Comment>
-									<![CDATA[ distance between horizontal slits (x)]]>
-								</Comment>
-							</SubVar>
-							<SubVar>
-								<Name>astApertures^astApertures[0]^Height</Name>
-								<Comment>
-									<![CDATA[ distance between vertical slits (y)]]>
-								</Comment>
-							</SubVar>
-							<SubVar>
-								<Name>astApertures^astApertures[0]^xOK</Name>
-								<Comment>
-									<![CDATA[ status of aperture, false if error or in motion]]>
 								</Comment>
 							</SubVar>
 							<SubVar>
@@ -418,6 +401,24 @@
 							</SubVar>
 							<SubVar>
 								<Name>astApertures^astApertures[3]^xOK</Name>
+								<Comment>
+									<![CDATA[ status of aperture, false if error or in motion]]>
+								</Comment>
+							</SubVar>
+							<SubVar>
+								<Name>astApertures^astApertures[4]^Width</Name>
+								<Comment>
+									<![CDATA[ distance between horizontal slits (x)]]>
+								</Comment>
+							</SubVar>
+							<SubVar>
+								<Name>astApertures^astApertures[4]^Height</Name>
+								<Comment>
+									<![CDATA[ distance between vertical slits (y)]]>
+								</Comment>
+							</SubVar>
+							<SubVar>
+								<Name>astApertures^astApertures[4]^xOK</Name>
 								<Comment>
 									<![CDATA[ status of aperture, false if error or in motion]]>
 								</Comment>
@@ -574,83 +575,6 @@
 								<![CDATA[ input Pressure // Link to analog Input]]>
 							</Comment>
 							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_10.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_10.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_20.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_20.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_30.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_30.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_40.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_40.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_50.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_50.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_60.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_60.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_70.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_70.i_xClsLS</Name>
-							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM1_VRC_10.i_xOpnLS</Name>
@@ -1067,83 +991,6 @@
 								<![CDATA[ input Pressure // Link to analog Input]]>
 							</Comment>
 							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_10.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_10.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_20.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_20.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_30.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_30.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_40.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_40.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_50.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_50.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_60.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_60.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_70.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_70.i_xClsLS</Name>
-							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM2_VRC_30.i_xOpnLS</Name>
@@ -1572,12 +1419,166 @@
 							</Comment>
 							<Type>INT</Type>
 						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_10.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_10.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_20.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_20.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_30.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_30.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_40.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_40.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_50.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_50.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_60.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_60.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_70.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_70.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_10.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_10.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_20.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_20.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_30.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_30.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_40.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_40.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_50.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_50.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_60.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_60.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_70.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_70.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
 						<Var>
 							<Name>PRG_PMPS.fbArbiterIO.q_stRequestedBP</Name>
-							<Type GUID="{80E871EC-0C36-49B0-AD5D-F1F0FB351299}">ST_BeamParams_IO</Type>
+							<Type GUID="{5FC92061-002A-45B0-B954-CD8F28B5CE49}">ST_BeamParams_IO</Type>
 							<SubVar>
 								<Name>nTran</Name>
 								<Comment>
@@ -1606,24 +1607,6 @@
 								<Name>astAttenuators</Name>
 								<Comment>
 									<![CDATA[ Beamline attenuators ]]>
-								</Comment>
-							</SubVar>
-							<SubVar>
-								<Name>astApertures^astApertures[0]^Width</Name>
-								<Comment>
-									<![CDATA[ distance between horizontal slits (x)]]>
-								</Comment>
-							</SubVar>
-							<SubVar>
-								<Name>astApertures^astApertures[0]^Height</Name>
-								<Comment>
-									<![CDATA[ distance between vertical slits (y)]]>
-								</Comment>
-							</SubVar>
-							<SubVar>
-								<Name>astApertures^astApertures[0]^xOK</Name>
-								<Comment>
-									<![CDATA[ status of aperture, false if error or in motion]]>
 								</Comment>
 							</SubVar>
 							<SubVar>
@@ -1681,6 +1664,24 @@
 								</Comment>
 							</SubVar>
 							<SubVar>
+								<Name>astApertures^astApertures[4]^Width</Name>
+								<Comment>
+									<![CDATA[ distance between horizontal slits (x)]]>
+								</Comment>
+							</SubVar>
+							<SubVar>
+								<Name>astApertures^astApertures[4]^Height</Name>
+								<Comment>
+									<![CDATA[ distance between vertical slits (y)]]>
+								</Comment>
+							</SubVar>
+							<SubVar>
+								<Name>astApertures^astApertures[4]^xOK</Name>
+								<Comment>
+									<![CDATA[ status of aperture, false if error or in motion]]>
+								</Comment>
+							</SubVar>
+							<SubVar>
 								<Name>aStoppers</Name>
 								<Comment>
 									<![CDATA[ Stopper statuses ]]>
@@ -1704,6 +1705,14 @@
 									<![CDATA[ Cohort index. Identifies which cohort this BP set was included in arbitration]]>
 								</Comment>
 							</SubVar>
+						</Var>
+						<Var>
+							<Name>GVL_ILK.g_FastFaultOutput1.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_ILK.g_FastFaultOutput2.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM1_GCC_10.q_xHV_DIS</Name>
@@ -1748,34 +1757,6 @@
 IO]]>
 							</Comment>
 							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_10.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_20.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_30.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_40.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_50.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_60.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_70.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM1_VRC_10.q_xOPN_DO</Name>
@@ -1954,34 +1935,6 @@ IO]]>
 							<Comment>
 								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
 							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_10.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_20.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_30.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_40.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_50.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_60.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_70.q_xOPN_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -2204,11 +2157,59 @@ IO]]>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_ILK.g_FastFaultOutput1.q_xFastFaultOut</Name>
+							<Name>GVL_Devices.GEM1_VGC_10.q_xOPN_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_ILK.g_FastFaultOutput2.q_xFastFaultOut</Name>
+							<Name>GVL_Devices.GEM1_VGC_20.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_30.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_40.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_50.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_60.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_70.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_10.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_20.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_30.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_40.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_50.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_60.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_70.q_xOPN_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
 					</Vars>
@@ -2242,18 +2243,6 @@ IO]]>
 								<Link VarA="GVL_Devices.GEM2_PMF_30.q_xRunDo" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 11^Output" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
 								<Link VarA="GVL_Devices.GEM2_PMF_50.q_xRunDo" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 12^Output" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
 								<Link VarA="GVL_Devices.GEM2_PMF_60.q_xRunDo" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 15^Output" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
-							</OwnerB>
-						</OwnerA>
-					</UnrestoredVarLinks>
-					<UnrestoredVarLinks ImportTime="2020-07-08T09:34:00">
-						<OwnerA Name="OutputSrc" Prefix="TIPC^plc_lfe_gem^plc_lfe_gem Instance" Type="2">
-							<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_PRE">
-								<Link VarA="PRG_PMPS.fbArbiterIO.q_stRequestedBP" InOutA="1" GuidA="{41059C79-1015-4C2C-AFF4-697A824775D7}" VarB="IO Outputs^RequestedBP" AutoLink="true" TypeA="ST_BeamParams_IO" IdA="302" RestoreInfo="BNotFound"/>
-							</OwnerB>
-						</OwnerA>
-						<OwnerA Name="InputDst" Prefix="TIPC^plc_lfe_gem^plc_lfe_gem Instance" Type="1">
-							<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_PRE">
-								<Link VarA="PRG_PMPS.fbArbiterIO.i_stCurrentBP" InOutA="0" GuidA="{41059C79-1015-4C2C-AFF4-697A824775D7}" VarB="IO Inputs^CurrentBP" AutoLink="true" TypeA="ST_BeamParams_IO" IdA="4" RestoreInfo="BNotFound"/>
 							</OwnerB>
 						</OwnerA>
 					</UnrestoredVarLinks>
