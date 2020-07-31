@@ -49,6 +49,10 @@
     <Compile Include="POUs\FB_PressureSensor_PX219.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\FB_VGC_1.TcPOU">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -128,10 +132,10 @@
       <Resolution>LCLS General, * (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="LCLS Vacuum">
-      <Resolution>LCLS Vacuum, 1.2.4 (SLAC - LCLS)</Resolution>
+      <Resolution>LCLS Vacuum, 0.0.0 (SLAC - LCLS)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
-      <Resolution>PMPS, 0.5.1 (SLAC - LCLS)</Resolution>
+      <Resolution>PMPS, 0.6.0 (SLAC - LCLS)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="SysFile">
       <Resolution>SysFile, * (System)</Resolution>

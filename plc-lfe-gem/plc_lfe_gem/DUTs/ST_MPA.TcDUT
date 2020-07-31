@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <DUT Name="ST_MPA" Id="{ee78164b-027c-4a52-afc0-269c58a42ceb}">
     <Declaration><![CDATA[TYPE ST_MPA :
 STRUCT
@@ -69,7 +69,7 @@ STRUCT
 	io: i
 	'}
 		
-	eState	:	E_PositionState := INVALID;
+	eState	:	E_PositionState := E_PositionState.INVALID;
 	
 END_STRUCT
 END_TYPE

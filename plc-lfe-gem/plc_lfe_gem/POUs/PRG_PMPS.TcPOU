@@ -4,6 +4,7 @@
     <Declaration><![CDATA[PROGRAM PRG_PMPS
 VAR
  fbArbiterIO : FB_SubSysToArbiter_IO;
+ test : bool;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -16,7 +17,13 @@ g_FastFaultOutput2.Execute();
 
 (* Arbiter Instantiation*)
 (*Arbiter one responsible for the aperture valves*)
-fbArbiterIO(Arbiter := GVL_ILK.g_fbArbiter, fbFFHWO := GVL_ILK.g_FastFaultOutput1);]]></ST>
+fbArbiterIO(Arbiter := GVL_ILK.g_fbArbiter, fbFFHWO := GVL_ILK.g_FastFaultOutput1);
+
+//test := GVL_ILK.g_fbArbiter.CheckRequest(1001);
+
+
+test := GVL_ILK.g_fbArbiter.CheckRequestInPool(1001);
+]]></ST>
     </Implementation>
     <LineIds Name="PRG_PMPS">
       <LineId Id="26" Count="0" />
@@ -27,6 +34,11 @@ fbArbiterIO(Arbiter := GVL_ILK.g_fbArbiter, fbFFHWO := GVL_ILK.g_FastFaultOutput
       <LineId Id="11" Count="0" />
       <LineId Id="30" Count="0" />
       <LineId Id="28" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="41" Count="1" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="39" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
