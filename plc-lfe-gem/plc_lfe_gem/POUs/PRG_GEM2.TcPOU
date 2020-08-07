@@ -137,6 +137,7 @@ END_IF
 	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.pDataTable_ADR			:= ADR(arrTable_GEM2);
 	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.nDataTable_SIZEOF		:= SIZEOF(arrTable_GEM2);
 
+fGEM2SetpointValue:= LIMIT(0,fGEM2SetpointValue,2);
 if (GEM2_GO) THEN
 	IF (bReset) THEN
 	(* set the mode to RESET*)
@@ -229,7 +230,9 @@ FTRIG(CLK := GEM2_GO);
       <LineId Id="224" Count="0" />
       <LineId Id="220" Count="2" />
       <LineId Id="216" Count="0" />
-      <LineId Id="13" Count="70" />
+      <LineId Id="13" Count="65" />
+      <LineId Id="324" Count="0" />
+      <LineId Id="79" Count="4" />
       <LineId Id="274" Count="0" />
       <LineId Id="84" Count="27" />
       <LineId Id="118" Count="48" />

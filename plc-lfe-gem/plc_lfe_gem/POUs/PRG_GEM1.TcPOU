@@ -144,7 +144,7 @@ stCTRL_LIN_INTERPOLATION_PARAMS_GEM.pDataTable_ADR			:= ADR(arrTable_GEM1);
 stCTRL_LIN_INTERPOLATION_PARAMS_GEM.nDataTable_SIZEOF		:= SIZEOF(arrTable_GEM1);
 
 
-
+fGEM1SetpointValue:= LIMIT(0,fGEM1SetpointValue,2);
 if (GEM1_GO) THEN
 	IF (bReset) THEN
 		(* set the mode to RESET*)
