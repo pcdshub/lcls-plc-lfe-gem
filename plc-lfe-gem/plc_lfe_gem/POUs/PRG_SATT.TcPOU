@@ -16,7 +16,7 @@ END_VAR
 	xMPS_OK=> , 
 	xDone=> ,
 	i_xReset := ,
-	io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:01',fbArbiter:=g_fbArbiter,
+	io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:01',fbArbiter:=g_fbArbiter3,
 	i_nTransitionRootID:=5100);
 	
 SATT_MPA_02(
@@ -27,7 +27,7 @@ SATT_MPA_02(
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:02',fbArbiter:=g_fbArbiter,
+	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:02',fbArbiter:=g_fbArbiter3,
 	i_nTransitionRootID:=5200);
 	
 SATT_MPA_03(
@@ -38,7 +38,7 @@ SATT_MPA_03(
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:03',fbArbiter:=g_fbArbiter,
+	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:03',fbArbiter:=g_fbArbiter3,
 	i_nTransitionRootID:=5300);
 	
 SATT_MPA_04(
@@ -49,7 +49,7 @@ SATT_MPA_04(
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:04',fbArbiter:=g_fbArbiter,
+	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:04',fbArbiter:=g_fbArbiter3,
 	i_nTransitionRootID:=5400);
 
 SATT_MPA_05(
@@ -60,7 +60,7 @@ SATT_MPA_05(
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:05',fbArbiter:=g_fbArbiter,
+	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:05',fbArbiter:=g_fbArbiter3,
 	i_nTransitionRootID:=5500);
 	
 SATT_MPA_06(
@@ -71,7 +71,7 @@ SATT_MPA_06(
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:06',fbArbiter:=g_fbArbiter,
+	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:06',fbArbiter:=g_fbArbiter3,
 	i_nTransitionRootID:=5600);
 	
 SATT_MPA_07(
@@ -82,7 +82,7 @@ SATT_MPA_07(
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:07',fbArbiter:=g_fbArbiter,
+	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:07',fbArbiter:=g_fbArbiter3,
 	i_nTransitionRootID:=5700);
 	
 SATT_MPA_08(
@@ -93,7 +93,7 @@ SATT_MPA_08(
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:08',fbArbiter:=g_fbArbiter,
+	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:08',fbArbiter:=g_fbArbiter3,
 	i_nTransitionRootID:=5800);
 
 SATT_MPA_09(
@@ -104,7 +104,7 @@ SATT_MPA_09(
 	q_stAct=> , 
 	xMPS_OK=> , 
 	xDone=> ,
-	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:09',fbArbiter:=g_fbArbiter,
+	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:09',fbArbiter:=g_fbArbiter3,
 	i_nTransitionRootID:=5900);	
 
 (*

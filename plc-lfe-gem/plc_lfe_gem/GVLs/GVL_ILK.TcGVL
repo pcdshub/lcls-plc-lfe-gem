@@ -16,6 +16,8 @@
     g_FastFaultOutput2  :   FB_HardwareFFOutput;
 	
 	g_fbArbiter   :   FB_Arbiter(1);
+	g_fbArbiter2   :   FB_Arbiter(2);
+	g_fbArbiter3   :   FB_Arbiter(3);
 	 
 	
 

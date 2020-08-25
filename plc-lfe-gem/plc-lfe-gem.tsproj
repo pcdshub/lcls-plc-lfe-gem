@@ -325,6 +325,13 @@
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 						</Var>
 						<Var>
+							<Name>LCLS_Vacuum.LCLSVacuumSerialDriverLib.L2SI_Vacuum_Library.PMPS.LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+							<Comment>
+								<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
+							</Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
 							<Name>PRG_PMPS.fbArbiterIO.i_stCurrentBP</Name>
 							<Type GUID="{5FC92061-002A-45B0-B954-CD8F28B5CE49}">ST_BeamParams_IO</Type>
 							<SubVar>
@@ -796,9 +803,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM1_PTM_10.i_iRawSpeed</Name>
-							<Comment>
-								<![CDATA[ Link to Analog input]]>
-							</Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
@@ -838,9 +842,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM1_PTM_20.i_iRawSpeed</Name>
-							<Comment>
-								<![CDATA[ Link to Analog input]]>
-							</Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
@@ -880,9 +881,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM1_PTM_30.i_iRawSpeed</Name>
-							<Comment>
-								<![CDATA[ Link to Analog input]]>
-							</Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
@@ -922,9 +920,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM1_PTM_50.i_iRawSpeed</Name>
-							<Comment>
-								<![CDATA[ Link to Analog input]]>
-							</Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
@@ -1251,9 +1246,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM2_PTM_30.i_iRawSpeed</Name>
-							<Comment>
-								<![CDATA[ Link to Analog input]]>
-							</Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
@@ -1293,9 +1285,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM2_PTM_50.i_iRawSpeed</Name>
-							<Comment>
-								<![CDATA[ Link to Analog input]]>
-							</Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
@@ -1335,9 +1324,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM2_PTM_60.i_iRawSpeed</Name>
-							<Comment>
-								<![CDATA[ Link to Analog input]]>
-							</Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
@@ -1377,9 +1363,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM2_PTM_70.i_iRawSpeed</Name>
-							<Comment>
-								<![CDATA[ Link to Analog input]]>
-							</Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
@@ -2601,13 +2584,25 @@ IO]]>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_50.i_xR1" VarB="Channel 5^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_50.i_xSTART" VarB="Channel 7^Input" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_4 (EL2088)">
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_4 (EL3064)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_10.i_iPowerMon" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_20.i_iPowerMon" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_30.i_iCurrentMon" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_50.i_iPowerMon" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_5 (EL3064)">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_30.i_iPowerMon" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_50.i_iCurrentMon" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_60.i_iPowerMon" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_70.i_iPowerMon" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_6 (EL2088)">
 				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PTM_30.q_RunDO" VarB="Channel 1^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PTM_50.q_RunDO" VarB="Channel 2^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PTM_60.q_RunDO" VarB="Channel 3^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PTM_70.q_RunDO" VarB="Channel 4^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_5 (EL1088)">
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_7 (EL1088)">
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_30.i_xFault" VarB="Channel 4^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_30.i_xLSpd" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_30.i_xR1" VarB="Channel 1^Input" AutoLink="true"/>
@@ -2617,7 +2612,7 @@ IO]]>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_50.i_xR1" VarB="Channel 5^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_50.i_xSTART" VarB="Channel 7^Input" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_6 (EL1088)">
+			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_8 (EL1088)">
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_60.i_xFault" VarB="Channel 4^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_60.i_xLSpd" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_60.i_xR1" VarB="Channel 1^Input" AutoLink="true"/>
