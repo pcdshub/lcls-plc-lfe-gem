@@ -2588,10 +2588,10 @@ IO]]>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_10.i_iPowerMon" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_20.i_iPowerMon" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_30.i_iCurrentMon" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_50.i_iPowerMon" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_50.i_iCurrentMon" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_5 (EL3064)">
-				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_30.i_iPowerMon" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_30.i_iCurrentMon" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_50.i_iCurrentMon" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_60.i_iPowerMon" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_70.i_iPowerMon" VarB="AI Standard Channel 4^Value" AutoLink="true"/>

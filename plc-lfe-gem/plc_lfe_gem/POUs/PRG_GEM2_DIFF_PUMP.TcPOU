@@ -10,10 +10,10 @@ END_VAR
     <Implementation>
       <ST><![CDATA[If (bInit) THEN
 	bInit := FALSE;
-	GEM2_PTM_30.M_SetPowerScale(500);
-	GEM2_PTM_50.M_SetCurrentScale(2);
-	GEM2_PTM_60.M_SetCurrentScale(100);
-	GEM2_PTM_70.M_SetPowerScale(150);
+	GEM2_PTM_30.M_SetPowerScale(50);
+	GEM2_PTM_50.M_SetCurrentScale(1);
+	GEM2_PTM_60.M_SetCurrentScale(10);
+	GEM2_PTM_70.M_SetPowerScale(10);
 END_IF
 
 

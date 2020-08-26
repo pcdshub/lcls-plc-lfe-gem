@@ -227,7 +227,7 @@
 								 .i_xLSpd :=	TIIB[PLC_EL_3 (EL1088)]^Channel 6^Input;
 								 .i_xSTART	:=	TIIB[PLC_EL_3 (EL1088)]^Channel 7^Input;
 								 .i_xFault	:=	TIIB[PLC_EL_3 (EL1088)]^Channel 8^Input;
-								 .i_iPowerMon := TIIB[PLC_EL_4 (EL3064)]^AI Standard Channel 4^Value;
+								 .i_iCurrentMon := TIIB[PLC_EL_4 (EL3064)]^AI Standard Channel 4^Value;
 								 .q_RunDO	:=	TIIB[PLC_EL_1 (EL2088)]^Channel 4^Output'}
 	GEM1_PTM_50 : FB_PTM_Agilent;
 	
@@ -469,7 +469,7 @@
 								 .i_xLSpd :=	TIIB[PLC_EL_7 (EL1088)]^Channel 2^Input;
 								 .i_xSTART	:=	TIIB[PLC_EL_7 (EL1088)]^Channel 3^Input;
 								 .i_xFault	:=	TIIB[PLC_EL_7 (EL1088)]^Channel 4^Input;
-								 .i_iPowerMon := TIIB[PLC_EL_5 (EL3064)]^AI Standard Channel 1^Value;
+								 .i_iCurrentMon := TIIB[PLC_EL_5 (EL3064)]^AI Standard Channel 1^Value;
 								 .q_RunDO	:=	TIIB[PLC_EL_6 (EL2088)]^Channel 1^Output'}
 	GEM2_PTM_30 : FB_PTM_Agilent;
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:50 '}

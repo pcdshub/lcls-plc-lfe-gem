@@ -11,10 +11,10 @@ END_VAR
     <Implementation>
       <ST><![CDATA[If (bInit) THEN
 	bInit := FALSE;
-	GEM1_PTM_10.M_SetPowerScale(150);
-	GEM1_PTM_20.M_SetPowerScale(150);
-	GEM1_PTM_20.M_SetCurrentScale(2);
-	GEM1_PTM_50.M_SetPowerScale(500);
+	GEM1_PTM_10.M_SetPowerScale(15);
+	GEM1_PTM_20.M_SetPowerScale(15);
+	GEM1_PTM_20.M_SetCurrentScale(1);
+	GEM1_PTM_50.M_SetPowerScale(50);
 END_IF
 
 (*Gauges*)
