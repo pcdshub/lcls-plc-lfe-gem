@@ -132,7 +132,7 @@
       <Resolution>L2SI Vacuum Library, 0.0.0 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="LCLS General">
-      <Resolution>LCLS General, 2.4.1 (SLAC)</Resolution>
+      <Resolution>LCLS General, 2.3.4 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="LCLS Vacuum">
       <Resolution>LCLS Vacuum, 0.0.0 (SLAC - LCLS)</Resolution>
@@ -141,7 +141,7 @@
       <Resolution>LCLSVacuumSerialDriverLib, 1.1.4 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
-      <Resolution>PMPS, 0.0.0 (SLAC - LCLS)</Resolution>
+      <Resolution>PMPS, 0.7.1 (SLAC - LCLS)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="SysFile">
       <Resolution>SysFile, 3.5.9.0 (System)</Resolution>
