@@ -132,7 +132,7 @@
       <Resolution>L2SI Vacuum Library, 0.0.0 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="LCLS General">
-      <Resolution>LCLS General, 2.3.4 (SLAC)</Resolution>
+      <Resolution>LCLS General, 2.4.1 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="LCLS Vacuum">
       <Resolution>LCLS Vacuum, 0.0.0 (SLAC - LCLS)</Resolution>
@@ -197,11 +197,6 @@
     <PlaceholderResolution Include="TcUnit">
       <Resolution>TcUnit, 1.0.1.0 (www.tcunit.org)</Resolution>
     </PlaceholderResolution>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="plc_lfe_gem.tmc">
-      <SubType>Content</SubType>
-    </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>

@@ -15,8 +15,11 @@
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
     g_FastFaultOutput2  :   FB_HardwareFFOutput;
 	
+	{attribute 'pytmc' := 'pv: EM1L0:GEM:ARB:01'}
 	g_fbArbiter   :   FB_Arbiter(1);
+	{attribute 'pytmc' := 'pv: EM1L0:GEM:ARB:02'}
 	g_fbArbiter2   :   FB_Arbiter(2);
+	{attribute 'pytmc' := 'pv: EM1L0:GEM:ARB:03'}
 	g_fbArbiter3   :   FB_Arbiter(3);
 	 
 	
