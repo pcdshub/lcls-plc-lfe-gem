@@ -156,7 +156,7 @@ fbFF(i_xOK := xMPS_OK,
 ACT_IO();
 (*Logger*)
 ACT_Logger();
-//ACT_PMPS();]]></ST>
+ACT_PMPS();]]></ST>
     </Implementation>
     <Action Name="ACT_IO" Id="{090f58e5-b160-4478-a84f-328a90ba6204}">
       <Implementation>

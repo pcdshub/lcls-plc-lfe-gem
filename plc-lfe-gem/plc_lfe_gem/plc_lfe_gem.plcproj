@@ -141,7 +141,7 @@
       <Resolution>LCLSVacuumSerialDriverLib, 1.1.4 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
-      <Resolution>PMPS, 0.7.1 (SLAC - LCLS)</Resolution>
+      <Resolution>PMPS, 0.0.0 (SLAC - LCLS)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="SysFile">
       <Resolution>SysFile, 3.5.9.0 (System)</Resolution>
@@ -197,11 +197,6 @@
     <PlaceholderResolution Include="TcUnit">
       <Resolution>TcUnit, 1.0.1.0 (www.tcunit.org)</Resolution>
     </PlaceholderResolution>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="plc_lfe_gem.tmc">
-      <SubType>Content</SubType>
-    </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
