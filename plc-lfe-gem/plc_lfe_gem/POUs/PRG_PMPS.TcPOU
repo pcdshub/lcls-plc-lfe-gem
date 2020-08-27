@@ -5,6 +5,12 @@
 VAR
  fbArbiterIO : FB_SubSysToArbiter_IO;
  test : bool;
+ ar1 : bool;
+ ar2 : bool;
+  ar3 : bool;
+ nReqID:UDINT;
+ nReqRM:UDINT;
+ bRemove:bool;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -20,11 +26,16 @@ g_FastFaultOutput2.Execute();
 fbArbiterIO(Arbiter := GVL_ILK.g_fbArbiter, fbFFHWO := GVL_ILK.g_FastFaultOutput1);
 GVL_ILK.g_fbArbiter2.ElevateRequest(GVL_ILK.g_fbArbiter);
 GVL_ILK.g_fbArbiter3.ElevateRequest(GVL_ILK.g_fbArbiter);
-//GVL_ILK.fbArbiter2.ElevateRequest(GVL_ILK.fbArbiter1);
-//test := GVL_ILK.g_fbArbiter.CheckRequest(1001);
 
+ar1:=GVL_ILK.g_fbArbiter.CheckRequestInPool(nReqID);
+ar2:=GVL_ILK.g_fbArbiter2.CheckRequestInPool(nReqID);
+ar3:=GVL_ILK.g_fbArbiter3.CheckRequestInPool(nReqID);
+if (bRemove) THEN
+	GVL_ILK.g_fbArbiter.RemoveRequest(nReqRM);
+ 	GVL_ILK.g_fbArbiter2.RemoveRequest(nReqRM);
+	GVL_ILK.g_fbArbiter3.RemoveRequest(nReqRM);  
+END_IF
 
-test := GVL_ILK.g_fbArbiter.CheckRequestInPool(1001);
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_PMPS">
@@ -38,10 +49,13 @@ test := GVL_ILK.g_fbArbiter.CheckRequestInPool(1001);
       <LineId Id="28" Count="0" />
       <LineId Id="38" Count="0" />
       <LineId Id="48" Count="0" />
-      <LineId Id="54" Count="0" />
-      <LineId Id="35" Count="0" />
-      <LineId Id="41" Count="1" />
-      <LineId Id="40" Count="0" />
+      <LineId Id="61" Count="2" />
+      <LineId Id="77" Count="0" />
+      <LineId Id="64" Count="0" />
+      <LineId Id="78" Count="0" />
+      <LineId Id="65" Count="1" />
+      <LineId Id="60" Count="0" />
+      <LineId Id="79" Count="0" />
       <LineId Id="39" Count="0" />
     </LineIds>
   </POU>
