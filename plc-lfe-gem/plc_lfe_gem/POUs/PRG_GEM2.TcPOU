@@ -81,10 +81,10 @@ IF bInit
 THEN
 	(* init array with the interpolation points  *)
 	(* 	fIn					 |		fOut		*)
-	arrTable_GEM2[1,1] := 0;		arrTable_GEM2[1,2] := 0;
-	arrTable_GEM2[2,1] := 0.0000412;		arrTable_GEM2[2,2] := 34;
-	arrTable_GEM2[3,1] := 0.001282;		arrTable_GEM2[3,2] := 36;
-	arrTable_GEM2[4,1] :=  0.002136;	    arrTable_GEM2[4,2] := 38;
+	arrTable_GEM2[1,1] := 0;		arrTable_GEM2[1,2] := 38.7;
+	arrTable_GEM2[2,1] := 0.0000412;		arrTable_GEM2[2,2] := 38.8;
+	arrTable_GEM2[3,1] := 0.001282;		arrTable_GEM2[3,2] := 38.9;
+	arrTable_GEM2[4,1] :=  0.002136;	    arrTable_GEM2[4,2] := 39;
 	arrTable_GEM2[5,1] :=  0.005884;	    arrTable_GEM2[5,2] := 40;
 	arrTable_GEM2[6,1] := 0.00907;		arrTable_GEM2[6,2] := 42;
 	arrTable_GEM2[7,1] := 0.01183;		arrTable_GEM2[7,2] := 44;
@@ -124,8 +124,8 @@ THEN
 	stCTRL_PID_PARAMS.fKp					:= fKp1;			(* proportional gain Kp				*)
 	stCTRL_PID_PARAMS.tTn					:= T#500ms;		(*  Tn									*)
 	stCTRL_PID_PARAMS.tTv					:= T#200ms;	(*  Tv									*)
-	stCTRL_PID_PARAMS.tTd					:= T#100ms;	(*  Td									*)
-	stCTRL_PID_PARAMS.fOutMaxLimit			:=  78;			(* maximum output limit				*)
+	stCTRL_PID_PARAMS.tTd					:= T#200ms;	(*  Td									*)
+	stCTRL_PID_PARAMS.fOutMaxLimit			:=  7;			(* maximum output limit				*)
 	stCTRL_PID_PARAMS.fOutMinLimit			:=  -100;			(* minimum output limit				*)
 
 	(* set the mode to ACTIVE --> normal operation *)
@@ -138,6 +138,11 @@ END_IF
 	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.nDataTable_SIZEOF		:= SIZEOF(arrTable_GEM2);
 
 fGEM2SetpointValue:= LIMIT(0,fGEM2SetpointValue,2);
+if (NOT (GEM2_VVC_40.i_xExtILK_OK) OR (GEM2_VVC_40.M_IsClosed())) THEN
+		 eMode	:= eCTRL_MODE_PASSIVE;
+		GEM2_VCN_40.M_ValveControl(CloseValve);
+		fGEM2SetpointValue :=0; 
+END_IF //Switch off the PID incase of interlock
 if (GEM2_GO) THEN
 	IF (bReset) THEN
 	(* set the mode to RESET*)
@@ -232,7 +237,13 @@ FTRIG(CLK := GEM2_GO);
       <LineId Id="216" Count="0" />
       <LineId Id="13" Count="65" />
       <LineId Id="324" Count="0" />
-      <LineId Id="79" Count="4" />
+      <LineId Id="79" Count="0" />
+      <LineId Id="375" Count="0" />
+      <LineId Id="377" Count="0" />
+      <LineId Id="376" Count="0" />
+      <LineId Id="374" Count="0" />
+      <LineId Id="378" Count="0" />
+      <LineId Id="80" Count="3" />
       <LineId Id="274" Count="0" />
       <LineId Id="84" Count="27" />
       <LineId Id="118" Count="48" />

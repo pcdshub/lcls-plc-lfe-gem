@@ -3,7 +3,7 @@
   <POU Name="PRG_GEM2_DIFF_PUMP" Id="{851181dd-ec63-4e65-94b1-0ffbf8be6c3d}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_GEM2_DIFF_PUMP
 VAR
-	rMaxBackingPressure : REAL := 0.6;
+	rMaxBackingPressure : REAL := 0.7;
 	bInit: BOOL:=TRUE;
 END_VAR
 ]]></Declaration>

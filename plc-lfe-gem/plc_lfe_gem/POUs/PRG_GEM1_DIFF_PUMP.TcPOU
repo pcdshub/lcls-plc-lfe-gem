@@ -3,7 +3,7 @@
   <POU Name="PRG_GEM1_DIFF_PUMP" Id="{7641916e-925e-4304-add8-c14da3930767}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_GEM1_DIFF_PUMP
 VAR
-	rMaxBackingPressure : REAL := 0.65;//Torr
+	rMaxBackingPressure : REAL := 0.7;//Torr
 	bInit:BOOL:=TRUE;
 	
 END_VAR
@@ -83,11 +83,11 @@ GEM1_PTM_10(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=rMaxBackingPressur
 GEM1_PTM_20.i_xExtILKOk := F_TurboExtILK_NO(GEM1_PTM_20.iq_stPtm,BackingGauge:= GEM1_GPI_11.PG,
 						InletGauge:=GEM1_GPI_20.PG,GEM1_VVC_20.q_stValve,GEM1_PRO_20.iq_stPFO);
 GEM1_PTM_20(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
-GEM1_PTM_30(i_xExtILKOK:=F_TurboExtILK_NO(GEM1_PTM_30.iq_stPtm, GEM1_GPI_31.PG,
-						GEM1_GPI_30.PG,GEM1_VVC_30.q_stValve,GEM1_PRO_30.iq_stPFO),
+GEM1_PTM_30(i_xExtILKOK:=TRUE,//F_TurboExtILK_NO(GEM1_PTM_30.iq_stPtm, GEM1_GPI_31.PG,
+						//GEM1_GPI_30.PG,GEM1_VVC_30.q_stValve,GEM1_PRO_30.iq_stPFO),
 		i_stGauge:=GEM1_GPI_31.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
-GEM1_PTM_50(i_xExtILKOK:=F_TurboExtILK_NO(GEM1_PTM_50.iq_stPtm, GEM1_GPI_51.PG,
-						GEM1_GPI_50.PG,GEM1_VVC_50.q_stValve,GEM1_PRO_50.iq_stPFO),
+GEM1_PTM_50(i_xExtILKOK:=TRUE,//F_TurboExtILK_NO(GEM1_PTM_50.iq_stPtm, GEM1_GPI_51.PG,
+						//GEM1_GPI_50.PG,GEM1_VVC_50.q_stValve,GEM1_PRO_50.iq_stPFO),
 		i_stGauge:=GEM1_GPI_51.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
 
 (*Roughing pumps*)
