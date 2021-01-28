@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Boxes &mdash; pcdshub/lcls-plc-lfe-gem  documentation</title>
   
@@ -16,7 +16,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -29,7 +32,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
         <script src="_static/doctr-versions-menu.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
@@ -52,7 +54,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> pcdshub/lcls-plc-lfe-gem
+            <a href="index.html" class="icon icon-home"> pcdshub/lcls-plc-lfe-gem
           
 
           
@@ -89,10 +91,10 @@
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_nc.html">NC Settings</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Boxes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#pmps-ffo">PMPS_FFO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plc-el-17-el6692">PLC_EL_17 (EL6692)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plc-el-13-el6070">PLC_EL_13 (EL6070)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plc-el-15-el9070">PLC_EL_15 (EL9070)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plc-el-16-el3174-0002">PLC_EL_16 (EL3174-0002)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pmps-pre">PMPS_PRE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plc-el-15-el6070">PLC_EL_15 (EL6070)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plc-el-4-el3064">PLC_EL_4 (EL3064)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plc-el-5-el3064">PLC_EL_5 (EL3064)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mks-e19-el9011">MKS_E19 (EL9011)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#drl-mks-ek1100">DRL_MKS (EK1100)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mks-e3-el2794">MKS_E3 (EL2794)</a></li>
@@ -103,15 +105,15 @@
 <li class="toctree-l2"><a class="reference internal" href="#plc-el-1-el2088">PLC_EL_1 (EL2088)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#plc-el-2-el1088">PLC_EL_2 (EL1088)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#plc-el-3-el1088">PLC_EL_3 (EL1088)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plc-el-4-el2088">PLC_EL_4 (EL2088)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plc-el-5-el1088">PLC_EL_5 (EL1088)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plc-el-6-el1088">PLC_EL_6 (EL1088)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plc-el-7-el9187">PLC_EL_7 (EL9187)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plc-el-8-el2088">PLC_EL_8 (EL2088)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plc-el-9-el1088">PLC_EL_9 (EL1088)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plc-el-10-el1088">PLC_EL_10 (EL1088)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plc-el-11-el2088">PLC_EL_11 (EL2088)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plc-el-12-el9187">PLC_EL_12 (EL9187)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plc-el-6-el2088">PLC_EL_6 (EL2088)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plc-el-7-el1088">PLC_EL_7 (EL1088)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plc-el-8-el1088">PLC_EL_8 (EL1088)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plc-el-9-el9187">PLC_EL_9 (EL9187)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plc-el-10-el2088">PLC_EL_10 (EL2088)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plc-el-11-el1088">PLC_EL_11 (EL1088)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plc-el-12-el1088">PLC_EL_12 (EL1088)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plc-el-13-el2088">PLC_EL_13 (EL2088)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plc-el-14-el9187">PLC_EL_14 (EL9187)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#plc-ek-18-ek1110">PLC_EK_18 (EK1110)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#l0s3-pnl-01-eb-1-ep2338-0002">L0S3_PNL_01_EB_1 (EP2338-0002)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#l0s3-pnl-01-eb-2-ep2338-0002">L0S3_PNL_01_EB_2 (EP2338-0002)</a></li>
@@ -227,6 +229,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -238,7 +242,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/plc-lfe-gem_boxes.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -348,8 +352,8 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="plc-el-17-el6692">
-<h2>PLC_EL_17 (EL6692)<a class="headerlink" href="#plc-el-17-el6692" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pmps-pre">
+<h2>PMPS_PRE<a class="headerlink" href="#pmps-pre" title="Permalink to this headline">¶</a></h2>
 <details>
      <summary>EtherCAT (5 PDOs)</summary><table class="docutils align-center" id="id2">
 <caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
@@ -364,7 +368,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>PLC_EL_17 (EL6692)</p></td>
+<td><p>PMPS_PRE</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
 <td><p>2</p></td>
@@ -379,13 +383,13 @@
 <td><p>001400012200010002000000800000040001001422010000</p></td>
 </tr>
 <tr class="row-odd"><td><p>SyncMan</p></td>
-<td><p>001800002400000003000000000000000000001824010000</p></td>
+<td><p>001898002400010003000000000000000000001824010000</p></td>
 </tr>
 <tr class="row-even"><td><p>SyncMan</p></td>
-<td><p>001e02002000010004000000000000000200001e20010000</p></td>
+<td><p>001e9a002000010004000000000000000200001e20010000</p></td>
 </tr>
 <tr class="row-odd"><td><p>Fmmu</p></td>
-<td><p>0000000000000000000000020000000001000000000000000000000000000000</p></td>
+<td><p>0000000000000000001800020100000001000000000000000000000000000000</p></td>
 </tr>
 <tr class="row-even"><td><p>Fmmu</p></td>
 <td><p>0000000000000000001e00010100000002000000000000000000000000000000</p></td>
@@ -639,10 +643,60 @@
 </tbody>
 </table>
 <p>PDO IO Inputs (Index #x1a00, Flags #x0021, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CurrentBP</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>ST_BeamParams_IO</p></td>
+</tr>
+</tbody>
+</table>
 <p>PDO IO Outputs (Index #x1600, Flags #x0021, SyncMan 2)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RequestedBP</p></td>
+<td></td>
+<td></td>
+<td><p>#x7000</p></td>
+<td><p>ST_BeamParams_IO</p></td>
+</tr>
+</tbody>
+</table>
 </details></div>
-<div class="section" id="plc-el-13-el6070">
-<h2>PLC_EL_13 (EL6070)<a class="headerlink" href="#plc-el-13-el6070" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plc-el-15-el6070">
+<h2>PLC_EL_15 (EL6070)<a class="headerlink" href="#plc-el-15-el6070" title="Permalink to this headline">¶</a></h2>
 <details>
      <summary>EtherCAT</summary><table class="docutils align-center" id="id3">
 <caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
@@ -657,7 +711,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>PLC_EL_13 (EL6070)</p></td>
+<td><p>PLC_EL_15 (EL6070)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
 <td><p>3</p></td>
@@ -677,10 +731,10 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="plc-el-15-el9070">
-<h2>PLC_EL_15 (EL9070)<a class="headerlink" href="#plc-el-15-el9070" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plc-el-4-el3064">
+<h2>PLC_EL_4 (EL3064)<a class="headerlink" href="#plc-el-4-el3064" title="Permalink to this headline">¶</a></h2>
 <details>
-     <summary>EtherCAT</summary><table class="docutils align-center" id="id4">
+     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id4">
 <caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
@@ -693,34 +747,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>PLC_EL_15 (EL9070)</p></td>
+<td><p>PLC_EL_4 (EL3064)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
 <td><p>4</p></td>
-</tr>
-</tbody>
-</table>
-</details></div>
-<div class="section" id="plc-el-16-el3174-0002">
-<h2>PLC_EL_16 (EL3174-0002)<a class="headerlink" href="#plc-el-16-el3174-0002" title="Permalink to this headline">¶</a></h2>
-<details>
-     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id5">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Data</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Name</p></td>
-<td><p>PLC_EL_16 (EL3174-0002)</p></td>
-</tr>
-<tr class="row-odd"><td><p>ID</p></td>
-<td><p>5</p></td>
 </tr>
 <tr class="row-even"><td><p>BootStrapData</p></td>
 <td><p>0010f400f410f400</p></td>
@@ -776,25 +806,25 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Bit set when upper value limit exceeded</p></td>
+<td><p>Underrange event active</p></td>
 <td></td>
 <td><p>#x6000</p></td>
 <td><p>BIT</p></td>
 </tr>
 <tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Bit set when lower value limit exceeded</p></td>
+<td><p>Overrange event active</p></td>
 <td></td>
 <td><p>#x6000</p></td>
 <td><p>BIT</p></td>
 </tr>
 <tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
+<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
 <td></td>
 <td><p>#x6000</p></td>
 <td><p>BIT2</p></td>
 </tr>
 <tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
+<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
 <td></td>
 <td><p>#x6000</p></td>
 <td><p>BIT2</p></td>
@@ -815,27 +845,21 @@
 <td></td>
 <td></td>
 <td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
+<td><p>ARRAY [0..5] OF BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
+<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
+<td><p>TRUE when this TxPDO is not valid</p></td>
 <td></td>
 <td><p>#x6000</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
+<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
+<td><p>Bit toggles everytime when new value available</p></td>
 <td></td>
 <td><p>#x6000</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-even"><td><p>Value</p></td>
+<tr class="row-odd"><td><p>Value</p></td>
 <td></td>
 <td></td>
 <td><p>#x6000</p></td>
@@ -888,25 +912,25 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Bit set when upper value limit exceeded</p></td>
+<td><p>Underrange event active</p></td>
 <td></td>
 <td><p>#x6010</p></td>
 <td><p>BIT</p></td>
 </tr>
 <tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Bit set when lower value limit exceeded</p></td>
+<td><p>Overrange event active</p></td>
 <td></td>
 <td><p>#x6010</p></td>
 <td><p>BIT</p></td>
 </tr>
 <tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
+<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
 <td></td>
 <td><p>#x6010</p></td>
 <td><p>BIT2</p></td>
 </tr>
 <tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
+<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
 <td></td>
 <td><p>#x6010</p></td>
 <td><p>BIT2</p></td>
@@ -927,27 +951,21 @@
 <td></td>
 <td></td>
 <td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
+<td><p>ARRAY [0..5] OF BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
+<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
+<td><p>TRUE when this TxPDO is not valid</p></td>
 <td></td>
 <td><p>#x6010</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
+<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
+<td><p>Bit toggles everytime when new value available</p></td>
 <td></td>
 <td><p>#x6010</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-even"><td><p>Value</p></td>
+<tr class="row-odd"><td><p>Value</p></td>
 <td></td>
 <td></td>
 <td><p>#x6010</p></td>
@@ -1000,25 +1018,25 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Bit set when upper value limit exceeded</p></td>
+<td><p>Underrange event active</p></td>
 <td></td>
 <td><p>#x6020</p></td>
 <td><p>BIT</p></td>
 </tr>
 <tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Bit set when lower value limit exceeded</p></td>
+<td><p>Overrange event active</p></td>
 <td></td>
 <td><p>#x6020</p></td>
 <td><p>BIT</p></td>
 </tr>
 <tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
+<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
 <td></td>
 <td><p>#x6020</p></td>
 <td><p>BIT2</p></td>
 </tr>
 <tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
+<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
 <td></td>
 <td><p>#x6020</p></td>
 <td><p>BIT2</p></td>
@@ -1039,27 +1057,21 @@
 <td></td>
 <td></td>
 <td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
+<td><p>ARRAY [0..5] OF BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
+<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
+<td><p>TRUE when this TxPDO is not valid</p></td>
 <td></td>
 <td><p>#x6020</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
+<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
+<td><p>Bit toggles everytime when new value available</p></td>
 <td></td>
 <td><p>#x6020</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-even"><td><p>Value</p></td>
+<tr class="row-odd"><td><p>Value</p></td>
 <td></td>
 <td></td>
 <td><p>#x6020</p></td>
@@ -1112,25 +1124,25 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Bit set when upper value limit exceeded</p></td>
+<td><p>Underrange event active</p></td>
 <td></td>
 <td><p>#x6030</p></td>
 <td><p>BIT</p></td>
 </tr>
 <tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Bit set when lower value limit exceeded</p></td>
+<td><p>Overrange event active</p></td>
 <td></td>
 <td><p>#x6030</p></td>
 <td><p>BIT</p></td>
 </tr>
 <tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
+<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
 <td></td>
 <td><p>#x6030</p></td>
 <td><p>BIT2</p></td>
 </tr>
 <tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
+<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
 <td></td>
 <td><p>#x6030</p></td>
 <td><p>BIT2</p></td>
@@ -1151,27 +1163,21 @@
 <td></td>
 <td></td>
 <td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
+<td><p>ARRAY [0..5] OF BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
+<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
+<td><p>TRUE when this TxPDO is not valid</p></td>
 <td></td>
 <td><p>#x6030</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
+<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
+<td><p>Bit toggles everytime when new value available</p></td>
 <td></td>
 <td><p>#x6030</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-even"><td><p>Value</p></td>
+<tr class="row-odd"><td><p>Value</p></td>
 <td></td>
 <td></td>
 <td><p>#x6030</p></td>
@@ -1206,11 +1212,11 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="mks-e19-el9011">
-<h2>MKS_E19 (EL9011)<a class="headerlink" href="#mks-e19-el9011" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plc-el-5-el3064">
+<h2>PLC_EL_5 (EL3064)<a class="headerlink" href="#plc-el-5-el3064" title="Permalink to this headline">¶</a></h2>
 <details>
-     <summary>EtherCAT</summary><table class="docutils align-center" id="id6">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id5">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -1222,192 +1228,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>MKS_E19 (EL9011)</p></td>
+<td><p>PLC_EL_5 (EL3064)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
-<td><p>6</p></td>
-</tr>
-</tbody>
-</table>
-</details></div>
-<div class="section" id="drl-mks-ek1100">
-<h2>DRL_MKS (EK1100)<a class="headerlink" href="#drl-mks-ek1100" title="Permalink to this headline">¶</a></h2>
-<details>
-     <summary>EtherCAT</summary><table class="docutils align-center" id="id7">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Data</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Name</p></td>
-<td><p>DRL_MKS (EK1100)</p></td>
-</tr>
-<tr class="row-odd"><td><p>ID</p></td>
-<td><p>20</p></td>
-</tr>
-</tbody>
-</table>
-</details></div>
-<div class="section" id="mks-e3-el2794">
-<h2>MKS_E3 (EL2794)<a class="headerlink" href="#mks-e3-el2794" title="Permalink to this headline">¶</a></h2>
-<details>
-     <summary>EtherCAT (4 PDOs)</summary><table class="docutils align-center" id="id8">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Data</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Name</p></td>
-<td><p>MKS_E3 (EL2794)</p></td>
-</tr>
-<tr class="row-odd"><td><p>ID</p></td>
-<td><p>22</p></td>
-</tr>
-<tr class="row-even"><td><p>SyncMan</p></td>
-<td><p>000f01004400010003000000000000000000000f44090000</p></td>
-</tr>
-<tr class="row-odd"><td><p>Fmmu</p></td>
-<td><p>0000000000000000000f00020100000001000000000000000000000000000000</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 1 (Index #x1600, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7000</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 2 (Index #x1601, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7010</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 3 (Index #x1602, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7020</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 4 (Index #x1603, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7030</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-</details></div>
-<div class="section" id="mks-e2-el3064">
-<h2>MKS_E2 (EL3064)<a class="headerlink" href="#mks-e2-el3064" title="Permalink to this headline">¶</a></h2>
-<details>
-     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id9">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Data</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Name</p></td>
-<td><p>MKS_E2 (EL3064)</p></td>
-</tr>
-<tr class="row-odd"><td><p>ID</p></td>
-<td><p>23</p></td>
+<td><p>5</p></td>
 </tr>
 <tr class="row-even"><td><p>BootStrapData</p></td>
 <td><p>0010f400f410f400</p></td>
@@ -1869,11 +1693,11 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="mks-e1-el3064">
-<h2>MKS_E1 (EL3064)<a class="headerlink" href="#mks-e1-el3064" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mks-e19-el9011">
+<h2>MKS_E19 (EL9011)<a class="headerlink" href="#mks-e19-el9011" title="Permalink to this headline">¶</a></h2>
 <details>
-     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id10">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
+     <summary>EtherCAT</summary><table class="docutils align-center" id="id6">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -1885,10 +1709,192 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>MKS_E1 (EL3064)</p></td>
+<td><p>MKS_E19 (EL9011)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
-<td><p>24</p></td>
+<td><p>6</p></td>
+</tr>
+</tbody>
+</table>
+</details></div>
+<div class="section" id="drl-mks-ek1100">
+<h2>DRL_MKS (EK1100)<a class="headerlink" href="#drl-mks-ek1100" title="Permalink to this headline">¶</a></h2>
+<details>
+     <summary>EtherCAT</summary><table class="docutils align-center" id="id7">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>DRL_MKS (EK1100)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>20</p></td>
+</tr>
+</tbody>
+</table>
+</details></div>
+<div class="section" id="mks-e3-el2794">
+<h2>MKS_E3 (EL2794)<a class="headerlink" href="#mks-e3-el2794" title="Permalink to this headline">¶</a></h2>
+<details>
+     <summary>EtherCAT (4 PDOs)</summary><table class="docutils align-center" id="id8">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>MKS_E3 (EL2794)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>22</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>000f01004400010003000000000000000000000f44090000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fmmu</p></td>
+<td><p>0000000000000000000f00020100000001000000000000000000000000000000</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 1 (Index #x1600, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7000</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 2 (Index #x1601, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7010</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 3 (Index #x1602, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7020</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 4 (Index #x1603, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7030</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+</details></div>
+<div class="section" id="mks-e2-el3064">
+<h2>MKS_E2 (EL3064)<a class="headerlink" href="#mks-e2-el3064" title="Permalink to this headline">¶</a></h2>
+<details>
+     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id9">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>MKS_E2 (EL3064)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>23</p></td>
 </tr>
 <tr class="row-even"><td><p>BootStrapData</p></td>
 <td><p>0010f400f410f400</p></td>
@@ -2350,11 +2356,11 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="mks-e4-el3064">
-<h2>MKS_E4 (EL3064)<a class="headerlink" href="#mks-e4-el3064" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mks-e1-el3064">
+<h2>MKS_E1 (EL3064)<a class="headerlink" href="#mks-e1-el3064" title="Permalink to this headline">¶</a></h2>
 <details>
-     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id11">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
+     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id10">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -2366,10 +2372,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>MKS_E4 (EL3064)</p></td>
+<td><p>MKS_E1 (EL3064)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
-<td><p>25</p></td>
+<td><p>24</p></td>
 </tr>
 <tr class="row-even"><td><p>BootStrapData</p></td>
 <td><p>0010f400f410f400</p></td>
@@ -2779,6 +2785,487 @@
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
 <tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id117">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..5] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
+<td><p>TRUE when this TxPDO is not valid</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
+<td><p>Bit toggles everytime when new value available</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 4 (Index #x1a07, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+</details></div>
+<div class="section" id="mks-e4-el3064">
+<h2>MKS_E4 (EL3064)<a class="headerlink" href="#mks-e4-el3064" title="Permalink to this headline">¶</a></h2>
+<details>
+     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id11">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>MKS_E4 (EL3064)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>25</p></td>
+</tr>
+<tr class="row-even"><td><p>BootStrapData</p></td>
+<td><p>0010f400f410f400</p></td>
+</tr>
+<tr class="row-odd"><td><p>SyncMan</p></td>
+<td><p>001080002600010001000000800080008000001026010000</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>801080002200010002000000800080008000801022010000</p></td>
+</tr>
+<tr class="row-odd"><td><p>SyncMan</p></td>
+<td><p>001100000400000003000000000000000000001104000000</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>801110002000010004000000000000001000801120010000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fmmu</p></td>
+<td><p>0000000000000000801100010100000002000000000000000000000000000000</p></td>
+</tr>
+<tr class="row-even"><td><p>Fmmu</p></td>
+<td><p>00000000000000000d0800010100000003000000000000000000000000000000</p></td>
+</tr>
+<tr class="row-odd"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+<tr class="row-even"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+<tr class="row-odd"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+<tr class="row-even"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 1 (Index #x1a00, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id118">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id119">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..5] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
+<td><p>TRUE when this TxPDO is not valid</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
+<td><p>Bit toggles everytime when new value available</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 1 (Index #x1a01, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 2 (Index #x1a02, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id120">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id121">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..5] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
+<td><p>TRUE when this TxPDO is not valid</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
+<td><p>Bit toggles everytime when new value available</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 2 (Index #x1a03, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 3 (Index #x1a04, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id122">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id123">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..5] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
+<td><p>TRUE when this TxPDO is not valid</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
+<td><p>Bit toggles everytime when new value available</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 3 (Index #x1a05, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 4 (Index #x1a06, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id124">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id125">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -3569,8 +4056,8 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="plc-el-4-el2088">
-<h2>PLC_EL_4 (EL2088)<a class="headerlink" href="#plc-el-4-el2088" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plc-el-6-el2088">
+<h2>PLC_EL_6 (EL2088)<a class="headerlink" href="#plc-el-6-el2088" title="Permalink to this headline">¶</a></h2>
 <details>
      <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id16">
 <caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id16" title="Permalink to this table">¶</a></caption>
@@ -3585,7 +4072,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>PLC_EL_4 (EL2088)</p></td>
+<td><p>PLC_EL_6 (EL2088)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
 <td><p>38</p></td>
@@ -3807,8 +4294,8 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="plc-el-5-el1088">
-<h2>PLC_EL_5 (EL1088)<a class="headerlink" href="#plc-el-5-el1088" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plc-el-7-el1088">
+<h2>PLC_EL_7 (EL1088)<a class="headerlink" href="#plc-el-7-el1088" title="Permalink to this headline">¶</a></h2>
 <details>
      <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id17">
 <caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id17" title="Permalink to this table">¶</a></caption>
@@ -3823,7 +4310,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>PLC_EL_5 (EL1088)</p></td>
+<td><p>PLC_EL_7 (EL1088)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
 <td><p>39</p></td>
@@ -4045,8 +4532,8 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="plc-el-6-el1088">
-<h2>PLC_EL_6 (EL1088)<a class="headerlink" href="#plc-el-6-el1088" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plc-el-8-el1088">
+<h2>PLC_EL_8 (EL1088)<a class="headerlink" href="#plc-el-8-el1088" title="Permalink to this headline">¶</a></h2>
 <details>
      <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id18">
 <caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id18" title="Permalink to this table">¶</a></caption>
@@ -4061,7 +4548,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>PLC_EL_6 (EL1088)</p></td>
+<td><p>PLC_EL_8 (EL1088)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
 <td><p>40</p></td>
@@ -4283,8 +4770,8 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="plc-el-7-el9187">
-<h2>PLC_EL_7 (EL9187)<a class="headerlink" href="#plc-el-7-el9187" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plc-el-9-el9187">
+<h2>PLC_EL_9 (EL9187)<a class="headerlink" href="#plc-el-9-el9187" title="Permalink to this headline">¶</a></h2>
 <details>
      <summary>EtherCAT</summary><table class="docutils align-center" id="id19">
 <caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id19" title="Permalink to this table">¶</a></caption>
@@ -4299,7 +4786,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>PLC_EL_7 (EL9187)</p></td>
+<td><p>PLC_EL_9 (EL9187)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
 <td><p>41</p></td>
@@ -4307,8 +4794,8 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="plc-el-8-el2088">
-<h2>PLC_EL_8 (EL2088)<a class="headerlink" href="#plc-el-8-el2088" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plc-el-10-el2088">
+<h2>PLC_EL_10 (EL2088)<a class="headerlink" href="#plc-el-10-el2088" title="Permalink to this headline">¶</a></h2>
 <details>
      <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id20">
 <caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id20" title="Permalink to this table">¶</a></caption>
@@ -4323,7 +4810,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>PLC_EL_8 (EL2088)</p></td>
+<td><p>PLC_EL_10 (EL2088)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
 <td><p>42</p></td>
@@ -4545,8 +5032,8 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="plc-el-9-el1088">
-<h2>PLC_EL_9 (EL1088)<a class="headerlink" href="#plc-el-9-el1088" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plc-el-11-el1088">
+<h2>PLC_EL_11 (EL1088)<a class="headerlink" href="#plc-el-11-el1088" title="Permalink to this headline">¶</a></h2>
 <details>
      <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id21">
 <caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id21" title="Permalink to this table">¶</a></caption>
@@ -4561,7 +5048,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>PLC_EL_9 (EL1088)</p></td>
+<td><p>PLC_EL_11 (EL1088)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
 <td><p>43</p></td>
@@ -4783,8 +5270,8 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="plc-el-10-el1088">
-<h2>PLC_EL_10 (EL1088)<a class="headerlink" href="#plc-el-10-el1088" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plc-el-12-el1088">
+<h2>PLC_EL_12 (EL1088)<a class="headerlink" href="#plc-el-12-el1088" title="Permalink to this headline">¶</a></h2>
 <details>
      <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id22">
 <caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id22" title="Permalink to this table">¶</a></caption>
@@ -4799,7 +5286,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>PLC_EL_10 (EL1088)</p></td>
+<td><p>PLC_EL_12 (EL1088)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
 <td><p>44</p></td>
@@ -5021,8 +5508,8 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="plc-el-11-el2088">
-<h2>PLC_EL_11 (EL2088)<a class="headerlink" href="#plc-el-11-el2088" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plc-el-13-el2088">
+<h2>PLC_EL_13 (EL2088)<a class="headerlink" href="#plc-el-13-el2088" title="Permalink to this headline">¶</a></h2>
 <details>
      <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id23">
 <caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id23" title="Permalink to this table">¶</a></caption>
@@ -5037,7 +5524,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>PLC_EL_11 (EL2088)</p></td>
+<td><p>PLC_EL_13 (EL2088)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
 <td><p>45</p></td>
@@ -5259,8 +5746,8 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="plc-el-12-el9187">
-<h2>PLC_EL_12 (EL9187)<a class="headerlink" href="#plc-el-12-el9187" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plc-el-14-el9187">
+<h2>PLC_EL_14 (EL9187)<a class="headerlink" href="#plc-el-14-el9187" title="Permalink to this headline">¶</a></h2>
 <details>
      <summary>EtherCAT</summary><table class="docutils align-center" id="id24">
 <caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id24" title="Permalink to this table">¶</a></caption>
@@ -5275,7 +5762,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>PLC_EL_12 (EL9187)</p></td>
+<td><p>PLC_EL_14 (EL9187)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
 <td><p>48</p></td>
@@ -7219,511 +7706,6 @@
 <td><p>#x6000</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id118">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..0] OF BIT</p></td>
-</tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id119">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Compact Channel 1 (Index #x1a01, Flags #x0010, SyncMan )</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Standard Channel 2 (Index #x1a02, Flags #x0010, SyncMan 3)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Underrange event active</p></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Overrange event active</p></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Error</p></td>
-<td><p>Bit set when Over- or Underrange</p></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id120">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..0] OF BIT</p></td>
-</tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id121">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Compact Channel 2 (Index #x1a03, Flags #x0010, SyncMan )</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Standard Channel 3 (Index #x1a04, Flags #x0010, SyncMan 3)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Underrange event active</p></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Overrange event active</p></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Error</p></td>
-<td><p>Bit set when Over- or Underrange</p></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id122">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..0] OF BIT</p></td>
-</tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id123">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Compact Channel 3 (Index #x1a05, Flags #x0010, SyncMan )</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Standard Channel 4 (Index #x1a06, Flags #x0010, SyncMan 3)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Underrange event active</p></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Overrange event active</p></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Error</p></td>
-<td><p>Bit set when Over- or Underrange</p></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id124">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..0] OF BIT</p></td>
-</tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id125">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Compact Channel 4 (Index #x1a07, Flags #x0010, SyncMan )</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-</details></div>
-<div class="section" id="l0s3-pnl-01-eb-6-ep3174-0002">
-<h2>L0S3_PNL_01_EB_6 (EP3174-0002)<a class="headerlink" href="#l0s3-pnl-01-eb-6-ep3174-0002" title="Permalink to this headline">¶</a></h2>
-<details>
-     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id31">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id31" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Data</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Name</p></td>
-<td><p>L0S3_PNL_01_EB_6 (EP3174-0002)</p></td>
-</tr>
-<tr class="row-odd"><td><p>ID</p></td>
-<td><p>56</p></td>
-</tr>
-<tr class="row-even"><td><p>BootStrapData</p></td>
-<td><p>0010f400f410f400</p></td>
-</tr>
-<tr class="row-odd"><td><p>SyncMan</p></td>
-<td><p>001080002600010001000000800080008000001026010000</p></td>
-</tr>
-<tr class="row-even"><td><p>SyncMan</p></td>
-<td><p>801080002200010002000000800080008000801022010000</p></td>
-</tr>
-<tr class="row-odd"><td><p>SyncMan</p></td>
-<td><p>001100000400000003000000000000000000001104000000</p></td>
-</tr>
-<tr class="row-even"><td><p>SyncMan</p></td>
-<td><p>801110002000010004000000000000001000801120010000</p></td>
-</tr>
-<tr class="row-odd"><td><p>Fmmu</p></td>
-<td><p>0000000000000000801100010100000002000000000000000000000000000000</p></td>
-</tr>
-<tr class="row-even"><td><p>Fmmu</p></td>
-<td><p>00000000000000000d0800010100000003000000000000000000000000000000</p></td>
-</tr>
-<tr class="row-odd"><td><p>CoeProfile</p></td>
-<td><p>19665801</p></td>
-</tr>
-<tr class="row-even"><td><p>CoeProfile</p></td>
-<td><p>19665801</p></td>
-</tr>
-<tr class="row-odd"><td><p>CoeProfile</p></td>
-<td><p>19665801</p></td>
-</tr>
-<tr class="row-even"><td><p>CoeProfile</p></td>
-<td><p>19665801</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Standard Channel 1 (Index #x1a00, Flags #x0010, SyncMan 3)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Underrange event active</p></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Overrange event active</p></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Error</p></td>
-<td><p>Bit set when Over- or Underrange</p></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
 <tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id126">Status__</span></a></p></td>
 <td></td>
 <td></td>
@@ -8067,6 +8049,511 @@
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
 <tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id133">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..4] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Sync error</p></td>
+<td></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO State</p></td>
+<td></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
+<td></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 4 (Index #x1a07, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+</details></div>
+<div class="section" id="l0s3-pnl-01-eb-6-ep3174-0002">
+<h2>L0S3_PNL_01_EB_6 (EP3174-0002)<a class="headerlink" href="#l0s3-pnl-01-eb-6-ep3174-0002" title="Permalink to this headline">¶</a></h2>
+<details>
+     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id31">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id31" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>L0S3_PNL_01_EB_6 (EP3174-0002)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>56</p></td>
+</tr>
+<tr class="row-even"><td><p>BootStrapData</p></td>
+<td><p>0010f400f410f400</p></td>
+</tr>
+<tr class="row-odd"><td><p>SyncMan</p></td>
+<td><p>001080002600010001000000800080008000001026010000</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>801080002200010002000000800080008000801022010000</p></td>
+</tr>
+<tr class="row-odd"><td><p>SyncMan</p></td>
+<td><p>001100000400000003000000000000000000001104000000</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>801110002000010004000000000000001000801120010000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fmmu</p></td>
+<td><p>0000000000000000801100010100000002000000000000000000000000000000</p></td>
+</tr>
+<tr class="row-even"><td><p>Fmmu</p></td>
+<td><p>00000000000000000d0800010100000003000000000000000000000000000000</p></td>
+</tr>
+<tr class="row-odd"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+<tr class="row-even"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+<tr class="row-odd"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+<tr class="row-even"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 1 (Index #x1a00, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id134">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id135">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..4] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Sync error</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO State</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 1 (Index #x1a01, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 2 (Index #x1a02, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id136">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id137">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..4] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Sync error</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO State</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 2 (Index #x1a03, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 3 (Index #x1a04, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id138">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id139">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..4] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Sync error</p></td>
+<td></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO State</p></td>
+<td></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
+<td></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 3 (Index #x1a05, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 4 (Index #x1a06, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id140">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id141">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9133,13 +9620,13 @@
 <td><p>#x6000</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id134">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id142">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id135">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id143">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9245,13 +9732,13 @@
 <td><p>#x6010</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id136">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id144">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id137">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id145">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9357,13 +9844,13 @@
 <td><p>#x6020</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id138">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id146">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id139">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id147">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -9469,13 +9956,13 @@
 <td><p>#x6030</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id140">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id148">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id141">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id149">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -11128,13 +11615,13 @@
 <td><p>#x6000</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id142">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id150">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id143">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id151">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -11240,13 +11727,13 @@
 <td><p>#x6010</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id144">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id152">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id145">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id153">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -11352,13 +11839,13 @@
 <td><p>#x6020</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id146">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id154">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id147">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id155">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -11464,13 +11951,13 @@
 <td><p>#x6030</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id148">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id156">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id149">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id157">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -11636,13 +12123,13 @@
 <td><p>#x6000</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id150">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id158">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id151">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id159">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -11748,13 +12235,13 @@
 <td><p>#x6010</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id152">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id160">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id153">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id161">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -11969,13 +12456,13 @@
 <td><p>#x6000</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id154">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id162">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id155">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id163">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -12081,13 +12568,13 @@
 <td><p>#x6010</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id156">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id164">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id157">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id165">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -12193,13 +12680,13 @@
 <td><p>#x6020</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id158">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id166">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id159">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id167">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -12305,13 +12792,13 @@
 <td><p>#x6030</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id160">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id168">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id161">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id169">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -14098,13 +14585,13 @@
 <td><p>#x6000</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id162">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id170">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id163">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id171">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -14210,13 +14697,13 @@
 <td><p>#x6010</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id164">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id172">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id165">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id173">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -14322,13 +14809,13 @@
 <td><p>#x6020</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id166">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id174">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id167">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id175">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -14434,13 +14921,13 @@
 <td><p>#x6030</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id168">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id176">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id169">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id177">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -18555,511 +19042,6 @@
 <td><p>#x6000</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id170">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..0] OF BIT</p></td>
-</tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id171">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Compact Channel 1 (Index #x1a01, Flags #x0010, SyncMan )</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Standard Channel 2 (Index #x1a02, Flags #x0010, SyncMan 3)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Underrange event active</p></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Overrange event active</p></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Error</p></td>
-<td><p>Bit set when Over- or Underrange</p></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id172">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..0] OF BIT</p></td>
-</tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id173">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Compact Channel 2 (Index #x1a03, Flags #x0010, SyncMan )</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Standard Channel 3 (Index #x1a04, Flags #x0010, SyncMan 3)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Underrange event active</p></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Overrange event active</p></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Error</p></td>
-<td><p>Bit set when Over- or Underrange</p></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id174">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..0] OF BIT</p></td>
-</tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id175">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Compact Channel 3 (Index #x1a05, Flags #x0010, SyncMan )</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Standard Channel 4 (Index #x1a06, Flags #x0010, SyncMan 3)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Underrange event active</p></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Overrange event active</p></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Error</p></td>
-<td><p>Bit set when Over- or Underrange</p></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id176">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..0] OF BIT</p></td>
-</tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id177">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Compact Channel 4 (Index #x1a07, Flags #x0010, SyncMan )</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-</details></div>
-<div class="section" id="l0s6-pnl-01-eb-5-ep3174-0002">
-<h2>L0S6_PNL_01_EB_5 (EP3174-0002)<a class="headerlink" href="#l0s6-pnl-01-eb-5-ep3174-0002" title="Permalink to this headline">¶</a></h2>
-<details>
-     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id58">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id58" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Data</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Name</p></td>
-<td><p>L0S6_PNL_01_EB_5 (EP3174-0002)</p></td>
-</tr>
-<tr class="row-odd"><td><p>ID</p></td>
-<td><p>83</p></td>
-</tr>
-<tr class="row-even"><td><p>BootStrapData</p></td>
-<td><p>0010f400f410f400</p></td>
-</tr>
-<tr class="row-odd"><td><p>SyncMan</p></td>
-<td><p>001080002600010001000000800080008000001026010000</p></td>
-</tr>
-<tr class="row-even"><td><p>SyncMan</p></td>
-<td><p>801080002200010002000000800080008000801022010000</p></td>
-</tr>
-<tr class="row-odd"><td><p>SyncMan</p></td>
-<td><p>001100000400000003000000000000000000001104000000</p></td>
-</tr>
-<tr class="row-even"><td><p>SyncMan</p></td>
-<td><p>801110002000010004000000000000001000801120010000</p></td>
-</tr>
-<tr class="row-odd"><td><p>Fmmu</p></td>
-<td><p>0000000000000000801100010100000002000000000000000000000000000000</p></td>
-</tr>
-<tr class="row-even"><td><p>Fmmu</p></td>
-<td><p>00000000000000000d0800010100000003000000000000000000000000000000</p></td>
-</tr>
-<tr class="row-odd"><td><p>CoeProfile</p></td>
-<td><p>19665801</p></td>
-</tr>
-<tr class="row-even"><td><p>CoeProfile</p></td>
-<td><p>19665801</p></td>
-</tr>
-<tr class="row-odd"><td><p>CoeProfile</p></td>
-<td><p>19665801</p></td>
-</tr>
-<tr class="row-even"><td><p>CoeProfile</p></td>
-<td><p>19665801</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Standard Channel 1 (Index #x1a00, Flags #x0010, SyncMan 3)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Underrange event active</p></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Overrange event active</p></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Error</p></td>
-<td><p>Bit set when Over- or Underrange</p></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
 <tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id178">Status__</span></a></p></td>
 <td></td>
 <td></td>
@@ -19403,6 +19385,511 @@
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
 <tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id185">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..4] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Sync error</p></td>
+<td></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO State</p></td>
+<td></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
+<td></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 4 (Index #x1a07, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+</details></div>
+<div class="section" id="l0s6-pnl-01-eb-5-ep3174-0002">
+<h2>L0S6_PNL_01_EB_5 (EP3174-0002)<a class="headerlink" href="#l0s6-pnl-01-eb-5-ep3174-0002" title="Permalink to this headline">¶</a></h2>
+<details>
+     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id58">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id58" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>L0S6_PNL_01_EB_5 (EP3174-0002)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>83</p></td>
+</tr>
+<tr class="row-even"><td><p>BootStrapData</p></td>
+<td><p>0010f400f410f400</p></td>
+</tr>
+<tr class="row-odd"><td><p>SyncMan</p></td>
+<td><p>001080002600010001000000800080008000001026010000</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>801080002200010002000000800080008000801022010000</p></td>
+</tr>
+<tr class="row-odd"><td><p>SyncMan</p></td>
+<td><p>001100000400000003000000000000000000001104000000</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>801110002000010004000000000000001000801120010000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fmmu</p></td>
+<td><p>0000000000000000801100010100000002000000000000000000000000000000</p></td>
+</tr>
+<tr class="row-even"><td><p>Fmmu</p></td>
+<td><p>00000000000000000d0800010100000003000000000000000000000000000000</p></td>
+</tr>
+<tr class="row-odd"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+<tr class="row-even"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+<tr class="row-odd"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+<tr class="row-even"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 1 (Index #x1a00, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id186">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id187">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..4] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Sync error</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO State</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 1 (Index #x1a01, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 2 (Index #x1a02, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id188">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id189">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..4] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Sync error</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO State</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 2 (Index #x1a03, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 3 (Index #x1a04, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id190">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id191">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..4] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Sync error</p></td>
+<td></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO State</p></td>
+<td></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
+<td></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 3 (Index #x1a05, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 4 (Index #x1a06, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id192">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id193">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -21977,13 +22464,13 @@
 <td><p>#x6000</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id186">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id194">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id187">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id195">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -22089,13 +22576,13 @@
 <td><p>#x6010</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id188">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id196">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id189">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id197">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -22201,13 +22688,13 @@
 <td><p>#x6020</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id190">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id198">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id191">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id199">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -22313,13 +22800,13 @@
 <td><p>#x6030</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id192">Status__</span></a></p></td>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id200">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
 <td><p>ARRAY [0..0] OF BIT</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id193">Status__</span></a></p></td>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id201">Status__</span></a></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -24424,511 +24911,6 @@
 <td><p>#x6000</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id194">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..0] OF BIT</p></td>
-</tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id195">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Compact Channel 1 (Index #x1a01, Flags #x0010, SyncMan )</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Standard Channel 2 (Index #x1a02, Flags #x0010, SyncMan 3)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Underrange event active</p></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Overrange event active</p></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Error</p></td>
-<td><p>Bit set when Over- or Underrange</p></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id196">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..0] OF BIT</p></td>
-</tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id197">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Compact Channel 2 (Index #x1a03, Flags #x0010, SyncMan )</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6010</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Standard Channel 3 (Index #x1a04, Flags #x0010, SyncMan 3)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Underrange event active</p></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Overrange event active</p></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Error</p></td>
-<td><p>Bit set when Over- or Underrange</p></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id198">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..0] OF BIT</p></td>
-</tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id199">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Compact Channel 3 (Index #x1a05, Flags #x0010, SyncMan )</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6020</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Standard Channel 4 (Index #x1a06, Flags #x0010, SyncMan 3)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Underrange event active</p></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Overrange event active</p></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Error</p></td>
-<td><p>Bit set when Over- or Underrange</p></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id200">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..0] OF BIT</p></td>
-</tr>
-<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id201">Status__</span></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-<td><p>ARRAY [0..4] OF BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Sync error</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__TxPDO State</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Compact Channel 4 (Index #x1a07, Flags #x0010, SyncMan )</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Value</p></td>
-<td></td>
-<td></td>
-<td><p>#x6030</p></td>
-<td><p>INT</p></td>
-</tr>
-</tbody>
-</table>
-</details></div>
-<div class="section" id="l0s6-pnl-03-eb-6-ep3174-0002">
-<h2>L0S6_PNL_03_EB_6 (EP3174-0002)<a class="headerlink" href="#l0s6-pnl-03-eb-6-ep3174-0002" title="Permalink to this headline">¶</a></h2>
-<details>
-     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id73">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id73" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Data</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Name</p></td>
-<td><p>L0S6_PNL_03_EB_6 (EP3174-0002)</p></td>
-</tr>
-<tr class="row-odd"><td><p>ID</p></td>
-<td><p>98</p></td>
-</tr>
-<tr class="row-even"><td><p>BootStrapData</p></td>
-<td><p>0010f400f410f400</p></td>
-</tr>
-<tr class="row-odd"><td><p>SyncMan</p></td>
-<td><p>001080002600010001000000800080008000001026010000</p></td>
-</tr>
-<tr class="row-even"><td><p>SyncMan</p></td>
-<td><p>801080002200010002000000800080008000801022010000</p></td>
-</tr>
-<tr class="row-odd"><td><p>SyncMan</p></td>
-<td><p>001100000400000003000000000000000000001104000000</p></td>
-</tr>
-<tr class="row-even"><td><p>SyncMan</p></td>
-<td><p>801110002000010004000000000000001000801120010000</p></td>
-</tr>
-<tr class="row-odd"><td><p>Fmmu</p></td>
-<td><p>0000000000000000801100010100000002000000000000000000000000000000</p></td>
-</tr>
-<tr class="row-even"><td><p>Fmmu</p></td>
-<td><p>00000000000000000d0800010100000003000000000000000000000000000000</p></td>
-</tr>
-<tr class="row-odd"><td><p>CoeProfile</p></td>
-<td><p>19665801</p></td>
-</tr>
-<tr class="row-even"><td><p>CoeProfile</p></td>
-<td><p>19665801</p></td>
-</tr>
-<tr class="row-odd"><td><p>CoeProfile</p></td>
-<td><p>19665801</p></td>
-</tr>
-<tr class="row-even"><td><p>CoeProfile</p></td>
-<td><p>19665801</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO AI Standard Channel 1 (Index #x1a00, Flags #x0010, SyncMan 3)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Status__Underrange</p></td>
-<td><p>Underrange event active</p></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Overrange</p></td>
-<td><p>Overrange event active</p></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT2</p></td>
-</tr>
-<tr class="row-even"><td><p>Status__Error</p></td>
-<td><p>Bit set when Over- or Underrange</p></td>
-<td></td>
-<td><p>#x6000</p></td>
-<td><p>BIT</p></td>
-</tr>
 <tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id202">Status__</span></a></p></td>
 <td></td>
 <td></td>
@@ -25330,11 +25312,11 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="mks-e5-el3064">
-<h2>MKS_E5 (EL3064)<a class="headerlink" href="#mks-e5-el3064" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="l0s6-pnl-03-eb-6-ep3174-0002">
+<h2>L0S6_PNL_03_EB_6 (EP3174-0002)<a class="headerlink" href="#l0s6-pnl-03-eb-6-ep3174-0002" title="Permalink to this headline">¶</a></h2>
 <details>
-     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id74">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id74" title="Permalink to this table">¶</a></caption>
+     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id73">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id73" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -25346,10 +25328,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>MKS_E5 (EL3064)</p></td>
+<td><p>L0S6_PNL_03_EB_6 (EP3174-0002)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
-<td><p>99</p></td>
+<td><p>98</p></td>
 </tr>
 <tr class="row-even"><td><p>BootStrapData</p></td>
 <td><p>0010f400f410f400</p></td>
@@ -25417,13 +25399,13 @@
 <td><p>BIT</p></td>
 </tr>
 <tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
+<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
 <td></td>
 <td><p>#x6000</p></td>
 <td><p>BIT2</p></td>
 </tr>
 <tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
+<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
 <td></td>
 <td><p>#x6000</p></td>
 <td><p>BIT2</p></td>
@@ -25444,21 +25426,27 @@
 <td></td>
 <td></td>
 <td></td>
-<td><p>ARRAY [0..5] OF BIT</p></td>
+<td><p>ARRAY [0..4] OF BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
-<td><p>TRUE when this TxPDO is not valid</p></td>
+<tr class="row-odd"><td><p>Status__Sync error</p></td>
+<td></td>
 <td></td>
 <td><p>#x6000</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
-<td><p>Bit toggles everytime when new value available</p></td>
+<tr class="row-even"><td><p>Status__TxPDO State</p></td>
+<td></td>
 <td></td>
 <td><p>#x6000</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p>Value</p></td>
+<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Value</p></td>
 <td></td>
 <td></td>
 <td><p>#x6000</p></td>
@@ -25523,13 +25511,13 @@
 <td><p>BIT</p></td>
 </tr>
 <tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
+<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
 <td></td>
 <td><p>#x6010</p></td>
 <td><p>BIT2</p></td>
 </tr>
 <tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
+<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
 <td></td>
 <td><p>#x6010</p></td>
 <td><p>BIT2</p></td>
@@ -25550,21 +25538,27 @@
 <td></td>
 <td></td>
 <td></td>
-<td><p>ARRAY [0..5] OF BIT</p></td>
+<td><p>ARRAY [0..4] OF BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
-<td><p>TRUE when this TxPDO is not valid</p></td>
+<tr class="row-odd"><td><p>Status__Sync error</p></td>
+<td></td>
 <td></td>
 <td><p>#x6010</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
-<td><p>Bit toggles everytime when new value available</p></td>
+<tr class="row-even"><td><p>Status__TxPDO State</p></td>
+<td></td>
 <td></td>
 <td><p>#x6010</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p>Value</p></td>
+<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Value</p></td>
 <td></td>
 <td></td>
 <td><p>#x6010</p></td>
@@ -25629,13 +25623,13 @@
 <td><p>BIT</p></td>
 </tr>
 <tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
+<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
 <td></td>
 <td><p>#x6020</p></td>
 <td><p>BIT2</p></td>
 </tr>
 <tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
+<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
 <td></td>
 <td><p>#x6020</p></td>
 <td><p>BIT2</p></td>
@@ -25656,21 +25650,27 @@
 <td></td>
 <td></td>
 <td></td>
-<td><p>ARRAY [0..5] OF BIT</p></td>
+<td><p>ARRAY [0..4] OF BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
-<td><p>TRUE when this TxPDO is not valid</p></td>
+<tr class="row-odd"><td><p>Status__Sync error</p></td>
+<td></td>
 <td></td>
 <td><p>#x6020</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
-<td><p>Bit toggles everytime when new value available</p></td>
+<tr class="row-even"><td><p>Status__TxPDO State</p></td>
+<td></td>
 <td></td>
 <td><p>#x6020</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p>Value</p></td>
+<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
+<td></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Value</p></td>
 <td></td>
 <td></td>
 <td><p>#x6020</p></td>
@@ -25735,13 +25735,13 @@
 <td><p>BIT</p></td>
 </tr>
 <tr class="row-even"><td><p>Status__Limit 1</p></td>
-<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
+<td><p>Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1</p></td>
 <td></td>
 <td><p>#x6030</p></td>
 <td><p>BIT2</p></td>
 </tr>
 <tr class="row-odd"><td><p>Status__Limit 2</p></td>
-<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
+<td><p>Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2</p></td>
 <td></td>
 <td><p>#x6030</p></td>
 <td><p>BIT2</p></td>
@@ -25762,21 +25762,27 @@
 <td></td>
 <td></td>
 <td></td>
-<td><p>ARRAY [0..5] OF BIT</p></td>
+<td><p>ARRAY [0..4] OF BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
-<td><p>TRUE when this TxPDO is not valid</p></td>
+<tr class="row-odd"><td><p>Status__Sync error</p></td>
+<td></td>
 <td></td>
 <td><p>#x6030</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
-<td><p>Bit toggles everytime when new value available</p></td>
+<tr class="row-even"><td><p>Status__TxPDO State</p></td>
+<td></td>
 <td></td>
 <td><p>#x6030</p></td>
 <td><p>BIT</p></td>
 </tr>
-<tr class="row-odd"><td><p>Value</p></td>
+<tr class="row-odd"><td><p>Status__TxPDO Toggle</p></td>
+<td></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Value</p></td>
 <td></td>
 <td></td>
 <td><p>#x6030</p></td>
@@ -25811,11 +25817,11 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="mks-e6-el2794">
-<h2>MKS_E6 (EL2794)<a class="headerlink" href="#mks-e6-el2794" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mks-e5-el3064">
+<h2>MKS_E5 (EL3064)<a class="headerlink" href="#mks-e5-el3064" title="Permalink to this headline">¶</a></h2>
 <details>
-     <summary>EtherCAT (4 PDOs)</summary><table class="docutils align-center" id="id75">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id75" title="Permalink to this table">¶</a></caption>
+     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id74">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id74" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -25827,144 +25833,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>MKS_E6 (EL2794)</p></td>
+<td><p>MKS_E5 (EL3064)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
-<td><p>100</p></td>
-</tr>
-<tr class="row-even"><td><p>SyncMan</p></td>
-<td><p>000f01004400010003000000000000000000000f44090000</p></td>
-</tr>
-<tr class="row-odd"><td><p>Fmmu</p></td>
-<td><p>0000000000000000000f00020100000001000000000000000000000000000000</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 1 (Index #x1600, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7000</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 2 (Index #x1601, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7010</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 3 (Index #x1602, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7020</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 4 (Index #x1603, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7030</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-</details></div>
-<div class="section" id="mks-e7-el3064">
-<h2>MKS_E7 (EL3064)<a class="headerlink" href="#mks-e7-el3064" title="Permalink to this headline">¶</a></h2>
-<details>
-     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id76">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id76" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Data</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Name</p></td>
-<td><p>MKS_E7 (EL3064)</p></td>
-</tr>
-<tr class="row-odd"><td><p>ID</p></td>
-<td><p>101</p></td>
+<td><p>99</p></td>
 </tr>
 <tr class="row-even"><td><p>BootStrapData</p></td>
 <td><p>0010f400f410f400</p></td>
@@ -26426,11 +26298,11 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="mks-e8-el3064">
-<h2>MKS_E8 (EL3064)<a class="headerlink" href="#mks-e8-el3064" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mks-e6-el2794">
+<h2>MKS_E6 (EL2794)<a class="headerlink" href="#mks-e6-el2794" title="Permalink to this headline">¶</a></h2>
 <details>
-     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id77">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id77" title="Permalink to this table">¶</a></caption>
+     <summary>EtherCAT (4 PDOs)</summary><table class="docutils align-center" id="id75">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id75" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -26442,10 +26314,144 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>MKS_E8 (EL3064)</p></td>
+<td><p>MKS_E6 (EL2794)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
-<td><p>102</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>000f01004400010003000000000000000000000f44090000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fmmu</p></td>
+<td><p>0000000000000000000f00020100000001000000000000000000000000000000</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 1 (Index #x1600, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7000</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 2 (Index #x1601, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7010</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 3 (Index #x1602, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7020</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 4 (Index #x1603, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7030</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+</details></div>
+<div class="section" id="mks-e7-el3064">
+<h2>MKS_E7 (EL3064)<a class="headerlink" href="#mks-e7-el3064" title="Permalink to this headline">¶</a></h2>
+<details>
+     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id76">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id76" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>MKS_E7 (EL3064)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>101</p></td>
 </tr>
 <tr class="row-even"><td><p>BootStrapData</p></td>
 <td><p>0010f400f410f400</p></td>
@@ -26907,11 +26913,11 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="mks-e9-el2794">
-<h2>MKS_E9 (EL2794)<a class="headerlink" href="#mks-e9-el2794" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mks-e8-el3064">
+<h2>MKS_E8 (EL3064)<a class="headerlink" href="#mks-e8-el3064" title="Permalink to this headline">¶</a></h2>
 <details>
-     <summary>EtherCAT (4 PDOs)</summary><table class="docutils align-center" id="id78">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id78" title="Permalink to this table">¶</a></caption>
+     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id77">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id77" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -26923,144 +26929,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>MKS_E9 (EL2794)</p></td>
+<td><p>MKS_E8 (EL3064)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
-<td><p>103</p></td>
-</tr>
-<tr class="row-even"><td><p>SyncMan</p></td>
-<td><p>000f01004400010003000000000000000000000f44090000</p></td>
-</tr>
-<tr class="row-odd"><td><p>Fmmu</p></td>
-<td><p>0000000000000000000f00020100000001000000000000000000000000000000</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 1 (Index #x1600, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7000</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 2 (Index #x1601, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7010</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 3 (Index #x1602, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7020</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 4 (Index #x1603, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7030</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-</details></div>
-<div class="section" id="mks-e10-el3064">
-<h2>MKS_E10 (EL3064)<a class="headerlink" href="#mks-e10-el3064" title="Permalink to this headline">¶</a></h2>
-<details>
-     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id79">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id79" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Data</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Name</p></td>
-<td><p>MKS_E10 (EL3064)</p></td>
-</tr>
-<tr class="row-odd"><td><p>ID</p></td>
-<td><p>104</p></td>
+<td><p>102</p></td>
 </tr>
 <tr class="row-even"><td><p>BootStrapData</p></td>
 <td><p>0010f400f410f400</p></td>
@@ -27522,11 +27394,11 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="mks-e11-el3064">
-<h2>MKS_E11 (EL3064)<a class="headerlink" href="#mks-e11-el3064" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mks-e9-el2794">
+<h2>MKS_E9 (EL2794)<a class="headerlink" href="#mks-e9-el2794" title="Permalink to this headline">¶</a></h2>
 <details>
-     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id80">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id80" title="Permalink to this table">¶</a></caption>
+     <summary>EtherCAT (4 PDOs)</summary><table class="docutils align-center" id="id78">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id78" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -27538,10 +27410,144 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>MKS_E11 (EL3064)</p></td>
+<td><p>MKS_E9 (EL2794)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
-<td><p>105</p></td>
+<td><p>103</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>000f01004400010003000000000000000000000f44090000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fmmu</p></td>
+<td><p>0000000000000000000f00020100000001000000000000000000000000000000</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 1 (Index #x1600, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7000</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 2 (Index #x1601, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7010</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 3 (Index #x1602, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7020</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 4 (Index #x1603, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7030</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+</details></div>
+<div class="section" id="mks-e10-el3064">
+<h2>MKS_E10 (EL3064)<a class="headerlink" href="#mks-e10-el3064" title="Permalink to this headline">¶</a></h2>
+<details>
+     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id79">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id79" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>MKS_E10 (EL3064)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>104</p></td>
 </tr>
 <tr class="row-even"><td><p>BootStrapData</p></td>
 <td><p>0010f400f410f400</p></td>
@@ -28003,11 +28009,11 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="mks-e12-el2794">
-<h2>MKS_E12 (EL2794)<a class="headerlink" href="#mks-e12-el2794" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mks-e11-el3064">
+<h2>MKS_E11 (EL3064)<a class="headerlink" href="#mks-e11-el3064" title="Permalink to this headline">¶</a></h2>
 <details>
-     <summary>EtherCAT (4 PDOs)</summary><table class="docutils align-center" id="id81">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id81" title="Permalink to this table">¶</a></caption>
+     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id80">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id80" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -28019,144 +28025,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>MKS_E12 (EL2794)</p></td>
+<td><p>MKS_E11 (EL3064)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
-<td><p>106</p></td>
-</tr>
-<tr class="row-even"><td><p>SyncMan</p></td>
-<td><p>000f01004400010003000000000000000000000f44090000</p></td>
-</tr>
-<tr class="row-odd"><td><p>Fmmu</p></td>
-<td><p>0000000000000000000f00020100000001000000000000000000000000000000</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 1 (Index #x1600, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7000</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 2 (Index #x1601, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7010</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 3 (Index #x1602, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7020</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-<p>PDO Channel 4 (Index #x1603, Flags #x0011, SyncMan 0)</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Comment</p></th>
-<th class="head"><p>BitLen</p></th>
-<th class="head"><p>Index</p></th>
-<th class="head"><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Output</p></td>
-<td></td>
-<td></td>
-<td><p>#x7030</p></td>
-<td><p>BIT</p></td>
-</tr>
-</tbody>
-</table>
-</details></div>
-<div class="section" id="mks-e13-el3064">
-<h2>MKS_E13 (EL3064)<a class="headerlink" href="#mks-e13-el3064" title="Permalink to this headline">¶</a></h2>
-<details>
-     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id82">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id82" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Data</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Name</p></td>
-<td><p>MKS_E13 (EL3064)</p></td>
-</tr>
-<tr class="row-odd"><td><p>ID</p></td>
-<td><p>107</p></td>
+<td><p>105</p></td>
 </tr>
 <tr class="row-even"><td><p>BootStrapData</p></td>
 <td><p>0010f400f410f400</p></td>
@@ -28618,11 +28490,11 @@
 </tbody>
 </table>
 </details></div>
-<div class="section" id="mks-e14-el3064">
-<h2>MKS_E14 (EL3064)<a class="headerlink" href="#mks-e14-el3064" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mks-e12-el2794">
+<h2>MKS_E12 (EL2794)<a class="headerlink" href="#mks-e12-el2794" title="Permalink to this headline">¶</a></h2>
 <details>
-     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id83">
-<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id83" title="Permalink to this table">¶</a></caption>
+     <summary>EtherCAT (4 PDOs)</summary><table class="docutils align-center" id="id81">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id81" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -28634,10 +28506,144 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Name</p></td>
-<td><p>MKS_E14 (EL3064)</p></td>
+<td><p>MKS_E12 (EL2794)</p></td>
 </tr>
 <tr class="row-odd"><td><p>ID</p></td>
-<td><p>108</p></td>
+<td><p>106</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>000f01004400010003000000000000000000000f44090000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fmmu</p></td>
+<td><p>0000000000000000000f00020100000001000000000000000000000000000000</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 1 (Index #x1600, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7000</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 2 (Index #x1601, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7010</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 3 (Index #x1602, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7020</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO Channel 4 (Index #x1603, Flags #x0011, SyncMan 0)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Output</p></td>
+<td></td>
+<td></td>
+<td><p>#x7030</p></td>
+<td><p>BIT</p></td>
+</tr>
+</tbody>
+</table>
+</details></div>
+<div class="section" id="mks-e13-el3064">
+<h2>MKS_E13 (EL3064)<a class="headerlink" href="#mks-e13-el3064" title="Permalink to this headline">¶</a></h2>
+<details>
+     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id82">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id82" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>MKS_E13 (EL3064)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>107</p></td>
 </tr>
 <tr class="row-even"><td><p>BootStrapData</p></td>
 <td><p>0010f400f410f400</p></td>
@@ -29099,6 +29105,487 @@
 </tbody>
 </table>
 </details></div>
+<div class="section" id="mks-e14-el3064">
+<h2>MKS_E14 (EL3064)<a class="headerlink" href="#mks-e14-el3064" title="Permalink to this headline">¶</a></h2>
+<details>
+     <summary>EtherCAT (8 PDOs)</summary><table class="docutils align-center" id="id83">
+<caption><span class="caption-text">Basic Settings</span><a class="headerlink" href="#id83" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Data</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>MKS_E14 (EL3064)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>108</p></td>
+</tr>
+<tr class="row-even"><td><p>BootStrapData</p></td>
+<td><p>0010f400f410f400</p></td>
+</tr>
+<tr class="row-odd"><td><p>SyncMan</p></td>
+<td><p>001080002600010001000000800080008000001026010000</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>801080002200010002000000800080008000801022010000</p></td>
+</tr>
+<tr class="row-odd"><td><p>SyncMan</p></td>
+<td><p>001100000400000003000000000000000000001104000000</p></td>
+</tr>
+<tr class="row-even"><td><p>SyncMan</p></td>
+<td><p>801110002000010004000000000000001000801120010000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fmmu</p></td>
+<td><p>0000000000000000801100010100000002000000000000000000000000000000</p></td>
+</tr>
+<tr class="row-even"><td><p>Fmmu</p></td>
+<td><p>00000000000000000d0800010100000003000000000000000000000000000000</p></td>
+</tr>
+<tr class="row-odd"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+<tr class="row-even"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+<tr class="row-odd"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+<tr class="row-even"><td><p>CoeProfile</p></td>
+<td><p>19665801</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 1 (Index #x1a00, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id266">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id267">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..5] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
+<td><p>TRUE when this TxPDO is not valid</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
+<td><p>Bit toggles everytime when new value available</p></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 1 (Index #x1a01, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6000</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 2 (Index #x1a02, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id268">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id269">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..5] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
+<td><p>TRUE when this TxPDO is not valid</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
+<td><p>Bit toggles everytime when new value available</p></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 2 (Index #x1a03, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6010</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 3 (Index #x1a04, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id270">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id271">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..5] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
+<td><p>TRUE when this TxPDO is not valid</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
+<td><p>Bit toggles everytime when new value available</p></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 3 (Index #x1a05, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6020</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Standard Channel 4 (Index #x1a06, Flags #x0010, SyncMan 3)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Status__Underrange</p></td>
+<td><p>Underrange event active</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Overrange</p></td>
+<td><p>Overrange event active</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Limit 1</p></td>
+<td><p>Bit0: Value smaller/equal Limit1 Bit1: Value bigger/equal Limit1</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__Limit 2</p></td>
+<td><p>Bit0: Value smaller/equal Limit2 Bit1: Value bigger/equal Limit2</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT2</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__Error</p></td>
+<td><p>Bit set when Over- or Underrange</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p><a href="#id85"><span class="problematic" id="id272">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..0] OF BIT</p></td>
+</tr>
+<tr class="row-even"><td><p><a href="#id85"><span class="problematic" id="id273">Status__</span></a></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>ARRAY [0..5] OF BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Status__TxPDO State</p></td>
+<td><p>TRUE when this TxPDO is not valid</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-even"><td><p>Status__TxPDO Toggle</p></td>
+<td><p>Bit toggles everytime when new value available</p></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>BIT</p></td>
+</tr>
+<tr class="row-odd"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+<p>PDO AI Compact Channel 4 (Index #x1a07, Flags #x0010, SyncMan )</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Comment</p></th>
+<th class="head"><p>BitLen</p></th>
+<th class="head"><p>Index</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Value</p></td>
+<td></td>
+<td></td>
+<td><p>#x6030</p></td>
+<td><p>INT</p></td>
+</tr>
+</tbody>
+</table>
+</details></div>
 <div class="section" id="mks-e15-el2794">
 <h2>MKS_E15 (EL2794)<a class="headerlink" href="#mks-e15-el2794" title="Permalink to this headline">¶</a></h2>
 <details>
@@ -29240,37 +29727,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="plc-lfe-gem_links.html" class="btn btn-neutral float-right" title="Links" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="plc-lfe-gem_nc.html" class="btn btn-neutral float-left" title="NC Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="plc-lfe-gem_links.html" class="btn btn-neutral float-right" title="Links" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="plc-lfe-gem_nc.html" class="btn btn-neutral float-left" title="NC Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, SLAC National Accelerator Laboratory
+        &#169; Copyright 2021, SLAC National Accelerator Laboratory.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

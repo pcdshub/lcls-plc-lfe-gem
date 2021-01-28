@@ -9,6 +9,8 @@ E_PositionState
 
 ::
 
+    {attribute 'qualified_only'}
+    {attribute 'strict'}
     TYPE E_PositionState :
     (
     RETRACTED	:= 0,
@@ -92,7 +94,7 @@ ST_MPA
     	io: i
     	'}
     		
-    	eState	:	E_PositionState := INVALID;
+    	eState	:	E_PositionState := E_PositionState.INVALID;
     	
     END_STRUCT
     END_TYPE
@@ -158,16 +160,33 @@ GVL_Control
 ::
 
     VAR_GLOBAL
-    	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:SP '}
+    	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:SP; 
+    	field: HOPR 1000;
+    	field: LOPR 0;
+    	field: PREC 2;
+    	field: EGU "TORR";
+    	'}
     	fGEM1SetpointValue : REAL:=0;
-    	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:SP '}
+    	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:SP;
+    	field: HOPR 1000;
+    	field: LOPR 0;
+    	field: PREC 2;
+    	field: EGU "TORR";
+    	'}
     	fGEM2SetpointValue : REAL:=0;
     	
     	
-    	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:GO '}
+    	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:GO;
+     	 field: ZNAM STOP; 
+    	 field: ONAM START; 
+    	 io: io;
+    	 '}
     	GEM1_GO : BOOL:=false;
     	
-    	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:GO '}
+    	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:GO;
+    	 field: ZNAM STOP; 
+    	 field: ONAM START; 
+    	 io: io; '}
     	GEM2_GO : BOOL:=false;
     END_VAR
 
@@ -252,13 +271,15 @@ GVL_Devices
     	GEM1_GPI_71 : FB_MKS275;
 
     (*detector*)
-    		
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:GCM:41 '}
     	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[L0S3_PNL_02_EB_4 (EP3174-0002)]^AI Standard Channel 1^Value'}
     	GEM1_GCM_41 : FB_GCM;
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:GCM:42 '}
     	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[L0S3_PNL_02_EB_4 (EP3174-0002)]^AI Standard Channel 2^Value'}
-    	GEM1_GCM_42 : FB_GCM;	
+    	GEM1_GCM_42 : FB_GCM;
+    	(*Pseudo gauge device Structure to combine the readings of two GCM gauges*)
+    	{attribute 'pytmc' :=' pv: EM1L0:GEM:GCM:40 '}
+    	GEM1_GCM_40 : ST_VG;	
     (* N2 cutt off valve *)
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:VVC:40'}
     	{attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[L0S3_PNL_02_EB_2 (EP2338-0002)]^Channel 15^Output'}
@@ -279,37 +300,37 @@ GVL_Devices
     	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_01_EB_2 (EP2338-0002)]^Channel 1^Input;
     								 .i_xClsLS	:=	TIIB[L0S3_PNL_01_EB_2 (EP2338-0002)]^Channel 2^Input;
     								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_01_EB_2 (EP2338-0002)]^Channel 11^Output'}
-    	GEM1_VGC_20: FB_VGC_AP;
+    	GEM1_VGC_20: FB_VGC;
     	
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:VGC:30 '}
     	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_01_EB_2 (EP2338-0002)]^Channel 5^Input;
     								 .i_xClsLS	:=	TIIB[L0S3_PNL_01_EB_2 (EP2338-0002)]^Channel 6^Input;
     								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_01_EB_2 (EP2338-0002)]^Channel 15^Output'}
-    	GEM1_VGC_30: FB_VGC_AP;
+    	GEM1_VGC_30: FB_VGC;
     	
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:VGC:40 '}
     	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_02_EB_1 (EP2338-0002)]^Channel 1^Input;
     								 .i_xClsLS	:=	TIIB[L0S3_PNL_02_EB_1 (EP2338-0002)]^Channel 2^Input;
     								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_02_EB_1 (EP2338-0002)]^Channel 11^Output'}
-    	GEM1_VGC_40: FB_VGC_AP;
+    	GEM1_VGC_40: FB_VGC;
     	
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:VGC:50 '}
     	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_02_EB_1 (EP2338-0002)]^Channel 5^Input;
     								 .i_xClsLS	:=	TIIB[L0S3_PNL_02_EB_1 (EP2338-0002)]^Channel 6^Input;
     								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_02_EB_1 (EP2338-0002)]^Channel 15^Output'}
-    	GEM1_VGC_50: FB_VGC_AP;
+    	GEM1_VGC_50: FB_VGC;
     	
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:VGC:60 '}
     	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_03_EB_1 (EP2338-0002)]^Channel 5^Input;
     								 .i_xClsLS	:=	TIIB[L0S3_PNL_03_EB_1 (EP2338-0002)]^Channel 6^Input;
     								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_03_EB_1 (EP2338-0002)]^Channel 15^Output'}
-    	GEM1_VGC_60: FB_VGC_AP;
+    	GEM1_VGC_60: FB_VGC;
     	
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:VGC:70 '}
     	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S3_PNL_03_EB_3 (EP2338-0002)]^Channel 1^Input;
     								 .i_xClsLS	:=	TIIB[L0S3_PNL_03_EB_3 (EP2338-0002)]^Channel 2^Input;
     								 .q_xOPN_DO	:=	TIIB[L0S3_PNL_03_EB_3 (EP2338-0002)]^Channel 11^Output'}
-    	GEM1_VGC_70: FB_VGC_AP;
+    	GEM1_VGC_70: FB_VGC;
 
     (*Turbo Isolation valves*)
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:VRC:10 '}
@@ -377,6 +398,7 @@ GVL_Devices
     								 .i_xLSpd :=	TIIB[PLC_EL_2 (EL1088)]^Channel 2^Input;
     								 .i_xSTART	:=	TIIB[PLC_EL_2 (EL1088)]^Channel 3^Input;
     								 .i_xFault	:=	TIIB[PLC_EL_2 (EL1088)]^Channel 4^Input;
+    								 .i_iPowerMon := TIIB[PLC_EL_4 (EL3064)]^AI Standard Channel 1^Value;
     								 .q_RunDO	:=	TIIB[PLC_EL_1 (EL2088)]^Channel 1^Output'}
     	GEM1_PTM_10 : FB_PTM_Agilent;
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:PTM:20 '}
@@ -384,6 +406,7 @@ GVL_Devices
     								 .i_xLSpd :=	TIIB[PLC_EL_2 (EL1088)]^Channel 6^Input;
     								 .i_xSTART	:=	TIIB[PLC_EL_2 (EL1088)]^Channel 7^Input;
     								 .i_xFault	:=	TIIB[PLC_EL_2 (EL1088)]^Channel 8^Input;
+    								 .i_iPowerMon := TIIB[PLC_EL_4 (EL3064)]^AI Standard Channel 2^Value;
     								 .q_RunDO	:=	TIIB[PLC_EL_1 (EL2088)]^Channel 2^Output'}
     	GEM1_PTM_20 : FB_PTM_Agilent;
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:PTM:30 '}
@@ -391,6 +414,7 @@ GVL_Devices
     								 .i_xLSpd :=	TIIB[PLC_EL_3 (EL1088)]^Channel 2^Input;
     								 .i_xSTART	:=	TIIB[PLC_EL_3 (EL1088)]^Channel 3^Input;
     								 .i_xFault	:=	TIIB[PLC_EL_3 (EL1088)]^Channel 4^Input;
+    								 .i_iCurrentMon := TIIB[PLC_EL_4 (EL3064)]^AI Standard Channel 3^Value;
     								 .q_RunDO	:=	TIIB[PLC_EL_1 (EL2088)]^Channel 3^Output'}
     	GEM1_PTM_30 : FB_PTM_Agilent;
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:PTM:50 '}
@@ -398,6 +422,7 @@ GVL_Devices
     								 .i_xLSpd :=	TIIB[PLC_EL_3 (EL1088)]^Channel 6^Input;
     								 .i_xSTART	:=	TIIB[PLC_EL_3 (EL1088)]^Channel 7^Input;
     								 .i_xFault	:=	TIIB[PLC_EL_3 (EL1088)]^Channel 8^Input;
+    								 .i_iCurrentMon := TIIB[PLC_EL_4 (EL3064)]^AI Standard Channel 4^Value;
     								 .q_RunDO	:=	TIIB[PLC_EL_1 (EL2088)]^Channel 4^Output'}
     	GEM1_PTM_50 : FB_PTM_Agilent;
     	
@@ -414,15 +439,15 @@ GVL_Devices
     	GEM1_VVC_50: FB_TurbVentvalve_NO;
 
     (*Scroll Pumps*)
-    	{attribute 'pytmc' :=' pv: EM1L0:GEM:PMF:20 '}
+    	{attribute 'pytmc' :=' pv: EM1L0:GEM:PRO:20 '}
     	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S3_PNL_03_EB_7 (EP2338-0002)]^Channel 11^Output'}
-    	GEM1_PMF_20 : FB_ScrollPump;
-    	{attribute 'pytmc' :=' pv: EM1L0:GEM:PMF:30 '}
+    	GEM1_PRO_20 : FB_ScrollPump;
+    	{attribute 'pytmc' :=' pv: EM1L0:GEM:PRO:30 '}
     	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S3_PNL_03_EB_7 (EP2338-0002)]^Channel 12^Output'}
-    	GEM1_PMF_30 : FB_ScrollPump;
-    	{attribute 'pytmc' :=' pv: EM1L0:GEM:PMF:50 '}
+    	GEM1_PRO_30 : FB_ScrollPump;
+    	{attribute 'pytmc' :=' pv: EM1L0:GEM:PRO:50 '}
     	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S3_PNL_03_EB_7 (EP2338-0002)]^Channel 15^Output'}
-    	GEM1_PMF_50 : FB_ScrollPump;
+    	GEM1_PRO_50 : FB_ScrollPump;
     	
     (******************)	
     (******AT1L0*******)
@@ -518,13 +543,16 @@ GVL_Devices
     	GEM2_GPI_70 : FB_MKS317A;
     	
     (* GAS Cell CM*)
-
+    	
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:GCM:41 '}
     	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[L0S6_PNL_02_EB_4 (EP3174-0002)]^AI Standard Channel 1^Value'}
     	GEM2_GCM_41 : FB_GCM;
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:GCM:42 '}
     	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[L0S6_PNL_02_EB_4 (EP3174-0002)]^AI Standard Channel 2^Value'}
     	GEM2_GCM_42 : FB_GCM;
+    	(*Pseudo gauge device Structure to combine the readings of two GCM gauges*)
+    	{attribute 'pytmc' :=' pv: EM2L0:GEM:GCM:40 '}
+    	GEM2_GCM_40 : ST_VG;
 
     (*valves*)
     	
@@ -532,37 +560,37 @@ GVL_Devices
     	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_01_EB_1 (EP2338-0002)]^Channel 1^Input;
     								 .i_xClsLS	:=	TIIB[L0S6_PNL_01_EB_1 (EP2338-0002)]^Channel 2^Input;
     								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_01_EB_1 (EP2338-0002)]^Channel 11^Output'}
-    	GEM2_VGC_10: FB_VGC_AP;
+    	GEM2_VGC_10: FB_VGC;
     	
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:20'}
     	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_01_EB_1 (EP2338-0002)]^Channel 5^Input;
     								 .i_xClsLS	:=	TIIB[L0S6_PNL_01_EB_1 (EP2338-0002)]^Channel 6^Input;
     								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_01_EB_1 (EP2338-0002)]^Channel 15^Output'}
-    	GEM2_VGC_20: FB_VGC_AP;
+    	GEM2_VGC_20: FB_VGC;
     	
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:30 '}
     	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_02_EB_1 (EP2338-0002)]^Channel 1^Input;
     								 .i_xClsLS	:=	TIIB[L0S6_PNL_02_EB_1 (EP2338-0002)]^Channel 2^Input;
     								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_02_EB_1 (EP2338-0002)]^Channel 11^Output'}
-    	GEM2_VGC_30: FB_VGC_AP;
+    	GEM2_VGC_30: FB_VGC;
     	
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:40 '}
     	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_02_EB_1 (EP2338-0002)]^Channel 5^Input;
     								 .i_xClsLS	:=	TIIB[L0S6_PNL_02_EB_1 (EP2338-0002)]^Channel 6^Input;
     								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_02_EB_1 (EP2338-0002)]^Channel 15^Output'}
-    	GEM2_VGC_40: FB_VGC_AP;
+    	GEM2_VGC_40: FB_VGC;
     	
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:50 '}
     	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 1^Input;
     								 .i_xClsLS	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 2^Input;
     								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_03_EB_1 (EP2338-0002)]^Channel 11^Output'}
-    	GEM2_VGC_50: FB_VGC_AP;
+    	GEM2_VGC_50: FB_VGC;
     	
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:60 '}
     	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_03_EB_3 (EP2338-0002)]^Channel 1^Input;
     								 .i_xClsLS	:=	TIIB[L0S6_PNL_03_EB_3 (EP2338-0002)]^Channel 2^Input;
     								 .q_xOPN_DO	:=	TIIB[L0S6_PNL_03_EB_3 (EP2338-0002)]^Channel 11^Output'}
-    	GEM2_VGC_60: FB_VGC_AP;
+    	GEM2_VGC_60: FB_VGC;
     	
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:70 '}
     	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[L0S6_PNL_03_EB_3 (EP2338-0002)]^Channel 5^Input;
@@ -632,44 +660,48 @@ GVL_Devices
     (*Pumps*)
     (*Turbos*)
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:30 '}
-    	{attribute 'TcLinkTo' := 	'.i_xR1	:=	TIIB[PLC_EL_5 (EL1088)]^Channel 1^Input;
-    								 .i_xLSpd :=	TIIB[PLC_EL_5 (EL1088)]^Channel 2^Input;
-    								 .i_xSTART	:=	TIIB[PLC_EL_5 (EL1088)]^Channel 3^Input;
-    								 .i_xFault	:=	TIIB[PLC_EL_5 (EL1088)]^Channel 4^Input;
-    								 .q_RunDO	:=	TIIB[PLC_EL_4 (EL2088)]^Channel 1^Output'}
+    	{attribute 'TcLinkTo' := 	'.i_xR1	:=	TIIB[PLC_EL_7 (EL1088)]^Channel 1^Input;
+    								 .i_xLSpd :=	TIIB[PLC_EL_7 (EL1088)]^Channel 2^Input;
+    								 .i_xSTART	:=	TIIB[PLC_EL_7 (EL1088)]^Channel 3^Input;
+    								 .i_xFault	:=	TIIB[PLC_EL_7 (EL1088)]^Channel 4^Input;
+    								 .i_iCurrentMon := TIIB[PLC_EL_5 (EL3064)]^AI Standard Channel 1^Value;
+    								 .q_RunDO	:=	TIIB[PLC_EL_6 (EL2088)]^Channel 1^Output'}
     	GEM2_PTM_30 : FB_PTM_Agilent;
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:50 '}
-    	{attribute 'TcLinkTo' := 	'.i_xR1	:=	TIIB[PLC_EL_5 (EL1088)]^Channel 5^Input;
-    								 .i_xLSpd :=	TIIB[PLC_EL_5 (EL1088)]^Channel 6^Input;
-    								 .i_xSTART	:=	TIIB[PLC_EL_5 (EL1088)]^Channel 7^Input;
-    								 .i_xFault	:=	TIIB[PLC_EL_5 (EL1088)]^Channel 8^Input;
-    								 .q_RunDO	:=	TIIB[PLC_EL_4 (EL2088)]^Channel 2^Output'}
+    	{attribute 'TcLinkTo' := 	'.i_xR1	:=	TIIB[PLC_EL_7 (EL1088)]^Channel 5^Input;
+    								 .i_xLSpd :=	TIIB[PLC_EL_7 (EL1088)]^Channel 6^Input;
+    								 .i_xSTART	:=	TIIB[PLC_EL_7 (EL1088)]^Channel 7^Input;
+    								 .i_xFault	:=	TIIB[PLC_EL_7 (EL1088)]^Channel 8^Input;
+    								 .i_iCurrentMon := TIIB[PLC_EL_5 (EL3064)]^AI Standard Channel 2^Value;
+    								 .q_RunDO	:=	TIIB[PLC_EL_6 (EL2088)]^Channel 2^Output'}
     	GEM2_PTM_50 : FB_PTM_Agilent;
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:60 '}
-    	{attribute 'TcLinkTo' := 	'.i_xR1	:=	TIIB[PLC_EL_6 (EL1088)]^Channel 1^Input;
-    								 .i_xLSpd :=	TIIB[PLC_EL_6 (EL1088)]^Channel 2^Input;
-    								 .i_xSTART	:=	TIIB[PLC_EL_6 (EL1088)]^Channel 3^Input;
-    								 .i_xFault	:=	TIIB[PLC_EL_6 (EL1088)]^Channel 4^Input;
-    								 .q_RunDO	:=	TIIB[PLC_EL_4 (EL2088)]^Channel 3^Output'}
+    	{attribute 'TcLinkTo' := 	'.i_xR1	:=	TIIB[PLC_EL_8 (EL1088)]^Channel 1^Input;
+    								 .i_xLSpd :=	TIIB[PLC_EL_8 (EL1088)]^Channel 2^Input;
+    								 .i_xSTART	:=	TIIB[PLC_EL_8 (EL1088)]^Channel 3^Input;
+    								 .i_xFault	:=	TIIB[PLC_EL_8 (EL1088)]^Channel 4^Input;
+    								 .i_iPowerMon := TIIB[PLC_EL_5 (EL3064)]^AI Standard Channel 3^Value;
+    								 .q_RunDO	:=	TIIB[PLC_EL_6 (EL2088)]^Channel 3^Output'}
     	GEM2_PTM_60 : FB_PTM_Agilent;
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:70 '}
-    	{attribute 'TcLinkTo' := 	'.i_xR1	:=	TIIB[PLC_EL_6 (EL1088)]^Channel 5^Input;
-    								 .i_xLSpd :=	TIIB[PLC_EL_6 (EL1088)]^Channel 6^Input;
-    								 .i_xSTART	:=	TIIB[PLC_EL_6 (EL1088)]^Channel 7^Input;
-    								 .i_xFault	:=	TIIB[PLC_EL_6 (EL1088)]^Channel 8^Input;
-    								 .q_RunDO	:=	TIIB[PLC_EL_4 (EL2088)]^Channel 4^Output'}
+    	{attribute 'TcLinkTo' := 	'.i_xR1	:=	TIIB[PLC_EL_8 (EL1088)]^Channel 5^Input;
+    								 .i_xLSpd :=	TIIB[PLC_EL_8 (EL1088)]^Channel 6^Input;
+    								 .i_xSTART	:=	TIIB[PLC_EL_8 (EL1088)]^Channel 7^Input;
+    								 .i_xFault	:=	TIIB[PLC_EL_8 (EL1088)]^Channel 8^Input;
+    								 .i_iPowerMon := TIIB[PLC_EL_5 (EL3064)]^AI Standard Channel 4^Value;
+    								 .q_RunDO	:=	TIIB[PLC_EL_6 (EL2088)]^Channel 4^Output'}
     	GEM2_PTM_70 : FB_PTM_Agilent;
 
     (*Scroll Pumps*)
-    	{attribute 'pytmc' :=' pv: EM2L0:GEM:PMF:30 '}
+    	{attribute 'pytmc' :=' pv: EM2L0:GEM:PRO:30 '}
     	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S6_PNL_01_EB_7 (EP2338-0002)]^Channel 11^Output'}
-    	GEM2_PMF_30 : FB_ScrollPump;
-    	{attribute 'pytmc' :=' pv: EM2L0:GEM:PMF:50 '}
+    	GEM2_PRO_30 : FB_ScrollPump;
+    	{attribute 'pytmc' :=' pv: EM2L0:GEM:PRO:50 '}
     	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S6_PNL_01_EB_7 (EP2338-0002)]^Channel 12^Output'}
-    	GEM2_PMF_50 : FB_ScrollPump;
-    	{attribute 'pytmc' :=' pv: EM2L0:GEM:PMF:60 '}
+    	GEM2_PRO_50 : FB_ScrollPump;
+    	{attribute 'pytmc' :=' pv: EM2L0:GEM:PRO:60 '}
     	{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[L0S6_PNL_01_EB_7 (EP2338-0002)]^Channel 15^Output'}
-    	GEM2_PMF_60 : FB_ScrollPump;
+    	GEM2_PRO_60 : FB_ScrollPump;
     (*Kashyiama Dry Pumps*)
     	
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:PRO:10 '}
@@ -756,27 +788,43 @@ GVL_ILK
     VAR_GLOBAL
     	
     	{attribute 'pytmc' := '
-        pv: PLC:LFE:GEM:FF1
+        pv: PLC:LFE:GEM:FFO:01
         '}
         {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
         g_FastFaultOutput1  :   FB_HardwareFFOutput;
     	
     	{attribute 'pytmc' := '
-        pv: PLC:LFE:GEM:FF2
+        pv: PLC:LFE:GEM:FFO:02
         '}
         {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
         g_FastFaultOutput2  :   FB_HardwareFFOutput;
     	
-    	{attribute 'pytmc' := '
-        pv: PLC:LFE:GEM:FF_RESET
-        '}
-        xFastFaultReset :   BOOL;
+    	{attribute 'pytmc' := 'pv: EM1L0:GEM:ARB:01'}
+    	g_fbArbiter   :   FB_Arbiter(1);
+    	{attribute 'pytmc' := 'pv: EM1L0:GEM:ARB:02'}
+    	g_fbArbiter2   :   FB_Arbiter(2);
+    	{attribute 'pytmc' := 'pv: EM1L0:GEM:ARB:03'}
+    	g_fbArbiter3   :   FB_Arbiter(3);
+    	 
+    	
 
-    	{attribute 'pytmc' := 'pv: EM1L0:GEM:VAC:OVRDON'}
+    	{attribute 'pytmc' := 'pv: EM1L0:GEM:VAC:OVRDON;
+    	field: ZNAM Override OFF; 
+    	field: ONAM Override ON; 
+    	 io: io;
+    	'}
     	xGEM1OverrideMode	:	BOOL; (* Global system override for the EM1L0*)
-    	{attribute 'pytmc' := 'pv: AT1L0:GAS:VAC:OVRDON'}
+    	{attribute 'pytmc' := 'pv: AT1L0:GAS:VAC:OVRDON;
+    	field: ZNAM Override OFF; 
+    	field: ONAM Override ON; 
+    	 io: io;
+    	'}
     	xGATTOverrideMode	:	BOOL; (* Global system override for the GATT*)
-    	{attribute 'pytmc' := 'pv: EM2L0:GEM:VAC:OVRDON'}
+    	{attribute 'pytmc' := 'pv: EM2L0:GEM:VAC:OVRDON;
+    	field: ZNAM Override OFF; 
+    	field: ONAM Override ON; 
+    	 io: io;
+    	'}
     	xGEM2OverrideMode	:	BOOL; (* Global system override for the EM2L0*)
 
 
@@ -842,7 +890,7 @@ DIAGNOSTICS
     PROGRAM DIAGNOSTICS
     VAR
     	//Change the PLC String Name to the actual PLC NAME
-    	sPLCName :STRING := 'PLC-TST-BASE';
+    	sPLCName :STRING := 'PLC-LFE-GEM';
     	//Link the sAMSNetID to the Etherat Master netID
     	i_sAMSNetID AT %I*: AMSNETID;
     	// DO NOT CHANGE
@@ -882,13 +930,14 @@ FB_MPA
     	(*EPS Interlock Bits*)
     	ibInsertOK: BOOL;
     	ibRetractOK: BOOL;
-    	ibPMPS_OK:BOOL;
     	ibOverrideInterlock:BOOL; (*if true interlocks are ignored*)
     	// Reset fault
     	{attribute 'pytmc' := '
         pv: FF_Reset
     	'}
         i_xReset: BOOL;
+    	i_sDevName : T_MaxString :=  'MPA'; // Device name for diagnostic
+    	i_nTransitionRootID: UDINT; //A unique transition Root ID that is equal to or greater than 1000
     END_VAR
     VAR_OUTPUT
     	{attribute 'pytmc' := '
@@ -906,8 +955,15 @@ FB_MPA
     END_VAR
     VAR_IN_OUT
     	io_fbFFHWO    :    FB_HardwareFFOutput;
+    	fbArbiter: FB_Arbiter();
     END_VAR
     VAR
+    	// PMPS
+    	tBPTMtimeout:TON;
+    	bMoving : BOOL;
+    	bDone :BOOL;
+    	ibPMPS_OK:BOOL;
+    	bptm: BeamParameterTransitionManager; 
     	// PMPS
     	fbFF    :    FB_FastFault :=(
             i_DevName := 'MPA',
@@ -928,6 +984,13 @@ FB_MPA
     	q_xInsert_DO	AT%Q*: BOOL;
     	q_xRetract_DO	AT%Q*: BOOL;
     	
+    	
+    	// For logging
+        fbLogger : FB_LogMessage := (eSubsystem:=E_SubSystem.MOTION);
+        ePrevState : E_PositionState;
+        tErrorPresent : R_TRIG;
+        tAction : R_TRIG; // Primary action of this device (OPN_DO, etc.)
+        tOverrideActivated : R_TRIG;
     END_VAR
     (*Initialize*)
     fbFSInit( CLK := TRUE, Q => xFirstPass);
@@ -935,32 +998,33 @@ FB_MPA
     ACT_IO();
 
     IF xFirstPass THEN
-    	q_stAct.eState := INVALID;
+    	q_stAct.eState := E_PositionState.INVALID;
     	q_stAct.bRetract_SW := FALSE;
     	q_stAct.bInsert_SW := FALSE;
+    	fbFF.i_DevName := i_sDevName;
     END_IF
 
 
     (* Manage States*)
     IF q_stAct.i_bInLS AND  q_stAct.i_bOutLS THEN
-    	q_stAct.eState:=INVALID;
+    	q_stAct.eState:=E_PositionState.INVALID;
     ELSIF NOT q_stAct.i_bInLS AND q_stAct.i_bOutLS THEN 
-    	q_stAct.eState:=RETRACTED;
+    	q_stAct.eState:=E_PositionState.RETRACTED;
     ELSIF q_stAct.i_bInLS AND NOT q_stAct.i_bOutLS THEN 
-    	q_stAct.eState:=INSERTED;
+    	q_stAct.eState:=E_PositionState.INSERTED;
     ELSIF NOT q_stAct.i_bInLS AND NOT q_stAct.i_bOutLS THEN 
-    	q_stAct.eState:=MOVING;
+    	q_stAct.eState:=E_PositionState.MOVING;
     ELSE
-    	q_stAct.eState:=INVALID;
+    	q_stAct.eState:=E_PositionState.INVALID;
     END_IF
 
     (*Set the Done signal*)
-    xDone := (q_stAct.bRetract_SW AND q_stAct.eState=RETRACTED) OR (q_stAct.eState=INSERTED AND q_stAct.bInsert_SW);
+    xDone := (q_stAct.bRetract_SW AND q_stAct.eState=E_PositionState.RETRACTED) OR (q_stAct.eState=E_PositionState.INSERTED AND q_stAct.bInsert_SW);
     	
 
     (*MPS FAULT*)
     (**)
-    xMPS_OK := (q_stAct.eState=RETRACTED) OR (q_stAct.eState=INSERTED);
+    xMPS_OK := i_xInsertedLS XOR i_xRetractedLS;//(q_stAct.eState=RETRACTED) OR (q_stAct.eState=INSERTED);
 
 
     (*PMPS PERMISSION*)
@@ -1003,11 +1067,15 @@ FB_MPA
     (*FAST FAULT*)
     fbFF(i_xOK := xMPS_OK,
         i_xReset := i_xReset,
+    	i_xAutoReset :=TRUE,
         io_fbFFHWO := io_fbFFHWO);
 
 
     (*Soft IO Mapping*)
     ACT_IO();
+    (*Logger*)
+    ACT_Logger();
+    //ACT_PMPS();
 
     END_FUNCTION_BLOCK
     ACTION ACT_IO:
@@ -1018,6 +1086,46 @@ FB_MPA
     (*outputs*)
     q_xInsert_DO:=q_stAct.q_bInsert;
     q_xRetract_DO:=q_stAct.q_bRetract;
+    END_ACTION
+    ACTION ACT_Logger:
+    //Position STATE Logger  
+    IF ePrevState <> q_stAct.eState THEN
+    	  CASE q_stAct.eState OF
+    		E_PositionState.INVALID:
+    			fbLogger(sMsg:='Device is in invalid position.', eSevr:=TcEventSeverity.Critical);
+      		E_PositionState.MOVING:
+    			fbLogger(sMsg:='Device moving', eSevr:=TcEventSeverity.Warning);
+    		E_PositionState.RETRACTED:
+    			fbLogger(sMsg:='Device retracted.', eSevr:=TcEventSeverity.Info);
+    		E_PositionState.INSERTED:
+    			fbLogger(sMsg:='Device inserted.', eSevr:=TcEventSeverity.Info);
+    	  END_CASE
+    	  ePrevState := q_stAct.eState;  
+      END_IF
+     
+     
+
+    // Log valve open
+    tAction(CLK:= q_stAct.q_bRetract XOR q_stAct.q_bInsert);
+    IF tAction.Q THEN fbLogger(sMsg:='Device commanded to actuate', eSevr:=TcEventSeverity.Info); END_IF
+    END_ACTION
+    ACTION ACT_PMPS:
+    //bMoving := ((q_stAct.bRetract_SW OR NOT q_stAct.bInsert_SW) AND q_stAct.i_bInLS) XOR  ((NOT q_stAct.bRetract_SW OR q_stAct.bInsert_SW) AND q_stAct.i_bOutLS);
+    //bDone :=  ((q_stAct.bRetract_SW OR NOT q_stAct.bInsert_SW) AND q_stAct.i_bOutLS) XOR ((NOT q_stAct.bRetract_SW OR q_stAct.bInsert_SW) AND q_stAct.i_bInLS);
+
+    bptm(fbArbiter:=fbArbiter,
+         i_TransitionAssertionID:=i_nTransitionRootID+2,
+         i_stTransitionAssertion:=PMPS_GVL.cstSafeBeam,
+         i_nRequestedAssertionID:=i_nTransitionRootID+ BOOL_TO_UDINT(q_stAct.bRetract_SW AND NOT q_stAct.bInsert_SW ),
+         i_stRequestedAssertion:=,
+         i_xMoving:=NOT xDone,
+         i_xDoneMoving:= xDone,
+         stCurrentBeamParameters:=PMPS_GVL.stCurrentBeamParameters,
+         q_xTransitionAuthorized=>);
+    	 
+    	 // Timeout
+    tBPTMtimeout(IN:= bptm.i_xMoving AND NOT bptm.q_xTransitionAuthorized , PT:=T#1S);
+    ibPMPS_OK := bptm.q_xTransitionAuthorized OR tBPTMtimeout.Q;
     END_ACTION
 
 
@@ -1076,6 +1184,480 @@ FB_PressureSensor_PX219
     END_ACTION
 
 
+FB_VGC_1
+^^^^^^^^
+
+::
+
+    (* This function block implements basic functionality for Isolation Gate Valves*)
+    (* This function block interlock is as follows:
+    1. The valve can be opened when the difference between the pressures on both sides is
+    less than the maximum differential pressure.
+    2. This rule persists until the pressures on both sides are lower than the vacuum-setpoint.
+    3. Once at-vac, the valve will close if the pressure on either side rises above the setpoint.*)
+    (*This function block also implements PMPS and EPS interlocks, as well as Fast MPS trigger*)
+    {attribute 'no_check'}
+    {attribute 'reflection'} 
+    FUNCTION_BLOCK FB_VGC_1 Extends FB_Valve
+    VAR_IN_OUT
+    	
+    END_VAR
+    VAR_INPUT
+    	(*Upstream Gauge, usually ion gauge*)
+    	i_stUSG	:	ST_VG;
+    	(*Downstream Gauge, usually ion gauge*)
+    	i_stDSG	:	ST_VG;
+    	{attribute 'pytmc' := '
+        pv: Dis_DPIlk
+    	'}
+    	i_xDis_DPIlk : BOOL := FALSE;  (* Set to true when calling the function to disable the differential pressure interlock *)
+    	{attribute 'pytmc' := '
+        pv: EPS_OK
+    	'}
+    	i_xEPS_OK:	BOOL	:= TRUE; (*External EPS interlock, Set to TRUE when no EPS interlock is required, otherwise set to correct interlock signal*)
+    	{attribute 'pytmc' := '
+        pv: MPS_OK
+    	'}
+    	//i_xPMPS_OK:	BOOL	; (*External MPS interlock, Set to TRUE when no PMPS interlock is required*)
+    	i_xExt_OK: BOOL; (*Other External Interlock, Set to True when no external interlock is required. If this Valve is neigboring a Fast Shutter this should be linked to the fast shutter xVAC_FAULT_OK*)
+    	i_xOverrideMode : BOOL; (*To be linked to global override bit. This Overrides Vacuum logic only, EPS, MPS and PMPS are still enforces*)
+    	// Reset fault
+    	{attribute 'pytmc' := '
+        pv: FF_Reset
+    	'}
+        i_xReset: BOOL;
+    	i_xIsAperture:BOOL :=FALSE; // Set tp True if this is an Aperture Valve, the MPS Fault will trip only when moving.
+    	i_sDevName : T_MaxString :=  'VGC'; // Device name for diagnostic
+    	i_nTransitionRootID: UDINT; //A unique transition Root ID that is equalt to or greater than 1000
+    END_VAR
+    VAR_OUTPUT
+    	{attribute 'pytmc' := '
+        pv:
+    	'}
+    	iq_stValve : ST_VGC; (* All valve data and states will be in this struct*)
+    	
+    	{attribute 'pytmc' := '
+        pv: MPS_FAULT_OK
+    	field: ZNAM MPS FAULT ;
+    	field: ONAM MPS OK ;
+    	'}
+    	xMPS_OK:	BOOL; (*MPS Fast OK, is set when the Valve is Open*)
+    END_VAR
+    VAR_IN_OUT
+    	io_fbFFHWO    :    FB_HardwareFFOutput;
+    	fbArbiter: FB_Arbiter();
+    END_VAR
+    VAR
+    	// PMPS
+    	bMoving : BOOL;
+    	bDone :BOOL;
+    	i_xPMPS_OK:	BOOL;
+    	bptm: BeamParameterTransitionManager;  
+    	FFO    :    FB_FastFault :=(
+            i_DevName := 'VGC',
+            i_Desc := 'Fault occurs when the valve is not in open state',
+            i_TypeCode := 16#1010);
+    	//g_FastFaultOutput1	:	FB_HardwareFFOutput;	
+
+    	{attribute 'instance-path'}
+    	{attribute 'noinit'}
+    	sPath: STRING;
+    	
+    	rDiffPressAllowed	:	REAL := 22.5; // Torr, Default value comes from Vat Valve Manual
+    	rDiffPress : REAL;
+    	set : BOOL;
+        reset: BOOL;
+    	  
+    	xFirstPass	:	BOOL;
+    	fbFSInit		:	R_TRIG;
+    	
+    	tonDelOK : TON;
+    	rtOK	:	R_TRIG;
+    	tonOvrd	:	TON;
+    	rtOpen	:	R_TRIG;
+    	ftClose: F_TRIG;
+    	
+    	tDelOK	:	TIME := T#60S;
+    	tOvrd	:	TIME := T#10s;
+    	
+    	
+    	(* Timeouts*)
+    	tTimeOutDuration: TIME:= T#30S;
+    	tOPNtimeout: TON;
+    	tCLStimeout:TON;
+    	tBPTMtimeout:TON;
+    	
+    	
+    	(*IO*)
+    	i_xOpnLS	AT%I*: BOOL;
+    	i_xClsLS	AT%I*: BOOL;
+    	q_xOPN_DO	AT%Q*: BOOL;
+        
+        // For logging
+        eVGCPrevState : E_VGC;
+       
+    	
+    END_VAR
+    (* Vacuum gate valve
+    A. Wallace
+    16-10-29
+
+    A gate valve isolates vacuum volumes. Ideally it can be opened when a system is vented
+    to allow for faster pumping, and will close when high vacuum is lost.
+
+    The following behavior is good for valves in something like a gas attenuator.
+    This function block does the following:
+    1. The valve can be opened when the difference between the pressures on both sides is
+    less than the maximum differential pressure.
+    2. This rule persists until the pressures on both sides are lower than the vacuum-setpoint.
+    3. Once at-vac, the valve will close if the pressure on either side rises above the setpoint.
+
+    Alternatively, the differential pressure interlock can be disabled so the valve may only be opened
+    if the pressure on both sides is lower than the at-vacuum-setpoint. You want this behavior if 
+    the valve is to be used in a UHV section.
+
+    Hysteresis is employed to ensure a smooth transition from vented/pumping down, to at-vac.
+
+    Finally, an override system is built in so you can bypass all the interlocking logic and 
+    get back online.
+    *)
+    (* 10/1/2018 Margaret Ghaly included EPS, PMPS Checkes and MPS trigger signals*)
+
+
+    fbFSInit( CLK := TRUE, Q => xFirstPass);
+    (*IO Mapping*)
+    ACT_IO();
+
+    (* On first PLC pass, put valve into vented state, which implies a closed valve *)
+    IF xFirstPass THEN
+    	iq_stValve.eVGC_State := Vented;
+    	iq_stValve.pv_xOPN_SW := FALSE;
+    	FFO.i_DevName := i_sDevName;
+    END_IF
+
+
+    ///Check valve position
+    IF iq_stValve.i_xClsLS AND  iq_stValve.i_xOpnLS THEN
+    	iq_stValve.eState:=INVALID;
+    ELSIF NOT iq_stValve.i_xClsLS AND iq_stValve.i_xOpnLS AND iq_stValve.q_xOPN_DO THEN 
+    	iq_stValve.eState:=OPEN;
+    ELSIF NOT iq_stValve.i_xClsLS AND iq_stValve.i_xOpnLS AND NOT iq_stValve.q_xOPN_DO THEN 
+    	iq_stValve.eState:=OPEN_F;
+    ELSIF iq_stValve.i_xClsLS AND NOT iq_stValve.i_xOpnLS AND NOT iq_stValve.q_xOPN_DO THEN 
+    	iq_stValve.eState:=CLOSED;
+    ELSIF NOT iq_stValve.i_xClsLS AND NOT iq_stValve.i_xOpnLS THEN 
+    	iq_stValve.eState:=MOVING;
+    ELSE
+    	iq_stValve.eState:=INVALID;
+    END_IF
+
+    // Update hysteresis
+    ///////////////////////////////////////////////////
+    IF iq_stValve.rAT_VAC_SP_LAST <> iq_stValve.rAT_VAC_SP OR xFirstPass THEN
+    	iq_stValve.rAT_VAC_SP_LAST := iq_stValve.rAT_VAC_SP;
+    	iq_stValve.rAT_VAC_HYS := iq_stValve.rHYST_PERC * iq_stValve.rAT_VAC_SP;
+    END_IF
+
+    iq_stValve.rAT_VAC_HYS := LIMIT(0, iq_stValve.rAT_VAC_HYS, iq_stValve.rAT_VAC_SP);
+    IF iq_stValve.rAT_VAC_SP <> 0 THEN
+    	IF iq_stValve.rHYST_PERC <> (iq_stValve.rAT_VAC_HYS / iq_stValve.rAT_VAC_SP) THEN
+    		iq_stValve.rHYST_PERC := LIMIT(0, (iq_stValve.rAT_VAC_HYS / iq_stValve.rAT_VAC_SP) ,1);
+    	END_IF
+    END_IF
+    // Valve at vacuum check
+    ///////////////////////////////////////////////////
+    	set := i_stUSG.rPRESS < iq_stValve.rAT_VAC_HYS AND i_stDSG.rPRESS < iq_stValve.rAT_VAC_HYS AND i_stUSG.xPRESS_OK AND i_stDSG.xPRESS_OK;
+     	iq_stValve.xAT_VAC S= set;
+    	reset := i_stUSG.rPRESS > iq_stValve.rAT_VAC_SP OR i_stDSG.rPRESS > iq_stValve.rAT_VAC_SP OR NOT i_stUSG.xPRESS_OK OR NOT i_stDSG.xPRESS_OK;
+    	iq_stValve.xAT_VAC R= reset;
+    	
+    // Differential pressure check
+    ///////////////////////////////////////////////////
+    	(* Calc the differential pressure across the valve *)
+    	rDiffPress := ABS(i_stUSG.rPRESS - i_stDSG.rPRESS);
+    	
+    	(* As long as the differential pressure is less than 30mbar, the valve is allowed to open *)
+    	IF rDiffPress <= rDiffPressAllowed AND i_stUSG.xPRESS_OK AND i_stDSG.xPRESS_OK THEN
+    		iq_stValve.xDP_OK := TRUE;
+    	ELSE
+    		iq_stValve.xDP_OK	:= FALSE;
+    		(* If the differential pressure is exceeded, even when the valve is open,
+    		the state is unexpected and triggers a fault, because it suggests that something
+    		is wrong with the valve, or gauges or mapping or there is a major leak on one side.*)
+    		iq_stValve.eVGC_State := ERR_DiffPress;
+            iq_stValve.xERR_DifPres := TRUE;
+    	END_IF
+
+    // Valve state
+    ///////////////////////////////////////////////////
+    CASE iq_stValve.eVGC_State OF
+    	Vented: (* The Vented state is used during pump down *)        
+    		(* Assuming the pump down went well, we are now at vacuum on both sides,
+    		so we move to the vacuum state, otherwise remain in the vented state *)
+    		IF iq_stValve.xAT_VAC AND (NOT (iq_stValve.xERR_DifPres)) AND (NOT (iq_stValve.xERR_SP)) AND (NOT (iq_stValve.xERR_ExtFault))THEN
+    		    iq_stValve.eVGC_State := AtVacuum;
+    		ELSE
+    		    iq_stValve.eVGC_State := Vented;
+    		END_IF
+    	
+    	AtVacuum:
+    		IF iq_stValve.xAT_VAC THEN
+    		(* If both pressure setpoints are made,
+    		then enable the differential pressure interlock, regardless of the valve state
+    		assuming we're using some kind of ion gauge where a pressure setpoint cannot be higher than 1E-4 T *)
+    		iq_stValve.eVGC_State := AtVacuum;
+    				
+    		ELSE
+    		
+    			(* If the valve is open (or in an unknown state) and either gauge is not at it's vacuum setpoint,
+    			we have a loss of vacuum error *)
+    			IF (iq_stValve.i_xOpnLS OR (NOT iq_stValve.i_xOpnLS AND NOT iq_stValve.i_xClsLS)) THEN
+    				iq_stValve.eVGC_State := ERR_LostVac;
+    				iq_stValve.xERR_SP := TRUE; //TAW changed this to the ERR_SP bool because I think that's what it was intended to be?
+    		
+    			(* Alternatively, if the valve is already closed and we lose pressure on one side,
+    			it was probably intentional venting, so we calmly move back to venting mode, and
+    			disable the differential pressure interlock *) //?? 
+    			ELSIF iq_stValve.i_xClsLS THEN
+    				iq_stValve.eVGC_State := Vented;
+    			END_IF
+    		
+    		END_IF
+    	
+    	ERR_DiffPress:       
+    		IF NOT (iq_stValve.xERR_DifPres) THEN
+    			IF iq_stValve.xAT_VAC AND (NOT (iq_stValve.xERR_DifPres)) AND (NOT (iq_stValve.xERR_SP)) AND (NOT (iq_stValve.xERR_ExtFault))THEN
+    		    	iq_stValve.eVGC_State := AtVacuum;
+    			ELSE
+    		    	iq_stValve.eVGC_State := Vented;
+    			END_IF
+    		END_IF
+    		
+    	
+    	ERR_LostVac:
+    		IF NOT (iq_stValve.xERR_SP) THEN
+    			IF iq_stValve.xAT_VAC AND (NOT (iq_stValve.xERR_DifPres)) AND (NOT (iq_stValve.xERR_SP)) AND (NOT (iq_stValve.xERR_ExtFault))THEN
+    		    	iq_stValve.eVGC_State := AtVacuum;
+    			ELSE
+    		    	iq_stValve.eVGC_State := Vented;
+    			END_IF
+    		END_IF
+    		
+    	ERR_ExtFault:
+    		IF NOT (iq_stValve.xERR_ExtFault) AND (i_xExt_OK) THEN
+    			IF iq_stValve.xAT_VAC AND (NOT (iq_stValve.xERR_DifPres)) AND (NOT (iq_stValve.xERR_SP)) AND (NOT (iq_stValve.xERR_ExtFault))THEN
+    		    	iq_stValve.eVGC_State := AtVacuum;
+    			ELSE
+    		    	iq_stValve.eVGC_State := Vented;
+    			END_IF
+    		END_IF
+    END_CASE
+
+    IF (NOT i_xExt_OK) AND (iq_stValve.eState=OPEN)  THEN
+    	iq_stValve.eVGC_State := ERR_ExtFault;
+    	iq_stValve.xERR_ExtFault := TRUE;
+    END_IF
+
+    // Interlock evaluation - with bypass for DP ILK bypass
+    ///////////////////////////////////////////////
+    IF i_xDis_DPIlk THEN
+    	iq_stValve.xOPN_OK := iq_stValve.xEXT_OK; // AND iq_stValve.xDP_OK ;
+    ELSE
+    	iq_stValve.xOPN_OK := iq_stValve.xEXT_OK AND iq_stValve.xAT_VAC;
+    END_IF
+
+
+    (* Valve operation *)
+
+    (* Override logic *)
+    (* Goal: give ability to override, but do so in a way that people won't forget it.
+    Solution: Override only after ten seconds of override, protect against blips,
+    when the valve permission goes true for more than ten seconds consistently, remove override
+    *)
+
+    tonDelOK(IN:=iq_stValve.xOPN_OK, PT:=tDelOK);
+    rtOK(CLK:=tonDelOK.Q);
+    IF rtOK.Q AND iq_stValve.pv_xOvrdOpn THEN 
+    	iq_stValve.pv_xOvrdOpn :=FALSE;
+    	if (iq_stValve.eState = OPEN) AND (i_xOverrideMode) THEN iq_stValve.pv_xOPN_SW := TRUE; END_IF //for seamless transition   
+        //Log
+        fbLogger(sMsg:='Override expired', eSevr:=TcEventSeverity.Warning);
+    END_IF
+    // Release the Force Open bit when the system override is false
+    IF NOT (i_xOverrideMode) THEN  iq_stValve.pv_xOvrdOpn :=FALSE; END_IF
+    //Override timer
+    tonOvrd(IN:=iq_stValve.pv_xOvrdOpn, PT:=tOvrd);
+
+
+    (* Valve operation *)
+    (* Here's where we evaluate sw actions and operate the valve *)
+    (* Valve operation *)
+
+    ftClose(CLK:= iq_stValve.pv_xOPN_SW);
+    rtOpen(CLK:= iq_stValve.pv_xOPN_SW);
+    (*when interlock is lost the Valve closes regardless of the status of the PMPS and EPS*)
+    IF NOT (iq_stValve.xOPN_OK) THEN
+    	iq_stValve.pv_xOPN_SW:= FALSE; // Reset switch after inlk is lost
+    	iq_stValve.q_xOPN_DO := (iq_stValve.pv_xOPN_SW  AND iq_stValve.xOPN_OK) OR (tonOvrd.Q AND i_xOverrideMode);
+    ELSIF i_xPMPS_OK THEN 
+    	iq_stValve.q_xOPN_DO := (iq_stValve.pv_xOPN_SW  AND iq_stValve.xOPN_OK) OR (tonOvrd.Q AND i_xOverrideMode);
+    //ELSIF NOT (i_xPMPS_OK) THEN
+    	// Only override mode
+    //	iq_stValve.q_xOPN_DO := (tonOvrd.Q AND i_xOverrideMode);
+    END_IF
+
+
+    (*MPS Fault setting*)
+    If (i_xIsAperture ) THEN 
+    	(* When the valve  is open or in Closed position MPS is OK, Fault while moving*)
+    	xMPS_OK := i_xOpnLS XOR i_xClsLS; 
+    ELSE
+    	(* When the valve  is open MPS is OK*)
+    	xMPS_OK := i_xOpnLS AND NOT i_xClsLS AND q_xOPN_DO; 
+    END_IF
+
+
+    ///Check valve moving postion timout
+    IF NOT iq_stValve.i_xClsLS AND tCLStimeout.Q THEN 
+    	iq_stValve.bErrorPresent := TRUE;
+    	iq_stValve.sErrorMessage := 'Close Timeout';
+    ELSIF NOT iq_stValve.i_xOpnLS AND tOPNtimeout.Q THEN 
+    	iq_stValve.bErrorPresent := TRUE; 
+    	iq_stValve.sErrorMessage := 'Open Timeout';
+    END_IF
+    IF (iq_stValve.eState=INVALID) THEN
+    	iq_stValve.bErrorPresent := TRUE; 
+    	iq_stValve.sErrorMessage := CONCAT(sPath,'Invalid Valve Position');
+    END_IF
+
+
+    (*Timers*)
+    tOPNtimeout(IN:= iq_stValve.q_xOPN_DO, PT := tTimeOutDuration );
+    tCLStimeout(IN:= NOT iq_stValve.q_xOPN_DO, PT := tTimeOutDuration);
+
+
+    // Alarm reset
+    //////////////////////////////////////
+    ACT_ResetAlarms();
+
+    (*IO Mapping*)
+    ACT_IO();
+
+    // Log States and triggers
+    ACT_Logger();
+
+    (*FAST FAULT*)
+    FFO(i_xOK := xMPS_OK,
+        i_xReset := i_xReset,
+    	i_xAutoReset :=TRUE,
+        io_fbFFHWO := io_fbFFHWO);
+
+    (*PMPS*)
+    ACT_PMPS();
+
+    END_FUNCTION_BLOCK
+    ACTION ACT_IO:
+    (*inputs*)
+    iq_stValve.i_xOpnLS := 	i_xOpnLS;
+    iq_stValve.i_xClsLS:=	i_xClsLS;
+    iq_stValve.xEXT_OK := i_xEXT_OK;
+    iq_stValve.xOverrideMode := i_xOverrideMode;
+    (*outputs*)
+    q_xOPN_DO:= iq_stValve.q_xOPN_DO;
+
+    (*ILK Devices*)
+    iq_stValve.sIlkUSDeviceName := This^.i_stUSG.sPath;
+    iq_stValve.sIlkDSDeviceName := This^.i_stDSG.sPath;
+    END_ACTION
+    ACTION ACT_Logger:
+    // ILK logger
+
+    IF NOT (iq_stValve.xOPN_OK) AND (ePrevState = OPEN) AND NOT (TonOvrd.Q) THEN
+     		fbLogger(sMsg:='Lost interlock ok bit while valve was open.', eSevr:=TcEventSeverity.Critical);  	
+    END_IF
+
+
+    //Positiong STATE Logger  
+    IF ePrevState <> iq_stValve.eState THEN
+    	  CASE iq_stValve.eState OF
+    		INVALID:
+    			fbLogger(sMsg:='Valve invalid position.', eSevr:=TcEventSeverity.Critical);
+      		MOVING:
+    			fbLogger(sMsg:='Valve moving', eSevr:=TcEventSeverity.Warning);
+    		OPEN:
+    			fbLogger(sMsg:='Valve Open.', eSevr:=TcEventSeverity.Info);
+    		OPEN_F:
+    			fbLogger(sMsg:='Valve Open.', eSevr:=TcEventSeverity.Info);
+    		CLOSED:
+    			fbLogger(sMsg:='Valve closed.', eSevr:=TcEventSeverity.Info);
+    	  END_CASE
+    	  ePrevState := iq_stValve.eState;  
+      END_IF
+     
+     //Pressure STATE Logger  
+    IF eVGCPrevState <> iq_stValve.eVGC_State THEN
+    	  CASE iq_stValve.eVGC_State OF
+    		Vented:
+    			 fbLogger(sMsg:='Vented', eSevr:=TcEventSeverity.Info);
+      		AtVacuum:
+    			 fbLogger(sMsg:='Vacuum setpoint satisfied', eSevr:=TcEventSeverity.Info);
+    		ERR_DiffPress:
+    			 fbLogger(sMsg:='Potential accidental vent.', eSevr:=TcEventSeverity.Critical);
+    		ERR_LostVac:
+    			fbLogger(sMsg:='Unexpected loss of vacuum while valve was open or moving.', eSevr:=TcEventSeverity.Critical);
+    		ERR_ExtFault:
+    			 fbLogger(sMsg:='Lost external interlock while valve was open.', eSevr:=TcEventSeverity.Critical);
+    	  END_CASE
+    	  eVGCPrevState := iq_stValve.eVGC_State;  
+      END_IF
+      
+
+
+    // Log valve timeouts
+    tErrorPresent(CLK:=iq_stValve.bErrorPresent);
+    IF tErrorPresent.Q THEN fbLogger(sMsg:=iq_stValve.sErrorMessage, eSevr:=TcEventSeverity.Warning); END_IF
+
+    // Log valve open
+    tAction(CLK:= iq_stValve.q_xOPN_DO);
+    IF tAction.Q THEN fbLogger(sMsg:='Valve commanded open', eSevr:=TcEventSeverity.Info); END_IF
+
+    // Log override mode enabled
+    tOverrideActivated(CLK:= (tonOvrd.Q AND i_xOverrideMode));
+    IF tOverrideActivated.Q THEN fbLogger(sMsg:='Valve override mode activated', eSevr:=TcEventSeverity.Warning); END_IF
+    END_ACTION
+    ACTION ACT_PMPS:
+    bMoving := (iq_stValve.pv_xOPN_SW AND iq_stValve.i_xClsLS) XOR (NOT iq_stValve.pv_xOPN_SW AND i_xOpnLS);
+    bDone := (iq_stValve.pv_xOPN_SW AND iq_stValve.i_xOpnLS) XOR (NOT iq_stValve.pv_xOPN_SW AND i_xClsLS);
+    If (i_xIsAperture ) OR (iq_stValve.pv_xOPN_SW )THEN
+    	bptm.i_stRequestedAssertion := PMPS_GVL.cstFullBeam;
+    ELSE  bptm.i_stRequestedAssertion := PMPS_GVL.cstSafeBeam;
+    END_IF
+    bptm(fbArbiter:=fbArbiter,
+         i_TransitionAssertionID:=i_nTransitionRootID+2,
+         i_stTransitionAssertion:=PMPS_GVL.cstSafeBeam,
+         i_nRequestedAssertionID:=i_nTransitionRootID+ BOOL_TO_UDINT( iq_stValve.pv_xOPN_SW),
+         i_stRequestedAssertion:=,
+         i_xMoving:=bMoving,
+         i_xDoneMoving:= bDone,
+         stCurrentBeamParameters:=PMPS_GVL.stCurrentBeamParameters,
+         q_xTransitionAuthorized=>);
+    // Timeout
+    tBPTMtimeout(IN:= bMoving AND NOT bptm.q_xTransitionAuthorized , PT:=T#1S);
+    i_xPMPS_OK := bptm.q_xTransitionAuthorized OR tBPTMtimeout.Q;
+    END_ACTION
+    ACTION ACT_ResetAlarms:
+    iq_stValve.xERR_DifPres R= iq_stValve.pv_xAlmRst;
+    iq_stValve.xERR_SP R= iq_stValve.pv_xAlmRst;
+    iq_stValve.bErrorPresent R= iq_stValve.pv_xAlmRst;
+    iq_stValve.xERR_ExtFault R= iq_stValve.pv_xAlmRst;
+
+    IF ( iq_stValve.pv_xAlmRst) THEN
+    	iq_stValve.sErrorMessage :='';
+    	 iq_stValve.pv_xAlmRst := FALSE;
+    END_IF
+    END_ACTION
+
+
 MAIN
 ^^^^
 
@@ -1101,8 +1683,7 @@ MAIN
     PRG_GEM1();
     PRG_GEM2();
     PRG_SATT();
-
-
+    PRG_PMPS();
     //Log Handler
     fbLogHandler();
 
@@ -1171,19 +1752,27 @@ PRG_GEM1
 
     PROGRAM PRG_GEM1
     VAR
-    	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:RESET '}
+    	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:RESET;
+         field: ZNAM FALSE; 
+    	 field: ONAM TRUE; 
+    	 io: io;
+    	'}
     	bReset : BOOL; 
-    	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:ERROR '}
+    	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:ERROR;
+         field: ZNAM FALSE; 
+    	 field: ONAM TRUE; 
+    	 io: io;
+    	'}
     	bError : BOOL; 
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Kp1 '}
-    	fKp1 : REAL:= 0.001; 
+    	fKp1 : REAL:= 0.4; 
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Tn1 '}
     	fTn1 : REAL:= 0.5; 
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Kp2 '}
     	fKp2 : REAL:= 0.01; 
     	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Tn2 '}
     	fTn2 : REAL:= 0.5; 
-    	arrTable_GEM1	: ARRAY[1..31,1..2] OF FLOAT;
+    	arrTable_GEM1	: ARRAY[1..30,1..2] OF FLOAT;
     	fManValue											: FLOAT;
     	bExtrapolate										: BOOL;
     	eMode							: E_CTRL_MODE;
@@ -1209,16 +1798,29 @@ PRG_GEM1
     END_VAR
     (*Devices*)
     (* GEM 1*)
-
     (*Gauges*)
     GEM1_GCM_41(i_rFULL_SCALE := 10.0 (*Torr*));
     GEM1_GCM_42(i_rFULL_SCALE := 0.05 (*Torr*));
+    (*Assign reading to psuedo gauge*)
+    IF (GEM1_GCM_42.PG.rPRESS >=0.049) THEN GEM1_GCM_40 := GEM1_GCM_41.PG;
+    	ELSE
+    	GEM1_GCM_40 := GEM1_GCM_42.PG;	
+    END_IF
+    (* Gauge selection *)
+    fbCTRL_PID.fActualValue := GEM1_GCM_40.rPRESS;
+    (*
+    IF (fGEM1SetpointValue >=0.049) THEN
+    	fbCTRL_PID.fActualValue := GEM1_GCM_41.PG.rPRESS;
+    ELSE
+    	fbCTRL_PID.fActualValue := GEM1_GCM_42.PG.rPRESS;
+    END_IF*)
+
 
     (* N2 Cut Off Valves *)
     GEM1_VVC_40(i_xExtILK_OK:= GEM1_Aperture_Closed AND GEM1_Turbo_Valves_Open AND GEM1_Turbo_Running); 
 
     (*Flow Control Valves*)
-    GEM1_VCN_40 (i_xExtIlkOK := (GEM1_Aperture_Closed AND GEM1_Turbo_Valves_Open AND GEM1_Turbo_Running AND  GEM2_VVC_40.M_IsOpen()),
+    GEM1_VCN_40 (i_xExtIlkOK := (GEM1_Aperture_Closed AND GEM1_Turbo_Valves_Open AND GEM1_Turbo_Running),// AND  GEM1_VVC_40.M_IsOpen()),
     			 i_ReqPos:= fbCTRL_LIN_INTERPOLATION.fOut + fbCTRL_PID.fOut);
     //GEM1_VPC_42 (i_xExtIlkOK := TRUE, i_rReqPos:= );
 
@@ -1231,42 +1833,41 @@ PRG_GEM1
     	
     	(* init array with the interpolation points  *)
     	(* 	fIn					 |		fOut		*)
-    	arrTable_GEM1[1,1] := 0;		arrTable_GEM1[1,2] := 0;
-    	arrTable_GEM1[2,1] := 0.0000412;		arrTable_GEM1[2,2] := 34;
-    	arrTable_GEM1[3,1] := 0.001282;		arrTable_GEM1[3,2] := 36;
-    	arrTable_GEM1[4,1] :=  0.002136;	    arrTable_GEM1[4,2] := 38;
-    	arrTable_GEM1[5,1] :=  0.005884;	    arrTable_GEM1[5,2] := 40;
-    	arrTable_GEM1[6,1] := 0.00907;		arrTable_GEM1[6,2] := 42;
-    	arrTable_GEM1[7,1] := 0.01183;		arrTable_GEM1[7,2] := 44;
-    	arrTable_GEM1[8,1] := 0.01799;	    arrTable_GEM1[8,2] := 46;
-    	arrTable_GEM1[9,1] := 0.0302;	    arrTable_GEM1[9,2] := 47;
-    	arrTable_GEM1[10,1] := 0.0417;		arrTable_GEM1[10,2] := 50;
-    	arrTable_GEM1[11,1] := 0.06635;		arrTable_GEM1[11,2] := 51;
-    	arrTable_GEM1[12,1] := 0.08118;		arrTable_GEM1[12,2] := 53;
-    	arrTable_GEM1[13,1] := 0.0998;		arrTable_GEM1[13,2] := 56;
-    	arrTable_GEM1[14,1] := 0.10644;		arrTable_GEM1[14,2] := 56.5;
-    	arrTable_GEM1[15,1] := 0.1359;		arrTable_GEM1[15,2] := 58;
-    	arrTable_GEM1[16,1] := 0.1929;		arrTable_GEM1[16,2] := 60;
-    	arrTable_GEM1[17,1] := 0.2922;		arrTable_GEM1[17,2] := 62;
-    	arrTable_GEM1[18,1] := 0.3428;	    arrTable_GEM1[18,2] := 64;
-    	arrTable_GEM1[19,1] :=  0.405;;	    arrTable_GEM1[19,2] :=66;
-    	arrTable_GEM1[20,1] := 0.481;		arrTable_GEM1[20,2] := 68;
-    	arrTable_GEM1[21,1] := 0.5542;		arrTable_GEM1[21,2] := 69;
-    	arrTable_GEM1[22,1] := 0.6333;	    arrTable_GEM1[22,2] := 70;
-    	arrTable_GEM1[23,1] := 0.7901;	    arrTable_GEM1[23,2] := 72;
-    	arrTable_GEM1[24,1] := 0.9307;		arrTable_GEM1[24,2] := 73.04;
-    	arrTable_GEM1[25,1] := 1.0448;		arrTable_GEM1[25,2] := 73.64;
-    	arrTable_GEM1[26,1] := 1.31919;;		arrTable_GEM1[26,2] := 74.45;
-    	arrTable_GEM1[27,1] :=  1.324;		arrTable_GEM1[27,2] :=74.46;
-    	arrTable_GEM1[28,1] := 1.71941;	arrTable_GEM1[28,2] := 75;
-    	arrTable_GEM1[29,1] :=  1.963194;		arrTable_GEM1[29,2] :=75.5;
-    	arrTable_GEM1[30,1] := 1.99999;	arrTable_GEM1[30,2] := 75.505;
-    	arrTable_GEM1[31,1] := 2;	arrTable_GEM1[31,2] := 75.55;
+    	arrTable_GEM1[1,1] := 0;		arrTable_GEM1[1,2] := 23.8;
+    	arrTable_GEM1[2,1] := 0.00178;		arrTable_GEM1[2,2] := 23.9;
+    	arrTable_GEM1[3,1] := 0.0025;		arrTable_GEM1[3,2] := 24;
+    	arrTable_GEM1[4,1] :=  0.005884;	    arrTable_GEM1[4,2] := 25;
+    	arrTable_GEM1[5,1] :=  0.085;	    arrTable_GEM1[5,2] := 35;
+    	arrTable_GEM1[6,1] := 0.1263;		arrTable_GEM1[6,2] := 40;
+    	arrTable_GEM1[7,1] := 0.1626;		arrTable_GEM1[7,2] := 42;
+    	arrTable_GEM1[8,1] := 0.19;	    arrTable_GEM1[8,2] := 44;
+    	arrTable_GEM1[9,1] := 0.234;	    arrTable_GEM1[9,2] := 46;
+    	arrTable_GEM1[10,1] := 0.32;		arrTable_GEM1[10,2] := 50;
+    	arrTable_GEM1[11,1] := 0.370;		arrTable_GEM1[11,2] := 52;
+    	arrTable_GEM1[12,1] := 0.43427;		arrTable_GEM1[12,2] := 54;
+    	arrTable_GEM1[13,1] := 0.5316;		arrTable_GEM1[13,2] := 55;
+    	arrTable_GEM1[14,1] := 0.61;		arrTable_GEM1[14,2] := 55.5;
+    	arrTable_GEM1[15,1] := 0.894;		arrTable_GEM1[15,2] := 56;
+    	arrTable_GEM1[16,1] := 1.215;		arrTable_GEM1[16,2] := 56.5;
+    	arrTable_GEM1[17,1] := 1.58;		arrTable_GEM1[17,2] := 57;
+    	arrTable_GEM1[18,1] := 2.025;	    arrTable_GEM1[18,2] := 58;
+    	arrTable_GEM1[19,1] := 2.2;	    arrTable_GEM1[19,2] :=58.1;
+    	arrTable_GEM1[20,1] := 2.9;		arrTable_GEM1[20,2] := 65;
+    	arrTable_GEM1[21,1] := 3;		arrTable_GEM1[21,2] := 69;
+    	arrTable_GEM1[22,1] :=  3.0448;	    arrTable_GEM1[22,2] := 70;
+    	arrTable_GEM1[23,1] :=  3.31919;	    arrTable_GEM1[23,2] := 72;
+    	arrTable_GEM1[24,1] :=3.324;		arrTable_GEM1[24,2] := 73.04;
+    	arrTable_GEM1[25,1] :=3.71941;		arrTable_GEM1[25,2] := 73.64;
+    	arrTable_GEM1[26,1] := 3.81941;		arrTable_GEM1[26,2] := 74.45;
+    	arrTable_GEM1[27,1] :=  3.963194;		arrTable_GEM1[27,2] :=74.46;
+    	arrTable_GEM1[28,1] := 3.99999;	arrTable_GEM1[28,2] := 75;
+    	arrTable_GEM1[29,1] :=  4;		arrTable_GEM1[29,2] :=75.5;
+    	arrTable_GEM1[30,1] := 4.1;	arrTable_GEM1[30,2] := 75.505;
     	
     	(* init parameter struct *)
     	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.tCtrlCycleTime					:= T#10ms;
     	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.tTaskCycleTime					:= T#10ms;
-    	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.nDataTable_NumberOfRows		:= INT_TO_UINT(31);	
+    	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.nDataTable_NumberOfRows		:= INT_TO_UINT(30);	
 
 
     	(* init parameter struct *)
@@ -1275,8 +1876,8 @@ PRG_GEM1
     	stCTRL_PID_PARAMS.fKp					:= fKp1;			(* proportional gain Kp				*)
     	stCTRL_PID_PARAMS.tTn					:= T#1s;		(*  Tn									*)
     	stCTRL_PID_PARAMS.tTv					:= T#200ms;	(*  Tv									*)
-    	stCTRL_PID_PARAMS.tTd					:= T#100ms;	(*  Td									*)
-    	stCTRL_PID_PARAMS.fOutMaxLimit			:=  78;			(* maximum output limit				*)
+    	stCTRL_PID_PARAMS.tTd					:= T#200ms;	(*  Td									*)
+    	stCTRL_PID_PARAMS.fOutMaxLimit			:=  5;			(* maximum output limit				*)
     	stCTRL_PID_PARAMS.fOutMinLimit			:=  -100;			(* minimum output limit				*)
 
     	(* set the mode to ACTIVE --> normal operation *)
@@ -1289,21 +1890,30 @@ PRG_GEM1
     stCTRL_LIN_INTERPOLATION_PARAMS_GEM.nDataTable_SIZEOF		:= SIZEOF(arrTable_GEM1);
 
 
-
+    fGEM1SetpointValue:= LIMIT(0,fGEM1SetpointValue,2);
+    if (NOT (GEM1_VVC_40.i_xExtILK_OK) OR (GEM1_VVC_40.M_IsClosed())) THEN
+    		eMode			:=eCTRL_MODE_PASSIVE;// eCTRL_MODE_RESET ;//eCTRL_MODE_PASSIVE;
+    		GEM1_VCN_40.M_ValveControl(CloseValve);
+    		fGEM1SetpointValue :=0;
+     END_IF //Switch off the PID incase of interlock
     if (GEM1_GO) THEN
     	IF (bReset) THEN
     		(* set the mode to RESET*)
     		eMode							:= eCTRL_MODE_RESET   ;
+    		stCTRL_PID_PARAMS.fKp					:= fKp1;			(* proportional gain Kp				*)
     		GEM1_VCN_40.M_ValveControl(CloseValve);
     		//bReset := False;
     	ELSE(* set the mode to ACTIVE --> normal operation *)
+    		fbCTRL_PID.bSync := FALSE;
     		eMode							:= eCTRL_MODE_ACTIVE   ;
     		GEM1_VCN_40.M_ValveControl(PressureControl);
     	END_IF
     END_IF
 
     If(FTrig.Q)THEN
-    		eMode							:= eCTRL_MODE_PASSIVE;
+    		eMode							:=eCTRL_MODE_PASSIVE;// eCTRL_MODE_RESET ;//eCTRL_MODE_PASSIVE;
+    		fbCTRL_PID.fManSyncValue :=0;
+    		fbCTRL_PID.bSync := TRUE;
     		GEM1_VCN_40.M_ValveControl(CloseValve);
     		fGEM1SetpointValue :=0;
     END_IF
@@ -1322,12 +1932,6 @@ PRG_GEM1
     	bError=> , 
     	stParams:= stCTRL_LIN_INTERPOLATION_PARAMS_GEM );
     	
-    (* Gauge selection *)
-    IF (fGEM1SetpointValue >0.04) THEN
-    	fbCTRL_PID.fActualValue := GEM1_GCM_41.PG.rPRESS;
-    ELSE
-    	fbCTRL_PID.fActualValue := GEM1_GCM_42.PG.rPRESS;
-    END_IF
 
     	
     (* call controller *)
@@ -1341,7 +1945,7 @@ PRG_GEM1
     					fOut				=>  ,
     					bARWactive		=> bARWactive,
     					eErrorId			=> eErrorId,
-    					bError				=> bError
+    					bError				=> 
     				);
 
 
@@ -1349,7 +1953,7 @@ PRG_GEM1
     (*deadband/clipper *)
 
     (* call function block *)
-    stCTRL_DEADBAND_PARAMS.fThreshold	:=  fGEM1SetpointValue*0.01 ;
+    stCTRL_DEADBAND_PARAMS.fThreshold	:=  fGEM1SetpointValue*0.0016 ;
     (*fbCTRL_DEADBAND	(	fIn					:= ,
     					stParams			:= stCTRL_DEADBAND_PARAMS,
     					bInIsUnderThreshold => ,
@@ -1357,7 +1961,7 @@ PRG_GEM1
     					bError				=> 
     				);*)
     				
-
+    bError := fbCTRL_PID.bError OR fbCTRL_LIN_INTERPOLATION.bError;
 
 
     // or NOT???
@@ -1369,7 +1973,7 @@ PRG_GEM1
     //pid_on(IN:=, PT:= wait, Q=>, ET =>);
     //IF (pid_on.Q) THEN eMode:= eCTRL_MODE_ACTIVE; pid_on.IN := FALSE; END_IF; //eCTRL_MODE_TUNE????
 
-    FTRIG(CLK := GEM2_GO);
+    FTRIG(CLK := GEM1_GO);
 
     END_PROGRAM
 
@@ -1381,8 +1985,18 @@ PRG_GEM1_DIFF_PUMP
 
     PROGRAM PRG_GEM1_DIFF_PUMP
     VAR
+    	rMaxBackingPressure : REAL := 0.7;//Torr
+    	bInit:BOOL:=TRUE;
     	
     END_VAR
+    If (bInit) THEN
+    	bInit := FALSE;
+    	GEM1_PTM_10.M_SetPowerScale(15);
+    	GEM1_PTM_20.M_SetPowerScale(15);
+    	GEM1_PTM_20.M_SetCurrentScale(1);
+    	GEM1_PTM_50.M_SetPowerScale(50);
+    END_IF
+
     (*Gauges*)
     USG_PIN(sNetId:='172.21.88.138.1.1' , nPort:=851 , sVarName:='GVL_Devices.SL1L0_POWER_PIN_01',iWatchdog:=Main.iWatchdog,IG=> );
 
@@ -1404,19 +2018,26 @@ PRG_GEM1_DIFF_PUMP
     (*apperture valves*)
 
     GEM1_VGC_10(i_stUSG := USG_PIN.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE,
-    		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := NOT (USG_PIN.bError), i_xOverrideMode := xGEM1OverrideMode,i_xReset := ,
+    		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:10',fbArbiter:=g_fbArbiter,i_nTransitionRootID:=1100);
     GEM1_VGC_20(i_stUSG := GEM1_GCC_10.IG, i_stDSG:= GEM1_GCC_20.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-    		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+    		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:20',fbArbiter:=g_fbArbiter,i_nTransitionRootID:=1200);
     GEM1_VGC_30(i_stUSG := GEM1_GCC_20.IG, i_stDSG:= GEM1_GCC_30.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-    		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+    		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:30',fbArbiter:=g_fbArbiter,i_nTransitionRootID:=1300);
     GEM1_VGC_40(i_stUSG := GEM1_GCC_30.IG, i_stDSG:= GEM1_GCC_30.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-    		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE, 
+    		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:40',fbArbiter:=g_fbArbiter,i_nTransitionRootID:=1400);
     GEM1_VGC_50(i_stUSG := GEM1_GCC_50.IG, i_stDSG:= GEM1_GCC_50.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-    		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+    		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:50',fbArbiter:=g_fbArbiter,i_nTransitionRootID:=1500);
     GEM1_VGC_60(i_stUSG := GEM1_GCC_50.IG, i_stDSG:= GEM1_GCC_50.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-    		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);		
+    		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+    		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:60',fbArbiter:=g_fbArbiter,i_nTransitionRootID:=1600);		
     GEM1_VGC_70(i_stUSG := GEM1_GCC_50.IG, i_stDSG:= GEM1_GCC_50.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-    		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO:=g_FastFaultOutput1);
+    		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+    		io_fbFFHWO:=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:70',fbArbiter:=g_fbArbiter,i_nTransitionRootID:=1700);
 
     (*Turbo Isolation Valves*)
      GEM1_VRC_10(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_10.iq_stPtm,GEM1_GPI_10.PG),i_xOverrideMode := xGEM1OverrideMode);
@@ -1437,22 +2058,22 @@ PRG_GEM1_DIFF_PUMP
 
     (*Turbo Isolation valves*)
     GEM1_PTM_10.i_xExtILKOk := F_TurboExtILK_NO(GEM1_PTM_10.iq_stPtm, GEM1_GPI_11.PG,
-    						GEM1_GPI_10.PG,GEM1_VVC_20.q_stValve,GEM1_PMF_20.iq_stPFO);
-    GEM1_PTM_10(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=0.4);
+    						GEM1_GPI_10.PG,GEM1_VVC_20.q_stValve,GEM1_PRO_20.iq_stPFO);
+    GEM1_PTM_10(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
     GEM1_PTM_20.i_xExtILKOk := F_TurboExtILK_NO(GEM1_PTM_20.iq_stPtm,BackingGauge:= GEM1_GPI_11.PG,
-    						InletGauge:=GEM1_GPI_20.PG,GEM1_VVC_20.q_stValve,GEM1_PMF_20.iq_stPFO);
-    GEM1_PTM_20(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=0.4);
-    GEM1_PTM_30(i_xExtILKOK:=F_TurboExtILK_NO(GEM1_PTM_30.iq_stPtm, GEM1_GPI_31.PG,
-    						GEM1_GPI_30.PG,GEM1_VVC_30.q_stValve,GEM1_PMF_30.iq_stPFO),
-    		i_stGauge:=GEM1_GPI_31.PG,i_rMaxBackingPressure :=0.4);
-    GEM1_PTM_50(i_xExtILKOK:=F_TurboExtILK_NO(GEM1_PTM_50.iq_stPtm, GEM1_GPI_51.PG,
-    						GEM1_GPI_50.PG,GEM1_VVC_50.q_stValve,GEM1_PMF_50.iq_stPFO),
-    		i_stGauge:=GEM1_GPI_51.PG,i_rMaxBackingPressure :=0.4);
+    						InletGauge:=GEM1_GPI_20.PG,GEM1_VVC_20.q_stValve,GEM1_PRO_20.iq_stPFO);
+    GEM1_PTM_20(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
+    GEM1_PTM_30(i_xExtILKOK:=TRUE,//F_TurboExtILK_NO(GEM1_PTM_30.iq_stPtm, GEM1_GPI_31.PG,
+    						//GEM1_GPI_30.PG,GEM1_VVC_30.q_stValve,GEM1_PRO_30.iq_stPFO),
+    		i_stGauge:=GEM1_GPI_31.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
+    GEM1_PTM_50(i_xExtILKOK:=TRUE,//F_TurboExtILK_NO(GEM1_PTM_50.iq_stPtm, GEM1_GPI_51.PG,
+    						//GEM1_GPI_50.PG,GEM1_VVC_50.q_stValve,GEM1_PRO_50.iq_stPFO),
+    		i_stGauge:=GEM1_GPI_51.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
 
     (*Roughing pumps*)
-    GEM1_PMF_20(xExtIlk:= TRUE, TurboIsOn:= (GEM1_PTM_10.iq_stPtm.q_RunDO OR GEM1_PTM_20.iq_stPtm.q_RunDO));
-    GEM1_PMF_30(xExtIlk:= TRUE, TurboIsOn:= GEM1_PTM_30.iq_stPtm.q_RunDO);
-    GEM1_PMF_50(xExtIlk:= TRUE, TurboIsOn:= GEM1_PTM_50.iq_stPtm.q_RunDO);
+    GEM1_PRO_20(xExtIlk:= TRUE, TurboIsOn:= (GEM1_PTM_10.iq_stPtm.q_RunDO OR GEM1_PTM_20.iq_stPtm.q_RunDO));
+    GEM1_PRO_30(xExtIlk:= TRUE, TurboIsOn:= GEM1_PTM_30.iq_stPtm.q_RunDO);
+    GEM1_PRO_50(xExtIlk:= TRUE, TurboIsOn:= GEM1_PTM_50.iq_stPtm.q_RunDO);
 
     END_PROGRAM
 
@@ -1464,12 +2085,21 @@ PRG_GEM2
 
     PROGRAM PRG_GEM2
     VAR
-    	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:RESET '}
+    	{attribute 'pytmc' :='
+         pv: EM2L0:GEM:CNTRL:RESET; 
+         field: ZNAM FALSE; 
+    	 field: ONAM TRUE; 
+    	 io: io;
+    	'}
     	bReset : BOOL; 
-    	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:ERROR '}
+    	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:ERROR;
+     	field: ZNAM FALSE; 
+    	 field: ONAM TRUE; 
+    	 io: io;
+    	 '}
     	bError : BOOL; 
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:Kp1 '}
-    	fKp1 : REAL:= 0.04; 
+    	fKp1 : REAL:= 0.25; 
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:Tn1 '}
     	fTn1 : REAL:= 1;//0.5; 
     	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:Kp2 '}
@@ -1506,10 +2136,23 @@ PRG_GEM2
     (*Gauges*)
     GEM2_GCM_41(i_rFULL_SCALE := 2.0 (*Torr*));
     GEM2_GCM_42(i_rFULL_SCALE := 0.05 (*Torr*));
+    (*Assign reading to psuedo gauge*)
+    IF (GEM2_GCM_42.PG.rPRESS >0.04) THEN GEM2_GCM_40 := GEM2_GCM_41.PG;
+    	ELSE
+    	GEM2_GCM_40 := GEM2_GCM_42.PG;	
+    END_IF
+    (* Gauge selection *)
+    	fbCTRL_PID.fActualValue := GEM2_GCM_40.rPRESS;
+    (*
+    IF (fGEM2SetpointValue >0.04) THEN
+    	fbCTRL_PID.fActualValue := GEM2_GCM_41.PG.rPRESS;
+    ELSE
+    	fbCTRL_PID.fActualValue := GEM2_GCM_42.PG.rPRESS;
+    END_IF*)
     (* N2 Cut Off Valves *)
     GEM2_VVC_40(i_xExtILK_OK:= GEM2_Aperture_Closed AND GEM2_Turbo_Valves_Open AND GEM2_Turbo_Running); 
     (*Flow Control Valves*)
-    GEM2_VCN_40 (i_xExtIlkOK := (GEM2_Aperture_Closed AND GEM2_Turbo_Valves_Open AND GEM2_Turbo_Running AND GEM2_VVC_40.M_IsOpen()), 
+    GEM2_VCN_40 (i_xExtIlkOK := (GEM2_Aperture_Closed AND GEM2_Turbo_Valves_Open AND GEM2_Turbo_Running),// AND GEM2_VVC_40.M_IsOpen()), 
     			i_ReqPos:=  fbCTRL_LIN_INTERPOLATION.fOut + fbCTRL_PID.fOut);
 
     (*Iniitialization*)
@@ -1517,10 +2160,10 @@ PRG_GEM2
     THEN
     	(* init array with the interpolation points  *)
     	(* 	fIn					 |		fOut		*)
-    	arrTable_GEM2[1,1] := 0;		arrTable_GEM2[1,2] := 0;
-    	arrTable_GEM2[2,1] := 0.0000412;		arrTable_GEM2[2,2] := 34;
-    	arrTable_GEM2[3,1] := 0.001282;		arrTable_GEM2[3,2] := 36;
-    	arrTable_GEM2[4,1] :=  0.002136;	    arrTable_GEM2[4,2] := 38;
+    	arrTable_GEM2[1,1] := 0;		arrTable_GEM2[1,2] := 38.7;
+    	arrTable_GEM2[2,1] := 0.0000412;		arrTable_GEM2[2,2] := 38.8;
+    	arrTable_GEM2[3,1] := 0.001282;		arrTable_GEM2[3,2] := 38.9;
+    	arrTable_GEM2[4,1] :=  0.002136;	    arrTable_GEM2[4,2] := 39;
     	arrTable_GEM2[5,1] :=  0.005884;	    arrTable_GEM2[5,2] := 40;
     	arrTable_GEM2[6,1] := 0.00907;		arrTable_GEM2[6,2] := 42;
     	arrTable_GEM2[7,1] := 0.01183;		arrTable_GEM2[7,2] := 44;
@@ -1560,12 +2203,12 @@ PRG_GEM2
     	stCTRL_PID_PARAMS.fKp					:= fKp1;			(* proportional gain Kp				*)
     	stCTRL_PID_PARAMS.tTn					:= T#500ms;		(*  Tn									*)
     	stCTRL_PID_PARAMS.tTv					:= T#200ms;	(*  Tv									*)
-    	stCTRL_PID_PARAMS.tTd					:= T#100ms;	(*  Td									*)
-    	stCTRL_PID_PARAMS.fOutMaxLimit			:=  78;			(* maximum output limit				*)
+    	stCTRL_PID_PARAMS.tTd					:= T#200ms;	(*  Td									*)
+    	stCTRL_PID_PARAMS.fOutMaxLimit			:=  7;			(* maximum output limit				*)
     	stCTRL_PID_PARAMS.fOutMinLimit			:=  -100;			(* minimum output limit				*)
 
     	(* set the mode to ACTIVE --> normal operation *)
-    	eMode							:= eCTRL_MODE_ACTIVE   ;					
+    	eMode							:= eCTRL_MODE_PASSIVE   ;					
     	(* reset the init flag *)
     	bInit							:= FALSE;
     END_IF
@@ -1573,10 +2216,17 @@ PRG_GEM2
     	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.pDataTable_ADR			:= ADR(arrTable_GEM2);
     	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.nDataTable_SIZEOF		:= SIZEOF(arrTable_GEM2);
 
+    fGEM2SetpointValue:= LIMIT(0,fGEM2SetpointValue,2);
+    if (NOT (GEM2_VVC_40.i_xExtILK_OK) OR (GEM2_VVC_40.M_IsClosed())) THEN
+    		 eMode	:= eCTRL_MODE_PASSIVE;
+    		GEM2_VCN_40.M_ValveControl(CloseValve);
+    		fGEM2SetpointValue :=0; 
+    END_IF //Switch off the PID incase of interlock
     if (GEM2_GO) THEN
     	IF (bReset) THEN
     	(* set the mode to RESET*)
     	eMode							:= eCTRL_MODE_RESET   ;
+    	stCTRL_PID_PARAMS.fKp					:= fKp1;			(* proportional gain Kp				*)
     	GEM2_VCN_40.M_ValveControl(CloseValve);
     	//bReset := False;
     	ELSE
@@ -1606,12 +2256,6 @@ PRG_GEM2
     	bError=> );
 
 
-    (* Gauge selection *)
-    IF (fGEM2SetpointValue >0.04) THEN
-    	fbCTRL_PID.fActualValue := GEM2_GCM_41.PG.rPRESS;
-    ELSE
-    	fbCTRL_PID.fActualValue := GEM2_GCM_42.PG.rPRESS;
-    END_IF
 
     (* call controller *)
     fbCTRL_PID(		fSetpointValue		:= fGEM2SetpointValue,
@@ -1666,7 +2310,18 @@ PRG_GEM2_DIFF_PUMP
 
     PROGRAM PRG_GEM2_DIFF_PUMP
     VAR
+    	rMaxBackingPressure : REAL := 0.7;
+    	bInit: BOOL:=TRUE;
     END_VAR
+    If (bInit) THEN
+    	bInit := FALSE;
+    	GEM2_PTM_30.M_SetPowerScale(50);
+    	GEM2_PTM_50.M_SetCurrentScale(1);
+    	GEM2_PTM_60.M_SetCurrentScale(10);
+    	GEM2_PTM_70.M_SetPowerScale(10);
+    END_IF
+
+
     (*Gauges*)
     DSG_PIN(sNetId:='172.21.88.138.1.1' , nPort:=851 , sVarName:='GVL_Devices.AT2L0_SOLID_PIN_01',iWatchdog:=Main.iWatchdog,IG=> ); // Downstream Gauge from Down Stream PLC System
     (*EM2L0*)
@@ -1687,20 +2342,27 @@ PRG_GEM2_DIFF_PUMP
      (* to Include PMPS ILK with the EXTILK bit*)
     (*apperture valves*)
     GEM2_VGC_10(i_stUSG := GEM2_GPI_10.PG, i_stDSG:= GEM2_GPI_10.PG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-    		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+    		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM2L0:GEM:VGC:10',fbArbiter:=g_fbArbiter2,i_nTransitionRootID:=2100);
     GEM2_VGC_20(i_stUSG := GEM2_GPI_10.PG, i_stDSG:= GEM2_GCC_30.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-    		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    		(*i_xPMPS_OK := TRUE,*)i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+    		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM2L0:GEM:VGC:20',fbArbiter:=g_fbArbiter2,i_nTransitionRootID:=2200);;
     GEM2_VGC_30(i_stUSG := GEM2_GCC_30.IG, i_stDSG:= GEM2_GCC_30.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-    		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+    		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM2L0:GEM:VGC:30',fbArbiter:=g_fbArbiter2,i_nTransitionRootID:=2300);
     GEM2_VGC_40(i_stUSG := GEM2_GCC_50.IG, i_stDSG:= GEM2_GCC_50.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-    		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);	
+    		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+    		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM2L0:GEM:VGC:40',fbArbiter:=g_fbArbiter2,i_nTransitionRootID:=2400);	
     GEM2_VGC_50(i_stUSG := GEM2_GCC_30.IG, i_stDSG:= GEM2_GCC_60.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-    		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+    		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM2L0:GEM:VGC:50',fbArbiter:=g_fbArbiter2,i_nTransitionRootID:=2500);
     GEM2_VGC_60(i_stUSG := GEM2_GCC_60.IG, i_stDSG:= GEM2_GCC_70.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-    		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+    		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM2L0:GEM:VGC:60',fbArbiter:=g_fbArbiter2,i_nTransitionRootID:=2600);
     (*downstream isolation valve*)
     GEM2_VGC_70(i_stUSG := GEM2_GCC_70.IG, i_stDSG:= DSG_PIN.IG,i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE,
-    		i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xGEM2OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := NOT (DSG_PIN.bError) , i_xOverrideMode := xGEM2OverrideMode,i_xReset := ,
+    		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM2L0:GEM:VGC:70',fbArbiter:=g_fbArbiter2,i_nTransitionRootID:=2700);
     DSV_VGC(VGC=>);
 
     (*Turbo vent valves NO*)//Deprecated
@@ -1721,22 +2383,22 @@ PRG_GEM2_DIFF_PUMP
 
     (*Turbo Pumps*)
     GEM2_PTM_30(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_30.iq_stPtm, GEM2_GPI_31.PG,
-    						GEM2_GPI_30.PG,GEM2_VVC_30.q_stValve,GEM2_PMF_30.iq_stPFO),
-    		i_stGauge:=GEM2_GPI_31.PG,i_rMaxBackingPressure :=0.6);
+    						GEM2_GPI_30.PG,GEM2_VVC_30.q_stValve,GEM2_PRO_30.iq_stPFO),
+    		i_stGauge:=GEM2_GPI_31.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
     GEM2_PTM_50(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_50.iq_stPtm, GEM2_GPI_51.PG,
-    						GEM2_GPI_50.PG,GEM2_VVC_50.q_stValve,GEM2_PMF_50.iq_stPFO),
-    		i_stGauge:=GEM2_GPI_51.PG,i_rMaxBackingPressure :=0.6);
+    						GEM2_GPI_50.PG,GEM2_VVC_50.q_stValve,GEM2_PRO_50.iq_stPFO),
+    		i_stGauge:=GEM2_GPI_51.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
     GEM2_PTM_60(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_60.iq_stPtm, GEM2_GPI_61.PG,
-    						GEM2_GPI_60.PG,GEM2_VVC_70.q_stValve,GEM2_PMF_60.iq_stPFO),
-    		i_stGauge:=GEM2_GPI_61.PG,i_rMaxBackingPressure :=0.4);
+    						GEM2_GPI_60.PG,GEM2_VVC_70.q_stValve,GEM2_PRO_60.iq_stPFO),
+    		i_stGauge:=GEM2_GPI_61.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
     GEM2_PTM_70(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_70.iq_stPtm, GEM2_GPI_61.PG,
-    						GEM2_GPI_70.PG,GEM2_VVC_70.q_stValve,GEM2_PMF_60.iq_stPFO),
-    		i_stGauge:=GEM2_GPI_61.PG,i_rMaxBackingPressure :=0.4);
+    						GEM2_GPI_70.PG,GEM2_VVC_70.q_stValve,GEM2_PRO_60.iq_stPFO),
+    		i_stGauge:=GEM2_GPI_61.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
 
     (*Roughing pumps*)
-    GEM2_PMF_30(xExtIlk:= TRUE, TurboIsOn:= GEM2_PTM_30.iq_stPtm.q_RunDO); 
-    GEM2_PMF_50(xExtIlk:= TRUE, TurboIsOn:= GEM2_PTM_50.iq_stPtm.q_RunDO); 
-    GEM2_PMF_60(xExtIlk:= TRUE, TurboIsOn:= (GEM2_PTM_60.iq_stPtm.q_RunDO OR GEM2_PTM_70.iq_stPtm.q_RunDO));
+    GEM2_PRO_30(xExtIlk:= TRUE, TurboIsOn:= GEM2_PTM_30.iq_stPtm.q_RunDO); 
+    GEM2_PRO_50(xExtIlk:= TRUE, TurboIsOn:= GEM2_PTM_50.iq_stPtm.q_RunDO); 
+    GEM2_PRO_60(xExtIlk:= TRUE, TurboIsOn:= (GEM2_PTM_60.iq_stPtm.q_RunDO OR GEM2_PTM_70.iq_stPtm.q_RunDO));
 
     END_PROGRAM
 
@@ -1758,7 +2420,7 @@ PRG_ILK
     GEM2_TwinscrewPumps_Valves_Open := (GEM2_VRC_10.q_stValve.i_xOpnLS AND GEM2_PRO_10.q_stPump.i_xIsRun) OR   (GEM2_VRC_20.q_stValve.i_xOpnLS AND GEM2_PRO_20.q_stPump.i_xIsRun);
     GEM1_Turbo_Valves_Open := GEM1_VRC_10.iq_stValve.i_xOpnLS AND  GEM1_VRC_20.iq_stValve.i_xOpnLS AND GEM1_VRC_30.iq_stValve.i_xOpnLS AND GEM1_VRC_50.iq_stValve.i_xOpnLS;
     GEM2_Turbo_Valves_Open := GEM2_VRC_30.iq_stValve.i_xOpnLS AND  GEM2_VRC_50.iq_stValve.i_xOpnLS AND GEM2_VRC_60.iq_stValve.i_xOpnLS AND GEM2_VRC_70.iq_stValve.i_xOpnLS; (*MG 03.09.20 Turbo is failing, but injection can run without it*)
-    GEM1_Aperture_Closed := GEM1_VGC_10.iq_stValve.i_xClsLS AND GEM1_VGC_20.iq_stValve.i_xClsLS AND GEM1_VGC_30.iq_stValve.i_xClsLS AND GEM1_VGC_40.iq_stValve.i_xClsLS AND GEM1_VGC_50.iq_stValve.i_xClsLS AND GEM1_VGC_60.iq_stValve.i_xClsLS AND GEM1_VGC_70.iq_stValve.i_xClsLS ;
+    GEM1_Aperture_Closed :=  GEM1_VGC_20.iq_stValve.i_xClsLS AND GEM1_VGC_30.iq_stValve.i_xClsLS AND GEM1_VGC_40.iq_stValve.i_xClsLS AND GEM1_VGC_50.iq_stValve.i_xClsLS AND GEM1_VGC_60.iq_stValve.i_xClsLS AND GEM1_VGC_70.iq_stValve.i_xClsLS ;
     GEM2_Aperture_Closed := GEM2_VGC_10.iq_stValve.i_xClsLS AND GEM2_VGC_20.iq_stValve.i_xClsLS AND GEM2_VGC_30.iq_stValve.i_xClsLS AND GEM2_VGC_40.iq_stValve.i_xClsLS AND GEM2_VGC_50.iq_stValve.i_xClsLS AND GEM2_VGC_60.iq_stValve.i_xClsLS; ;
     GEM1_Turbo_Running := (GEM1_PTM_10.iq_stPtm.eState = pumpRUNNING) AND (GEM1_PTM_20.iq_stPtm.eState = pumpRUNNING) AND (GEM1_PTM_30.iq_stPtm.eState = pumpRUNNING) AND (GEM1_PTM_50.iq_stPtm.eState = pumpRUNNING);
     GEM2_Turbo_Running := (GEM2_PTM_30.iq_stPtm.eState = pumpRUNNING) AND (GEM2_PTM_50.iq_stPtm.eState = pumpRUNNING) AND (GEM2_PTM_60.iq_stPtm.eState = pumpRUNNING) AND (GEM2_PTM_70.iq_stPtm.eState = pumpRUNNING); (*MG 03.09.20 Turbo is failing, but injection can run without it*)
@@ -1782,10 +2444,36 @@ PRG_PMPS
 
     PROGRAM PRG_PMPS
     VAR
-    	 io_fbFFHWO1    :    FB_HardwareFFOutput;
-    	 io_fbFFHWO2   :    FB_HardwareFFOutput;
+     fbArbiterIO : FB_SubSysToArbiter_IO;
+     test : bool;
+     ar1 : bool;
+     ar2 : bool;
+      ar3 : bool;
+     nReqID:UDINT;
+     nReqRM:UDINT;
+     bRemove:bool;
     END_VAR
+    (*Fast Fault instantiation*)
+    g_FastFaultOutput1.bAutoReset :=TRUE;
+    g_FastFaultOutput2.bAutoReset :=TRUE;
+    g_FastFaultOutput1.Execute();
+    g_FastFaultOutput2.Execute();
 
+
+    (* Arbiter Instantiation*)
+    (*Arbiter one responsible for the aperture valves*)
+    fbArbiterIO(Arbiter := GVL_ILK.g_fbArbiter, fbFFHWO := GVL_ILK.g_FastFaultOutput1);
+    GVL_ILK.g_fbArbiter2.ElevateRequest(GVL_ILK.g_fbArbiter);
+    GVL_ILK.g_fbArbiter3.ElevateRequest(GVL_ILK.g_fbArbiter);
+
+    ar1:=GVL_ILK.g_fbArbiter.CheckRequestInPool(nReqID);
+    ar2:=GVL_ILK.g_fbArbiter2.CheckRequestInPool(nReqID);
+    ar3:=GVL_ILK.g_fbArbiter3.CheckRequestInPool(nReqID);
+    if (bRemove) THEN
+    	GVL_ILK.g_fbArbiter.RemoveRequest(nReqRM);
+     	GVL_ILK.g_fbArbiter2.RemoveRequest(nReqRM);
+    	GVL_ILK.g_fbArbiter3.RemoveRequest(nReqRM);  
+    END_IF
 
     END_PROGRAM
 
@@ -1842,96 +2530,107 @@ PRG_SATT
 
     PROGRAM PRG_SATT
     VAR
+    	PMPS_OK: BOOL := TRUE; // to be linked to pmps
     END_VAR
     SATT_MPA_01(
-    	ibInsertOK:= TRUE, 
-    	ibRetractOK:= TRUE , 
-    	ibPMPS_OK:= TRUE , 
+    	ibInsertOK:= PMPS_OK, 
+    	ibRetractOK:= PMPS_OK , 
+    	//ibPMPS_OK:= PMPS_OK , 
     	ibOverrideInterlock:= , 
     	q_stAct=> , 
     	xMPS_OK=> , 
     	xDone=> ,
-    	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    	i_xReset := ,
+    	io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:01',fbArbiter:=g_fbArbiter3,
+    	i_nTransitionRootID:=5100);
     	
     SATT_MPA_02(
-    	ibInsertOK:= TRUE, 
-    	ibRetractOK:= TRUE , 
-    	ibPMPS_OK:= TRUE , 
+    	ibInsertOK:= PMPS_OK, 
+    	ibRetractOK:= PMPS_OK , 
+    	//ibPMPS_OK:= PMPS_OK , 
     	ibOverrideInterlock:= , 
     	q_stAct=> , 
     	xMPS_OK=> , 
     	xDone=> ,
-    	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:02',fbArbiter:=g_fbArbiter3,
+    	i_nTransitionRootID:=5200);
     	
     SATT_MPA_03(
-    	ibInsertOK:= TRUE, 
-    	ibRetractOK:= TRUE , 
-    	ibPMPS_OK:= TRUE , 
+    	ibInsertOK:= PMPS_OK, 
+    	ibRetractOK:= PMPS_OK , 
+    	//ibPMPS_OK:= PMPS_OK , 
     	ibOverrideInterlock:= , 
     	q_stAct=> , 
     	xMPS_OK=> , 
     	xDone=> ,
-    	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:03',fbArbiter:=g_fbArbiter3,
+    	i_nTransitionRootID:=5300);
     	
     SATT_MPA_04(
-    	ibInsertOK:= TRUE, 
-    	ibRetractOK:= TRUE , 
-    	ibPMPS_OK:= TRUE , 
+    	ibInsertOK:= PMPS_OK, 
+    	ibRetractOK:= PMPS_OK , 
+    	//ibPMPS_OK:= PMPS_OK , 
     	ibOverrideInterlock:= , 
     	q_stAct=> , 
     	xMPS_OK=> , 
     	xDone=> ,
-    	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:04',fbArbiter:=g_fbArbiter3,
+    	i_nTransitionRootID:=5400);
 
     SATT_MPA_05(
-    	ibInsertOK:= TRUE, 
-    	ibRetractOK:= TRUE , 
-    	ibPMPS_OK:= TRUE , 
+    	ibInsertOK:= PMPS_OK, 
+    	ibRetractOK:= PMPS_OK , 
+    	//ibPMPS_OK:= PMPS_OK , 
     	ibOverrideInterlock:= , 
     	q_stAct=> , 
     	xMPS_OK=> , 
     	xDone=> ,
-    	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:05',fbArbiter:=g_fbArbiter3,
+    	i_nTransitionRootID:=5500);
     	
     SATT_MPA_06(
-    	ibInsertOK:= TRUE, 
-    	ibRetractOK:= TRUE , 
-    	ibPMPS_OK:= TRUE , 
+    	ibInsertOK:= PMPS_OK, 
+    	ibRetractOK:= PMPS_OK , 
+    	//ibPMPS_OK:= PMPS_OK , 
     	ibOverrideInterlock:= , 
     	q_stAct=> , 
     	xMPS_OK=> , 
     	xDone=> ,
-    	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:06',fbArbiter:=g_fbArbiter3,
+    	i_nTransitionRootID:=5600);
     	
     SATT_MPA_07(
-    	ibInsertOK:= TRUE, 
-    	ibRetractOK:= TRUE , 
-    	ibPMPS_OK:= TRUE , 
+    	ibInsertOK:= PMPS_OK, 
+    	ibRetractOK:= PMPS_OK , 
+    	//ibPMPS_OK:= PMPS_OK , 
     	ibOverrideInterlock:= , 
     	q_stAct=> , 
     	xMPS_OK=> , 
     	xDone=> ,
-    	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+    	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:07',fbArbiter:=g_fbArbiter3,
+    	i_nTransitionRootID:=5700);
     	
     SATT_MPA_08(
-    	ibInsertOK:= TRUE, 
-    	ibRetractOK:= TRUE , 
-    	ibPMPS_OK:= TRUE , 
+    	ibInsertOK:= PMPS_OK, 
+    	ibRetractOK:= PMPS_OK , 
+    	//ibPMPS_OK:= PMPS_OK , 
     	ibOverrideInterlock:= , 
     	q_stAct=> , 
     	xMPS_OK=> , 
     	xDone=> ,
-    	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);	
+    	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:08',fbArbiter:=g_fbArbiter3,
+    	i_nTransitionRootID:=5800);
 
     SATT_MPA_09(
-    	ibInsertOK:= TRUE, 
-    	ibRetractOK:= TRUE , 
-    	ibPMPS_OK:= TRUE , 
+    	ibInsertOK:= PMPS_OK, 
+    	ibRetractOK:= PMPS_OK , 
+    	//ibPMPS_OK:= PMPS_OK , 
     	ibOverrideInterlock:= , 
     	q_stAct=> , 
     	xMPS_OK=> , 
     	xDone=> ,
-    	i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);	
+    	i_xReset := ,io_fbFFHWO :=g_FastFaultOutput2,i_sDevName:= 'AT1L0:SOLID:MPA:09',fbArbiter:=g_fbArbiter3,
+    	i_nTransitionRootID:=5900);	
 
     (*
     MPA_321();
