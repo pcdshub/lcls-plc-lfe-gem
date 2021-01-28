@@ -1,0 +1,29 @@
+lcls-plc-lfe-gem
+----------------
+
+.. toctree::
+    :maxdepth: 2
+    :caption: plc-lfe-gem
+
+    plc-lfe-gem_pragmas
+    plc-lfe-gem_nc
+    plc-lfe-gem_boxes
+    plc-lfe-gem_links
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: plc_lfe_gem
+
+    plc-lfe-gem_plc_lfe_gem_summary
+    plc-lfe-gem_plc_lfe_gem_epics
+    plc-lfe-gem_plc_lfe_gem_source
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
