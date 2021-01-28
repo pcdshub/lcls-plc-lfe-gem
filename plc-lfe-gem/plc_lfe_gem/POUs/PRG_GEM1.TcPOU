@@ -3,19 +3,27 @@
   <POU Name="PRG_GEM1" Id="{b5aed3c6-13be-428f-86ce-8bd830676022}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_GEM1
 VAR
-	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:RESET '}
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:RESET;
+     field: ZNAM FALSE; 
+	 field: ONAM TRUE; 
+	 io: io;
+	'}
 	bReset : BOOL; 
-	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:ERROR '}
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:ERROR;
+     field: ZNAM FALSE; 
+	 field: ONAM TRUE; 
+	 io: io;
+	'}
 	bError : BOOL; 
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Kp1 '}
-	fKp1 : REAL:= 0.001; 
+	fKp1 : REAL:= 0.4; 
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Tn1 '}
 	fTn1 : REAL:= 0.5; 
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Kp2 '}
 	fKp2 : REAL:= 0.01; 
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:Tn2 '}
 	fTn2 : REAL:= 0.5; 
-	arrTable_GEM1	: ARRAY[1..31,1..2] OF FLOAT;
+	arrTable_GEM1	: ARRAY[1..30,1..2] OF FLOAT;
 	fManValue											: FLOAT;
 	bExtrapolate										: BOOL;
 	eMode							: E_CTRL_MODE;
@@ -44,16 +52,29 @@ END_VAR
       <ST><![CDATA[
 (*Devices*)
 (* GEM 1*)
-
 (*Gauges*)
 GEM1_GCM_41(i_rFULL_SCALE := 10.0 (*Torr*));
 GEM1_GCM_42(i_rFULL_SCALE := 0.05 (*Torr*));
+(*Assign reading to psuedo gauge*)
+IF (GEM1_GCM_42.PG.rPRESS >=0.049) THEN GEM1_GCM_40 := GEM1_GCM_41.PG;
+	ELSE
+	GEM1_GCM_40 := GEM1_GCM_42.PG;	
+END_IF
+(* Gauge selection *)
+fbCTRL_PID.fActualValue := GEM1_GCM_40.rPRESS;
+(*
+IF (fGEM1SetpointValue >=0.049) THEN
+	fbCTRL_PID.fActualValue := GEM1_GCM_41.PG.rPRESS;
+ELSE
+	fbCTRL_PID.fActualValue := GEM1_GCM_42.PG.rPRESS;
+END_IF*)
+
 
 (* N2 Cut Off Valves *)
 GEM1_VVC_40(i_xExtILK_OK:= GEM1_Aperture_Closed AND GEM1_Turbo_Valves_Open AND GEM1_Turbo_Running); 
 
 (*Flow Control Valves*)
-GEM1_VCN_40 (i_xExtIlkOK := (GEM1_Aperture_Closed AND GEM1_Turbo_Valves_Open AND GEM1_Turbo_Running AND  GEM2_VVC_40.M_IsOpen()),
+GEM1_VCN_40 (i_xExtIlkOK := (GEM1_Aperture_Closed AND GEM1_Turbo_Valves_Open AND GEM1_Turbo_Running),// AND  GEM1_VVC_40.M_IsOpen()),
 			 i_ReqPos:= fbCTRL_LIN_INTERPOLATION.fOut + fbCTRL_PID.fOut);
 //GEM1_VPC_42 (i_xExtIlkOK := TRUE, i_rReqPos:= );
 
@@ -66,42 +87,41 @@ THEN
 	
 	(* init array with the interpolation points  *)
 	(* 	fIn					 |		fOut		*)
-	arrTable_GEM1[1,1] := 0;		arrTable_GEM1[1,2] := 0;
-	arrTable_GEM1[2,1] := 0.0000412;		arrTable_GEM1[2,2] := 34;
-	arrTable_GEM1[3,1] := 0.001282;		arrTable_GEM1[3,2] := 36;
-	arrTable_GEM1[4,1] :=  0.002136;	    arrTable_GEM1[4,2] := 38;
-	arrTable_GEM1[5,1] :=  0.005884;	    arrTable_GEM1[5,2] := 40;
-	arrTable_GEM1[6,1] := 0.00907;		arrTable_GEM1[6,2] := 42;
-	arrTable_GEM1[7,1] := 0.01183;		arrTable_GEM1[7,2] := 44;
-	arrTable_GEM1[8,1] := 0.01799;	    arrTable_GEM1[8,2] := 46;
-	arrTable_GEM1[9,1] := 0.0302;	    arrTable_GEM1[9,2] := 47;
-	arrTable_GEM1[10,1] := 0.0417;		arrTable_GEM1[10,2] := 50;
-	arrTable_GEM1[11,1] := 0.06635;		arrTable_GEM1[11,2] := 51;
-	arrTable_GEM1[12,1] := 0.08118;		arrTable_GEM1[12,2] := 53;
-	arrTable_GEM1[13,1] := 0.0998;		arrTable_GEM1[13,2] := 56;
-	arrTable_GEM1[14,1] := 0.10644;		arrTable_GEM1[14,2] := 56.5;
-	arrTable_GEM1[15,1] := 0.1359;		arrTable_GEM1[15,2] := 58;
-	arrTable_GEM1[16,1] := 0.1929;		arrTable_GEM1[16,2] := 60;
-	arrTable_GEM1[17,1] := 0.2922;		arrTable_GEM1[17,2] := 62;
-	arrTable_GEM1[18,1] := 0.3428;	    arrTable_GEM1[18,2] := 64;
-	arrTable_GEM1[19,1] :=  0.405;;	    arrTable_GEM1[19,2] :=66;
-	arrTable_GEM1[20,1] := 0.481;		arrTable_GEM1[20,2] := 68;
-	arrTable_GEM1[21,1] := 0.5542;		arrTable_GEM1[21,2] := 69;
-	arrTable_GEM1[22,1] := 0.6333;	    arrTable_GEM1[22,2] := 70;
-	arrTable_GEM1[23,1] := 0.7901;	    arrTable_GEM1[23,2] := 72;
-	arrTable_GEM1[24,1] := 0.9307;		arrTable_GEM1[24,2] := 73.04;
-	arrTable_GEM1[25,1] := 1.0448;		arrTable_GEM1[25,2] := 73.64;
-	arrTable_GEM1[26,1] := 1.31919;;		arrTable_GEM1[26,2] := 74.45;
-	arrTable_GEM1[27,1] :=  1.324;		arrTable_GEM1[27,2] :=74.46;
-	arrTable_GEM1[28,1] := 1.71941;	arrTable_GEM1[28,2] := 75;
-	arrTable_GEM1[29,1] :=  1.963194;		arrTable_GEM1[29,2] :=75.5;
-	arrTable_GEM1[30,1] := 1.99999;	arrTable_GEM1[30,2] := 75.505;
-	arrTable_GEM1[31,1] := 2;	arrTable_GEM1[31,2] := 75.55;
+	arrTable_GEM1[1,1] := 0;		arrTable_GEM1[1,2] := 23.8;
+	arrTable_GEM1[2,1] := 0.00178;		arrTable_GEM1[2,2] := 23.9;
+	arrTable_GEM1[3,1] := 0.0025;		arrTable_GEM1[3,2] := 24;
+	arrTable_GEM1[4,1] :=  0.005884;	    arrTable_GEM1[4,2] := 25;
+	arrTable_GEM1[5,1] :=  0.085;	    arrTable_GEM1[5,2] := 35;
+	arrTable_GEM1[6,1] := 0.1263;		arrTable_GEM1[6,2] := 40;
+	arrTable_GEM1[7,1] := 0.1626;		arrTable_GEM1[7,2] := 42;
+	arrTable_GEM1[8,1] := 0.19;	    arrTable_GEM1[8,2] := 44;
+	arrTable_GEM1[9,1] := 0.234;	    arrTable_GEM1[9,2] := 46;
+	arrTable_GEM1[10,1] := 0.32;		arrTable_GEM1[10,2] := 50;
+	arrTable_GEM1[11,1] := 0.370;		arrTable_GEM1[11,2] := 52;
+	arrTable_GEM1[12,1] := 0.43427;		arrTable_GEM1[12,2] := 54;
+	arrTable_GEM1[13,1] := 0.5316;		arrTable_GEM1[13,2] := 55;
+	arrTable_GEM1[14,1] := 0.61;		arrTable_GEM1[14,2] := 55.5;
+	arrTable_GEM1[15,1] := 0.894;		arrTable_GEM1[15,2] := 56;
+	arrTable_GEM1[16,1] := 1.215;		arrTable_GEM1[16,2] := 56.5;
+	arrTable_GEM1[17,1] := 1.58;		arrTable_GEM1[17,2] := 57;
+	arrTable_GEM1[18,1] := 2.025;	    arrTable_GEM1[18,2] := 58;
+	arrTable_GEM1[19,1] := 2.2;	    arrTable_GEM1[19,2] :=58.1;
+	arrTable_GEM1[20,1] := 2.9;		arrTable_GEM1[20,2] := 65;
+	arrTable_GEM1[21,1] := 3;		arrTable_GEM1[21,2] := 69;
+	arrTable_GEM1[22,1] :=  3.0448;	    arrTable_GEM1[22,2] := 70;
+	arrTable_GEM1[23,1] :=  3.31919;	    arrTable_GEM1[23,2] := 72;
+	arrTable_GEM1[24,1] :=3.324;		arrTable_GEM1[24,2] := 73.04;
+	arrTable_GEM1[25,1] :=3.71941;		arrTable_GEM1[25,2] := 73.64;
+	arrTable_GEM1[26,1] := 3.81941;		arrTable_GEM1[26,2] := 74.45;
+	arrTable_GEM1[27,1] :=  3.963194;		arrTable_GEM1[27,2] :=74.46;
+	arrTable_GEM1[28,1] := 3.99999;	arrTable_GEM1[28,2] := 75;
+	arrTable_GEM1[29,1] :=  4;		arrTable_GEM1[29,2] :=75.5;
+	arrTable_GEM1[30,1] := 4.1;	arrTable_GEM1[30,2] := 75.505;
 	
 	(* init parameter struct *)
 	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.tCtrlCycleTime					:= T#10ms;
 	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.tTaskCycleTime					:= T#10ms;
-	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.nDataTable_NumberOfRows		:= INT_TO_UINT(31);	
+	stCTRL_LIN_INTERPOLATION_PARAMS_GEM.nDataTable_NumberOfRows		:= INT_TO_UINT(30);	
 
 
 	(* init parameter struct *)
@@ -110,8 +130,8 @@ THEN
 	stCTRL_PID_PARAMS.fKp					:= fKp1;			(* proportional gain Kp				*)
 	stCTRL_PID_PARAMS.tTn					:= T#1s;		(*  Tn									*)
 	stCTRL_PID_PARAMS.tTv					:= T#200ms;	(*  Tv									*)
-	stCTRL_PID_PARAMS.tTd					:= T#100ms;	(*  Td									*)
-	stCTRL_PID_PARAMS.fOutMaxLimit			:=  78;			(* maximum output limit				*)
+	stCTRL_PID_PARAMS.tTd					:= T#200ms;	(*  Td									*)
+	stCTRL_PID_PARAMS.fOutMaxLimit			:=  5;			(* maximum output limit				*)
 	stCTRL_PID_PARAMS.fOutMinLimit			:=  -100;			(* minimum output limit				*)
 
 	(* set the mode to ACTIVE --> normal operation *)
@@ -124,21 +144,30 @@ stCTRL_LIN_INTERPOLATION_PARAMS_GEM.pDataTable_ADR			:= ADR(arrTable_GEM1);
 stCTRL_LIN_INTERPOLATION_PARAMS_GEM.nDataTable_SIZEOF		:= SIZEOF(arrTable_GEM1);
 
 
-
+fGEM1SetpointValue:= LIMIT(0,fGEM1SetpointValue,2);
+if (NOT (GEM1_VVC_40.i_xExtILK_OK) OR (GEM1_VVC_40.M_IsClosed())) THEN
+		eMode			:=eCTRL_MODE_PASSIVE;// eCTRL_MODE_RESET ;//eCTRL_MODE_PASSIVE;
+		GEM1_VCN_40.M_ValveControl(CloseValve);
+		fGEM1SetpointValue :=0;
+ END_IF //Switch off the PID incase of interlock
 if (GEM1_GO) THEN
 	IF (bReset) THEN
 		(* set the mode to RESET*)
 		eMode							:= eCTRL_MODE_RESET   ;
+		stCTRL_PID_PARAMS.fKp					:= fKp1;			(* proportional gain Kp				*)
 		GEM1_VCN_40.M_ValveControl(CloseValve);
 		//bReset := False;
 	ELSE(* set the mode to ACTIVE --> normal operation *)
+		fbCTRL_PID.bSync := FALSE;
 		eMode							:= eCTRL_MODE_ACTIVE   ;
 		GEM1_VCN_40.M_ValveControl(PressureControl);
 	END_IF
 END_IF
 
 If(FTrig.Q)THEN
-		eMode							:= eCTRL_MODE_PASSIVE;
+		eMode							:=eCTRL_MODE_PASSIVE;// eCTRL_MODE_RESET ;//eCTRL_MODE_PASSIVE;
+		fbCTRL_PID.fManSyncValue :=0;
+		fbCTRL_PID.bSync := TRUE;
 		GEM1_VCN_40.M_ValveControl(CloseValve);
 		fGEM1SetpointValue :=0;
 END_IF
@@ -157,12 +186,6 @@ fbCTRL_LIN_INTERPOLATION(
 	bError=> , 
 	stParams:= stCTRL_LIN_INTERPOLATION_PARAMS_GEM );
 	
-(* Gauge selection *)
-IF (fGEM1SetpointValue >0.04) THEN
-	fbCTRL_PID.fActualValue := GEM1_GCM_41.PG.rPRESS;
-ELSE
-	fbCTRL_PID.fActualValue := GEM1_GCM_42.PG.rPRESS;
-END_IF
 
 	
 (* call controller *)
@@ -176,7 +199,7 @@ fbCTRL_PID(		fSetpointValue		:= fGEM1SetpointValue,
 					fOut				=>  ,
 					bARWactive		=> bARWactive,
 					eErrorId			=> eErrorId,
-					bError				=> bError
+					bError				=> 
 				);
 
 
@@ -184,7 +207,7 @@ fbCTRL_PID(		fSetpointValue		:= fGEM1SetpointValue,
 (*deadband/clipper *)
 
 (* call function block *)
-stCTRL_DEADBAND_PARAMS.fThreshold	:=  fGEM1SetpointValue*0.01 ;
+stCTRL_DEADBAND_PARAMS.fThreshold	:=  fGEM1SetpointValue*0.0016 ;
 (*fbCTRL_DEADBAND	(	fIn					:= ,
 					stParams			:= stCTRL_DEADBAND_PARAMS,
 					bInIsUnderThreshold => ,
@@ -192,7 +215,7 @@ stCTRL_DEADBAND_PARAMS.fThreshold	:=  fGEM1SetpointValue*0.01 ;
 					bError				=> 
 				);*)
 				
-
+bError := fbCTRL_PID.bError OR fbCTRL_LIN_INTERPOLATION.bError;
 
 
 // or NOT???
@@ -204,44 +227,38 @@ stCTRL_DEADBAND_PARAMS.fThreshold	:=  fGEM1SetpointValue*0.01 ;
 //pid_on(IN:=, PT:= wait, Q=>, ET =>);
 //IF (pid_on.Q) THEN eMode:= eCTRL_MODE_ACTIVE; pid_on.IN := FALSE; END_IF; //eCTRL_MODE_TUNE????
 
-FTRIG(CLK := GEM2_GO);
+FTRIG(CLK := GEM1_GO);
 
 
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_GEM1">
-      <LineId Id="93" Count="12" />
-      <LineId Id="566" Count="0" />
-      <LineId Id="106" Count="1" />
-      <LineId Id="120" Count="0" />
-      <LineId Id="172" Count="0" />
+      <LineId Id="3" Count="10" />
+      <LineId Id="221" Count="0" />
+      <LineId Id="229" Count="0" />
+      <LineId Id="227" Count="0" />
+      <LineId Id="222" Count="4" />
+      <LineId Id="228" Count="0" />
+      <LineId Id="220" Count="0" />
+      <LineId Id="14" Count="46" />
+      <LineId Id="62" Count="27" />
       <LineId Id="327" Count="0" />
-      <LineId Id="329" Count="5" />
-      <LineId Id="496" Count="29" />
-      <LineId Id="350" Count="5" />
-      <LineId Id="360" Count="16" />
-      <LineId Id="527" Count="2" />
-      <LineId Id="526" Count="0" />
-      <LineId Id="192" Count="0" />
-      <LineId Id="377" Count="1" />
-      <LineId Id="545" Count="3" />
-      <LineId Id="395" Count="0" />
-      <LineId Id="549" Count="1" />
-      <LineId Id="396" Count="0" />
-      <LineId Id="551" Count="0" />
-      <LineId Id="398" Count="0" />
-      <LineId Id="552" Count="5" />
-      <LineId Id="530" Count="12" />
-      <LineId Id="399" Count="0" />
-      <LineId Id="543" Count="0" />
-      <LineId Id="559" Count="5" />
-      <LineId Id="558" Count="0" />
-      <LineId Id="400" Count="26" />
-      <LineId Id="565" Count="0" />
-      <LineId Id="427" Count="0" />
-      <LineId Id="441" Count="12" />
-      <LineId Id="193" Count="0" />
-      <LineId Id="9" Count="0" />
+      <LineId Id="334" Count="0" />
+      <LineId Id="337" Count="0" />
+      <LineId Id="333" Count="0" />
+      <LineId Id="338" Count="0" />
+      <LineId Id="90" Count="0" />
+      <LineId Id="323" Count="0" />
+      <LineId Id="92" Count="1" />
+      <LineId Id="276" Count="0" />
+      <LineId Id="94" Count="2" />
+      <LineId Id="330" Count="0" />
+      <LineId Id="97" Count="6" />
+      <LineId Id="332" Count="0" />
+      <LineId Id="331" Count="0" />
+      <LineId Id="104" Count="17" />
+      <LineId Id="128" Count="43" />
+      <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

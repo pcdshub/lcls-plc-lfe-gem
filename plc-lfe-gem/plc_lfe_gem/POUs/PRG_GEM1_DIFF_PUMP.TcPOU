@@ -3,11 +3,21 @@
   <POU Name="PRG_GEM1_DIFF_PUMP" Id="{7641916e-925e-4304-add8-c14da3930767}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_GEM1_DIFF_PUMP
 VAR
+	rMaxBackingPressure : REAL := 0.7;//Torr
+	bInit:BOOL:=TRUE;
 	
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(*Gauges*)
+      <ST><![CDATA[If (bInit) THEN
+	bInit := FALSE;
+	GEM1_PTM_10.M_SetPowerScale(15);
+	GEM1_PTM_20.M_SetPowerScale(15);
+	GEM1_PTM_20.M_SetCurrentScale(1);
+	GEM1_PTM_50.M_SetPowerScale(50);
+END_IF
+
+(*Gauges*)
 USG_PIN(sNetId:='172.21.88.138.1.1' , nPort:=851 , sVarName:='GVL_Devices.SL1L0_POWER_PIN_01',iWatchdog:=Main.iWatchdog,IG=> );
 
 GEM1_GPI_10(PG=>);
@@ -28,19 +38,26 @@ GEM1_GPI_51(PG=>);
 (*apperture valves*)
 
 GEM1_VGC_10(i_stUSG := USG_PIN.IG, i_stDSG:= GEM1_GCC_10.IG,i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE,
-		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := NOT (USG_PIN.bError), i_xOverrideMode := xGEM1OverrideMode,i_xReset := ,
+		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:10',fbArbiter:=g_fbArbiter,i_nTransitionRootID:=1100);
 GEM1_VGC_20(i_stUSG := GEM1_GCC_10.IG, i_stDSG:= GEM1_GCC_20.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:20',fbArbiter:=g_fbArbiter,i_nTransitionRootID:=1200);
 GEM1_VGC_30(i_stUSG := GEM1_GCC_20.IG, i_stDSG:= GEM1_GCC_30.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:30',fbArbiter:=g_fbArbiter,i_nTransitionRootID:=1300);
 GEM1_VGC_40(i_stUSG := GEM1_GCC_30.IG, i_stDSG:= GEM1_GCC_30.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE, 
+		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:40',fbArbiter:=g_fbArbiter,i_nTransitionRootID:=1400);
 GEM1_VGC_50(i_stUSG := GEM1_GCC_50.IG, i_stDSG:= GEM1_GCC_50.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);
+		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:50',fbArbiter:=g_fbArbiter,i_nTransitionRootID:=1500);
 GEM1_VGC_60(i_stUSG := GEM1_GCC_50.IG, i_stDSG:= GEM1_GCC_50.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO :=g_FastFaultOutput1);		
+		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:60',fbArbiter:=g_fbArbiter,i_nTransitionRootID:=1600);		
 GEM1_VGC_70(i_stUSG := GEM1_GCC_50.IG, i_stDSG:= GEM1_GCC_50.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := xFastFaultReset,io_fbFFHWO:=g_FastFaultOutput1);
+		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM1_AperturesOpnOK, i_xOverrideMode := xGEM1OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+		io_fbFFHWO:=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:70',fbArbiter:=g_fbArbiter,i_nTransitionRootID:=1700);
 
 (*Turbo Isolation Valves*)
  GEM1_VRC_10(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_10.iq_stPtm,GEM1_GPI_10.PG),i_xOverrideMode := xGEM1OverrideMode);
@@ -61,33 +78,55 @@ GEM1_VVC_50.M_Close(TRUE);
 
 (*Turbo Isolation valves*)
 GEM1_PTM_10.i_xExtILKOk := F_TurboExtILK_NO(GEM1_PTM_10.iq_stPtm, GEM1_GPI_11.PG,
-						GEM1_GPI_10.PG,GEM1_VVC_20.q_stValve,GEM1_PMF_20.iq_stPFO);
-GEM1_PTM_10(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=0.4);
+						GEM1_GPI_10.PG,GEM1_VVC_20.q_stValve,GEM1_PRO_20.iq_stPFO);
+GEM1_PTM_10(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
 GEM1_PTM_20.i_xExtILKOk := F_TurboExtILK_NO(GEM1_PTM_20.iq_stPtm,BackingGauge:= GEM1_GPI_11.PG,
-						InletGauge:=GEM1_GPI_20.PG,GEM1_VVC_20.q_stValve,GEM1_PMF_20.iq_stPFO);
-GEM1_PTM_20(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=0.4);
-GEM1_PTM_30(i_xExtILKOK:=F_TurboExtILK_NO(GEM1_PTM_30.iq_stPtm, GEM1_GPI_31.PG,
-						GEM1_GPI_30.PG,GEM1_VVC_30.q_stValve,GEM1_PMF_30.iq_stPFO),
-		i_stGauge:=GEM1_GPI_31.PG,i_rMaxBackingPressure :=0.4);
-GEM1_PTM_50(i_xExtILKOK:=F_TurboExtILK_NO(GEM1_PTM_50.iq_stPtm, GEM1_GPI_51.PG,
-						GEM1_GPI_50.PG,GEM1_VVC_50.q_stValve,GEM1_PMF_50.iq_stPFO),
-		i_stGauge:=GEM1_GPI_51.PG,i_rMaxBackingPressure :=0.4);
+						InletGauge:=GEM1_GPI_20.PG,GEM1_VVC_20.q_stValve,GEM1_PRO_20.iq_stPFO);
+GEM1_PTM_20(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
+GEM1_PTM_30(i_xExtILKOK:=TRUE,//F_TurboExtILK_NO(GEM1_PTM_30.iq_stPtm, GEM1_GPI_31.PG,
+						//GEM1_GPI_30.PG,GEM1_VVC_30.q_stValve,GEM1_PRO_30.iq_stPFO),
+		i_stGauge:=GEM1_GPI_31.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
+GEM1_PTM_50(i_xExtILKOK:=TRUE,//F_TurboExtILK_NO(GEM1_PTM_50.iq_stPtm, GEM1_GPI_51.PG,
+						//GEM1_GPI_50.PG,GEM1_VVC_50.q_stValve,GEM1_PRO_50.iq_stPFO),
+		i_stGauge:=GEM1_GPI_51.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
 
 (*Roughing pumps*)
-GEM1_PMF_20(xExtIlk:= TRUE, TurboIsOn:= (GEM1_PTM_10.iq_stPtm.q_RunDO OR GEM1_PTM_20.iq_stPtm.q_RunDO));
-GEM1_PMF_30(xExtIlk:= TRUE, TurboIsOn:= GEM1_PTM_30.iq_stPtm.q_RunDO);
-GEM1_PMF_50(xExtIlk:= TRUE, TurboIsOn:= GEM1_PTM_50.iq_stPtm.q_RunDO); 
+GEM1_PRO_20(xExtIlk:= TRUE, TurboIsOn:= (GEM1_PTM_10.iq_stPtm.q_RunDO OR GEM1_PTM_20.iq_stPtm.q_RunDO));
+GEM1_PRO_30(xExtIlk:= TRUE, TurboIsOn:= GEM1_PTM_30.iq_stPtm.q_RunDO);
+GEM1_PRO_50(xExtIlk:= TRUE, TurboIsOn:= GEM1_PTM_50.iq_stPtm.q_RunDO); 
 		
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_GEM1_DIFF_PUMP">
+      <LineId Id="102" Count="0" />
+      <LineId Id="117" Count="0" />
+      <LineId Id="104" Count="0" />
+      <LineId Id="113" Count="0" />
+      <LineId Id="115" Count="0" />
+      <LineId Id="114" Count="0" />
+      <LineId Id="105" Count="0" />
+      <LineId Id="103" Count="0" />
       <LineId Id="6" Count="0" />
       <LineId Id="84" Count="0" />
       <LineId Id="7" Count="10" />
       <LineId Id="5" Count="0" />
       <LineId Id="19" Count="3" />
       <LineId Id="18" Count="0" />
-      <LineId Id="24" Count="14" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="118" Count="1" />
+      <LineId Id="89" Count="0" />
+      <LineId Id="27" Count="1" />
+      <LineId Id="90" Count="0" />
+      <LineId Id="29" Count="1" />
+      <LineId Id="91" Count="0" />
+      <LineId Id="31" Count="1" />
+      <LineId Id="92" Count="0" />
+      <LineId Id="33" Count="1" />
+      <LineId Id="93" Count="0" />
+      <LineId Id="35" Count="1" />
+      <LineId Id="94" Count="0" />
+      <LineId Id="37" Count="1" />
+      <LineId Id="95" Count="0" />
       <LineId Id="75" Count="0" />
       <LineId Id="39" Count="0" />
       <LineId Id="77" Count="3" />

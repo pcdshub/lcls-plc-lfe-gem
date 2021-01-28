@@ -4,27 +4,43 @@
     <Declaration><![CDATA[VAR_GLOBAL
 	
 	{attribute 'pytmc' := '
-    pv: PLC:LFE:GEM:FF1
+    pv: PLC:LFE:GEM:FFO:01
     '}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
     g_FastFaultOutput1  :   FB_HardwareFFOutput;
 	
 	{attribute 'pytmc' := '
-    pv: PLC:LFE:GEM:FF2
+    pv: PLC:LFE:GEM:FFO:02
     '}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
     g_FastFaultOutput2  :   FB_HardwareFFOutput;
 	
-	{attribute 'pytmc' := '
-    pv: PLC:LFE:GEM:FF_RESET
-    '}
-    xFastFaultReset :   BOOL;
+	{attribute 'pytmc' := 'pv: EM1L0:GEM:ARB:01'}
+	g_fbArbiter   :   FB_Arbiter(1);
+	{attribute 'pytmc' := 'pv: EM1L0:GEM:ARB:02'}
+	g_fbArbiter2   :   FB_Arbiter(2);
+	{attribute 'pytmc' := 'pv: EM1L0:GEM:ARB:03'}
+	g_fbArbiter3   :   FB_Arbiter(3);
+	 
+	
 
-	{attribute 'pytmc' := 'pv: EM1L0:GEM:VAC:OVRDON'}
+	{attribute 'pytmc' := 'pv: EM1L0:GEM:VAC:OVRDON;
+	field: ZNAM Override OFF; 
+	field: ONAM Override ON; 
+	 io: io;
+	'}
 	xGEM1OverrideMode	:	BOOL; (* Global system override for the EM1L0*)
-	{attribute 'pytmc' := 'pv: AT1L0:GAS:VAC:OVRDON'}
+	{attribute 'pytmc' := 'pv: AT1L0:GAS:VAC:OVRDON;
+	field: ZNAM Override OFF; 
+	field: ONAM Override ON; 
+	 io: io;
+	'}
 	xGATTOverrideMode	:	BOOL; (* Global system override for the GATT*)
-	{attribute 'pytmc' := 'pv: EM2L0:GEM:VAC:OVRDON'}
+	{attribute 'pytmc' := 'pv: EM2L0:GEM:VAC:OVRDON;
+	field: ZNAM Override OFF; 
+	field: ONAM Override ON; 
+	 io: io;
+	'}
 	xGEM2OverrideMode	:	BOOL; (* Global system override for the EM2L0*)
 
 
