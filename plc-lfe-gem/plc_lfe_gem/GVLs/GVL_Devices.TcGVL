@@ -242,15 +242,15 @@
 								 .q_xSetSpeed	:=	TIIB[PTM_E3_EL2798]^Channel 5^Output;
 								 .q_iSpeedSet	:=	TIIB[PTM_E5_EL4004]^AO Outputs Channel 1^Analog output'}
 	GEM1_PTM_30 : FB_PTM_Ebara_010M;
-	{attribute 'pytmc' :=' pv: EM1L0:GEM:PTM:50 '}
+	(*{attribute 'pytmc' :=' pv: EM1L0:GEM:PTM:50 '} REMOVE
 	{attribute 'TcLinkTo' := 	'.i_xR1	:=	TIIB[PLC_EL_3 (EL1088)]^Channel 5^Input;
 								 .i_xLSpd :=	TIIB[PLC_EL_3 (EL1088)]^Channel 6^Input;
 								 .i_xSTART	:=	TIIB[PLC_EL_3 (EL1088)]^Channel 7^Input;
 								 .i_xFault	:=	TIIB[PLC_EL_3 (EL1088)]^Channel 8^Input;
 								 .i_iCurrentMon := TIIB[PLC_EL_4 (EL3064)]^AI Standard Channel 4^Value;
 								 .q_RunDO	:=	TIIB[PLC_EL_1 (EL2088)]^Channel 4^Output'}
-	GEM1_PTM_50 : FB_PTM_Agilent;
-	(*
+	GEM1_PTM_50 : FB_PTM_Agilent;*)
+	
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:PTM:50 '}
 	{attribute 'TcLinkTo' := 	'.i_xDecel	:=	TIIB[PTM_E8_EL1004]^Channel 1^Input;
 								 .i_xAtSpd	:=	TIIB[PTM_E8_EL1004]^Channel 2^Input;
@@ -266,7 +266,7 @@
 								 .q_xProtection	:=	TIIB[PTM_E7_EL2798]^Channel 4^Output;
 								 .q_xSetSpeed	:=	TIIB[PTM_E7_EL2798]^Channel 5^Output;
 								 .q_iSpeedSet	:=	TIIB[PTM_E5_EL4004]^AO Outputs Channel 3^Analog output'}
-	GEM1_PTM_50 : FB_PTM_Ebara_010M;*)
+	GEM1_PTM_50 : FB_PTM_Ebara_010M;
 	
 
 (*Turbo vent valves*) (*deprecated*)
@@ -501,6 +501,7 @@
 	
 (*Pumps*)
 (*Turbos*)
+(*REMOVE
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:30 '}
 	{attribute 'TcLinkTo' := 	'.i_xR1	:=	TIIB[PLC_EL_7 (EL1088)]^Channel 1^Input;
 								 .i_xLSpd :=	TIIB[PLC_EL_7 (EL1088)]^Channel 2^Input;
@@ -509,7 +510,7 @@
 								 .i_iCurrentMon := TIIB[PLC_EL_5 (EL3064)]^AI Standard Channel 1^Value;
 								 .q_RunDO	:=	TIIB[PLC_EL_6 (EL2088)]^Channel 1^Output'}
 	GEM2_PTM_30 : FB_PTM_Agilent;
-	(*
+	*)
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:30 '}
 	{attribute 'TcLinkTo' := 	'.i_xDecel	:=	TIIB[PTM_E11_EL1004]^Channel 1^Input;
 								 .i_xAtSpd	:=	TIIB[PTM_E11_EL1004]^Channel 2^Input;
@@ -525,16 +526,16 @@
 								 .q_xProtection	:=	TIIB[PTM_E13_EL2798]^Channel 4^Output;
 								 .q_xSetSpeed	:=	TIIB[PTM_E13_EL2798]^Channel 5^Output;
 								 .q_iSpeedSet	:=	TIIB[PTM_E15_EL4004]^AO Outputs Channel 1^Analog output'}
-	GEM2_PTM_30 : FB_PTM_Ebara_010M;*)
-	{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:50 '}
+	GEM2_PTM_30 : FB_PTM_Ebara_010M;
+	(*REMOVE{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:50 '}
 	{attribute 'TcLinkTo' := 	'.i_xR1	:=	TIIB[PLC_EL_7 (EL1088)]^Channel 5^Input;
 								 .i_xLSpd :=	TIIB[PLC_EL_7 (EL1088)]^Channel 6^Input;
 								 .i_xSTART	:=	TIIB[PLC_EL_7 (EL1088)]^Channel 7^Input;
 								 .i_xFault	:=	TIIB[PLC_EL_7 (EL1088)]^Channel 8^Input;
 								 .i_iCurrentMon := TIIB[PLC_EL_5 (EL3064)]^AI Standard Channel 2^Value;
 								 .q_RunDO	:=	TIIB[PLC_EL_6 (EL2088)]^Channel 2^Output'}
-	GEM2_PTM_50 : FB_PTM_Agilent;
-	(*
+	GEM2_PTM_50 : FB_PTM_Agilent;*)
+	
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:50 '}
 	{attribute 'TcLinkTo' := 	'.i_xDecel	:=	TIIB[PTM_E18_EL1004]^Channel 1^Input;
 								 .i_xAtSpd	:=	TIIB[PTM_E18_EL1004]^Channel 2^Input;
@@ -550,8 +551,8 @@
 								 .q_xProtection	:=	TIIB[PTM_E17_EL2798]^Channel 4^Output;
 								 .q_xSetSpeed	:=	TIIB[PTM_E17_EL2798]^Channel 5^Output;
 								 .q_iSpeedSet	:=	TIIB[PTM_E15_EL4004]^AO Outputs Channel 3^Analog output'}
-	GEM2_PTM_50 : FB_PTM_Ebara_010M;*)
-	{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:60 '}
+	GEM2_PTM_50 : FB_PTM_Ebara_010M;
+	(*REMOVE{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:60 '}
 	{attribute 'TcLinkTo' := 	'.i_xR1	:=	TIIB[PLC_EL_8 (EL1088)]^Channel 1^Input;
 								 .i_xLSpd :=	TIIB[PLC_EL_8 (EL1088)]^Channel 2^Input;
 								 .i_xSTART	:=	TIIB[PLC_EL_8 (EL1088)]^Channel 3^Input;
@@ -559,16 +560,16 @@
 								 .i_iPowerMon := TIIB[PLC_EL_5 (EL3064)]^AI Standard Channel 3^Value;
 								 .q_RunDO	:=	TIIB[PLC_EL_6 (EL2088)]^Channel 3^Output'}
 	GEM2_PTM_60 : FB_PTM_Agilent;
-	(*
+	*)
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:60 '}
-	{attribute 'TcLinkTo' := 	'.i_xAtSpd	:=	TIIB[PTM_E21_EL1088]^Channel 7^Input;
-								 .i_xFault :=	TIIB[PTM_E21_EL1088]^Channel 8^Input;
-								 .q_RunDO	:=	TIIB[PTM_E20_EL2624]^Channel 4^Output'}
-	GEM2_PTM_60 : FB_PTM_TwisTorr;*)
-	{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:70 '}
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd	:=	TIIB[PTM_E21_EL1088]^Channel 5^Input;
 								 .i_xFault :=	TIIB[PTM_E21_EL1088]^Channel 6^Input;
 								 .q_RunDO	:=	TIIB[PTM_E20_EL2624]^Channel 3^Output'}
+	GEM2_PTM_60 : FB_PTM_TwisTorr;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:70 '}
+	{attribute 'TcLinkTo' := 	'.i_xAtSpd	:=	TIIB[PTM_E21_EL1088]^Channel 7^Input;
+								 .i_xFault :=	TIIB[PTM_E21_EL1088]^Channel 8^Input;
+								 .q_RunDO	:=	TIIB[PTM_E20_EL2624]^Channel 4^Output'}
 	GEM2_PTM_70 : FB_PTM_TwisTorr;//FB_PTM_Agilent;
 	
 

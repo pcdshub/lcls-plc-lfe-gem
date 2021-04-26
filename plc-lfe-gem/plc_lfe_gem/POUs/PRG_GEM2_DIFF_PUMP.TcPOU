@@ -8,15 +8,7 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[If (bInit) THEN
-	bInit := FALSE;
-	GEM2_PTM_30.M_SetPowerScale(50);
-	GEM2_PTM_50.M_SetCurrentScale(1);
-	GEM2_PTM_60.M_SetCurrentScale(10);
-	//GEM2_PTM_70.M_SetPowerScale(10);
-END_IF
-
-
+      <ST><![CDATA[
 (*Gauges*)
 DSG_PIN(sNetId:='172.21.88.138.1.1' , nPort:=851 , sVarName:='GVL_Devices.AT2L0_SOLID_PIN_01',iWatchdog:=Main.iWatchdog,IG=> ); // Downstream Gauge from Down Stream PLC System
 (*EM2L0*)
@@ -61,13 +53,13 @@ GEM2_VGC_70(i_stUSG := GEM2_GCC_70.IG, i_stDSG:= DSG_PIN.IG,i_xDis_DPIlk := FALS
 DSV_VGC(VGC=>);
 
 (*Turbo vent valves NO*)//Deprecated
-GEM2_VVC_30(i_stPTM :=GEM2_PTM_30.iq_stPtm);
-GEM2_VVC_50(i_stPTM :=GEM2_PTM_50.iq_stPtm);
+//GEM2_VVC_30(i_stPTM :=GEM2_PTM_30.iq_stPtm);
+//GEM2_VVC_50(i_stPTM :=GEM2_PTM_50.iq_stPtm);
 //GEM2_VVC_70(i_stPTM :=GEM2_PTM_70.iq_stPtm);
 (*This part was added to Close all the Turbo's NO vent valves, These valves are capped off, and wont be in use*)
-GEM2_VVC_30.M_Close(TRUE);
-GEM2_VVC_50.M_Close(TRUE);
-GEM2_VVC_70.M_Close(TRUE);
+//GEM2_VVC_30.M_Close(TRUE);
+//GEM2_VVC_50.M_Close(TRUE);
+//GEM2_VVC_70.M_Close(TRUE);
 
 
 (*Turbo Isolation valves*)
@@ -78,14 +70,11 @@ GEM2_VVC_70.M_Close(TRUE);
 
 (*Turbo Pumps*)
 GEM2_PTM_30(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_30.iq_stPtm, GEM2_GPI_31.PG,
-						GEM2_GPI_30.PG,GEM2_VVC_30.q_stValve,GEM2_PRO_30.iq_stPFO),
-		i_stGauge:=GEM2_GPI_31.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
+						GEM2_GPI_30.PG,GEM2_VVC_30.q_stValve,GEM2_PRO_30.iq_stPFO));
 GEM2_PTM_50(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_50.iq_stPtm, GEM2_GPI_51.PG,
-						GEM2_GPI_50.PG,GEM2_VVC_50.q_stValve,GEM2_PRO_50.iq_stPFO),
-		i_stGauge:=GEM2_GPI_51.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
+						GEM2_GPI_50.PG,GEM2_VVC_50.q_stValve,GEM2_PRO_50.iq_stPFO));
 GEM2_PTM_60(i_xExtILKOK:=F_TurboExtILKLogic_2(GEM2_PTM_60.iq_stPtm, GEM2_GPI_61.PG,
-						GEM2_GPI_60.PG,GEM2_PRO_60.iq_stPFO),
-		i_stGauge:=GEM2_GPI_61.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
+						GEM2_GPI_60.PG,GEM2_PRO_60.iq_stPFO));
 GEM2_PTM_70(i_xExtILKOK:=F_TurboExtILKLogic_2(GEM2_PTM_70.iq_stPtm, GEM2_GPI_61.PG,
 						GEM2_GPI_70.PG,GEM2_PRO_60.iq_stPFO));
 		
