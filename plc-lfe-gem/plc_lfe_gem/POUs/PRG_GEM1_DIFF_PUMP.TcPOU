@@ -65,12 +65,12 @@ GEM1_VGC_70(i_stUSG := GEM1_GCC_50.IG, i_stDSG:= GEM1_GCC_50.IG,i_xDis_DPIlk := 
  
 		
 (*Turbo vent valves NO*) //Deprecated
-//GEM1_VVC_20(i_stPTM :=GEM1_PTM_20.iq_stPtm); 
+GEM1_VVC_20(i_stPTM :=GEM1_PTM_20.iq_stPtm); 
 //GEM1_VVC_30(i_stPTM :=GEM1_PTM_30.iq_stPtm);
 //GEM1_VVC_50(i_stPTM :=GEM1_PTM_50.iq_stPtm);
 (*This part was added to Close all the Turbo's NO vent valves, These valves are capped off, and wont be in use*)
-//GEM1_VVC_20.M_Close(TRUE);
-//GEM1_VVC_30.M_Close(TRUE);
+GEM1_VVC_20.M_Close(TRUE);
+//GEM1_VVC_10.M_Close(TRUE);
 //GEM1_VVC_50.M_Close(TRUE);
 
 

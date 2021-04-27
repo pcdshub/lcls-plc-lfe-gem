@@ -69,10 +69,10 @@ DSV_VGC(VGC=>);
  GEM2_VRC_70(i_xExtILK_OK := F_TurboGateValve_ILK(GEM2_PTM_70.iq_stPtm,GEM2_GPI_70.PG) AND GEM2_PTM_70.iq_stPtm.eState = pumpRUNNING,i_xOverrideMode := xGEM2OverrideMode);
 
 (*Turbo Pumps*)
-GEM2_PTM_30(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_30.iq_stPtm, GEM2_GPI_31.PG,
-						GEM2_GPI_30.PG,GEM2_VVC_30.q_stValve,GEM2_PRO_30.iq_stPFO));
-GEM2_PTM_50(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_50.iq_stPtm, GEM2_GPI_51.PG,
-						GEM2_GPI_50.PG,GEM2_VVC_50.q_stValve,GEM2_PRO_50.iq_stPFO));
+GEM2_PTM_30(i_xExtILKOK:=F_TurboExtILKLogic_2(GEM2_PTM_30.iq_stPtm, GEM2_GPI_31.PG,
+						GEM2_GPI_30.PG,GEM2_PRO_30.iq_stPFO));
+GEM2_PTM_50(i_xExtILKOK:=F_TurboExtILKLogic_2(GEM2_PTM_50.iq_stPtm, GEM2_GPI_51.PG,
+						GEM2_GPI_50.PG,GEM2_PRO_50.iq_stPFO));
 GEM2_PTM_60(i_xExtILKOK:=F_TurboExtILKLogic_2(GEM2_PTM_60.iq_stPtm, GEM2_GPI_61.PG,
 						GEM2_GPI_60.PG,GEM2_PRO_60.iq_stPFO));
 GEM2_PTM_70(i_xExtILKOK:=F_TurboExtILKLogic_2(GEM2_PTM_70.iq_stPtm, GEM2_GPI_61.PG,
