@@ -141,7 +141,7 @@
       <Resolution>LCLSVacuumSerialDriverLib, 1.1.4 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
-      <Resolution>PMPS, 0.13.1 (SLAC - LCLS)</Resolution>
+      <Resolution>PMPS, 1.0.0 (SLAC - LCLS)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="SysFile">
       <Resolution>SysFile, 3.5.9.0 (System)</Resolution>
