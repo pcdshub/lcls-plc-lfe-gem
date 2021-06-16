@@ -12,6 +12,11 @@
     <Implicit_KindOfTask>{3da22297-7deb-4316-828a-56fcf4040281}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{05e54537-67e7-4799-afec-0960e118322e}</Implicit_Jitter_Distribution>
     <LibraryReferences>{aa68d126-deb7-4f7d-962e-332579910aa1}</LibraryReferences>
+    <CombineIds>false</CombineIds>
+    <Company>SLAC - LCLS</Company>
+    <Released>false</Released>
+    <Title>LFE GEM</Title>
+    <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DUTs\E_PositionState.TcDUT">
