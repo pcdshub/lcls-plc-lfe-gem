@@ -759,81 +759,31 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.GEM1_PTM_10.i_xSTART</Name>
+							<Name>GVL_Devices.GEM1_PTM_10.i_xAtSpd</Name>
 							<Comment>
-								<![CDATA[I/Os]]>
+								<![CDATA[ Normaml operation when true]]>
 							</Comment>
 							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_10.i_xR1</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_10.i_xR2</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_10.i_xLSpd</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_10.i_iTempMon</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_10.i_iPowerMon</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_10.i_iCurrentMon</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_10.i_iRawSpeed</Name>
-							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM1_PTM_10.i_xFault</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_20.i_xSTART</Name>
 							<Comment>
-								<![CDATA[I/Os]]>
+								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.GEM1_PTM_20.i_xR1</Name>
+							<Name>GVL_Devices.GEM1_PTM_20.i_xAtSpd</Name>
+							<Comment>
+								<![CDATA[ Normaml operation when true]]>
+							</Comment>
 							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_20.i_xR2</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_20.i_xLSpd</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_20.i_iTempMon</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_20.i_iPowerMon</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_20.i_iCurrentMon</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_20.i_iRawSpeed</Name>
-							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM1_PTM_20.i_xFault</Name>
+							<Comment>
+								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
+							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -1787,18 +1737,16 @@ IO]]>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM1_PTM_10.q_RunDO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_10.q_xLSpd</Name>
+							<Comment>
+								<![CDATA[ Start/Stop]]>
+							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM1_PTM_20.q_RunDO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_PTM_20.q_xLSpd</Name>
+							<Comment>
+								<![CDATA[ Start/Stop]]>
+							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -2369,6 +2317,22 @@ IO]]>
 							</OwnerB>
 						</OwnerA>
 					</UnrestoredVarLinks>
+					<UnrestoredVarLinks ImportTime="2021-08-26T14:20:48">
+						<OwnerA Name="InputDst" Prefix="TIPC^plc_lfe_gem^plc_lfe_gem Instance" Type="1">
+							<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_2 (EL1088)">
+								<Link VarA="GVL_Devices.GEM1_PTM_10.i_xLSpd" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.GEM1_PTM_10.i_xR1" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.GEM1_PTM_10.i_xSTART" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 3^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.GEM1_PTM_20.i_xLSpd" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 6^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.GEM1_PTM_20.i_xR1" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 5^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.GEM1_PTM_20.i_xSTART" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 7^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+							<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_4 (EL3064)">
+								<Link VarA="GVL_Devices.GEM1_PTM_10.i_iPowerMon" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AI Standard Channel 1^Value" AutoLink="true" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.GEM1_PTM_20.i_iPowerMon" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AI Standard Channel 2^Value" AutoLink="true" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
 					<TaskPouOids>
 						<TaskPouOid Prio="20" OTCID="#x08502001"/>
 					</TaskPouOids>
@@ -2490,10 +2454,16 @@ IO]]>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_30.i_xRotate" VarB="Channel 4^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_PTM (EK1100)^PTM_E20_EL2624">
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PTM_10.q_RunDO" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PTM_20.q_RunDO" VarB="Channel 2^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PTM_60.q_RunDO" VarB="Channel 3^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.GEM2_PTM_70.q_RunDO" VarB="Channel 4^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^EMxL0 (EtherCAT)^DRL_PTM (EK1100)^PTM_E21_EL1088">
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_10.i_xAtSpd" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_10.i_xFault" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_20.i_xAtSpd" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_20.i_xFault" VarB="Channel 4^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_60.i_xAtSpd" VarB="Channel 5^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_60.i_xFault" VarB="Channel 6^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GEM2_PTM_70.i_xAtSpd" VarB="Channel 7^Input" AutoLink="true"/>
@@ -2789,24 +2759,6 @@ IO]]>
 				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_09.i_xInsertedLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_09.i_xRetractedLS" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_09.q_xRetract_DO" VarB="Channel 11^Output" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_1 (EL2088)">
-				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PTM_10.q_RunDO" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.GEM1_PTM_20.q_RunDO" VarB="Channel 2^Output" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_2 (EL1088)">
-				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_10.i_xFault" VarB="Channel 4^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_10.i_xLSpd" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_10.i_xR1" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_10.i_xSTART" VarB="Channel 3^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_20.i_xFault" VarB="Channel 8^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_20.i_xLSpd" VarB="Channel 6^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_20.i_xR1" VarB="Channel 5^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_20.i_xSTART" VarB="Channel 7^Input" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_4 (EL3064)">
-				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_10.i_iPowerMon" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.GEM1_PTM_20.i_iPowerMon" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_FFO">
 				<Link VarA="PlcTask Outputs^GVL_ILK.g_FastFaultOutput1.q_xFastFaultOut" VarB="Channel 1^Output" AutoLink="true"/>

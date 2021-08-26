@@ -198,34 +198,35 @@
 	GEM1_PRO_70: FB_KashiyamaPump;	
 	
 (*Turbos*)
-	{attribute 'pytmc' :=' pv: EM1L0:GEM:PTM:10 '}
+	(*{attribute 'pytmc' :=' pv: EM1L0:GEM:PTM:10 '}
 	{attribute 'TcLinkTo' := 	'.i_xR1	:=	TIIB[PLC_EL_2 (EL1088)]^Channel 1^Input;
 								 .i_xLSpd :=	TIIB[PLC_EL_2 (EL1088)]^Channel 2^Input;
 								 .i_xSTART	:=	TIIB[PLC_EL_2 (EL1088)]^Channel 3^Input;
 								 .i_xFault	:=	TIIB[PLC_EL_2 (EL1088)]^Channel 4^Input;
 								 .i_iPowerMon := TIIB[PLC_EL_4 (EL3064)]^AI Standard Channel 1^Value;
 								 .q_RunDO	:=	TIIB[PLC_EL_1 (EL2088)]^Channel 1^Output'}
-	GEM1_PTM_10 : FB_PTM_Agilent;
-	(*
+	GEM1_PTM_10 : FB_PTM_Agilent;*)
+	
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:PTM:10 '}
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd	:=	TIIB[PTM_E21_EL1088]^Channel 1^Input;
 								 .i_xFault :=	TIIB[PTM_E21_EL1088]^Channel 2^Input;
 								 .q_RunDO	:=	TIIB[PTM_E20_EL2624]^Channel 1^Output'}
-	GEM1_PTM_10 : FB_PTM_TwisTorr;*)
-	{attribute 'pytmc' :=' pv: EM1L0:GEM:PTM:20 '}
+	GEM1_PTM_10 : FB_PTM_TwisTorr;
+	(*{attribute 'pytmc' :=' pv: EM1L0:GEM:PTM:20 '}
 	{attribute 'TcLinkTo' := 	'.i_xR1	:=	TIIB[PLC_EL_2 (EL1088)]^Channel 5^Input;
 								 .i_xLSpd :=	TIIB[PLC_EL_2 (EL1088)]^Channel 6^Input;
 								 .i_xSTART	:=	TIIB[PLC_EL_2 (EL1088)]^Channel 7^Input;
 								 .i_xFault	:=	TIIB[PLC_EL_2 (EL1088)]^Channel 8^Input;
 								 .i_iPowerMon := TIIB[PLC_EL_4 (EL3064)]^AI Standard Channel 2^Value;
 								 .q_RunDO	:=	TIIB[PLC_EL_1 (EL2088)]^Channel 2^Output'}
-	(*
+	GEM1_PTM_20 : FB_PTM_Agilent;*)
+	
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:PTM:20 '}
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd	:=	TIIB[PTM_E21_EL1088]^Channel 3^Input;
 								 .i_xFault :=	TIIB[PTM_E21_EL1088]^Channel 4^Input;
 								 .q_RunDO	:=	TIIB[PTM_E20_EL2624]^Channel 2^Output'}
-	GEM1_PTM_20 : FB_PTM_TwisTorr;*)
-	GEM1_PTM_20 : FB_PTM_Agilent;
+	GEM1_PTM_20 : FB_PTM_TwisTorr;
+
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:PTM:30 '}
 	{attribute 'TcLinkTo' := 	'.i_xDecel	:=	TIIB[PTM_E1_EL1004]^Channel 1^Input;
 								 .i_xAtSpd	:=	TIIB[PTM_E1_EL1004]^Channel 2^Input;
