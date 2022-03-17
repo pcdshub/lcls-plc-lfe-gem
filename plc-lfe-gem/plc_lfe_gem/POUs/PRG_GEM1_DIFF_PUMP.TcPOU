@@ -11,10 +11,8 @@ END_VAR
     <Implementation>
       <ST><![CDATA[If (bInit) THEN
 	bInit := FALSE;
-	GEM1_PTM_10.M_SetPowerScale(15);
-	GEM1_PTM_20.M_SetPowerScale(15);
-	GEM1_PTM_20.M_SetCurrentScale(1);
-	GEM1_PTM_50.M_SetPowerScale(50);
+	//GEM1_PTM_10.M_SetPowerScale(15);
+	//GEM1_PTM_20.M_SetPowerScale(15);
 END_IF
 
 (*Gauges*)
@@ -60,35 +58,37 @@ GEM1_VGC_70(i_stUSG := GEM1_GCC_50.IG, i_stDSG:= GEM1_GCC_50.IG,i_xDis_DPIlk := 
 		io_fbFFHWO:=g_FastFaultOutput1,i_sDevName:= 'EM1L0:GEM:VGC:70',fbArbiter:=g_fbArbiter,i_nTransitionRootID:=1700);
 
 (*Turbo Isolation Valves*)
- GEM1_VRC_10(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_10.iq_stPtm,GEM1_GPI_10.PG),i_xOverrideMode := xGEM1OverrideMode);
- GEM1_VRC_20(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_20.iq_stPtm,GEM1_GPI_20.PG),i_xOverrideMode := xGEM1OverrideMode);
- GEM1_VRC_30(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_30.iq_stPtm,GEM1_GPI_30.PG),i_xOverrideMode := xGEM1OverrideMode);
- GEM1_VRC_50(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_50.iq_stPtm,GEM1_GPI_50.PG),i_xOverrideMode := xGEM1OverrideMode);
+ GEM1_VRC_10(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_10.iq_stPtm,GEM1_GPI_10.PG) AND GEM1_PTM_10.iq_stPtm.eState = pumpRUNNING ,i_xOverrideMode := xGEM1OverrideMode);
+ GEM1_VRC_20(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_20.iq_stPtm,GEM1_GPI_20.PG) AND GEM1_PTM_20.iq_stPtm.eState = pumpRUNNING,i_xOverrideMode := xGEM1OverrideMode);
+ GEM1_VRC_30(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_30.iq_stPtm,GEM1_GPI_30.PG) AND GEM1_PTM_30.iq_stPtm.eState = pumpRUNNING,i_xOverrideMode := xGEM1OverrideMode);
+ GEM1_VRC_50(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_50.iq_stPtm,GEM1_GPI_50.PG) AND GEM1_PTM_50.iq_stPtm.eState = pumpRUNNING,i_xOverrideMode := xGEM1OverrideMode);
  
 		
 (*Turbo vent valves NO*) //Deprecated
-GEM1_VVC_20(i_stPTM :=GEM1_PTM_20.iq_stPtm); 
-GEM1_VVC_30(i_stPTM :=GEM1_PTM_30.iq_stPtm);
-GEM1_VVC_50(i_stPTM :=GEM1_PTM_50.iq_stPtm);
+//GEM1_VVC_20(i_stPTM :=GEM1_PTM_20.iq_stPtm); 
+//GEM1_VVC_30(i_stPTM :=GEM1_PTM_30.iq_stPtm);
+//GEM1_VVC_50(i_stPTM :=GEM1_PTM_50.iq_stPtm);
 (*This part was added to Close all the Turbo's NO vent valves, These valves are capped off, and wont be in use*)
-GEM1_VVC_20.M_Close(TRUE);
-GEM1_VVC_30.M_Close(TRUE);
-GEM1_VVC_50.M_Close(TRUE);
+//GEM1_VVC_20.M_Close(TRUE);
+//GEM1_VVC_10.M_Close(TRUE);
+//GEM1_VVC_50.M_Close(TRUE);
 
 
 (*Turbo Isolation valves*)
-GEM1_PTM_10.i_xExtILKOk := F_TurboExtILK_NO(GEM1_PTM_10.iq_stPtm, GEM1_GPI_11.PG,
+(*GEM1_PTM_10.i_xExtILKOk := F_TurboExtILK_NO(GEM1_PTM_10.iq_stPtm, GEM1_GPI_11.PG,
 						GEM1_GPI_10.PG,GEM1_VVC_20.q_stValve,GEM1_PRO_20.iq_stPFO);
-GEM1_PTM_10(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
-GEM1_PTM_20.i_xExtILKOk := F_TurboExtILK_NO(GEM1_PTM_20.iq_stPtm,BackingGauge:= GEM1_GPI_11.PG,
+GEM1_PTM_10(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=rMaxBackingPressure);*)
+GEM1_PTM_10( i_xExtILKOk := F_TurboExtILKLogic_2(GEM1_PTM_10.iq_stPtm, GEM1_GPI_11.PG,
+						GEM1_GPI_10.PG,GEM1_PRO_20.iq_stPFO));
+(*GEM1_PTM_20.i_xExtILKOk := F_TurboExtILK_NO(GEM1_PTM_20.iq_stPtm,BackingGauge:= GEM1_GPI_11.PG,
 						InletGauge:=GEM1_GPI_20.PG,GEM1_VVC_20.q_stValve,GEM1_PRO_20.iq_stPFO);
-GEM1_PTM_20(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
-GEM1_PTM_30(i_xExtILKOK:=TRUE,//F_TurboExtILK_NO(GEM1_PTM_30.iq_stPtm, GEM1_GPI_31.PG,
-						//GEM1_GPI_30.PG,GEM1_VVC_30.q_stValve,GEM1_PRO_30.iq_stPFO),
-		i_stGauge:=GEM1_GPI_31.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
-GEM1_PTM_50(i_xExtILKOK:=TRUE,//F_TurboExtILK_NO(GEM1_PTM_50.iq_stPtm, GEM1_GPI_51.PG,
-						//GEM1_GPI_50.PG,GEM1_VVC_50.q_stValve,GEM1_PRO_50.iq_stPFO),
-		i_stGauge:=GEM1_GPI_51.PG,i_rMaxBackingPressure :=rMaxBackingPressure);
+GEM1_PTM_20(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=rMaxBackingPressure);*)
+GEM1_PTM_20( i_xExtILKOk := F_TurboExtILKLogic_2(GEM1_PTM_20.iq_stPtm, GEM1_GPI_11.PG,
+						GEM1_GPI_20.PG,GEM1_PRO_20.iq_stPFO));
+GEM1_PTM_30(i_xExtILKOK:=F_TurboExtILKLogic_2(GEM1_PTM_30.iq_stPtm, GEM1_GPI_31.PG,
+						GEM1_GPI_30.PG,GEM1_PRO_30.iq_stPFO));
+GEM1_PTM_50(i_xExtILKOK:=F_TurboExtILKLogic_2(GEM1_PTM_50.iq_stPtm, GEM1_GPI_51.PG,
+						GEM1_GPI_50.PG,GEM1_PRO_50.iq_stPFO));
 
 (*Roughing pumps*)
 GEM1_PRO_20(xExtIlk:= TRUE, TurboIsOn:= (GEM1_PTM_10.iq_stPtm.q_RunDO OR GEM1_PTM_20.iq_stPtm.q_RunDO));
@@ -97,50 +97,5 @@ GEM1_PRO_50(xExtIlk:= TRUE, TurboIsOn:= GEM1_PTM_50.iq_stPtm.q_RunDO);
 		
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_GEM1_DIFF_PUMP">
-      <LineId Id="102" Count="0" />
-      <LineId Id="117" Count="0" />
-      <LineId Id="104" Count="0" />
-      <LineId Id="113" Count="0" />
-      <LineId Id="115" Count="0" />
-      <LineId Id="114" Count="0" />
-      <LineId Id="105" Count="0" />
-      <LineId Id="103" Count="0" />
-      <LineId Id="6" Count="0" />
-      <LineId Id="84" Count="0" />
-      <LineId Id="7" Count="10" />
-      <LineId Id="5" Count="0" />
-      <LineId Id="19" Count="3" />
-      <LineId Id="18" Count="0" />
-      <LineId Id="24" Count="0" />
-      <LineId Id="118" Count="1" />
-      <LineId Id="89" Count="0" />
-      <LineId Id="27" Count="1" />
-      <LineId Id="90" Count="0" />
-      <LineId Id="29" Count="1" />
-      <LineId Id="91" Count="0" />
-      <LineId Id="31" Count="1" />
-      <LineId Id="92" Count="0" />
-      <LineId Id="33" Count="1" />
-      <LineId Id="93" Count="0" />
-      <LineId Id="35" Count="1" />
-      <LineId Id="94" Count="0" />
-      <LineId Id="37" Count="1" />
-      <LineId Id="95" Count="0" />
-      <LineId Id="75" Count="0" />
-      <LineId Id="39" Count="0" />
-      <LineId Id="77" Count="3" />
-      <LineId Id="76" Count="0" />
-      <LineId Id="23" Count="0" />
-      <LineId Id="40" Count="0" />
-      <LineId Id="42" Count="2" />
-      <LineId Id="47" Count="3" />
-      <LineId Id="45" Count="1" />
-      <LineId Id="41" Count="0" />
-      <LineId Id="54" Count="12" />
-      <LineId Id="68" Count="3" />
-      <LineId Id="53" Count="0" />
-      <LineId Id="67" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
