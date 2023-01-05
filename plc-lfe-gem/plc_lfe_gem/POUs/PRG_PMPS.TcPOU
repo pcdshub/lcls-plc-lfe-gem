@@ -23,7 +23,7 @@ g_FastFaultOutput2.Execute();
 
 (* Arbiter Instantiation*)
 (*Arbiter one responsible for the aperture valves*)
-//fbArbiterIO(Arbiter := GVL_ILK.g_fbArbiter, fbFFHWO := GVL_ILK.g_FastFaultOutput1);
+fbArbiterIO(Arbiter := GVL_ILK.g_fbArbiter, fbFFHWO := GVL_ILK.g_FastFaultOutput1);
 GVL_ILK.g_fbArbiter2.ElevateRequest(GVL_ILK.g_fbArbiter);
 GVL_ILK.g_fbArbiter3.ElevateRequest(GVL_ILK.g_fbArbiter);
 
