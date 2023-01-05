@@ -29,26 +29,26 @@ GEM2_GCC_70(PG:=GEM2_GPI_70.PG,IG=>);
  (* to Include PMPS ILK with the EXTILK bit*)
 (*apperture valves*)
 GEM2_VGC_10(i_stUSG := GEM2_GPI_10.PG, i_stDSG:= GEM2_GPI_10.PG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
 		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM2L0:GEM:VGC:10',fbArbiter:=g_fbArbiter2,i_nTransitionRootID:=2100);
 GEM2_VGC_20(i_stUSG := GEM2_GPI_10.PG, i_stDSG:= GEM2_GCC_30.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		(*i_xPMPS_OK := TRUE,*)i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
 		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM2L0:GEM:VGC:20',fbArbiter:=g_fbArbiter2,i_nTransitionRootID:=2200);;
 GEM2_VGC_30(i_stUSG := GEM2_GCC_30.IG, i_stDSG:= GEM2_GCC_30.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
 		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM2L0:GEM:VGC:30',fbArbiter:=g_fbArbiter2,i_nTransitionRootID:=2300);
 GEM2_VGC_40(i_stUSG := GEM2_GCC_50.IG, i_stDSG:= GEM2_GCC_50.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
 		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM2L0:GEM:VGC:40',fbArbiter:=g_fbArbiter2,i_nTransitionRootID:=2400);	
 GEM2_VGC_50(i_stUSG := GEM2_GCC_30.IG, i_stDSG:= GEM2_GCC_60.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
 		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM2L0:GEM:VGC:50',fbArbiter:=g_fbArbiter2,i_nTransitionRootID:=2500);
 GEM2_VGC_60(i_stUSG := GEM2_GCC_60.IG, i_stDSG:= GEM2_GCC_70.IG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
-		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
+		i_xPMPS_OK := TRUE, i_xExt_OK := xGEM2_AperturesOpnOK, i_xOverrideMode := xGEM2OverrideMode,i_xReset := , i_xIsAperture:= TRUE ,
 		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM2L0:GEM:VGC:60',fbArbiter:=g_fbArbiter2,i_nTransitionRootID:=2600);
 (*downstream isolation valve*)
 GEM2_VGC_70(i_stUSG := GEM2_GCC_70.IG, i_stDSG:= DSG_PIN.IG,i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE,
-		(*i_xPMPS_OK := TRUE,*) i_xExt_OK := NOT (DSG_PIN.bError) , i_xOverrideMode := xGEM2OverrideMode,i_xReset := ,
+		i_xPMPS_OK := TRUE, i_xExt_OK := NOT (DSG_PIN.bError) , i_xOverrideMode := xGEM2OverrideMode,i_xReset := ,
 		io_fbFFHWO :=g_FastFaultOutput1,i_sDevName:= 'EM2L0:GEM:VGC:70',fbArbiter:=g_fbArbiter2,i_nTransitionRootID:=2700);
 DSV_VGC(VGC=>);
 
@@ -91,5 +91,9 @@ GEM2_PRO_60(xExtIlk:= TRUE, TurboIsOn:= (GEM2_PTM_60.iq_stPtm.q_RunDO OR GEM2_PT
 
 ]]></ST>
     </Implementation>
+    <LineIds Name="PRG_GEM2_DIFF_PUMP">
+      <LineId Id="3" Count="80" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>
