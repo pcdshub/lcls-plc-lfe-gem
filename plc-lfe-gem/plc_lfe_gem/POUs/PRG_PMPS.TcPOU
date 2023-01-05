@@ -23,9 +23,14 @@ g_FastFaultOutput2.Execute();
 
 (* Arbiter Instantiation*)
 (*Arbiter one responsible for the aperture valves*)
-fbArbiterIO(Arbiter := GVL_ILK.g_fbArbiter, fbFFHWO := GVL_ILK.g_FastFaultOutput1);
+//fbArbiterIO(Arbiter := GVL_ILK.g_fbArbiter, fbFFHWO := GVL_ILK.g_FastFaultOutput1);
 GVL_ILK.g_fbArbiter2.ElevateRequest(GVL_ILK.g_fbArbiter);
 GVL_ILK.g_fbArbiter3.ElevateRequest(GVL_ILK.g_fbArbiter);
+
+GVL_ILK.g_fbArbiter.AddRequest(nReqID:= 90  , stReqBP:= PMPS_GVL.cstFullBeam, sDevName := 'plc-lfe-gem');
+GVL_ILK.g_fbArbiter2.AddRequest(nReqID:= 91  , stReqBP:= PMPS_GVL.cstFullBeam, sDevName := 'plc-lfe-gem');
+GVL_ILK.g_fbArbiter3.AddRequest(nReqID:= 92  , stReqBP:= PMPS_GVL.cstFullBeam, sDevName := 'plc-lfe-gem');
+
 
 ar1:=GVL_ILK.g_fbArbiter.CheckRequestInPool(nReqID);
 ar2:=GVL_ILK.g_fbArbiter2.CheckRequestInPool(nReqID);
@@ -49,6 +54,10 @@ END_IF
       <LineId Id="28" Count="0" />
       <LineId Id="38" Count="0" />
       <LineId Id="48" Count="0" />
+      <LineId Id="93" Count="0" />
+      <LineId Id="91" Count="0" />
+      <LineId Id="94" Count="1" />
+      <LineId Id="92" Count="0" />
       <LineId Id="61" Count="2" />
       <LineId Id="77" Count="0" />
       <LineId Id="64" Count="0" />

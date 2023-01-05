@@ -203,7 +203,7 @@ IF tAction.Q THEN fbLogger(sMsg:='Device commanded to actuate', eSevr:=TcEventSe
 
 bptm(fbArbiter:=fbArbiter,
      i_TransitionAssertionID:=i_nTransitionRootID+2,
-     i_stTransitionAssertion:=PMPS_GVL.cstSafeBeam,
+     i_stTransitionAssertion:=PMPS_GVL.cst0RateBeam,
      i_nRequestedAssertionID:=i_nTransitionRootID+ BOOL_TO_UDINT(q_stAct.bRetract_SW AND NOT q_stAct.bInsert_SW ),
      i_stRequestedAssertion:=,
      i_xMoving:=NOT xDone,
