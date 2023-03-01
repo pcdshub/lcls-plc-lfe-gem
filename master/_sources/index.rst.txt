@@ -7,6 +7,7 @@ lcls-plc-lfe-gem
 
     plc-lfe-gem_pragmas
     plc-lfe-gem_nc
+    plc-lfe-gem_ethercat
     plc-lfe-gem_boxes
     plc-lfe-gem_links
 
