@@ -9,6 +9,6 @@ PROJECT_PATH := ../../plc-lfe-gem/plc-lfe-gem.tsproj
 PLC := plc_lfe_gem
 
 PYTMC_OPTS := 
-PREFIX := PREFIX
+PREFIX := PLC:LFE:GEM
 
 include $(IOC_TOP)/iocBoot/templates/Makefile.base
