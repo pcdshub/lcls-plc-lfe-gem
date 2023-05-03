@@ -2,34 +2,34 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_Control" Id="{6d2a29ed-0dfc-4be1-ad02-3e5984113bf6}">
     <Declaration><![CDATA[VAR_GLOBAL
-	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:SP; 
-	field: HOPR 1000;
-	field: LOPR 0;
-	field: PREC 2;
-	field: EGU "TORR";
-	'}
-	fGEM1SetpointValue : REAL:=0;
-	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:SP;
-	field: HOPR 1000;
-	field: LOPR 0;
-	field: PREC 2;
-	field: EGU "TORR";
-	'}
-	fGEM2SetpointValue : REAL:=0;
-	
-	
-	{attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:GO;
- 	 field: ZNAM STOP; 
-	 field: ONAM START; 
-	 io: io;
-	 '}
-	GEM1_GO : BOOL:=false;
-	
-	{attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:GO;
-	 field: ZNAM STOP; 
-	 field: ONAM START; 
-	 io: io; '}
-	GEM2_GO : BOOL:=false;
+    {attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:SP;
+    field: HOPR 1000;
+    field: LOPR 0;
+    field: PREC 2;
+    field: EGU "TORR";
+    '}
+    fGEM1SetpointValue : REAL:=0;
+    {attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:SP;
+    field: HOPR 1000;
+    field: LOPR 0;
+    field: PREC 2;
+    field: EGU "TORR";
+    '}
+    fGEM2SetpointValue : REAL:=0;
+
+
+    {attribute 'pytmc' :=' pv: EM1L0:GEM:CNTRL:GO;
+      field: ZNAM STOP;
+     field: ONAM START;
+     io: io;
+     '}
+    GEM1_GO : BOOL:=false;
+
+    {attribute 'pytmc' :=' pv: EM2L0:GEM:CNTRL:GO;
+     field: ZNAM STOP;
+     field: ONAM START;
+     io: io; '}
+    GEM2_GO : BOOL:=false;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

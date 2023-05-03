@@ -3,9 +3,9 @@
   <POU Name="MAIN" Id="{08fcf07b-a57e-4f6f-85ed-e3315e0ea5b4}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
-	iWatchdog:UDINT;//The watchdog variable name written to by the remote plc
+    iWatchdog:UDINT;//The watchdog variable name written to by the remote plc
 
-	fbLogHandler: FB_LogHandler;
+    fbLogHandler: FB_LogHandler;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -27,9 +27,5 @@ PRG_PMPS();
 //Log Handler
 fbLogHandler();]]></ST>
     </Implementation>
-    <LineIds Name="MAIN">
-      <LineId Id="3" Count="15" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
