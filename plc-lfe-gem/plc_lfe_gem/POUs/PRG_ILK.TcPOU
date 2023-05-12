@@ -20,8 +20,8 @@ GEM2_Aperture_Closed := GEM2_VGC_10.iq_stValve.i_xClsLS AND GEM2_VGC_20.iq_stVal
 GEM1_Turbo_Running := (GEM1_PTM_10.iq_stPtm.eState = pumpRUNNING) AND (GEM1_PTM_20.iq_stPtm.eState = pumpRUNNING) AND (GEM1_PTM_30.iq_stPtm.eState = pumpRUNNING) AND (GEM1_PTM_50.iq_stPtm.eState = pumpRUNNING);
 GEM2_Turbo_Running := (GEM2_PTM_30.iq_stPtm.eState = pumpRUNNING) AND (GEM2_PTM_50.iq_stPtm.eState = pumpRUNNING) AND (GEM2_PTM_60.iq_stPtm.eState = pumpRUNNING) AND (GEM2_PTM_70.iq_stPtm.eState = pumpRUNNING); (*MG 03.09.20 Turbo is failing, but injection can run without it*)
 
-xGEM1_AperturesOpnOK := NOT GEM1_VVC_40.iq_stValve.q_xOPN_DO AND NOT GATT_VVC_10.iq_stValve.q_xOPN_DO; //AND VCN is closed 
-xGEM2_AperturesOpnOK := NOT GEM2_VVC_40.iq_stValve.q_xOPN_DO AND NOT GATT_VVC_10.iq_stValve.q_xOPN_DO; //AND VCN is closed 
+xGEM1_AperturesOpnOK := NOT GEM1_VVC_40.iq_stValve.q_xOPN_DO AND NOT GATT_VVC_10.iq_stValve.q_xOPN_DO; //AND VCN is closed
+xGEM2_AperturesOpnOK := NOT GEM2_VVC_40.iq_stValve.q_xOPN_DO AND NOT GATT_VVC_10.iq_stValve.q_xOPN_DO; //AND VCN is closed
 
 (* Link The correct override bit to the correct vacuum section*)
 
@@ -31,16 +31,5 @@ xGEM2_AperturesOpnOK := NOT GEM2_VVC_40.iq_stValve.q_xOPN_DO AND NOT GATT_VVC_10
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_ILK">
-      <LineId Id="6" Count="14" />
-      <LineId Id="5" Count="0" />
-      <LineId Id="22" Count="0" />
-      <LineId Id="21" Count="0" />
-      <LineId Id="24" Count="0" />
-      <LineId Id="28" Count="1" />
-      <LineId Id="23" Count="0" />
-      <LineId Id="31" Count="0" />
-      <LineId Id="30" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
