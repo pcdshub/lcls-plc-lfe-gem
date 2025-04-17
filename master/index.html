@@ -1,22 +1,24 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>lcls-plc-lfe-gem &mdash; pcdshub/lcls-plc-lfe-gem  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/tree.css?v=837a00b9" />
+      <link rel="stylesheet" type="text/css" href="_static/width.css?v=ab210c7a" />
+
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/docs-versions-menu.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -46,7 +48,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_pragmas.html">Pragmas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_nc.html">NC Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_ethercat.html">Box Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_ethercat.html">EtherCAT Terminals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_boxes.html">Boxes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_links.html">Links</a></li>
 </ul>
@@ -88,7 +90,7 @@
            <div itemprop="articleBody">
              
   <section id="lcls-plc-lfe-gem">
-<h1>lcls-plc-lfe-gem<a class="headerlink" href="#lcls-plc-lfe-gem" title="Permalink to this heading"></a></h1>
+<h1>lcls-plc-lfe-gem<a class="headerlink" href="#lcls-plc-lfe-gem" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">plc-lfe-gem</span></p>
 <ul>
@@ -97,7 +99,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_nc.html">NC Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_ethercat.html">Box Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_ethercat.html">EtherCAT Terminals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_boxes.html">Boxes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_boxes.html#pmps-ffo">PMPS_FFO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_boxes.html#pmps-pre">PMPS_PRE</a></li>
@@ -221,7 +223,6 @@
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_summary.html#symbols">Symbols</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_summary.html#constants">Constants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_summary.html#defaultglobals">DefaultGlobals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_summary.html#generalconstants">GeneralConstants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_summary.html#global-constants">Global_Constants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_summary.html#global-variables">Global_Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_summary.html#global-version">Global_Version</a></li>
@@ -248,7 +249,6 @@
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_summary.html#prg-gem2">PRG_GEM2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_summary.html#prg-gem2-diff-pump">PRG_GEM2_DIFF_PUMP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_summary.html#prg-pmps">PRG_PMPS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_summary.html#prg-satt">PRG_SATT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_summary.html#tc-event-classes">TC_EVENT_CLASSES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_summary.html#tc-events">TC_EVENTS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_summary.html#twincat-licenseinfovarlist">TwinCAT_LicenseInfoVarList</a></li>
@@ -256,7 +256,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_epics.html">Data Types</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_epics.html#fb-mpa">FB_MPA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_epics.html#fb-pressuresensor-px219">FB_PressureSensor_PX219</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_epics.html#lcls-general-fb-listener">LCLS_General.FB_Listener</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_epics.html#lcls-general-fb-loghandler">LCLS_General.FB_LogHandler</a></li>
@@ -307,7 +306,6 @@
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_epics.html#pmps-t-hashtableentry">PMPS.T_HashTableEntry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_epics.html#st-beamparams-io">ST_BeamParams_IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_epics.html#st-loggingeventinfo">ST_LoggingEventInfo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_epics.html#st-mpa">ST_MPA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_epics.html#st-pmps-aperture-io">ST_PMPS_Aperture_IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plc-lfe-gem_plc_lfe_gem_epics.html#st-pressuresensor">ST_PressureSensor</a></li>
 </ul>
@@ -347,7 +345,7 @@
 </ul>
 </div>
 <section id="indices-and-tables">
-<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h2>
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
@@ -366,7 +364,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, SLAC National Accelerator Laboratory.</p>
+    <p>&#169; Copyright 2025, SLAC National Accelerator Laboratory.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

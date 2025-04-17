@@ -1,22 +1,24 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DUTs &mdash; pcdshub/lcls-plc-lfe-gem  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/tree.css?v=837a00b9" />
+      <link rel="stylesheet" type="text/css" href="_static/width.css?v=ab210c7a" />
+
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/docs-versions-menu.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -46,7 +48,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_pragmas.html">Pragmas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_nc.html">NC Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_ethercat.html">Box Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_ethercat.html">EtherCAT Terminals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_boxes.html">Boxes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc-lfe-gem_links.html">Links</a></li>
 </ul>
@@ -116,9 +118,9 @@
            <div itemprop="articleBody">
              
   <section id="duts">
-<h1>DUTs<a class="headerlink" href="#duts" title="Permalink to this heading"></a></h1>
+<h1>DUTs<a class="headerlink" href="#duts" title="Link to this heading"></a></h1>
 <section id="e-positionstate">
-<h2>E_PositionState<a class="headerlink" href="#e-positionstate" title="Permalink to this heading"></a></h2>
+<h2>E_PositionState<a class="headerlink" href="#e-positionstate" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;strict&#39;</span><span class="p">}</span>
 <span class="n">TYPE</span> <span class="n">E_PositionState</span> <span class="p">:</span>
@@ -139,7 +141,7 @@
 </dl>
 </section>
 <section id="st-mpa">
-<h2>ST_MPA<a class="headerlink" href="#st-mpa" title="Permalink to this heading"></a></h2>
+<h2>ST_MPA<a class="headerlink" href="#st-mpa" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TYPE</span> <span class="n">ST_MPA</span> <span class="p">:</span>
 <span class="n">STRUCT</span>
     <span class="o">//</span><span class="n">Readbacks</span>
@@ -222,7 +224,7 @@
 </dl>
 </section>
 <section id="st-pressuresensor">
-<h2>ST_PressureSensor<a class="headerlink" href="#st-pressuresensor" title="Permalink to this heading"></a></h2>
+<h2>ST_PressureSensor<a class="headerlink" href="#st-pressuresensor" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TYPE</span> <span class="n">ST_PressureSensor</span> <span class="p">:</span>
 <span class="n">STRUCT</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -271,9 +273,9 @@
 </section>
 </section>
 <section id="gvls">
-<h1>GVLs<a class="headerlink" href="#gvls" title="Permalink to this heading"></a></h1>
+<h1>GVLs<a class="headerlink" href="#gvls" title="Link to this heading"></a></h1>
 <section id="gvl-control">
-<h2>GVL_Control<a class="headerlink" href="#gvl-control" title="Permalink to this heading"></a></h2>
+<h2>GVL_Control<a class="headerlink" href="#gvl-control" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VAR_GLOBAL</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: EM1L0:GEM:CNTRL:SP;</span>
     <span class="n">field</span><span class="p">:</span> <span class="n">HOPR</span> <span class="mi">1000</span><span class="p">;</span>
@@ -308,7 +310,7 @@
 </div>
 </section>
 <section id="gvl-devices">
-<h2>GVL_Devices<a class="headerlink" href="#gvl-devices" title="Permalink to this heading"></a></h2>
+<h2>GVL_Devices<a class="headerlink" href="#gvl-devices" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VAR_GLOBAL</span>
 
     <span class="p">(</span><span class="o">*</span><span class="n">Upstream</span> <span class="n">Interface</span><span class="o">*</span><span class="p">)</span>
@@ -917,71 +919,12 @@
     <span class="n">GEM2_PRO_20</span><span class="p">:</span> <span class="n">FB_KashiyamaPump</span><span class="p">;</span>
 
 
-
-<span class="p">(</span><span class="o">*************</span><span class="p">)</span>
-<span class="p">(</span><span class="o">*</span><span class="n">AT1L0</span><span class="o">-</span><span class="n">SOLID</span><span class="o">*</span><span class="p">)</span>
-<span class="p">(</span><span class="o">*************</span><span class="p">)</span>
-
-<span class="p">(</span><span class="o">*</span><span class="n">Pneumatic</span> <span class="n">actuators</span><span class="o">*</span><span class="p">)</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: AT1L0:SOLID:MPA:01 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xRetractedLS:=      TIIB[L0S6_PNL_04_EB_4 (EP2338-0002)]^Channel 1^Input;</span>
-                                 <span class="o">.</span><span class="n">i_xInsertedLS</span>     <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_4</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
-                                 <span class="o">.</span><span class="n">q_xInsert_DO</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_4</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">11</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
-    <span class="n">SATT_MPA_01</span><span class="p">:</span> <span class="n">FB_MPA</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: AT1L0:SOLID:MPA:02 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xRetractedLS:=      TIIB[L0S6_PNL_04_EB_4 (EP2338-0002)]^Channel 5^Input;</span>
-                                 <span class="o">.</span><span class="n">i_xInsertedLS</span>     <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_4</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">6</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
-                                 <span class="o">.</span><span class="n">q_xInsert_DO</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_4</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">15</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
-    <span class="n">SATT_MPA_02</span><span class="p">:</span> <span class="n">FB_MPA</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: AT1L0:SOLID:MPA:03 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xRetractedLS:=      TIIB[L0S6_PNL_04_EB_5 (EP2338-0002)]^Channel 1^Input;</span>
-                                 <span class="o">.</span><span class="n">i_xInsertedLS</span>     <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_5</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
-                                 <span class="o">.</span><span class="n">q_xInsert_DO</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_5</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">11</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
-    <span class="n">SATT_MPA_03</span><span class="p">:</span> <span class="n">FB_MPA</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: AT1L0:SOLID:MPA:04 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xRetractedLS:=      TIIB[L0S6_PNL_04_EB_5 (EP2338-0002)]^Channel 5^Input;</span>
-                                 <span class="o">.</span><span class="n">i_xInsertedLS</span>     <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_5</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">6</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
-                                 <span class="o">.</span><span class="n">q_xInsert_DO</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_5</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">15</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
-    <span class="n">SATT_MPA_04</span><span class="p">:</span> <span class="n">FB_MPA</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: AT1L0:SOLID:MPA:05 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xRetractedLS:=      TIIB[L0S6_PNL_04_EB_6 (EP2338-0002)]^Channel 1^Input;</span>
-                                 <span class="o">.</span><span class="n">i_xInsertedLS</span>     <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_6</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
-                                 <span class="o">.</span><span class="n">q_xInsert_DO</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_6</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">11</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
-    <span class="n">SATT_MPA_05</span><span class="p">:</span> <span class="n">FB_MPA</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: AT1L0:SOLID:MPA:06 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xRetractedLS:=      TIIB[L0S6_PNL_04_EB_6 (EP2338-0002)]^Channel 5^Input;</span>
-                                 <span class="o">.</span><span class="n">i_xInsertedLS</span>     <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_6</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">6</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
-                                 <span class="o">.</span><span class="n">q_xInsert_DO</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_6</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">15</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
-    <span class="n">SATT_MPA_06</span><span class="p">:</span> <span class="n">FB_MPA</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: AT1L0:SOLID:MPA:07 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xRetractedLS:=      TIIB[L0S6_PNL_04_EB_7 (EP2338-0002)]^Channel 1^Input;</span>
-                                 <span class="o">.</span><span class="n">i_xInsertedLS</span>     <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_7</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
-                                 <span class="o">.</span><span class="n">q_xRetract_DO</span>     <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_7</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">11</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
-    <span class="n">SATT_MPA_07</span><span class="p">:</span> <span class="n">FB_MPA</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: AT1L0:SOLID:MPA:08 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xRetractedLS:=      TIIB[L0S6_PNL_04_EB_7 (EP2338-0002)]^Channel 5^Input;</span>
-                                 <span class="o">.</span><span class="n">i_xInsertedLS</span>     <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_7</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">6</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
-                                 <span class="o">.</span><span class="n">q_xRetract_DO</span>     <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_7</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">15</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
-    <span class="n">SATT_MPA_08</span><span class="p">:</span> <span class="n">FB_MPA</span><span class="p">;</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: AT1L0:SOLID:MPA:09 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xRetractedLS:=      TIIB[L0S6_PNL_04_EB_8 (EP2338-0002)]^Channel 1^Input;</span>
-                                 <span class="o">.</span><span class="n">i_xInsertedLS</span>     <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_8</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
-                                 <span class="o">.</span><span class="n">q_xRetract_DO</span>     <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">L0S6_PNL_04_EB_8</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">11</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
-    <span class="n">SATT_MPA_09</span><span class="p">:</span> <span class="n">FB_MPA</span><span class="p">;</span>
-
-
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>Related:</dt><dd><ul class="simple">
-<li><p><a class="reference internal" href="#fb-mpa">FB_MPA</a></p></li>
-</ul>
-</dd>
-</dl>
 </section>
 <section id="gvl-ilk">
-<h2>GVL_ILK<a class="headerlink" href="#gvl-ilk" title="Permalink to this heading"></a></h2>
+<h2>GVL_ILK<a class="headerlink" href="#gvl-ilk" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VAR_GLOBAL</span>
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -1048,7 +991,7 @@
 </div>
 </section>
 <section id="gvl-sensors">
-<h2>GVL_Sensors<a class="headerlink" href="#gvl-sensors" title="Permalink to this heading"></a></h2>
+<h2>GVL_Sensors<a class="headerlink" href="#gvl-sensors" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VAR_GLOBAL</span>
 
 <span class="p">(</span><span class="o">*</span><span class="n">Pressure</span> <span class="n">Meter</span><span class="o">*</span><span class="p">)</span>
@@ -1082,9 +1025,9 @@
 </section>
 </section>
 <section id="pous">
-<h1>POUs<a class="headerlink" href="#pous" title="Permalink to this heading"></a></h1>
+<h1>POUs<a class="headerlink" href="#pous" title="Link to this heading"></a></h1>
 <section id="diagnostics">
-<h2>DIAGNOSTICS<a class="headerlink" href="#diagnostics" title="Permalink to this heading"></a></h2>
+<h2>DIAGNOSTICS<a class="headerlink" href="#diagnostics" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">DIAGNOSTICS</span>
 <span class="n">VAR</span>
     <span class="o">//</span><span class="n">Change</span> <span class="n">the</span> <span class="n">PLC</span> <span class="n">String</span> <span class="n">Name</span> <span class="n">to</span> <span class="n">the</span> <span class="n">actual</span> <span class="n">PLC</span> <span class="n">NAME</span>
@@ -1120,7 +1063,7 @@
 </div>
 </section>
 <section id="fb-mpa">
-<h2>FB_MPA<a class="headerlink" href="#fb-mpa" title="Permalink to this heading"></a></h2>
+<h2>FB_MPA<a class="headerlink" href="#fb-mpa" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_MPA</span>
 <span class="n">VAR_INPUT</span>
     <span class="p">(</span><span class="o">*</span><span class="n">EPS</span> <span class="n">Interlock</span> <span class="n">Bits</span><span class="o">*</span><span class="p">)</span>
@@ -1337,7 +1280,7 @@
 </dl>
 </section>
 <section id="fb-pressuresensor-px219">
-<h2>FB_PressureSensor_PX219<a class="headerlink" href="#fb-pressuresensor-px219" title="Permalink to this heading"></a></h2>
+<h2>FB_PressureSensor_PX219<a class="headerlink" href="#fb-pressuresensor-px219" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_PressureSensor_PX219</span>
 <span class="n">VAR_OUTPUT</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv:&#39;</span><span class="p">}</span>
@@ -1397,7 +1340,7 @@
 </dl>
 </section>
 <section id="fb-vgc-1">
-<h2>FB_VGC_1<a class="headerlink" href="#fb-vgc-1" title="Permalink to this heading"></a></h2>
+<h2>FB_VGC_1<a class="headerlink" href="#fb-vgc-1" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(* This function block implements basic functionality for Isolation Gate Valves*)
 (* This function block interlock is as follows:
 1. The valve can be opened when the difference between the pressures on both sides is
@@ -1893,7 +1836,7 @@ END_METHOD
 </div>
 </section>
 <section id="main">
-<h2>MAIN<a class="headerlink" href="#main" title="Permalink to this heading"></a></h2>
+<h2>MAIN<a class="headerlink" href="#main" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">MAIN</span>
 <span class="n">VAR</span>
     <span class="n">iWatchdog</span><span class="p">:</span><span class="n">UDINT</span><span class="p">;</span><span class="o">//</span><span class="n">The</span> <span class="n">watchdog</span> <span class="n">variable</span> <span class="n">name</span> <span class="n">written</span> <span class="n">to</span> <span class="n">by</span> <span class="n">the</span> <span class="n">remote</span> <span class="n">plc</span>
@@ -1913,7 +1856,6 @@ END_METHOD
 <span class="n">PRG_GATT</span><span class="p">();</span>
 <span class="n">PRG_GEM1</span><span class="p">();</span>
 <span class="n">PRG_GEM2</span><span class="p">();</span>
-<span class="n">PRG_SATT</span><span class="p">();</span>
 <span class="n">PRG_PMPS</span><span class="p">();</span>
 <span class="o">//</span><span class="n">Log</span> <span class="n">Handler</span>
 <span class="n">fbLogHandler</span><span class="p">();</span>
@@ -1932,13 +1874,12 @@ END_METHOD
 <li><p><a class="reference internal" href="#prg-ilk">PRG_ILK</a></p></li>
 <li><p><a class="reference internal" href="#prg-pmps">PRG_PMPS</a></p></li>
 <li><p><a class="reference internal" href="#prg-roots">PRG_ROOTS</a></p></li>
-<li><p><a class="reference internal" href="#prg-satt">PRG_SATT</a></p></li>
 </ul>
 </dd>
 </dl>
 </section>
 <section id="prg-gatt">
-<h2>PRG_GATT<a class="headerlink" href="#prg-gatt" title="Permalink to this heading"></a></h2>
+<h2>PRG_GATT<a class="headerlink" href="#prg-gatt" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_GATT</span>
 <span class="n">VAR</span> <span class="n">CONSTANT</span>
         <span class="n">nDataTable_NumberOfRows</span> <span class="p">:</span> <span class="n">INT</span><span class="o">:=</span><span class="mi">9</span><span class="p">;</span>
@@ -1991,7 +1932,7 @@ END_METHOD
 </div>
 </section>
 <section id="prg-gem1">
-<h2>PRG_GEM1<a class="headerlink" href="#prg-gem1" title="Permalink to this heading"></a></h2>
+<h2>PRG_GEM1<a class="headerlink" href="#prg-gem1" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PROGRAM PRG_GEM1
 VAR
     {attribute &#39;pytmc&#39; :=&#39; pv: EM1L0:GEM:CNTRL:RESET;
@@ -2222,7 +2163,7 @@ END_PROGRAM
 </div>
 </section>
 <section id="prg-gem1-diff-pump">
-<h2>PRG_GEM1_DIFF_PUMP<a class="headerlink" href="#prg-gem1-diff-pump" title="Permalink to this heading"></a></h2>
+<h2>PRG_GEM1_DIFF_PUMP<a class="headerlink" href="#prg-gem1-diff-pump" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_GEM1_DIFF_PUMP</span>
 <span class="n">VAR</span>
     <span class="n">rMaxBackingPressure</span> <span class="p">:</span> <span class="n">REAL</span> <span class="o">:=</span> <span class="mf">0.7</span><span class="p">;</span><span class="o">//</span><span class="n">Torr</span>
@@ -2327,7 +2268,7 @@ END_PROGRAM
 </dl>
 </section>
 <section id="prg-gem2">
-<h2>PRG_GEM2<a class="headerlink" href="#prg-gem2" title="Permalink to this heading"></a></h2>
+<h2>PRG_GEM2<a class="headerlink" href="#prg-gem2" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PROGRAM PRG_GEM2
 VAR
     {attribute &#39;pytmc&#39; :=&#39;
@@ -2550,14 +2491,14 @@ END_PROGRAM
 </div>
 </section>
 <section id="prg-gem2-diff-pump">
-<h2>PRG_GEM2_DIFF_PUMP<a class="headerlink" href="#prg-gem2-diff-pump" title="Permalink to this heading"></a></h2>
+<h2>PRG_GEM2_DIFF_PUMP<a class="headerlink" href="#prg-gem2-diff-pump" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_GEM2_DIFF_PUMP</span>
 <span class="n">VAR</span>
     <span class="n">rMaxBackingPressure</span> <span class="p">:</span> <span class="n">REAL</span> <span class="o">:=</span> <span class="mf">0.7</span><span class="p">;</span>
     <span class="n">bInit</span><span class="p">:</span> <span class="n">BOOL</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">;</span>
 <span class="n">END_VAR</span>
 <span class="p">(</span><span class="o">*</span><span class="n">Gauges</span><span class="o">*</span><span class="p">)</span>
-<span class="n">DSG_PIN</span><span class="p">(</span><span class="n">sNetId</span><span class="o">:=</span><span class="s1">&#39;172.21.88.138.1.1&#39;</span> <span class="p">,</span> <span class="n">nPort</span><span class="o">:=</span><span class="mi">851</span> <span class="p">,</span> <span class="n">sVarName</span><span class="o">:=</span><span class="s1">&#39;GVL_Devices.AT2L0_SOLID_PIN_01&#39;</span><span class="p">,</span><span class="n">iWatchdog</span><span class="o">:=</span><span class="n">Main</span><span class="o">.</span><span class="n">iWatchdog</span><span class="p">,</span><span class="n">IG</span><span class="o">=&gt;</span> <span class="p">);</span> <span class="o">//</span> <span class="n">Downstream</span> <span class="n">Gauge</span> <span class="kn">from</span> <span class="nn">Down</span> <span class="n">Stream</span> <span class="n">PLC</span> <span class="n">System</span>
+<span class="n">DSG_PIN</span><span class="p">(</span><span class="n">sNetId</span><span class="o">:=</span><span class="s1">&#39;172.21.88.138.1.1&#39;</span> <span class="p">,</span> <span class="n">nPort</span><span class="o">:=</span><span class="mi">851</span> <span class="p">,</span> <span class="n">sVarName</span><span class="o">:=</span><span class="s1">&#39;GVL_Devices.AT2L0_SOLID_PIN_01&#39;</span><span class="p">,</span><span class="n">iWatchdog</span><span class="o">:=</span><span class="n">Main</span><span class="o">.</span><span class="n">iWatchdog</span><span class="p">,</span><span class="n">IG</span><span class="o">=&gt;</span> <span class="p">);</span> <span class="o">//</span> <span class="n">Downstream</span> <span class="n">Gauge</span> <span class="kn">from</span><span class="w"> </span><span class="nn">Down</span> <span class="n">Stream</span> <span class="n">PLC</span> <span class="n">System</span>
 <span class="p">(</span><span class="o">*</span><span class="n">EM2L0</span><span class="o">*</span><span class="p">)</span>
 <span class="n">GEM2_GPI_30</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="p">);</span>
 <span class="n">GEM2_GCC_30</span><span class="p">(</span><span class="n">PG</span><span class="o">:=</span><span class="n">GEM2_GPI_30</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span><span class="n">IG</span><span class="o">=&gt;</span><span class="p">);</span>
@@ -2642,7 +2583,7 @@ END_PROGRAM
 </dl>
 </section>
 <section id="prg-ilk">
-<h2>PRG_ILK<a class="headerlink" href="#prg-ilk" title="Permalink to this heading"></a></h2>
+<h2>PRG_ILK<a class="headerlink" href="#prg-ilk" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_ILK</span>
 <span class="n">VAR</span>
 <span class="n">END_VAR</span>
@@ -2674,7 +2615,7 @@ END_PROGRAM
 </div>
 </section>
 <section id="prg-pmps">
-<h2>PRG_PMPS<a class="headerlink" href="#prg-pmps" title="Permalink to this heading"></a></h2>
+<h2>PRG_PMPS<a class="headerlink" href="#prg-pmps" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_PMPS</span>
 <span class="n">VAR</span>
  <span class="n">fbArbiterIO</span> <span class="p">:</span> <span class="n">FB_SubSysToArbiter_IO</span><span class="p">;</span>
@@ -2724,7 +2665,7 @@ END_PROGRAM
 </dl>
 </section>
 <section id="prg-roots">
-<h2>PRG_ROOTS<a class="headerlink" href="#prg-roots" title="Permalink to this heading"></a></h2>
+<h2>PRG_ROOTS<a class="headerlink" href="#prg-roots" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_ROOTS</span>
 <span class="n">VAR</span>
 <span class="n">END_VAR</span>
@@ -2767,7 +2708,7 @@ END_PROGRAM
 </div>
 </section>
 <section id="prg-satt">
-<h2>PRG_SATT<a class="headerlink" href="#prg-satt" title="Permalink to this heading"></a></h2>
+<h2>PRG_SATT<a class="headerlink" href="#prg-satt" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_SATT</span>
 <span class="n">VAR</span>
     <span class="n">PMPS_OK</span><span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span> <span class="o">//</span> <span class="n">to</span> <span class="n">be</span> <span class="n">linked</span> <span class="n">to</span> <span class="n">pmps</span>
@@ -2888,7 +2829,7 @@ END_PROGRAM
 </div>
 </section>
 <section id="prg-sensors">
-<h2>PRG_SENSORS<a class="headerlink" href="#prg-sensors" title="Permalink to this heading"></a></h2>
+<h2>PRG_SENSORS<a class="headerlink" href="#prg-sensors" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_SENSORS</span>
 <span class="n">VAR</span>
         <span class="o">//</span> <span class="n">Sensor</span> <span class="n">Range</span> <span class="ow">in</span> <span class="n">Psi</span>
@@ -2935,7 +2876,7 @@ END_PROGRAM
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, SLAC National Accelerator Laboratory.</p>
+    <p>&#169; Copyright 2025, SLAC National Accelerator Laboratory.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

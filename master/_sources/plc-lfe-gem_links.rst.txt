@@ -42,6 +42,25 @@ Links
         InputDst, GVL_Devices.GEM2_PTM_70.i_xLSpd, TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_8 (EL1088), Channel 6^Input
         InputDst, GVL_Devices.GEM2_PTM_70.i_xR1, TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_8 (EL1088), Channel 5^Input
         InputDst, GVL_Devices.GEM2_PTM_70.i_xSTART, TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_8 (EL1088), Channel 7^Input
+        InputDst, GVL_Devices.SATT_MPA_01.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002), Channel 2^Input
+        InputDst, GVL_Devices.SATT_MPA_01.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002), Channel 1^Input
+        InputDst, GVL_Devices.SATT_MPA_02.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002), Channel 6^Input
+        InputDst, GVL_Devices.SATT_MPA_02.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002), Channel 5^Input
+        InputDst, GVL_Devices.SATT_MPA_03.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002), Channel 2^Input
+        InputDst, GVL_Devices.SATT_MPA_03.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002), Channel 1^Input
+        InputDst, GVL_Devices.SATT_MPA_04.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002), Channel 6^Input
+        InputDst, GVL_Devices.SATT_MPA_04.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002), Channel 5^Input
+        InputDst, GVL_Devices.SATT_MPA_05.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002), Channel 2^Input
+        InputDst, GVL_Devices.SATT_MPA_05.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002), Channel 1^Input
+        InputDst, GVL_Devices.SATT_MPA_06.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002), Channel 6^Input
+        InputDst, GVL_Devices.SATT_MPA_06.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002), Channel 5^Input
+        InputDst, GVL_Devices.SATT_MPA_07.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002), Channel 2^Input
+        InputDst, GVL_Devices.SATT_MPA_07.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002), Channel 1^Input
+        InputDst, GVL_Devices.SATT_MPA_08.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002), Channel 6^Input
+        InputDst, GVL_Devices.SATT_MPA_08.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002), Channel 5^Input
+        InputDst, GVL_Devices.SATT_MPA_09.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_8 (EP2338-0002), Channel 2^Input
+        InputDst, GVL_Devices.SATT_MPA_09.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_8 (EP2338-0002), Channel 1^Input
+        InputDst, PRG_PMPS.fbArbiterIO.i_stCurrentBP, TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_PRE, IO Inputs^CurrentBP
         OutputSrc, GVL_Devices.GEM1_PMF_20.q_xRunDo, TIID^EMxL0 (EtherCAT)^L0S3_PNL_03_EB_7 (EP2338-0002), Channel 11^Output
         OutputSrc, GVL_Devices.GEM1_PMF_30.q_xRunDo, TIID^EMxL0 (EtherCAT)^L0S3_PNL_03_EB_7 (EP2338-0002), Channel 12^Output
         OutputSrc, GVL_Devices.GEM1_PMF_50.q_xRunDo, TIID^EMxL0 (EtherCAT)^L0S3_PNL_03_EB_7 (EP2338-0002), Channel 15^Output
@@ -52,6 +71,16 @@ Links
         OutputSrc, GVL_Devices.GEM2_PMF_60.q_xRunDo, TIID^EMxL0 (EtherCAT)^L0S6_PNL_01_EB_7 (EP2338-0002), Channel 15^Output
         OutputSrc, GVL_Devices.GEM2_PTM_30.q_RunDO, TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_6 (EL2088), Channel 1^Output
         OutputSrc, GVL_Devices.GEM2_PTM_50.q_RunDO, TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_6 (EL2088), Channel 2^Output
+        OutputSrc, GVL_Devices.SATT_MPA_01.q_xInsert_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002), Channel 11^Output
+        OutputSrc, GVL_Devices.SATT_MPA_02.q_xInsert_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002), Channel 15^Output
+        OutputSrc, GVL_Devices.SATT_MPA_03.q_xInsert_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002), Channel 11^Output
+        OutputSrc, GVL_Devices.SATT_MPA_04.q_xInsert_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002), Channel 15^Output
+        OutputSrc, GVL_Devices.SATT_MPA_05.q_xInsert_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002), Channel 11^Output
+        OutputSrc, GVL_Devices.SATT_MPA_06.q_xInsert_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002), Channel 15^Output
+        OutputSrc, GVL_Devices.SATT_MPA_07.q_xRetract_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002), Channel 11^Output
+        OutputSrc, GVL_Devices.SATT_MPA_08.q_xRetract_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002), Channel 15^Output
+        OutputSrc, GVL_Devices.SATT_MPA_09.q_xRetract_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_8 (EP2338-0002), Channel 11^Output
+        OutputSrc, PRG_PMPS.fbArbiterIO.q_stRequestedBP, TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_PRE, IO Outputs^RequestedBP
         TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.GATT_GMP_10.i_iPRESS_R, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_2 (EP3174-0002), AI Standard Channel 2^Value
         TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.GATT_GMP_11.i_iPRESS_R, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_3 (EP4374-0002), AI Inputs Channel 1^Value
         TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.GATT_GPI_10.i_iPRESS_R, TIID^EMxL0 (EtherCAT)^DRL_MKS (EK1100)^MKS_E7 (EL3064), AI Standard Channel 2^Value
@@ -193,24 +222,6 @@ Links
         TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.GEM2_VRC_60.i_xOpnLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_03_EB_2 (EP2338-0002), Channel 1^Input
         TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.GEM2_VRC_70.i_xClsLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_03_EB_2 (EP2338-0002), Channel 6^Input
         TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.GEM2_VRC_70.i_xOpnLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_03_EB_2 (EP2338-0002), Channel 5^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_01.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002), Channel 2^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_01.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002), Channel 1^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_02.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002), Channel 6^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_02.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002), Channel 5^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_03.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002), Channel 2^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_03.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002), Channel 1^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_04.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002), Channel 6^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_04.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002), Channel 5^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_05.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002), Channel 2^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_05.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002), Channel 1^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_06.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002), Channel 6^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_06.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002), Channel 5^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_07.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002), Channel 2^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_07.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002), Channel 1^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_08.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002), Channel 6^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_08.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002), Channel 5^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_09.i_xInsertedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_8 (EP2338-0002), Channel 2^Input
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^GVL_Devices.SATT_MPA_09.i_xRetractedLS, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_8 (EP2338-0002), Channel 1^Input
         TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^PRG_PMPS.fbArbiterIO.i_stCurrentBP, TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_PRE, IO Inputs^CurrentBP
         TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^PRG_PMPS.fbArbiterIO.xTxPDO_state, TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_PRE, SYNC Inputs^TxPDO state
         TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Inputs^PRG_PMPS.fbArbiterIO.xTxPDO_toggle, TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_PRE, SYNC Inputs^TxPDO toggle
@@ -306,15 +317,6 @@ Links
         TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Outputs^GVL_Devices.GEM2_VVC_40.q_xOPN_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_02_EB_2 (EP2338-0002), Channel 15^Output
         TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Outputs^GVL_Devices.GEM2_VVC_50.q_xCLS_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_03_EB_4 (EP2338-0002), Channel 15^Output
         TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Outputs^GVL_Devices.GEM2_VVC_70.q_xCLS_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_03_EB_4 (EP2338-0002), Channel 16^Output
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Outputs^GVL_Devices.SATT_MPA_01.q_xInsert_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002), Channel 11^Output
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Outputs^GVL_Devices.SATT_MPA_02.q_xInsert_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002), Channel 15^Output
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Outputs^GVL_Devices.SATT_MPA_03.q_xInsert_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002), Channel 11^Output
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Outputs^GVL_Devices.SATT_MPA_04.q_xInsert_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002), Channel 15^Output
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Outputs^GVL_Devices.SATT_MPA_05.q_xInsert_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002), Channel 11^Output
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Outputs^GVL_Devices.SATT_MPA_06.q_xInsert_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002), Channel 15^Output
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Outputs^GVL_Devices.SATT_MPA_07.q_xRetract_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002), Channel 11^Output
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Outputs^GVL_Devices.SATT_MPA_08.q_xRetract_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002), Channel 15^Output
-        TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Outputs^GVL_Devices.SATT_MPA_09.q_xRetract_DO, TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_8 (EP2338-0002), Channel 11^Output
         TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Outputs^GVL_ILK.g_FastFaultOutput1.q_xFastFaultOut, TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_FFO, Channel 1^Output
         TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Outputs^GVL_ILK.g_FastFaultOutput2.q_xFastFaultOut, TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_FFO, Channel 2^Output
         TIPC^plc_lfe_gem^plc_lfe_gem Instance, PlcTask Outputs^PRG_PMPS.fbArbiterIO.q_stRequestedBP, TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_PRE, IO Outputs^RequestedBP
