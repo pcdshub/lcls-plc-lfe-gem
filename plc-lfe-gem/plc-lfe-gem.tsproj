@@ -370,6 +370,62 @@
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 						</Var>
 						<Var>
+							<Name>GVL_Sensors.GEM1_AIR_1.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM1_AIR_2.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_N2_1.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_N2_2.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM1_GFM_41.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM1_GFM_42.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_GFM_41.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_GFM_42.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
 							<Name>PRG_PMPS.fbArbiterIO.i_stCurrentBP</Name>
 							<Type GUID="{292CD354-C7C0-4A61-AAD0-1C85DD69646B}">ST_BeamParams_IO</Type>
 							<SubVar>
@@ -626,83 +682,6 @@
 								<![CDATA[ input Pressure // Link to analog Input]]>
 							</Comment>
 							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_10.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_10.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_20.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_20.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_30.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_30.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_40.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_40.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_50.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_50.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_60.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_60.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_70.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_70.i_xClsLS</Name>
-							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM1_VRC_10.i_xOpnLS</Name>
@@ -1075,83 +1054,6 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.GEM2_VGC_10.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_10.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_20.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_20.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_30.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_30.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_40.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_40.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_50.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_50.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_60.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_60.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_70.i_xOpnLS</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_70.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_Devices.GEM2_VRC_30.i_xOpnLS</Name>
 							<Comment>
 								<![CDATA[IO]]>
@@ -1378,159 +1280,158 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_01.i_xInsertedLS</Name>
+							<Name>GVL_Devices.GEM1_VGC_10.i_xOpnLS</Name>
 							<Comment>
 								<![CDATA[IO]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_01.i_xRetractedLS</Name>
+							<Name>GVL_Devices.GEM1_VGC_10.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_02.i_xInsertedLS</Name>
+							<Name>GVL_Devices.GEM1_VGC_20.i_xOpnLS</Name>
 							<Comment>
 								<![CDATA[IO]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_02.i_xRetractedLS</Name>
+							<Name>GVL_Devices.GEM1_VGC_20.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_03.i_xInsertedLS</Name>
+							<Name>GVL_Devices.GEM1_VGC_30.i_xOpnLS</Name>
 							<Comment>
 								<![CDATA[IO]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_03.i_xRetractedLS</Name>
+							<Name>GVL_Devices.GEM1_VGC_30.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_04.i_xInsertedLS</Name>
+							<Name>GVL_Devices.GEM1_VGC_40.i_xOpnLS</Name>
 							<Comment>
 								<![CDATA[IO]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_04.i_xRetractedLS</Name>
+							<Name>GVL_Devices.GEM1_VGC_40.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_05.i_xInsertedLS</Name>
+							<Name>GVL_Devices.GEM1_VGC_50.i_xOpnLS</Name>
 							<Comment>
 								<![CDATA[IO]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_05.i_xRetractedLS</Name>
+							<Name>GVL_Devices.GEM1_VGC_50.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_06.i_xInsertedLS</Name>
+							<Name>GVL_Devices.GEM1_VGC_60.i_xOpnLS</Name>
 							<Comment>
 								<![CDATA[IO]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_06.i_xRetractedLS</Name>
+							<Name>GVL_Devices.GEM1_VGC_60.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_07.i_xInsertedLS</Name>
+							<Name>GVL_Devices.GEM1_VGC_70.i_xOpnLS</Name>
 							<Comment>
 								<![CDATA[IO]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_07.i_xRetractedLS</Name>
+							<Name>GVL_Devices.GEM1_VGC_70.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_08.i_xInsertedLS</Name>
+							<Name>GVL_Devices.GEM2_VGC_10.i_xOpnLS</Name>
 							<Comment>
 								<![CDATA[IO]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_08.i_xRetractedLS</Name>
+							<Name>GVL_Devices.GEM2_VGC_10.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_09.i_xInsertedLS</Name>
+							<Name>GVL_Devices.GEM2_VGC_20.i_xOpnLS</Name>
 							<Comment>
 								<![CDATA[IO]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_09.i_xRetractedLS</Name>
+							<Name>GVL_Devices.GEM2_VGC_20.i_xClsLS</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Sensors.GEM1_AIR_1.i_iPRESS_R</Name>
+							<Name>GVL_Devices.GEM2_VGC_30.i_xOpnLS</Name>
 							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
+								<![CDATA[IO]]>
 							</Comment>
-							<Type>INT</Type>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Sensors.GEM1_AIR_2.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
-							<Type>INT</Type>
+							<Name>GVL_Devices.GEM2_VGC_30.i_xClsLS</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Sensors.GEM2_N2_1.i_iPRESS_R</Name>
+							<Name>GVL_Devices.GEM2_VGC_40.i_xOpnLS</Name>
 							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
+								<![CDATA[IO]]>
 							</Comment>
-							<Type>INT</Type>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Sensors.GEM2_N2_2.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
-							<Type>INT</Type>
+							<Name>GVL_Devices.GEM2_VGC_40.i_xClsLS</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Sensors.GEM1_GFM_41.i_iPRESS_R</Name>
+							<Name>GVL_Devices.GEM2_VGC_50.i_xOpnLS</Name>
 							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
+								<![CDATA[IO]]>
 							</Comment>
-							<Type>INT</Type>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Sensors.GEM1_GFM_42.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
-							<Type>INT</Type>
+							<Name>GVL_Devices.GEM2_VGC_50.i_xClsLS</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Sensors.GEM2_GFM_41.i_iPRESS_R</Name>
+							<Name>GVL_Devices.GEM2_VGC_60.i_xOpnLS</Name>
 							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
+								<![CDATA[IO]]>
 							</Comment>
-							<Type>INT</Type>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Sensors.GEM2_GFM_42.i_iPRESS_R</Name>
+							<Name>GVL_Devices.GEM2_VGC_60.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_70.i_xOpnLS</Name>
 							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
+								<![CDATA[IO]]>
 							</Comment>
-							<Type>INT</Type>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_70.i_xClsLS</Name>
+							<Type>BOOL</Type>
 						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
@@ -1708,34 +1609,6 @@
 IO]]>
 							</Comment>
 							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_10.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_20.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_30.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_40.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_50.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_60.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM1_VGC_70.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GEM1_VRC_10.q_xOPN_DO</Name>
@@ -1965,34 +1838,6 @@ IO]]>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.GEM2_VGC_10.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_20.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_30.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_40.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_50.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_60.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GEM2_VGC_70.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_Devices.GEM2_VRC_30.q_xOPN_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
@@ -2188,83 +2033,67 @@ IO]]>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.SATT_MPA_01.q_xInsert_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_01.q_xRetract_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_02.q_xInsert_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_02.q_xRetract_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_03.q_xInsert_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_03.q_xRetract_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_04.q_xInsert_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_04.q_xRetract_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_05.q_xInsert_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_05.q_xRetract_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_06.q_xInsert_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_06.q_xRetract_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_07.q_xInsert_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_07.q_xRetract_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_08.q_xInsert_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_08.q_xRetract_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_09.q_xInsert_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.SATT_MPA_09.q_xRetract_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_ILK.g_FastFaultOutput1.q_xFastFaultOut</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_ILK.g_FastFaultOutput2.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_10.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_20.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_30.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_40.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_50.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_60.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM1_VGC_70.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_10.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_20.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_30.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_40.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_50.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_60.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GEM2_VGC_70.q_xOPN_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
 					</Vars>
@@ -2391,6 +2220,71 @@ IO]]>
 							<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PLC_EL_4 (EL3064)">
 								<Link VarA="GVL_Devices.GEM1_PTM_10.i_iPowerMon" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AI Standard Channel 1^Value" AutoLink="true" RestoreInfo="ANotFound"/>
 								<Link VarA="GVL_Devices.GEM1_PTM_20.i_iPowerMon" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AI Standard Channel 2^Value" AutoLink="true" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+					<UnrestoredVarLinks ImportTime="2025-08-20T17:56:32">
+						<OwnerA Name="OutputSrc" Prefix="TIPC^plc_lfe_gem^plc_lfe_gem Instance" Type="2">
+							<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002)">
+								<Link VarA="GVL_Devices.SATT_MPA_01.q_xInsert_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 11^Output" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_02.q_xInsert_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 15^Output" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+							<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002)">
+								<Link VarA="GVL_Devices.SATT_MPA_03.q_xInsert_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 11^Output" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_04.q_xInsert_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 15^Output" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+							<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002)">
+								<Link VarA="GVL_Devices.SATT_MPA_05.q_xInsert_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 11^Output" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_06.q_xInsert_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 15^Output" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+							<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002)">
+								<Link VarA="GVL_Devices.SATT_MPA_07.q_xRetract_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 11^Output" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_08.q_xRetract_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 15^Output" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+							<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_8 (EP2338-0002)">
+								<Link VarA="GVL_Devices.SATT_MPA_09.q_xRetract_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 11^Output" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+						<OwnerA Name="InputDst" Prefix="TIPC^plc_lfe_gem^plc_lfe_gem Instance" Type="1">
+							<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002)">
+								<Link VarA="GVL_Devices.SATT_MPA_01.i_xInsertedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_01.i_xRetractedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_02.i_xInsertedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 6^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_02.i_xRetractedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 5^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+							<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002)">
+								<Link VarA="GVL_Devices.SATT_MPA_03.i_xInsertedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_03.i_xRetractedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_04.i_xInsertedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 6^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_04.i_xRetractedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 5^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+							<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002)">
+								<Link VarA="GVL_Devices.SATT_MPA_05.i_xInsertedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_05.i_xRetractedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_06.i_xInsertedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 6^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_06.i_xRetractedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 5^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+							<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002)">
+								<Link VarA="GVL_Devices.SATT_MPA_07.i_xInsertedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_07.i_xRetractedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_08.i_xInsertedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 6^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_08.i_xRetractedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 5^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+							<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_8 (EP2338-0002)">
+								<Link VarA="GVL_Devices.SATT_MPA_09.i_xInsertedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_Devices.SATT_MPA_09.i_xRetractedLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+					<UnrestoredVarLinks ImportTime="2025-08-20T18:09:11">
+						<OwnerA Name="OutputSrc" Prefix="TIPC^plc_lfe_gem^plc_lfe_gem Instance" Type="2">
+							<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_PRE">
+								<Link VarA="PRG_PMPS.fbArbiterIO.q_stRequestedBP" InOutA="1" GuidA="{C9AB5DB1-1B57-42EF-8E17-FBE97768475C}" VarB="IO Outputs^RequestedBP" AutoLink="true" RestoreInfo="TypeChanged" TypeA="ST_BeamParams_IO" IdA="255"/>
+							</OwnerB>
+						</OwnerA>
+						<OwnerA Name="InputDst" Prefix="TIPC^plc_lfe_gem^plc_lfe_gem Instance" Type="1">
+							<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_PRE">
+								<Link VarA="PRG_PMPS.fbArbiterIO.i_stCurrentBP" InOutA="0" GuidA="{C9AB5DB1-1B57-42EF-8E17-FBE97768475C}" VarB="IO Inputs^CurrentBP" AutoLink="true" RestoreInfo="TypeChanged" TypeA="ST_BeamParams_IO" IdA="12"/>
 							</OwnerB>
 						</OwnerA>
 					</UnrestoredVarLinks>
@@ -2783,43 +2677,6 @@ IO]]>
 			</OwnerB>
 			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_3 (EP4374-0002)">
 				<Link VarA="PlcTask Inputs^GVL_Devices.GATT_GMP_11.i_iPRESS_R" VarB="AI Inputs Channel 1^Value" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_4 (EP2338-0002)">
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_01.i_xInsertedLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_01.i_xRetractedLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_02.i_xInsertedLS" VarB="Channel 6^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_02.i_xRetractedLS" VarB="Channel 5^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_01.q_xInsert_DO" VarB="Channel 11^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_02.q_xInsert_DO" VarB="Channel 15^Output" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_5 (EP2338-0002)">
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_03.i_xInsertedLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_03.i_xRetractedLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_04.i_xInsertedLS" VarB="Channel 6^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_04.i_xRetractedLS" VarB="Channel 5^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_03.q_xInsert_DO" VarB="Channel 11^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_04.q_xInsert_DO" VarB="Channel 15^Output" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_6 (EP2338-0002)">
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_05.i_xInsertedLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_05.i_xRetractedLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_06.i_xInsertedLS" VarB="Channel 6^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_06.i_xRetractedLS" VarB="Channel 5^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_05.q_xInsert_DO" VarB="Channel 11^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_06.q_xInsert_DO" VarB="Channel 15^Output" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_7 (EP2338-0002)">
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_07.i_xInsertedLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_07.i_xRetractedLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_08.i_xInsertedLS" VarB="Channel 6^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_08.i_xRetractedLS" VarB="Channel 5^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_07.q_xRetract_DO" VarB="Channel 11^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_08.q_xRetract_DO" VarB="Channel 15^Output" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^EMxL0 (EtherCAT)^L0S6_PNL_04_EB_8 (EP2338-0002)">
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_09.i_xInsertedLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.SATT_MPA_09.i_xRetractedLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.SATT_MPA_09.q_xRetract_DO" VarB="Channel 11^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^EMxL0 (EtherCAT)^PLC_EMxL0 (EK1200)^PMPS_FFO">
 				<Link VarA="PlcTask Outputs^GVL_ILK.g_FastFaultOutput1.q_xFastFaultOut" VarB="Channel 1^Output" AutoLink="true"/>

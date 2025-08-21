@@ -609,59 +609,6 @@
     GEM2_PRO_20: FB_KashiyamaPump;
 
 
-
-(*************)
-(*AT1L0-SOLID*)
-(*************)
-
-(*Pneumatic actuators*)
-    {attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:01 '}
-    {attribute 'TcLinkTo' := 	'.i_xRetractedLS:=	TIIB[L0S6_PNL_04_EB_4 (EP2338-0002)]^Channel 1^Input;
-                                 .i_xInsertedLS	:=	TIIB[L0S6_PNL_04_EB_4 (EP2338-0002)]^Channel 2^Input;
-                                 .q_xInsert_DO	:=	TIIB[L0S6_PNL_04_EB_4 (EP2338-0002)]^Channel 11^Output'}
-    SATT_MPA_01: FB_MPA;
-    {attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:02 '}
-    {attribute 'TcLinkTo' := 	'.i_xRetractedLS:=	TIIB[L0S6_PNL_04_EB_4 (EP2338-0002)]^Channel 5^Input;
-                                 .i_xInsertedLS	:=	TIIB[L0S6_PNL_04_EB_4 (EP2338-0002)]^Channel 6^Input;
-                                 .q_xInsert_DO	:=	TIIB[L0S6_PNL_04_EB_4 (EP2338-0002)]^Channel 15^Output'}
-    SATT_MPA_02: FB_MPA;
-    {attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:03 '}
-    {attribute 'TcLinkTo' := 	'.i_xRetractedLS:=	TIIB[L0S6_PNL_04_EB_5 (EP2338-0002)]^Channel 1^Input;
-                                 .i_xInsertedLS	:=	TIIB[L0S6_PNL_04_EB_5 (EP2338-0002)]^Channel 2^Input;
-                                 .q_xInsert_DO	:=	TIIB[L0S6_PNL_04_EB_5 (EP2338-0002)]^Channel 11^Output'}
-    SATT_MPA_03: FB_MPA;
-    {attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:04 '}
-    {attribute 'TcLinkTo' := 	'.i_xRetractedLS:=	TIIB[L0S6_PNL_04_EB_5 (EP2338-0002)]^Channel 5^Input;
-                                 .i_xInsertedLS	:=	TIIB[L0S6_PNL_04_EB_5 (EP2338-0002)]^Channel 6^Input;
-                                 .q_xInsert_DO	:=	TIIB[L0S6_PNL_04_EB_5 (EP2338-0002)]^Channel 15^Output'}
-    SATT_MPA_04: FB_MPA;
-    {attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:05 '}
-    {attribute 'TcLinkTo' := 	'.i_xRetractedLS:=	TIIB[L0S6_PNL_04_EB_6 (EP2338-0002)]^Channel 1^Input;
-                                 .i_xInsertedLS	:=	TIIB[L0S6_PNL_04_EB_6 (EP2338-0002)]^Channel 2^Input;
-                                 .q_xInsert_DO	:=	TIIB[L0S6_PNL_04_EB_6 (EP2338-0002)]^Channel 11^Output'}
-    SATT_MPA_05: FB_MPA;
-    {attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:06 '}
-    {attribute 'TcLinkTo' := 	'.i_xRetractedLS:=	TIIB[L0S6_PNL_04_EB_6 (EP2338-0002)]^Channel 5^Input;
-                                 .i_xInsertedLS	:=	TIIB[L0S6_PNL_04_EB_6 (EP2338-0002)]^Channel 6^Input;
-                                 .q_xInsert_DO	:=	TIIB[L0S6_PNL_04_EB_6 (EP2338-0002)]^Channel 15^Output'}
-    SATT_MPA_06: FB_MPA;
-    {attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:07 '}
-    {attribute 'TcLinkTo' := 	'.i_xRetractedLS:=	TIIB[L0S6_PNL_04_EB_7 (EP2338-0002)]^Channel 1^Input;
-                                 .i_xInsertedLS	:=	TIIB[L0S6_PNL_04_EB_7 (EP2338-0002)]^Channel 2^Input;
-                                 .q_xRetract_DO	:=	TIIB[L0S6_PNL_04_EB_7 (EP2338-0002)]^Channel 11^Output'}
-    SATT_MPA_07: FB_MPA;
-    {attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:08 '}
-    {attribute 'TcLinkTo' := 	'.i_xRetractedLS:=	TIIB[L0S6_PNL_04_EB_7 (EP2338-0002)]^Channel 5^Input;
-                                 .i_xInsertedLS	:=	TIIB[L0S6_PNL_04_EB_7 (EP2338-0002)]^Channel 6^Input;
-                                 .q_xRetract_DO	:=	TIIB[L0S6_PNL_04_EB_7 (EP2338-0002)]^Channel 15^Output'}
-    SATT_MPA_08: FB_MPA;
-    {attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:09 '}
-    {attribute 'TcLinkTo' := 	'.i_xRetractedLS:=	TIIB[L0S6_PNL_04_EB_8 (EP2338-0002)]^Channel 1^Input;
-                                 .i_xInsertedLS	:=	TIIB[L0S6_PNL_04_EB_8 (EP2338-0002)]^Channel 2^Input;
-                                 .q_xRetract_DO	:=	TIIB[L0S6_PNL_04_EB_8 (EP2338-0002)]^Channel 11^Output'}
-    SATT_MPA_09: FB_MPA;
-
-
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
