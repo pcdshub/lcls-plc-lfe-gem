@@ -22,14 +22,9 @@ PRG_ROOTS();
 PRG_GATT();
 PRG_GEM1();
 PRG_GEM2();
-PRG_SATT();
 PRG_PMPS();
 //Log Handler
 fbLogHandler();]]></ST>
     </Implementation>
-    <LineIds Name="MAIN">
-      <LineId Id="3" Count="15" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
